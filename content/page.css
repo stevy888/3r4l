@@ -51,5 +51,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 .share button{display:flex;align-items:center;min-height:3rem;font:500 1.0625rem/1.3 var(--sans);color:var(--door);background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:.2em;text-decoration-color:var(--line);cursor:pointer}
 .share button::after{content:" ›";white-space:pre}
 .addr{font:0.9375rem/1.3 var(--sans);color:var(--mute);margin:.25rem 0 0}
+.notice{font:0.8125rem/1.4 var(--sans);color:var(--mute);margin:2.5rem 0 0;max-width:34ch}
 [hidden]{display:none!important}
 @media print{body{background:#fff;color:#000}main>*{display:none}main>#card{display:block;border-color:#000;background:#fff;color:#000}}

@@ -9,12 +9,16 @@ import fs from 'node:fs'; import path from 'node:path';
 const root = process.env.CW_ROOT, dir = path.resolve(process.env.CW_DIR), { normalise } = await import(path.join(root, 'normalise.mjs'));
 const J = p => JSON.parse(fs.readFileSync(p, 'utf8')), C = p => path.join(root, 'content', p);
 const sheet = J(C('sheet.json')), verses = J(C('verses.json')), tr = J(C('translations.json')), ADDRESS = 'https://3r4l.org/';
+// THE ONE LEGAL STRING beside the owner's and Jeff's words (TR-translation; owner word 2026-10-07 "use NIV translation"): Biblica's gratis-use notice,
+// printed once at the foot of each page by build.mjs from translations.json — the record there and this fence must agree, byte for byte.
+const NOTICE = 'Scripture quotations taken from The Holy Bible, New International Version® NIV® Copyright © 2011 by Biblica, Inc.™ Used by permission. All rights reserved worldwide.';
+const enDefault = Object.values(tr.en).find(t => t.default); if (!enDefault || enDefault.notice !== NOTICE) { console.log('FAIL: the default English translation\'s notice in translations.json is not the legal string of record'); process.exit(1); }
 const inputs = '/Users/aibrain/projects/3r4l-inputs', checked = fs.existsSync(C('sheet-tl.json')) && fs.existsSync(path.join(inputs, 'pastor-check.txt'));
 const cardOf = f => fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : null, cardEn = cardOf(C('card.txt')), cardTl = cardOf(path.join(inputs, 'card-tl.txt'));
 const blocks = t => t ? [...t.matchAll(/^== \w+ ==\n([\s\S]*?)(?=\n== |$)/gm)].map(m => m[1]) : [];
 function allow(lang) { const S = lang === 'tl' ? J(C('sheet-tl.json')) : sheet, card = lang === 'tl' ? (cardTl || cardEn) : cardEn, A = new Set(), add = s => { if (s) A.add(normalise(s)); };
   [S.h1, S.h2, S.whatnext_link, S.whatnext_clause, ...S.h1_lines, ...S.lines].forEach(add); Object.entries(S.labels).forEach(([k, v]) => { if (k[0] !== '_') { add(v); add(v + ' ›'); } });
-  const title = card ? blocks(card)[0] : '3R4L'; add(title); add(title + S.labels.title_whatnext_suffix); add(ADDRESS);
+  const title = card ? blocks(card)[0] : '3R4L'; add(title); add(title + S.labels.title_whatnext_suffix); add(ADDRESS); add(NOTICE); // the legal string, both languages
   if (card) blocks(card).forEach(b => { add(b); b.split('\n').forEach(add); }); else add(sheet.placeholder.card); // THE INTERIM: the one placeholder sentence is allowed
   verses.forEach(v => { add(lang === 'tl' ? v.ref_tl : v.ref); add(lang === 'tl' ? v.text_tl : v.text); add(lang === 'tl' ? v.translation_tl : v.translation_name); });
   Object.values(tr.en).forEach(t => add(t.name)); Object.values(tr.tl).forEach(t => add(t.name)); return A; }

@@ -3,290 +3,309 @@
   "day": 1,
   "ref": "1 John 1:9",
   "parts": [
-   "If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness."
+   "If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness."
   ],
-  "text": "If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/1-john-1-9",
   "text_tl": "Kung ipinahahayag natin ang ating mga kasalanan, ay tapat at banal siya na tayo'y patatawarin sa ating mga kasalanan, at tayo'y lilinisin sa lahat ng kalikuan.",
   "ref_tl": "1 Juan 1:9",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 2,
   "ref": "Luke 18:13",
   "parts": [
-   "But the tax collector, standing far off, was unwilling even to lift up his eyes to heaven, but kept beating his breast, saying, ‘God, be merciful to me, the sinner.’"
+   "“But the tax collector stood at a distance. He would not even look up to heaven, but beat his breast and said, ‘God, have mercy on me, a sinner.’"
   ],
-  "text": "But the tax collector, standing far off, was unwilling even to lift up his eyes to heaven, but kept beating his breast, saying, ‘God, be merciful to me, the sinner.’",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "“But the tax collector stood at a distance. He would not even look up to heaven, but beat his breast and said, ‘God, have mercy on me, a sinner.’",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/Luke/18/13",
   "text_tl": "Datapuwa't ang maniningil ng buwis, na nakatayo sa malayo, ay ayaw na itingin man lamang ang kaniyang mga mata sa langit, kundi dinadagukan ang kaniyang dibdib, na sinasabi, Dios, ikaw ay mahabag sa akin, na isang makasalanan.",
   "ref_tl": "Lucas 18:13",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 3,
   "ref": "Psalm 51:1",
   "parts": [
-   "Have mercy on me, O God, according to your lovingkindness;\naccording to the abundance of your compassion, blot out my transgressions."
+   "Have mercy on me, O God,\naccording to your unfailing love;\naccording to your great compassion\nblot out my transgressions."
   ],
-  "text": "Have mercy on me, O God, according to your lovingkindness;\naccording to the abundance of your compassion, blot out my transgressions.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Have mercy on me, O God,\naccording to your unfailing love;\naccording to your great compassion\nblot out my transgressions.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/Psalm/51/1",
   "text_tl": "Maawa ka sa akin, Oh Dios, ayon sa iyong kagandahang-loob: ayon sa karamihan ng iyong malumanay na mga kaawaan ay pinawi mo ang aking mga pagsalangsang.",
   "ref_tl": "Mga Awit 51:1",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 4,
   "ref": "Psalm 32:5",
   "parts": [
-   "My sin I made known to you, and my iniquity I did not cover.\nI said, “I will confess my transgressions to the LORD,”\nand you forgave the iniquity of my sin. Selah"
+   "Then I acknowledged my sin to you\nand did not cover up my iniquity.\nI said, “I will confess\nmy transgressions to the LORD.”\nAnd you forgave\nthe guilt of my sin."
   ],
-  "text": "My sin I made known to you, and my iniquity I did not cover.\nI said, “I will confess my transgressions to the LORD,”\nand you forgave the iniquity of my sin. Selah",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Then I acknowledged my sin to you\nand did not cover up my iniquity.\nI said, “I will confess\nmy transgressions to the LORD.”\nAnd you forgave\nthe guilt of my sin.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/Psalm/32/5",
   "text_tl": "Aking kinilala ang aking kasalanan sa iyo, at ang aking kasamaan ay hindi ko ikinubli: aking sinabi, aking ipahahayag ang aking pagsalangsang sa Panginoon; at iyong ipinatawad ang kasamaan ng aking kasalanan.",
   "ref_tl": "Mga Awit 32:5",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 5,
   "ref": "Proverbs 28:13",
   "parts": [
-   "He who covers his transgressions does not prosper,\nbut he who confesses and forsakes them is shown mercy."
+   "Whoever conceals their sins does not prosper,\nbut the one who confesses and renounces them finds mercy."
   ],
-  "text": "He who covers his transgressions does not prosper,\nbut he who confesses and forsakes them is shown mercy.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Whoever conceals their sins does not prosper,\nbut the one who confesses and renounces them finds mercy.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/Proverbs/28/13",
   "text_tl": "Siyang nagtatakip ng kaniyang mga pagsalangsang ay hindi giginhawa: nguni't ang nagpapahayag at nagiiwan ng mga yaon ay magtatamo ng kaawaan.",
   "ref_tl": "Mga Kawikaan 28:13",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 6,
   "ref": "Hebrews 4:16",
   "parts": [
-   "Therefore let us draw near with confidence to the throne of grace, so that we may receive mercy and find grace for help in time of need."
+   "Let us then approach God’s throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need."
   ],
-  "text": "Therefore let us draw near with confidence to the throne of grace, so that we may receive mercy and find grace for help in time of need.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Let us then approach God’s throne of grace with confidence, so that we may receive mercy and find grace to help us in our time of need.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/hebrews-4-16",
   "text_tl": "Magsilapit nga tayong may pagkakatiwala sa luklukan ng biyaya, upang tayo'y magsipagtamo ng awa, at mangakasumpong ng biyaya upang tumulong sa atin sa panahon ng pangangailangan.",
   "ref_tl": "Mga Hebreo 4:16",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 7,
   "ref": "Lamentations 3:22-23",
   "parts": [
-   "The steadfast loves of the Lord! For we are not consumed;\nfor his mercies have not failed.",
-   "New every morning; great is your faithfulness."
+   "Because of the LORD’s great love we are not consumed,\nfor his compassions never fail.",
+   "They are new every morning;\ngreat is your faithfulness."
   ],
-  "text": "The steadfast loves of the Lord! For we are not consumed;\nfor his mercies have not failed.\nNew every morning; great is your faithfulness.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Because of the LORD’s great love we are not consumed,\nfor his compassions never fail.\nThey are new every morning;\ngreat is your faithfulness.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/lamentations-3-22",
   "text_tl": "Sa mga kaawaan nga ng Panginoon ay hindi tayo nalipol, sapagka't ang kaniyang mga habag ay hindi nauubos.\nAng mga yao'y bago tuwing umaga, dakila ang inyong pagtatapat.",
   "ref_tl": "Mga Panaghoy 3:22-23",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 8,
   "ref": "Matthew 28:20",
   "parts": [
-   "teaching them to observe all that I have commanded you. And look, I am with you always, even to the end of the age.”"
+   "and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.”"
   ],
-  "text": "teaching them to observe all that I have commanded you. And look, I am with you always, even to the end of the age.”",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "and teaching them to obey everything I have commanded you. And surely I am with you always, to the very end of the age.”",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/matthew-28-20",
   "text_tl": "Na ituro ninyo sa kanila na kanilang ganapin ang lahat ng mga bagay na iniutos ko sa inyo: at narito, ako'y sumasa inyong palagi, hanggang sa katapusan ng sanglibutan.",
   "ref_tl": "Mateo 28:20",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 9,
   "ref": "John 14:3",
   "parts": [
-   "“And if I go and prepare a place for you, I will come again and receive you to Myself, that where I am, you may be also."
+   "And if I go and prepare a place for you, I will come back and take you to be with me that you also may be where I am."
   ],
-  "text": "“And if I go and prepare a place for you, I will come again and receive you to Myself, that where I am, you may be also.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "And if I go and prepare a place for you, I will come back and take you to be with me that you also may be where I am.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/john-14-3",
   "text_tl": "At kung ako'y pumaroon at kayo'y maipaghanda ng kalalagyan, ay muling paririto ako, at kayo'y tatanggapin ko sa aking sarili; upang kung saan ako naroroon, kayo naman ay dumoon.",
   "ref_tl": "Juan 14:3",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 10,
   "ref": "1 Timothy 2:1",
   "parts": [
-   "I urge, therefore, first of all, that petitions, prayers, intercessions, and thanksgivings be made for all people,"
+   "I urge, then, first of all, that petitions, prayers, intercession and thanksgiving be made for all people—"
   ],
-  "text": "I urge, therefore, first of all, that petitions, prayers, intercessions, and thanksgivings be made for all people,",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "I urge, then, first of all, that petitions, prayers, intercession and thanksgiving be made for all people—",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/1-timothy-2-1",
   "text_tl": "Una-una nga sa lahat ng mga bagay, ay iniaaral ko na manaing, manalangin, mamagitan, at magpasalamat na patungkol sa lahat ng mga tao;",
   "ref_tl": "1 Timoteo 2:1",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 11,
   "ref": "Psalm 103:12",
   "parts": [
-   "As far as the east is from the west,\nso far has he removed our transgressions from us."
+   "as far as the east is from the west,\nso far has he removed our transgressions from us."
   ],
-  "text": "As far as the east is from the west,\nso far has he removed our transgressions from us.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "as far as the east is from the west,\nso far has he removed our transgressions from us.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/psalm-103-12",
   "text_tl": "Kung gaano ang layo ng silanganan sa kalunuran, gayon inilayo niya ang mga pagsalangsang natin sa atin.",
   "ref_tl": "Mga Awit 103:12",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 12,
   "ref": "Micah 7:18-19",
   "parts": [
-   "Who is a God like you,\npardoning iniquity and passing over transgression\nfor the remnant of his inheritance?\nHe does not hold fast his anger forever,\nbecause he delights in steadfast love.",
-   "He will again have compassion on us; he will tread our iniquities underfoot;\nand you will cast into the depths of the sea all their sins."
+   "Who is a God like you,\nwho pardons sin and forgives the transgression\nof the remnant of his inheritance?\nYou do not stay angry forever\nbut delight to show mercy.",
+   "You will again have compassion on us;\nyou will tread our sins underfoot\nand hurl all our iniquities into the depths of the sea."
   ],
-  "text": "Who is a God like you,\npardoning iniquity and passing over transgression\nfor the remnant of his inheritance?\nHe does not hold fast his anger forever,\nbecause he delights in steadfast love.\nHe will again have compassion on us; he will tread our iniquities underfoot;\nand you will cast into the depths of the sea all their sins.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Who is a God like you,\nwho pardons sin and forgives the transgression\nof the remnant of his inheritance?\nYou do not stay angry forever\nbut delight to show mercy.\nYou will again have compassion on us;\nyou will tread our sins underfoot\nand hurl all our iniquities into the depths of the sea.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/micah-7-18",
   "text_tl": "Sino ang Dios na gaya mo, na nagpapatawad ng kasamaan, at pinalalagpas ang pagsalansang ng nalabi sa kaniyang mana? hindi niya pinipigil ang kaniyang galit ng magpakailan man, sapagka't siya'y nalulugod sa kagandahang-loob.\nSiya'y muling magtataglay ng habag sa atin; kaniyang yayapakan ang ating kasamaan: at kaniyang ihahagis ang lahat nilang kasalanan sa mga kalaliman ng dagat.",
   "ref_tl": "Mikas 7:18-19",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 13,
   "ref": "Isaiah 1:18",
   "parts": [
-   "Come now, and let us reason together, says the LORD:\nthough your sins are like scarlet, they shall be white as snow;\nthough they are red like crimson, they shall be like wool."
+   "“Come now, let us settle the matter,”\nsays the LORD.\n“Though your sins are like scarlet,\nthey shall be as white as snow;\nthough they are red as crimson,\nthey shall be like wool."
   ],
-  "text": "Come now, and let us reason together, says the LORD:\nthough your sins are like scarlet, they shall be white as snow;\nthough they are red like crimson, they shall be like wool.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "“Come now, let us settle the matter,”\nsays the LORD.\n“Though your sins are like scarlet,\nthey shall be as white as snow;\nthough they are red as crimson,\nthey shall be like wool.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/isaiah-1-18",
   "text_tl": "Magsiparito kayo ngayon, at tayo'y magkatuwiranan, sabi ng Panginoon: bagaman ang inyong mga kasalanan ay maging tila mapula, ay magiging mapuputi na parang niebe; bagaman maging mapulang gaya ng matingkad na pula, ay magiging parang balahibo ng bagong paligong tupa,",
   "ref_tl": "Isaias 1:18",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 14,
   "ref": "1 John 2:1",
   "parts": [
-   "My little children, these things I write to you so that you may not sin. And if anyone sins, we have an Advocate with the Father, Jesus Christ the righteous."
+   "My dear children, I write this to you so that you will not sin. But if anybody does sin, we have an advocate with the Father—Jesus Christ, the Righteous One."
   ],
-  "text": "My little children, these things I write to you so that you may not sin. And if anyone sins, we have an Advocate with the Father, Jesus Christ the righteous.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "My dear children, I write this to you so that you will not sin. But if anybody does sin, we have an advocate with the Father—Jesus Christ, the Righteous One.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/1-john-2-1",
   "text_tl": "Mumunti kong mga anak, ang mga bagay na ito ay isinusulat ko sa inyo upang kayo'y huwag mangagkasala. At kung ang sinoman ay magkasala, ay may Tagapamagitan tayo sa Ama, si Jesucristo ang matuwid:",
   "ref_tl": "1 Juan 2:1",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 15,
   "ref": "Psalm 130:3-4",
   "parts": [
-   "If you, LORD, should keep watch over iniquities,\nLord, who could stand?",
-   "For with you there is forgiveness,\nso that you may be feared."
+   "If you, LORD, kept a record of sins,\nLord, who could stand?",
+   "But with you there is forgiveness,\nso that we can, with reverence, serve you."
   ],
-  "text": "If you, LORD, should keep watch over iniquities,\nLord, who could stand?\nFor with you there is forgiveness,\nso that you may be feared.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "If you, LORD, kept a record of sins,\nLord, who could stand?\nBut with you there is forgiveness,\nso that we can, with reverence, serve you.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/psalm-130-3",
   "text_tl": "Kung ikaw, Panginoon, magtatanda ng mga kasamaan, Oh Panginoon, sinong tatayo?\nNguni't may kapatawarang taglay ka, upang ikaw ay katakutan.",
   "ref_tl": "Mga Awit 130:3-4",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 16,
   "ref": "Psalm 139:23-24",
   "parts": [
-   "Search me, O God, and know my heart;\ntest me, and know my anxious thoughts;",
-   "and see if there is any offensive way in me,\nand lead me in the way everlasting."
+   "Search me, God, and know my heart;\ntest me and know my anxious thoughts.",
+   "See if there is any offensive way in me,\nand lead me in the way everlasting."
   ],
-  "text": "Search me, O God, and know my heart;\ntest me, and know my anxious thoughts;\nand see if there is any offensive way in me,\nand lead me in the way everlasting.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Search me, God, and know my heart;\ntest me and know my anxious thoughts.\nSee if there is any offensive way in me,\nand lead me in the way everlasting.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/Psalm/139/23",
   "text_tl": "Siyasatin mo ako, Oh Dios, at alamin mo ang aking puso; subukin mo ako, at alamin mo ang aking mga pagiisip:\nAt tingnan mo kung may anomang lakad ng kasamaan sa akin, at patnubayan mo ako sa daang walang hanggan.",
   "ref_tl": "Mga Awit 139:23-24",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 17,
   "ref": "James 5:16",
   "parts": [
-   "Confess, then, your sins to one another and pray for one another, so that you may be healed. The supplication of a righteous man is very powerful in its working."
+   "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective."
   ],
-  "text": "Confess, then, your sins to one another and pray for one another, so that you may be healed. The supplication of a righteous man is very powerful in its working.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/james-5-16",
   "text_tl": "Mangagpahayagan nga kayo sa isa't isa ng inyong mga kasalanan, at ipanalangin ng isa't isa ang iba, upang kayo'y magsigaling. Malaki ang nagagawa ng maningas na panalangin ng taong matuwid.",
   "ref_tl": "Santiago 5:16",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 18,
   "ref": "Ephesians 6:18",
   "parts": [
-   "through all prayer and supplication, praying at all times in the Spirit, and to this end keeping alert with all perseverance and supplication for all the saints,"
+   "And pray in the Spirit on all occasions with all kinds of prayers and requests. With this in mind, be alert and always keep on praying for all the Lord’s people."
   ],
-  "text": "through all prayer and supplication, praying at all times in the Spirit, and to this end keeping alert with all perseverance and supplication for all the saints,",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "And pray in the Spirit on all occasions with all kinds of prayers and requests. With this in mind, be alert and always keep on praying for all the Lord’s people.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/ephesians-6-18",
   "text_tl": "Na magsipanalangin kayo sa Espiritu ng lahat ng panalangin at daing sa buong panahon, at mangagpuyat sa buong katiyagaan at daing na patungkol sa lahat ng mga banal,",
   "ref_tl": "Mga Efeso 6:18",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 19,
   "ref": "Matthew 5:7",
   "parts": [
-   "Blessed are the merciful, for they will be shown mercy."
+   "Blessed are the merciful,\nfor they will be shown mercy."
   ],
-  "text": "Blessed are the merciful, for they will be shown mercy.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Blessed are the merciful,\nfor they will be shown mercy.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/matthew-5-7",
   "text_tl": "Mapapalad ang mga mahabagin: sapagka't sila'y kahahabagan.",
   "ref_tl": "Mateo 5:7",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 20,
@@ -295,317 +314,338 @@
    "Be merciful, just as your Father is merciful."
   ],
   "text": "Be merciful, just as your Father is merciful.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/luke-6-36",
   "text_tl": "Magmaawain kayo, gaya naman ng inyong Ama na maawain.",
   "ref_tl": "Lucas 6:36",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 21,
   "ref": "Titus 3:5",
   "parts": [
-   "not by works done in righteousness, which we did ourselves, but according to His mercy He saved us, through the washing of regeneration and renewing of the Holy Spirit,"
+   "he saved us, not because of righteous things we had done, but because of his mercy. He saved us through the washing of rebirth and renewal by the Holy Spirit,"
   ],
-  "text": "not by works done in righteousness, which we did ourselves, but according to His mercy He saved us, through the washing of regeneration and renewing of the Holy Spirit,",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "he saved us, not because of righteous things we had done, but because of his mercy. He saved us through the washing of rebirth and renewal by the Holy Spirit,",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/titus-3-5",
   "text_tl": "Na hindi dahil sa mga gawa sa katuwiran na ginawa nating sarili, kundi ayon sa kaniyang kaawaan ay kaniyang iniligtas tayo, sa pamamagitan ng paghuhugas sa muling kapanganakan at ng pagbabago sa Espiritu Santo,",
   "ref_tl": "Tito 3:5",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 22,
   "ref": "Ephesians 2:4-5",
   "parts": [
-   "but God, being rich in mercy, because of His great love with which He loved us,",
-   "even when we were dead in trespasses, made us alive together with Christ — by grace you have been saved —"
+   "But because of his great love for us, God, who is rich in mercy,",
+   "made us alive with Christ even when we were dead in transgressions—it is by grace you have been saved."
   ],
-  "text": "but God, being rich in mercy, because of His great love with which He loved us,\neven when we were dead in trespasses, made us alive together with Christ — by grace you have been saved —",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "But because of his great love for us, God, who is rich in mercy,\nmade us alive with Christ even when we were dead in transgressions—it is by grace you have been saved.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/ephesians-2-4",
   "text_tl": "Nguni't ang Dios, palibhasa'y mayaman sa awa, dahil sa kaniyang malaking pagibig na kaniyang iniibig sa atin,\nBagama't tayo'y mga patay dahil sa ating mga kasalanan, tayo'y binuhay na kalakip ni Cristo (sa pamamagitan ng biyaya kayo'y nangaligtas),",
   "ref_tl": "Mga Efeso 2:4-5",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 23,
   "ref": "Psalm 86:5",
   "parts": [
-   "For you, O Lord, are good and forgiving,\nand abundant in lovingkindness to all who call on you."
+   "You, Lord, are forgiving and good,\nabounding in love to all who call to you."
   ],
-  "text": "For you, O Lord, are good and forgiving,\nand abundant in lovingkindness to all who call on you.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "You, Lord, are forgiving and good,\nabounding in love to all who call to you.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/Psalm/86/5",
   "text_tl": "Sapagka't ikaw, Panginoon, ay mabuti, at mapagpatawad, at sagana sa kagandahang-loob sa lahat na tumatawag sa iyo.",
   "ref_tl": "Mga Awit 86:5",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 24,
   "ref": "Micah 6:8",
   "parts": [
-   "He has told you, O man, what is good;\nand what does the Lord require of you\nbut to do justice, and to love kindness,\nand to walk humbly with your God?"
+   "He has shown you, O mortal, what is good.\nAnd what does the LORD require of you?\nTo act justly and to love mercy\nand to walk humbly with your God."
   ],
-  "text": "He has told you, O man, what is good;\nand what does the Lord require of you\nbut to do justice, and to love kindness,\nand to walk humbly with your God?",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "He has shown you, O mortal, what is good.\nAnd what does the LORD require of you?\nTo act justly and to love mercy\nand to walk humbly with your God.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/micah-6-8",
   "text_tl": "Kaniyang ipinakilala sa iyo, Oh tao, kung ano ang mabuti; at ano ang hinihingi ng Panginoon sa iyo, kundi gumawa na may kaganapan, at ibigin ang kaawaan, at lumakad na may kababaan na kasama ng iyong Dios.",
   "ref_tl": "Mikas 6:8",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 25,
   "ref": "Matthew 5:44",
   "parts": [
-   "But I say to you, love your enemies and pray for those who persecute you,"
+   "But I tell you, love your enemies and pray for those who persecute you,"
   ],
-  "text": "But I say to you, love your enemies and pray for those who persecute you,",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "But I tell you, love your enemies and pray for those who persecute you,",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/Matthew/5/44",
   "text_tl": "Datapuwa't sinasabi ko sa inyo, Ibigin ninyo ang inyong mga kaaway, at idalangin ninyo ang sa inyo'y nagsisiusig;",
   "ref_tl": "Mateo 5:44",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 26,
   "ref": "Philippians 4:6-7",
   "parts": [
-   "Be anxious for nothing, but in everything, by prayer and petition with thanksgiving, let your requests be made known to God.",
-   "And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus."
+   "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.",
+   "And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus."
   ],
-  "text": "Be anxious for nothing, but in everything, by prayer and petition with thanksgiving, let your requests be made known to God.\nAnd the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.\nAnd the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/philippians-4-6",
   "text_tl": "Huwag kayong mangabalisa sa anomang bagay; kundi sa lahat ng mga bagay sa pamamagitan ng panalangin at daing na may pagpapasalamat ay ipakilala ninyo ang inyong mga kahilingan sa Dios.\nAt ang kapayapaan ng Dios, na di masayod ng pagiisip, ay magiingat ng inyong mga puso at ng inyong mga pagiisip kay Cristo Jesus.",
   "ref_tl": "Mga Taga-Filipos 4:6-7",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 27,
   "ref": "Colossians 4:2",
   "parts": [
-   "Devote yourselves to prayer, being watchful in it, with thanksgiving,"
+   "Devote yourselves to prayer, being watchful and thankful."
   ],
-  "text": "Devote yourselves to prayer, being watchful in it, with thanksgiving,",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Devote yourselves to prayer, being watchful and thankful.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/colossians-4-2",
   "text_tl": "Manatili kayong palagi sa pananalangin, na kayo'y mangagpuyat na may pagpapasalamat;",
   "ref_tl": "Mga Taga-Colosas 4:2",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 28,
   "ref": "1 Thessalonians 5:17",
   "parts": [
-   "Pray without ceasing."
+   "pray continually,"
   ],
-  "text": "Pray without ceasing.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "pray continually,",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/1-thessalonians-5-17",
   "text_tl": "Magsipanalangin kayong walang patid;",
   "ref_tl": "1 Mga Taga-Tesalonica 5:17",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 29,
   "ref": "Galatians 6:9",
   "parts": [
-   "And let us not lose heart in doing what is right, for in due season we will reap, if we do not give out."
+   "Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up."
   ],
-  "text": "And let us not lose heart in doing what is right, for in due season we will reap, if we do not give out.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/galatians-6-9",
   "text_tl": "At huwag tayong mangapagod sa paggawa ng mabuti: sapagka't sa kapanahunan ay magsisipagani tayo, kung hindi tayo manganghihimagod.",
   "ref_tl": "Mga Taga-Galacia 6:9",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 30,
   "ref": "Luke 9:23",
   "parts": [
-   "And He said to them all, “If anyone desires to come after Me, let him deny himself, and take up his cross daily, and follow Me."
+   "Then he said to them all: “Whoever wants to be my disciple must deny themselves and take up their cross daily and follow me."
   ],
-  "text": "And He said to them all, “If anyone desires to come after Me, let him deny himself, and take up his cross daily, and follow Me.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Then he said to them all: “Whoever wants to be my disciple must deny themselves and take up their cross daily and follow me.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/luke-9-23",
   "text_tl": "At sinabi niya sa lahat, Kung ang sinomang tao ay ibig sumunod sa akin, ay tumanggi sa kaniyang sarili, at pasanin sa arawaraw ang kaniyang krus, at sumunod sa akin.",
   "ref_tl": "Lucas 9:23",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 31,
   "ref": "Psalm 32:8",
   "parts": [
-   "I will instruct you and teach you in the way you shall go;\nI will give counsel, with my eye upon you."
+   "I will instruct you and teach you in the way you should go;\nI will counsel you with my loving eye on you."
   ],
-  "text": "I will instruct you and teach you in the way you shall go;\nI will give counsel, with my eye upon you.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "I will instruct you and teach you in the way you should go;\nI will counsel you with my loving eye on you.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/Psalm/32/8",
   "text_tl": "Aking ipaaalam sa iyo at ituturo sa iyo ang daan na iyong lalakaran: papayuhan kita na ang aking mga mata, ay nakatitig sa iyo.",
   "ref_tl": "Mga Awit 32:8",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 32,
   "ref": "Proverbs 3:5-6",
   "parts": [
-   "Trust in the Lord with all your heart,\nand do not lean on your own understanding.",
-   "In all your ways acknowledge Him,\nand He will make your paths straight."
+   "Trust in the LORD with all your heart\nand lean not on your own understanding;",
+   "in all your ways submit to him,\nand he will make your paths straight."
   ],
-  "text": "Trust in the Lord with all your heart,\nand do not lean on your own understanding.\nIn all your ways acknowledge Him,\nand He will make your paths straight.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Trust in the LORD with all your heart\nand lean not on your own understanding;\nin all your ways submit to him,\nand he will make your paths straight.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/proverbs-3-5",
   "text_tl": "Tumiwala ka sa Panginoon ng buong puso mo, at huwag kang manalig sa iyong sariling kaunawaan:\nKilalanin mo siya sa lahat ng iyong mga lakad, at kaniyang ituturo ang iyong mga landas.",
   "ref_tl": "Mga Kawikaan 3:5-6",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 33,
   "ref": "Joshua 1:9",
   "parts": [
-   "Have I not commanded you? Be strong and courageous. Do not be afraid, and do not be dismayed, for the Lord your God is with you wherever you go.”"
+   "Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the LORD your God will be with you wherever you go.”"
   ],
-  "text": "Have I not commanded you? Be strong and courageous. Do not be afraid, and do not be dismayed, for the Lord your God is with you wherever you go.”",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the LORD your God will be with you wherever you go.”",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/joshua-1-9",
   "text_tl": "Hindi ba kita inutusan? Ikaw ay magpakalakas at magpakatapang na mabuti; huwag kang matakot, ni manglupaypay: sapagka't ang Panginoon mong Dios ay sumasa iyo saan ka man pumaroon.",
   "ref_tl": "Josue 1:9",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 34,
   "ref": "Hebrews 13:5",
   "parts": [
-   "Let your way of life be free from the love of money, and be content with what you have, for He Himself has said, “I will never leave you, nor will I ever forsake you.”"
+   "Keep your lives free from the love of money and be content with what you have, because God has said,\n“Never will I leave you;\nnever will I forsake you.”"
   ],
-  "text": "Let your way of life be free from the love of money, and be content with what you have, for He Himself has said, “I will never leave you, nor will I ever forsake you.”",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Keep your lives free from the love of money and be content with what you have, because God has said,\n“Never will I leave you;\nnever will I forsake you.”",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/hebrews-13-5",
   "text_tl": "Mangilag kayo sa pagibig sa salapi; mangagkasiya kayo sa inyong tinatangkilik: sapagka't siya rin ang nagsabi, Sa anomang paraan ay hindi kita papagkukulangin, sa anomang paraan ni hindi kita pababayaan.",
   "ref_tl": "Mga Hebreo 13:5",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 35,
   "ref": "Matthew 11:28-29",
   "parts": [
-   "Come to Me, all you who labor and are burdened, and I will give you rest.",
-   "Take My yoke upon you and learn from Me, for I am meek and lowly in heart, and you will find rest for your souls."
+   "“Come to me, all you who are weary and burdened, and I will give you rest.",
+   "Take my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls."
   ],
-  "text": "Come to Me, all you who labor and are burdened, and I will give you rest.\nTake My yoke upon you and learn from Me, for I am meek and lowly in heart, and you will find rest for your souls.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "“Come to me, all you who are weary and burdened, and I will give you rest.\nTake my yoke upon you and learn from me, for I am gentle and humble in heart, and you will find rest for your souls.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/matthew-11-28",
   "text_tl": "Magsiparito sa akin, kayong lahat na nangapapagal at nangabibigatang lubha, at kayo'y aking papagpapahingahin.\nPasanin ninyo ang aking pamatok, at magaral kayo sa akin; sapagka't ako'y maamo at mapagpakumbabang puso: at masusumpungan ninyo ang kapahingahan ng inyong mga kaluluwa.",
   "ref_tl": "Mateo 11:28-29",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 36,
   "ref": "Colossians 3:23",
   "parts": [
-   "Whatever you do, work from the soul, as for the Lord and not for people,"
+   "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters,"
   ],
-  "text": "Whatever you do, work from the soul, as for the Lord and not for people,",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters,",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/colossians-3-23",
   "text_tl": "Anomang inyong ginagawa, ay inyong gawin ng buong puso, na gaya ng sa Panginoon, at hindi sa mga tao;",
   "ref_tl": "Mga Taga-Colosas 3:23",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 37,
   "ref": "Philippians 1:6",
   "parts": [
-   "being confident of this very thing, that He who began a good work in you will carry it on to completion until the day of Christ Jesus;"
+   "being confident of this, that he who began a good work in you will carry it on to completion until the day of Christ Jesus."
   ],
-  "text": "being confident of this very thing, that He who began a good work in you will carry it on to completion until the day of Christ Jesus;",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "being confident of this, that he who began a good work in you will carry it on to completion until the day of Christ Jesus.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/philippians-1-6",
   "text_tl": "Na ako'y may lubos na pagkakatiwala sa bagay na ito, na ang nagpasimula sa inyo ng mabuting gawa, ay lulubusin hanggang sa araw ni Jesucristo:",
   "ref_tl": "Mga Taga-Filipos 1:6",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 38,
   "ref": "1 John 5:13",
   "parts": [
-   "These things I have written to you so that you may know that you have eternal life — to you who believe in the name of the Son of God."
+   "I write these things to you who believe in the name of the Son of God so that you may know that you have eternal life."
   ],
-  "text": "These things I have written to you so that you may know that you have eternal life — to you who believe in the name of the Son of God.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "I write these things to you who believe in the name of the Son of God so that you may know that you have eternal life.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/1-john-5-13",
   "text_tl": "Ang mga bagay na ito ay isinulat ko sa inyo, upang inyong maalaman na kayo'y mayroong buhay na walang hanggan, sa makatuwid ay sa inyong nananampalataya sa pangalan ng Anak ng Dios.",
   "ref_tl": "1 Juan 5:13",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 39,
   "ref": "Romans 8:38-39",
   "parts": [
-   "For I am persuaded that neither death, nor life, nor angels, nor rulers, nor things present, nor things to come, nor powers,",
-   "nor height, nor depth, nor any other created thing, shall be able to separate us from the love of God, which is in Christ Jesus our Lord."
+   "For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers,",
+   "neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord."
   ],
-  "text": "For I am persuaded that neither death, nor life, nor angels, nor rulers, nor things present, nor things to come, nor powers,\nnor height, nor depth, nor any other created thing, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers,\nneither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/romans-8-38",
   "text_tl": "Sapagka't ako'y naniniwalang lubos, na kahit ang kamatayan man, kahit ang buhay, kahit ang mga anghel, kahit ang mga pamunuan, kahit ang mga bagay na kasalukuyan, kahit ang mga bagay na darating, kahit ang mga kapangyarihan,\nKahit ang kataasan, kahit ang kababaan, kahit ang alin mang ibang nilalang, ay hindi makapaghihiwalay sa atin sa pagibig ng Dios, na nasa kay Cristo Jesus na Panginoon natin.",
   "ref_tl": "Mga Romano 8:38-39",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  },
  {
   "day": 40,
   "ref": "John 10:28",
   "parts": [
-   "“And I give them eternal life, and they shall never, ever perish, and no one shall snatch them out of My hand."
+   "I give them eternal life, and they shall never perish; no one will snatch them out of my hand."
   ],
-  "text": "“And I give them eternal life, and they shall never, ever perish, and no one shall snatch them out of My hand.",
-  "translation_slug": "vsb",
-  "translation_name": "Veracity Standard Bible",
+  "text": "I give them eternal life, and they shall never perish; no one will snatch them out of my hand.",
+  "translation_slug": "niv",
+  "translation_name": "New International Version",
   "fetched": "2026-10-07",
   "door": "https://www.knowing-jesus.com/john-10-28",
   "text_tl": "At sila'y binibigyan ko ng walang hanggang buhay; at kailan ma'y hindi sila malilipol, at hindi sila aagawin ng sinoman sa aking kamay.",
   "ref_tl": "Juan 10:28",
-  "translation_tl": "Ang Dating Biblia (1905)"
+  "translation_tl": "Ang Dating Biblia (1905)",
+  "source": "127.0.0.1:3020/api/bible/verse"
  }
 ]

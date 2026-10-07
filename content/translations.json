@@ -1,9 +1,14 @@
 {
  "en": {
-  "vsb": {
-   "name": "Veracity Standard Bible",
-   "source": "Knowing Jesus (staging verse door, api/bible/verse), catalog read 2026-10-07",
-   "default": true
+  "niv": {
+   "name": "New International Version",
+   "abbreviation": "NIV",
+   "translation_id": 151,
+   "source": "Knowing Jesus NIV rows (bible.translation 151, New International Version, 30,964 verse texts; the same row on staging and in the Studio DB staging is dumped from) through the verse door api/bible/verse?translation=niv — the Studio twin 127.0.0.1:3020 (staging's public catalog folds niv to vsb), fetched 2026-10-07",
+   "licence": "Biblica gratis use: up to 500 verses, under 25 % of the work, with the notice below (this site quotes 49 verses)",
+   "notice": "Scripture quotations taken from The Holy Bible, New International Version® NIV® Copyright © 2011 by Biblica, Inc.™ Used by permission. All rights reserved worldwide.",
+   "default": true,
+   "ruled": "owner word 2026-10-07 \"Don't have veracity standard .. use NIV translation\" (TR-translation, owner/3r4l-translation-niv-2026-10-07)"
   },
   "kjv": {
    "name": "King James Version",
