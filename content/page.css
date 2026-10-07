@@ -48,7 +48,7 @@ main>#card{margin-top:var(--gap)}
 #card .other{font:400 1.0625rem/1.45 var(--serif);margin:1rem 0 0;white-space:pre-line}
 /* THE INTERIM placeholder is set as the printed card will be: left-set under the gold rule, in the card's ink at reading size. */
 #card.placeholder p{margin:0;color:var(--card-ink);font:400 1.3125rem/1.5 var(--serif);max-width:30ch;text-wrap:pretty}
-/* THE LITANY — the owner's six lines set to be read, not scanned past (his word on r5: "broken up or illustrated better … bullet points"): his question as before; the promise one size up in the serif with air under it; the lead line in the body face, its saying pulled out on its own line in italic serif (the quotes as typed); the four "He will help you…" lines as a list, each on its own line with a hanging indent, a 4 px gold square at the margin and a small gold line drawing beside it (book · ball · hammer · moon and star) at the door glyph's stroke, 24 px, toned gold by night. */
+/* THE LITANY — the owner's six lines set to be read, not scanned past (his word on r5: "broken up or illustrated better … bullet points"): his question as before; the promise one size up in the serif with air under it; the lead line in the body face, its saying pulled out on its own line in italic serif (the quotes as typed); the four "He will help you…" lines as a list, each on its own line with a hanging indent, a 4 px gold square at the margin and a small gold line drawing beside it (book · ball · hammer · cross) at the door glyph's stroke, 24 px, toned gold by night. */
 .taking{margin:var(--gap) 0 0}
 .taking .promise{font:400 1.25rem/1.45 var(--serif);color:var(--head);margin:0 0 1.25rem}
 .taking .lead{margin:0 0 1.25rem}
