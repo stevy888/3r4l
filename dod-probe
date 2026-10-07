@@ -1,0 +1,11 @@
+#!/bin/bash
+# dod-probe: read-only, under 20 s. Prints <done>\t4 where done = the four paths of https://3r4l.org answering 200 AND passing check-wording AND carrying the right tongue. 0 until markers/tr-live.marker exists.
+D=/Users/aibrain/projects/3r4l; test -f $D/markers/tr-live.marker || { printf '0\t4\n'; exit 0; }
+T=${TMPDIR:-/tmp}/3r4l-probe; rm -rf $T; n=0
+for p in / /what-next/ /en/ /en/what-next/; do
+  mkdir -p $T$p; c=$(curl -s -m 10 -o $T${p}index.html -w '%{http_code}' https://3r4l.org$p); [ "$c" = 200 ] || continue
+  case $p in /en*) want=en;; *) want=tl;; esac
+  grep -q "<html lang=\"$want\"" $T${p}index.html || continue
+  bash $D/check-wording $T$p >/dev/null 2>&1 && n=$((n+1))
+done
+printf '%s\t4\n' $n

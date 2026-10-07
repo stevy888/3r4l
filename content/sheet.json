@@ -1,0 +1,42 @@
+{
+ "_note": "The owner's nine COPY strings exactly as typed (press/OWNER-WORD-3r4l-site-2026-10-06.md message 1; TR-copy A, TR-spelling A: 'everyday' x2 and 'its' x3 as typed; the stray closing quote after 'taking you?' dropped as a paste artefact; the link label without a question mark; the schoolhouse bullet one paragraph) + his what-next clause (TR-whatnext-line A). Nothing else here is the owner's prose.",
+ "h1": "Confess, confess, confess. Never stop, never stop, never stop.",
+ "h1_lines": [
+  "Confess, confess, confess.",
+  "Never stop, never stop, never stop."
+ ],
+ "h2": "If you use the rules everyday, where will God be taking you?",
+ "lines": [
+  "Ultimately, He will take you to be with Him in heaven; wherever He is, you will be there.",
+  "In this life He will walk you to school everyday, and He will attend every class with you. \"This life is a schoolhouse.\"",
+  "He will help you with your homework.",
+  "He will help you when its time to play.",
+  "He will help you when its time to work.",
+  "He will help you when its time to rest, and worship."
+ ],
+ "whatnext_link": "Have you used the prayer, what next",
+ "whatnext_clause": "Keep using the rules daily and especially confession. Never stop.",
+ "labels": {
+  "_note": "TR-labels A — the only labels and strings not in the owner's words, flagged once",
+  "lang_link": "Tagalog",
+  "read_on_kj": "Read it on Knowing Jesus",
+  "print_card": "Print the card",
+  "print_sheet": "Print a sheet of cards",
+  "share": "Share",
+  "messenger": "Messenger",
+  "viber": "Viber",
+  "text": "Text",
+  "whatsapp": "WhatsApp",
+  "email": "Email",
+  "home": "Home",
+  "forty": "The forty days",
+  "one_a_day": "One a day. Start at 1.",
+  "today": "today",
+  "todays_verse": "Today's verse",
+  "title_whatnext_suffix": " — Have you used the prayer, what next"
+ },
+ "placeholder": {
+  "_note": "THE INTERIM ONLY (plan §4 THE INPUTS GATE: a greyed placeholder until Jeff's PDF lands). Nothing here claims to be the prayer or the rules. Removed by build.mjs the moment content/card.txt exists.",
+  "card": "The card's wording goes here, word for word from Jeff's card."
+ }
+}

@@ -1,0 +1,8 @@
+inputs/
+markers/
+*.env
+node_modules
+.venv/
+*.DRAFT.*
+content/tl-cache/*.tmp
+.DS_Store

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3R4L — Have you used the prayer, what next</title>
+<meta name="description" content="Confess, confess, confess. Never stop, never stop, never stop.">
+<meta property="og:title" content="Confess, confess, confess. Never stop, never stop, never stop.">
+<meta property="og:description" content="Confess, confess, confess. Never stop, never stop, never stop.">
+<meta name="color-scheme" content="light dark">
+<style>
+/* 3r4l — the numbers block of the plan (reader-first-design appendix A); inlined by build.mjs. Tokens: look.md (navy · gold · cream). System faces only. */
+:root{--serif:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,"Noto Serif",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;
+--paper:#fbf8f1;--ink:#1a233f;--mute:#5b6274;--card:#f7f2e7;--line:#b8882d;--door:#1a233f;--focus:#b8882d;--grey:#6b7280;--pad:1.5rem;--top:1.75rem;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141a2e;--ink:#ece6d6;--mute:#b3b8c7;--card:#1f2742;--line:#8f6f2c;--door:#ece6d6;--focus:#d1a84a;--grey:#9aa0b0}}
+:root[data-theme="dark"]{--paper:#141a2e;--ink:#ece6d6;--mute:#b3b8c7;--card:#1f2742;--line:#8f6f2c;--door:#ece6d6;--focus:#d1a84a;--grey:#9aa0b0}
+@media (max-width:359px){:root{--pad:1.25rem}}
+html{font-size:100%;-webkit-text-size-adjust:100%;hyphens:none;-webkit-hyphens:none}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.125rem/1.55 var(--sans);overflow-x:hidden}
+main{padding:var(--top) var(--pad) 2.5rem;max-width:40rem;margin:0 auto;position:relative}
+p,h1,h2,li{overflow-wrap:break-word}
+.prose{max-width:34ch;text-wrap:pretty}
+.lang{position:absolute;top:.25rem;right:var(--pad);margin:0;font:0.9375rem/1.25 var(--sans);height:1.25rem}
+.lang a{color:var(--mute);text-decoration:underline;text-underline-offset:.15em;padding:0}
+h1{font:500 2rem/1.15 var(--serif);margin:0 0 1.25rem;text-wrap:pretty}
+h2{font:500 1.375rem/1.25 var(--serif);margin:2rem 0 .75rem;text-wrap:pretty}
+@media (max-width:419px){h1{font-size:1.8125rem}}
+@media (max-width:359px){h1{font-size:1.75rem}h2{font-size:1.3125rem}.verse .text{font-size:1.25rem}#card .prayer{font-size:1.1875rem}#card .rules{font-size:1.125rem}}
+#card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.25rem;margin:0 0 1.5rem;font-family:var(--serif)}
+#card .title{font:600 1.25rem/1.3 var(--serif);margin:0 0 .75rem}
+#card .prayer{font:1.25rem/1.5 var(--serif);margin:0 0 1rem;white-space:pre-line}
+#card .rules{font:1.1875rem/1.45 var(--serif);margin:0;padding-left:1.5rem}
+#card .rules li{margin:0 0 .5rem}
+#card .other{font:1.0625rem/1.45 var(--serif);margin:1rem 0 0;white-space:pre-line}
+#card.placeholder{border-style:dashed}
+#card.placeholder p{margin:0;color:var(--grey);font:italic 1.125rem/1.5 var(--serif)}
+.taking p{margin:0 0 .75rem}
+.label{font:0.9375rem/1.3 var(--sans);color:var(--mute);margin:2rem 0 .5rem}
+.verse .ref{font:600 1rem/1.3 var(--sans);margin:0 0 .5rem}
+.verse .text{font:1.375rem/1.45 var(--serif);margin:0 0 .5rem;white-space:pre-line}
+.verse .tr{font:0.9375rem/1.3 var(--sans);color:var(--mute);margin:0 0 .25rem}
+.forty{list-style:none;margin:0;padding:0}
+.forty>li{display:none}
+.forty>li.is-today{display:block}
+.door{display:flex;align-items:center;min-height:3rem;font:500 1.0625rem/1.3 var(--sans);color:var(--door);text-decoration:underline;text-underline-offset:.2em;text-decoration-color:var(--line);margin:0}
+.door::after{content:" ›";white-space:pre}
+a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px}
+.next{margin:2rem 0 0}
+.next.under-card{margin:0 0 .5rem}
+.next .door{font-size:1.125rem}
+.message{font:500 1.375rem/1.3 var(--serif);margin:0 0 .75rem;text-wrap:pretty}
+.clause{font:1.125rem/1.55 var(--sans);margin:0 0 1.5rem}
+.list{margin:0;padding-left:2rem;font:1.125rem/1.6 var(--sans)}
+.list li{margin:0 0 .25rem;padding-left:.25rem}
+.list .today{display:none;font:600 0.9375rem/1.3 var(--sans);color:var(--line);margin-left:.5rem}
+.list .door{display:none}
+.list li.is-today .today{display:inline}
+.list li.is-today .door{display:flex}
+.doors .door{margin:0}
+.share{margin:0}
+.share button{display:flex;align-items:center;min-height:3rem;font:500 1.0625rem/1.3 var(--sans);color:var(--door);background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:.2em;text-decoration-color:var(--line);cursor:pointer}
+.share button::after{content:" ›";white-space:pre}
+.addr{font:0.9375rem/1.3 var(--sans);color:var(--mute);margin:.25rem 0 0}
+[hidden]{display:none!important}
+@media print{body{background:#fff;color:#000}main>*{display:none}main>#card{display:block;border-color:#000;background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<main>
+<h1>Have you used the prayer, what next</h1>
+<p class="clause prose">Keep using the rules daily and especially confession. Never stop.</p>
+<section class="verse">
+<p class="message">Confess, confess, confess. Never stop, never stop, never stop.</p>
+<p class="text">If we confess our sins, He is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.</p>
+<p class="ref">1 John 1:9</p>
+<p class="tr">Veracity Standard Bible</p>
+<a class="door" href="https://www.knowing-jesus.com/1-john-1-9">Read it on Knowing Jesus</a>
+</section>
+<section id="card" class="placeholder"><p>The card's wording goes here, word for word from Jeff's card.</p></section>
+<section id="forty">
+<h2>The forty days</h2>
+<p class="label">One a day. Start at 1.</p>
+<ol class="list">
+<li data-day="1"><span class="ref">1 John 1:9</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-john-1-9">Read it on Knowing Jesus</a></li>
+<li data-day="2"><span class="ref">Luke 18:13</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Luke/18/13">Read it on Knowing Jesus</a></li>
+<li data-day="3"><span class="ref">Psalm 51:1</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/51/1">Read it on Knowing Jesus</a></li>
+<li data-day="4"><span class="ref">Psalm 32:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/32/5">Read it on Knowing Jesus</a></li>
+<li data-day="5"><span class="ref">Proverbs 28:13</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Proverbs/28/13">Read it on Knowing Jesus</a></li>
+<li data-day="6"><span class="ref">Hebrews 4:16</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/hebrews-4-16">Read it on Knowing Jesus</a></li>
+<li data-day="7"><span class="ref">Lamentations 3:22-23</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/lamentations-3-22">Read it on Knowing Jesus</a></li>
+<li data-day="8"><span class="ref">Matthew 28:20</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/matthew-28-20">Read it on Knowing Jesus</a></li>
+<li data-day="9"><span class="ref">John 14:3</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/john-14-3">Read it on Knowing Jesus</a></li>
+<li data-day="10"><span class="ref">1 Timothy 2:1</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-timothy-2-1">Read it on Knowing Jesus</a></li>
+<li data-day="11"><span class="ref">Psalm 103:12</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/psalm-103-12">Read it on Knowing Jesus</a></li>
+<li data-day="12"><span class="ref">Micah 7:18-19</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/micah-7-18">Read it on Knowing Jesus</a></li>
+<li data-day="13"><span class="ref">Isaiah 1:18</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/isaiah-1-18">Read it on Knowing Jesus</a></li>
+<li data-day="14"><span class="ref">1 John 2:1</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-john-2-1">Read it on Knowing Jesus</a></li>
+<li data-day="15"><span class="ref">Psalm 130:3-4</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/psalm-130-3">Read it on Knowing Jesus</a></li>
+<li data-day="16"><span class="ref">Psalm 139:23-24</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/139/23">Read it on Knowing Jesus</a></li>
+<li data-day="17"><span class="ref">James 5:16</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/james-5-16">Read it on Knowing Jesus</a></li>
+<li data-day="18"><span class="ref">Ephesians 6:18</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/ephesians-6-18">Read it on Knowing Jesus</a></li>
+<li data-day="19"><span class="ref">Matthew 5:7</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/matthew-5-7">Read it on Knowing Jesus</a></li>
+<li data-day="20"><span class="ref">Luke 6:36</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/luke-6-36">Read it on Knowing Jesus</a></li>
+<li data-day="21"><span class="ref">Titus 3:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/titus-3-5">Read it on Knowing Jesus</a></li>
+<li data-day="22"><span class="ref">Ephesians 2:4-5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/ephesians-2-4">Read it on Knowing Jesus</a></li>
+<li data-day="23"><span class="ref">Psalm 86:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/86/5">Read it on Knowing Jesus</a></li>
+<li data-day="24"><span class="ref">Micah 6:8</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/micah-6-8">Read it on Knowing Jesus</a></li>
+<li data-day="25"><span class="ref">Matthew 5:44</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Matthew/5/44">Read it on Knowing Jesus</a></li>
+<li data-day="26"><span class="ref">Philippians 4:6-7</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/philippians-4-6">Read it on Knowing Jesus</a></li>
+<li data-day="27"><span class="ref">Colossians 4:2</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/colossians-4-2">Read it on Knowing Jesus</a></li>
+<li data-day="28"><span class="ref">1 Thessalonians 5:17</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-thessalonians-5-17">Read it on Knowing Jesus</a></li>
+<li data-day="29"><span class="ref">Galatians 6:9</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/galatians-6-9">Read it on Knowing Jesus</a></li>
+<li data-day="30"><span class="ref">Luke 9:23</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/luke-9-23">Read it on Knowing Jesus</a></li>
+<li data-day="31"><span class="ref">Psalm 32:8</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/32/8">Read it on Knowing Jesus</a></li>
+<li data-day="32"><span class="ref">Proverbs 3:5-6</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/proverbs-3-5">Read it on Knowing Jesus</a></li>
+<li data-day="33"><span class="ref">Joshua 1:9</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/joshua-1-9">Read it on Knowing Jesus</a></li>
+<li data-day="34"><span class="ref">Hebrews 13:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/hebrews-13-5">Read it on Knowing Jesus</a></li>
+<li data-day="35"><span class="ref">Matthew 11:28-29</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/matthew-11-28">Read it on Knowing Jesus</a></li>
+<li data-day="36"><span class="ref">Colossians 3:23</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/colossians-3-23">Read it on Knowing Jesus</a></li>
+<li data-day="37"><span class="ref">Philippians 1:6</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/philippians-1-6">Read it on Knowing Jesus</a></li>
+<li data-day="38"><span class="ref">1 John 5:13</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-john-5-13">Read it on Knowing Jesus</a></li>
+<li data-day="39"><span class="ref">Romans 8:38-39</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/romans-8-38">Read it on Knowing Jesus</a></li>
+<li data-day="40"><span class="ref">John 10:28</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/john-10-28">Read it on Knowing Jesus</a></li>
+</ol>
+</section>
+<section class="share">
+<p class="label">Share</p>
+<button id="share" hidden data-title="3R4L" data-text="Confess, confess, confess. Never stop, never stop, never stop.">Share</button>
+<div id="share-links">
+<a class="door" href="fb-messenger://share?link=https%3A%2F%2F3r4l.org%2F">Messenger</a>
+<a class="door" href="viber://forward?text=Confess%2C%20confess%2C%20confess.%20Never%20stop%2C%20never%20stop%2C%20never%20stop.%20https%3A%2F%2F3r4l.org%2F">Viber</a>
+<a class="door" href="sms:?&amp;body=Confess%2C%20confess%2C%20confess.%20Never%20stop%2C%20never%20stop%2C%20never%20stop.%20https%3A%2F%2F3r4l.org%2F">Text</a>
+<a class="door" href="https://wa.me/?text=Confess%2C%20confess%2C%20confess.%20Never%20stop%2C%20never%20stop%2C%20never%20stop.%20https%3A%2F%2F3r4l.org%2F">WhatsApp</a>
+<a class="door" href="mailto:?subject=3R4L&amp;body=Confess%2C%20confess%2C%20confess.%20Never%20stop%2C%20never%20stop%2C%20never%20stop.%20https%3A%2F%2F3r4l.org%2F">Email</a>
+</div>
+<p class="addr">https://3r4l.org/</p>
+</section>
+<p class="next"><a class="door" href="../">Home</a></p>
+</main>
+<script>
+(function(){
+  var S={"y":2026,"m":10,"d":7};
+  var t=new Date();
+  var d=Math.floor((Date.UTC(t.getFullYear(),t.getMonth(),t.getDate())-Date.UTC(S.y,S.m-1,S.d))/86400000);
+  var N=d<0?1:(d%40)+1;
+  var li=document.querySelector('li[data-day="'+N+'"]');
+  if(li){li.classList.add('is-today');}
+  var b=document.getElementById('share');
+  if(b&&navigator.share){
+    var f=document.getElementById('share-links');
+    if(f){f.hidden=true;}
+    b.hidden=false;
+    b.addEventListener('click',function(){
+      navigator.share({title:b.getAttribute('data-title'),text:b.getAttribute('data-text'),url:'https://3r4l.org/'}).catch(function(){});
+    });
+  }
+})();
+</script>
+<noscript><style>.list>li[data-day="1"] .today{display:inline}.list>li[data-day="1"] .door{display:flex}</style></noscript>
+</body>
+</html>

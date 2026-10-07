@@ -1,0 +1,85 @@
+{
+ "source": "https://api.getbible.net/v2/tagalog.json (Ang Dating Biblia 1905; book names as that catalog prints them)",
+ "books": {
+  "1 John": {
+   "nr": 62,
+   "tl": "1 Juan"
+  },
+  "Luke": {
+   "nr": 42,
+   "tl": "Lucas"
+  },
+  "Psalm": {
+   "nr": 19,
+   "tl": "Mga Awit"
+  },
+  "Proverbs": {
+   "nr": 20,
+   "tl": "Mga Kawikaan"
+  },
+  "Hebrews": {
+   "nr": 58,
+   "tl": "Mga Hebreo"
+  },
+  "Lamentations": {
+   "nr": 25,
+   "tl": "Mga Panaghoy"
+  },
+  "Matthew": {
+   "nr": 40,
+   "tl": "Mateo"
+  },
+  "John": {
+   "nr": 43,
+   "tl": "Juan"
+  },
+  "1 Timothy": {
+   "nr": 54,
+   "tl": "1 Timoteo"
+  },
+  "Micah": {
+   "nr": 33,
+   "tl": "Mikas"
+  },
+  "Isaiah": {
+   "nr": 23,
+   "tl": "Isaias"
+  },
+  "James": {
+   "nr": 59,
+   "tl": "Santiago"
+  },
+  "Ephesians": {
+   "nr": 49,
+   "tl": "Mga Efeso"
+  },
+  "Titus": {
+   "nr": 56,
+   "tl": "Tito"
+  },
+  "Philippians": {
+   "nr": 50,
+   "tl": "Mga Taga-Filipos"
+  },
+  "Colossians": {
+   "nr": 51,
+   "tl": "Mga Taga-Colosas"
+  },
+  "1 Thessalonians": {
+   "nr": 52,
+   "tl": "1 Mga Taga-Tesalonica"
+  },
+  "Galatians": {
+   "nr": 48,
+   "tl": "Mga Taga-Galacia"
+  },
+  "Joshua": {
+   "nr": 6,
+   "tl": "Josue"
+  },
+  "Romans": {
+   "nr": 45,
+   "tl": "Mga Romano"
+  }
+ }
+}

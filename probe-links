@@ -1,0 +1,5 @@
+#!/bin/bash
+# probe-links <base-url> — follows every internal href of the four pages and the short doors on a served host and asserts 200 (plan rung 2 ACCEPTANCE). rc 1 on any miss.
+B="${1%/}/"; bad=0; for p in "" what-next/ en/ en/what-next/ next/ 40/; do html=$(curl -s -m 15 "$B$p") || { echo "MISS $B$p"; bad=1; continue; }
+  for h in $(printf '%s' "$html" | grep -oE 'href="[^"]+"|url=[^"]+"' | sed -E 's/^href="//; s/^url=//; s/"$//' | grep -vE '^(https?:|mailto:|sms:|viber:|fb-messenger:|#)'); do
+    u=$(python3 -c "import sys,urllib.parse as u; print(u.urljoin(sys.argv[1], sys.argv[2]).split('#')[0])" "$B$p" "$h"); c=$(curl -s -m 15 -o /dev/null -w '%{http_code}' "$u"); [ "$c" = 200 ] && echo "200 $p → $h" || { echo "MISS $c $p → $h ($u)"; bad=1; }; done; done; exit $bad

@@ -1,0 +1,15 @@
+#!/bin/bash
+# doctor — the tools this site's scripts need (rung 0; read-only; prints OK/FAIL per check, rc 1 on any FAIL)
+cd "$(dirname "$0")" || exit 1; rc=0; ok(){ echo "OK   $1"; }; bad(){ echo "FAIL $1"; rc=1; }
+node -e 'process.exit(parseInt(process.versions.node)>=20?0:1)' 2>/dev/null && ok "node $(node -v)" || bad "node >= 20"
+node --input-type=module -e "Promise.all([import('@playwright/test'),import('node:fs')]).then(([m,fs])=>process.exit(fs.existsSync(m.chromium.executablePath())?0:1))" 2>/dev/null && ok "@playwright/test + chromium path" || bad "@playwright/test import / chromium path (node_modules symlink)"
+./.venv/bin/python -W ignore -c "import fitz, segno" 2>/dev/null && ok "venv: pymupdf + segno" || bad "venv: pymupdf + segno (.venv/bin/pip install segno pymupdf)"
+command -v pdftotext >/dev/null && ok "pdftotext" || bad "pdftotext (brew install poppler)"
+gh auth status >/dev/null 2>&1 && ok "gh auth" || bad "gh auth status"
+test -f "$HOME/.config/kj/external-probe.env" && ok "token file present (never read here)" || bad "~/.config/kj/external-probe.env"
+H=$( set -a; . "$HOME/.config/kj/external-probe.env" 2>/dev/null; set +a; curl -s -m 15 -o /dev/null -w '%{http_code}' -H "CF-Access-Client-Id: $CF_ACCESS_CLIENT_ID" -H "CF-Access-Client-Secret: $CF_ACCESS_CLIENT_SECRET" 'https://staging.knowing-jesus.com/api/bible/verse?reference=1%20John%201:9' )
+[ "$H" = 200 ] && ok "staging verse door 200" || bad "staging verse door answered $H (want 200)"
+M=$( set -a; . "$HOME/.config/kj/external-probe.env" 2>/dev/null; set +a; curl -s -m 15 -o /dev/null -w '%{http_code}' -H "CF-Access-Client-Id: $CF_ACCESS_CLIENT_ID" -H "CF-Access-Client-Secret: $CF_ACCESS_CLIENT_SECRET" 'https://staging.knowing-jesus.com/api/bible/verse?reference=Zzz%2099:99' )
+[ "$M" = 404 ] && ok "staging verse door 404 on an unknown reference" || bad "staging verse door answered $M on an unknown reference (want 404)"
+G=$(curl -s -m 15 -o /dev/null -w '%{http_code}' https://api.getbible.net/v2/tagalog/books.json); [ "$G" = 200 ] && ok "getbible books.json 200" || bad "getbible books.json answered $G"
+exit $rc

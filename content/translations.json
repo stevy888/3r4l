@@ -1,0 +1,26 @@
+{
+ "en": {
+  "vsb": {
+   "name": "Veracity Standard Bible",
+   "source": "Knowing Jesus (staging verse door, api/bible/verse), catalog read 2026-10-07",
+   "default": true
+  },
+  "kjv": {
+   "name": "King James Version",
+   "source": "Knowing Jesus catalog read 2026-10-07"
+  }
+ },
+ "tl": {
+  "adb1905": {
+   "name": "Ang Dating Biblia (1905)",
+   "language": "Tagalog",
+   "licence": "Public Domain",
+   "licence_line": "Ang Dating Biblia (1905), Philippine Bible Society (1905); public domain — text from api.getbible.net v2 (abbreviation tagalog, distribution version 1.2, 2008-07-19; typed from the Ang Biblia Tagalog by Richard & Dolores Long)",
+   "source_url": "https://api.getbible.net/v2/tagalog/<book_nr>/<chapter>.json",
+   "catalog_url": "https://api.getbible.net/v2/tagalog.json",
+   "fetched": "2026-10-07",
+   "default": true,
+   "alternative_not_offered": "Ang Salita ng Diyos (Biblica, CC BY-SA 4.0): no machine source found by this seat on 2026-10-07, so not offered to the pastor (plan rung 1)"
+  }
+ }
+}
