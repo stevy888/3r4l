@@ -15,7 +15,7 @@ const NOTICE = 'Scripture quotations taken from The Holy Bible, New Internationa
 const enDefault = Object.values(tr.en).find(t => t.default); if (!enDefault || enDefault.notice !== NOTICE) { console.log('FAIL: the default English translation\'s notice in translations.json is not the legal string of record'); process.exit(1); }
 const inputs = '/Users/aibrain/projects/3r4l-inputs', checked = fs.existsSync(C('sheet-tl.json')) && fs.existsSync(path.join(inputs, 'pastor-check.txt'));
 const cardOf = f => fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : null, cardEn = cardOf(C('card.txt')), cardTl = cardOf(path.join(inputs, 'card-tl.txt'));
-const blocks = t => t ? [...t.matchAll(/^== \w+ ==\n([\s\S]*?)(?=\n== |$)/gm)].map(m => m[1]) : [];
+const blocks = t => t ? [...t.matchAll(/^== \w+ ==\n([\s\S]*?)(?=\n== \w+ ==\n|(?![\s\S]))/gm)].map(m => m[1].replace(/\n$/, '')) : []; // a block ends at the next header or EOF, never at a line end (the plan's `$` under the m flag cut each block to its first line; defect met 2026-10-07)
 function allow(lang) { const S = lang === 'tl' ? J(C('sheet-tl.json')) : sheet, card = lang === 'tl' ? (cardTl || cardEn) : cardEn, A = new Set(), add = s => { if (s) A.add(normalise(s)); };
   [S.h1, S.h2, S.whatnext_link, S.whatnext_clause, ...S.h1_lines, ...S.lines].forEach(add); Object.entries(S.labels).forEach(([k, v]) => { if (k[0] !== '_') { add(v); add(v + ' ›'); } });
   const title = card ? blocks(card)[0] : '3R4L'; add(title); add(title + S.labels.title_whatnext_suffix); add(ADDRESS); add(NOTICE); // the legal string, both languages

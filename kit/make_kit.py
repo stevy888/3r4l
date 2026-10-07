@@ -16,7 +16,7 @@ def normalise(s):  # the twin of normalise.mjs for the pdftotext side: NFKC, whi
 
 def card_text():
     t = open(CARD_TXT, encoding='utf-8').read()
-    return normalise(' '.join(m.group(1) for m in re.finditer(r'^== \w+ ==\n([\s\S]*?)(?=\n== |$)', t, re.M)))
+    return normalise(' '.join(m.group(1) for m in re.finditer(r'^== \w+ ==\n([\s\S]*?)(?=\n== \w+ ==\n|(?![\s\S]))', t, re.M)))  # a block ends at the next header or EOF, never at a line end (the plan's `$` under re.M cut each block to its first line)
 
 def impose(fitz, src, out_path, stamp=None):
     """N-up on A4 and Letter (one page per size; both orientations tried, the larger count wins). Returns [(size, n, cells)]."""

@@ -277,19 +277,19 @@
  },
  {
   "day": 18,
-  "ref": "Ephesians 6:18",
-  "parts": [
-   "And pray in the Spirit on all occasions with all kinds of prayers and requests. With this in mind, be alert and always keep on praying for all the Lord’s people."
-  ],
-  "text": "And pray in the Spirit on all occasions with all kinds of prayers and requests. With this in mind, be alert and always keep on praying for all the Lord’s people.",
+  "ref": "Ephesians 4:32",
   "translation_slug": "niv",
   "translation_name": "New International Version",
+  "source": "127.0.0.1:3020/api/bible/verse",
+  "parts": [
+   "Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you."
+  ],
+  "text": "Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you.",
   "fetched": "2026-10-07",
-  "door": "https://www.knowing-jesus.com/ephesians-6-18",
-  "text_tl": "Na magsipanalangin kayo sa Espiritu ng lahat ng panalangin at daing sa buong panahon, at mangagpuyat sa buong katiyagaan at daing na patungkol sa lahat ng mga banal,",
-  "ref_tl": "Mga Efeso 6:18",
-  "translation_tl": "Ang Dating Biblia (1905)",
-  "source": "127.0.0.1:3020/api/bible/verse"
+  "door": "https://www.knowing-jesus.com/ephesians-4-32",
+  "text_tl": "At magmagandang-loob kayo sa isa't isa, mga mahabagin, na mangagpatawaran kayo sa isa't isa, gaya naman ng pagpapatawad sa inyo ng Dios kay Cristo.",
+  "ref_tl": "Mga Efeso 4:32",
+  "translation_tl": "Ang Dating Biblia (1905)"
  },
  {
   "day": 19,
