@@ -5,10 +5,10 @@
 :root{--serif:"Source Serif 4","Iowan Old Style",Palatino,"Palatino Linotype",Georgia,"Noto Serif",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;
 --paper:#ffffff;--ink:#262626;--head:#1b2440;--mute:#5d5d5d;--gold:#b9892e;--gold-text:#6e4e14;--horizon:#dccfb1;--draw:#1b2440;--sun:#e8d9b8;--ray:#d6bd86;--bulb:#d9be7a;
 --card-face:#f7efdc;--card-edge:#1b2440;--card-ink:#1b2440;--card-body:#262626;--card-shadow:6px 7px 12px -6px rgba(27,36,64,.28);
---door:#1b2440;--door-rule:#a3781f;--focus:#a3781f;--band:#1b2440;--band-ink:#f8f3e8;--band-mute:#aeb4c6;--glow:#343a4e;--lift:2.5rem;--pad:1.5rem;--top:1.75rem;--gap:2.5rem;--dawn-h:3rem;color-scheme:light dark}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141b31;--ink:#d6cfc0;--head:#f8f3e8;--mute:#aeb4c6;--gold:#a6802c;--gold-text:#cdb272;--horizon:#665b45;--draw:#cfc6b3;--sun:#3a362e;--ray:#8c7d55;--bulb:#cdb272;--card-face:#413a2e;--card-edge:#7d7059;--card-ink:#f8f3e8;--card-body:#efe9dc;--card-shadow:6px 7px 12px -6px rgba(0,0,0,.55);--door:#f8f3e8;--door-rule:#c9ad6a;--focus:#c9ad6a;--band:#141b31}
+--door:#1b2440;--door-rule:#a3781f;--focus:#a3781f;--panel:#1b2440;--panel-ink:#f8f3e8;--panel-mute:#aeb4c6;--panel-gold:#d4b36a;--panel-rule:#3a4466;--band:#1b2440;--band-ink:#f8f3e8;--band-mute:#aeb4c6;--glow:#343a4e;--lift:2.5rem;--pad:1.5rem;--top:1.75rem;--gap:2.5rem;--dawn-h:3rem;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141b31;--ink:#d6cfc0;--head:#f8f3e8;--mute:#aeb4c6;--gold:#a6802c;--gold-text:#cdb272;--horizon:#665b45;--draw:#cfc6b3;--sun:#3a362e;--ray:#8c7d55;--bulb:#cdb272;--card-face:#413a2e;--card-edge:#7d7059;--card-ink:#f8f3e8;--card-body:#efe9dc;--card-shadow:6px 7px 12px -6px rgba(0,0,0,.55);--door:#f8f3e8;--door-rule:#c9ad6a;--focus:#c9ad6a;--panel:#232c4a;--panel-rule:#4a5480;--band:#141b31}
 :root:not([data-theme="light"]) .day{display:none}:root:not([data-theme="light"]) .night{display:block}}
-:root[data-theme="dark"]{--paper:#141b31;--ink:#d6cfc0;--head:#f8f3e8;--mute:#aeb4c6;--gold:#a6802c;--gold-text:#cdb272;--horizon:#665b45;--draw:#cfc6b3;--sun:#3a362e;--ray:#8c7d55;--bulb:#cdb272;--card-face:#413a2e;--card-edge:#7d7059;--card-ink:#f8f3e8;--card-body:#efe9dc;--card-shadow:6px 7px 12px -6px rgba(0,0,0,.55);--door:#f8f3e8;--door-rule:#c9ad6a;--focus:#c9ad6a;--band:#141b31}
+:root[data-theme="dark"]{--paper:#141b31;--ink:#d6cfc0;--head:#f8f3e8;--mute:#aeb4c6;--gold:#a6802c;--gold-text:#cdb272;--horizon:#665b45;--draw:#cfc6b3;--sun:#3a362e;--ray:#8c7d55;--bulb:#cdb272;--card-face:#413a2e;--card-edge:#7d7059;--card-ink:#f8f3e8;--card-body:#efe9dc;--card-shadow:6px 7px 12px -6px rgba(0,0,0,.55);--door:#f8f3e8;--door-rule:#c9ad6a;--focus:#c9ad6a;--panel:#232c4a;--panel-rule:#4a5480;--band:#141b31}
 :root[data-theme="dark"] .day{display:none}:root[data-theme="dark"] .night{display:block}
 @media (max-width:359px){:root{--pad:1.25rem}}
 html{font-size:100%;-webkit-text-size-adjust:100%;hyphens:none;-webkit-hyphens:none}
@@ -25,7 +25,7 @@ h1{font:500 1.875rem/1.2 var(--serif);color:var(--head);letter-spacing:-.01em;ma
 h2{font:600 1.125rem/1.5 var(--sans);color:var(--head);margin:0 0 .75rem;text-wrap:pretty}
 @media (max-width:419px){h1{font-size:1.8125rem}}
 @media (max-width:383px){h1{font-size:1.6875rem}}
-@media (max-width:359px){h1{font-size:1.5rem}.verse .text{font-size:1.1875rem}#card .prayer{font-size:1.1875rem}#card .rules{font-size:1.125rem}#card.placeholder p{font-size:1.25rem}}
+@media (max-width:359px){h1{font-size:1.5rem}.verse .text{font-size:1.25rem}.verse{padding-left:1.125rem;padding-right:1.125rem}.verse::before{left:1rem}#card .prayer{font-size:1.1875rem}#card .rules{font-size:1.125rem}#card.placeholder p{font-size:1.25rem}}
 /* THE HERO BAND — the family's navy from the top edge, full-bleed (the margins reach the device's edges, the padding brings the words back to the one left edge); the headline in cream serif on it, three lines at 390, the strongest thing on the page. It adds no height above the headline: its top pad IS main's top pad (the negative margin takes main's back). On the home it runs on under the dawn and behind the card's top third (--lift), and the card block pulls up by the same --lift, so the card reads as lifted out of the night into the day while every measured row below the headline keeps r5's geometry; on what-next it holds the headline and the clause. By night the band is the page (--band = --paper). The rays' tips and the glow's crown stay under the headline: 28 and 25 px of air at 390. */
 .band{background:var(--band);color:var(--band-ink);margin:calc(-1*var(--top)) calc(50% - 50vw) 0;padding:var(--top) calc(50vw - 50%) var(--gap)}
 .band h1{color:var(--band-ink)}
@@ -33,7 +33,6 @@ h2{font:600 1.125rem/1.5 var(--sans);color:var(--head);margin:0 0 .75rem;text-wr
 .band .lang a{color:var(--band-mute);text-decoration-color:var(--door-rule)}
 .band.lifts{padding-bottom:calc(var(--gap) + var(--dawn-h) + var(--lift))}
 .band.lifts+.held{margin-top:calc(-1*var(--lift))}
-.band+.verse{margin-top:1.5rem}
 /* THE CARD, ALONE — paper: a warmer cream, a crisp 1 px edge, the corner lift, one soft shadow to the right and below only (the only alpha on the page), Jeff's gold rule printed inside above the wording. The dawn rises BEHIND its top edge (half the disc hidden; the SVG's bottom sits 1 px under the card's edge): five faint rays by day; by night the same disc is the lamp's pool and the pendant lamp hangs over it. The dawn's box is --dawn-h tall; the gap above the card is --gap + --dawn-h so the air between the headline and the rays' tips is --gap. */
 .held{position:relative;margin:calc(var(--gap) + var(--dawn-h)) 0 0}
 .held>svg{display:block;position:absolute;pointer-events:none;height:auto}
@@ -59,15 +58,18 @@ main>#card{margin-top:var(--gap)}
 .litany li::before{content:"";position:absolute;left:0;top:.75rem;width:4px;height:4px;background:var(--gold)}
 .litany .pic{position:absolute;left:.75rem;top:.09375rem;width:1.5rem;height:1.5rem}
 .label{font:400 1rem/1.4 var(--sans);color:var(--mute);margin:0 0 .5rem}
-/* THE VERSE, THE PAGE'S ONE JEWEL — italic serif opened by one small gold mark; beneath it the reference and the translation's full name in two quiet 16 px lines; then the Knowing Jesus link as a 48 px tap box. The forty list and its one revealed row are display:contents so the rows flow in the section (order sets the reading order). */
-.verse{display:flex;flex-direction:column;align-items:flex-start;margin:var(--gap) 0 0;padding:0}
-.verse .label{order:0;margin:0 0 .75rem}
-.verse .message{order:0;font:400 1.1875rem/1.45 var(--serif);color:var(--head);margin:0 0 1rem;text-wrap:pretty;max-width:32ch}
-.verse .text{order:1;font:italic 400 1.25rem/1.45 var(--serif);color:var(--head);margin:0 0 .75rem;white-space:pre-line;max-width:32ch}
-.verse .mark{display:inline-block;width:.75rem;height:.75rem;margin:0 .5rem 0 0;vertical-align:.05em}
-.verse .ref{order:2;font:400 1rem/1.4 var(--sans);color:var(--mute);margin:0}
-.verse .tr{order:3;font:400 1rem/1.4 var(--sans);color:var(--mute);margin:0}
-.verse .door{order:4;width:auto;min-height:3rem;margin:.25rem 0 0;padding:.75rem 0;font:400 1rem/1.3 var(--sans);color:var(--door)}
+/* THE VERSE PANEL (DESIGN r7 — the owner's word on the live site, 2026-10-07: "Beautiful design. Different color / box. Big quote mark / beautiful font / maybe box / visual"): the page's second navy moment, lower down, echoing the band — a full-width panel inside the gutter at the card's radius, the family's navy with cream type; the serif's own opening quotation mark in gold at 96 px hanging over the panel's top-left edge (generated content, no text node for the fence; the empty alternative text keeps it off the screen reader); the label small and gold, lightly tracked; the verse in the italic serif at 22 px cream, ≤ 30 ch; the reference in gold, the translation's full name in muted cream; the Knowing Jesus door the panel's foot — a 48 px row under a hairline, cream with the gold underline, the › its last glyph (the fence allows each label with " ›"). By night the panel is one step lighter than the page so it still reads as a panel. The forty list and its one revealed row are display:contents so the rows flow in the panel (order sets the reading order). On what-next the owner's line stands on the paper above the panel (.message) and the panel holds the verse alone: the same component. */
+.verse{position:relative;display:flex;flex-direction:column;align-items:stretch;margin:var(--gap) 0 0;padding:1.75rem 1.375rem .5rem;background:var(--panel);color:var(--panel-ink);border-radius:clamp(10px,3.7vw,16px)}
+.verse::before{content:"\201C";content:"\201C" / "";position:absolute;left:1.25rem;top:-1.5rem;font:500 6rem/1 var(--serif);color:var(--panel-gold)}
+.verse .label{order:0;margin:0 0 .625rem;font:400 .9375rem/1.4 var(--sans);letter-spacing:.04em;color:var(--panel-gold)}
+.verse .text{order:1;font:italic 400 1.375rem/1.45 var(--serif);color:var(--panel-ink);margin:0 0 1rem;white-space:pre-line;max-width:30ch}
+.verse .ref{order:2;font:400 1rem/1.4 var(--sans);color:var(--panel-gold);margin:0}
+.verse .tr{order:3;font:400 1rem/1.4 var(--sans);color:var(--panel-mute);margin:0 0 .875rem}
+.verse .door{order:4;width:100%;min-height:3rem;margin:0;padding:.75rem 0;border-top:1px solid var(--panel-rule);font:400 1rem/1.3 var(--sans);color:var(--panel-ink);text-decoration-color:var(--panel-gold)}
+.verse .door:hover{text-decoration-color:var(--panel-ink)}
+.message{font:400 1.1875rem/1.45 var(--serif);color:var(--head);margin:0;text-wrap:pretty;max-width:32ch}
+.band+.message,.clause+.message{margin-top:1.5rem}
+.message+.verse{margin-top:1.25rem}
 .forty{display:contents;margin:0;padding:0;list-style:none}
 .forty>li{display:none}
 .forty>li.is-today{display:contents}
@@ -110,4 +112,4 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 .notice{font:400 0.9375rem/1.45 var(--sans);color:var(--mute);margin:var(--gap) 0 0;max-width:36ch}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){.door,.share button,.door .leaf,.door .lite{transition:none}}
-@media print{body{background:#fff;color:#000}main>*{display:none}main>.held{display:block;margin:0}main>.held>svg{display:none!important}#card{display:block;box-shadow:none;border-color:#000;background:#fff;color:#000}#card::before{background:#000}}
+@media print{body{background:#fff;color:#000}main>*{display:none}main>.held{display:block;margin:0}main>.held>svg{display:none!important}#card{display:block;box-shadow:none;border-color:#000;background:#fff;color:#000}#card::before{background:#000}.verse{background:#f7efdc;border:1px solid #1b2440;color:#1b2440}.verse::before,.verse .label,.verse .ref,.verse .tr,.verse .text,.verse .door{color:#1b2440}.verse .door{border-top-color:#1b2440;text-decoration-color:#1b2440}}
