@@ -27,9 +27,10 @@ const pages = []; (function walk(d) { for (const e of fs.readdirSync(d, { withFi
 for (const f of pages) { const html = fs.readFileSync(f, 'utf8'), rel = path.relative(dir, f);
   if (/http-equiv="refresh"/.test(html)) continue; // a short door: one link, no prose
   const lang = (/<html lang="(\w+)"/.exec(html) || [])[1]; if (!lang || !A[lang]) { fail(rel, `lang="${lang}" is not a served language today`); continue; }
-  if (/<script[^>]+src=|<img\b|<iframe\b|<link\b[^>]*stylesheet|@import|url\(|fetch\(|XMLHttpRequest|document\.cookie|localStorage|sessionStorage|gtag|analytics|fbq\(/.test(html)) fail(rel, 'a script src, img, iframe, external request or cookie word');
+  if (/<script[^>]+src=|<img\b|<iframe\b|<link\b[^>]*stylesheet|@import|url\((?![\"']?(?!\/)[\w./-]+\.woff2[\"']?\))|fetch\(|XMLHttpRequest|document\.cookie|localStorage|sessionStorage|gtag|analytics|fbq\(/.test(html)) fail(rel, 'a script src, img, iframe, external request or cookie word'); // THE ONE url( ALLOWED (seat 1007c, the self-hosted Source Serif 4 subsets of DESIGN r5/r6): a RELATIVE woff2 path only — fonts/… or ../fonts/… — no leading / (so //cdn and /abs are refused) and no scheme or host (http(s):// is refused); every other url( still fails
   const body = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<noscript>[\s\S]*?<\/noscript>|<!--[\s\S]*?-->/g, '');
-  for (const m of body.matchAll(/>([^<]+)</g)) { const t = normalise(m[1]); if (t && !A[lang].has(t)) fail(rel, `text not in the allowlist: "${t.slice(0, 80)}"`); }
+  const text = body.replace(/<\/?em\b[^>]*>/g, ''); // DESIGN r6: an italic pull-out (<em>) inside one of the owner's lines is unwrapped before the text nodes are read, so the line is read whole, as typed; nothing else is joined (two separate strings around an <em> would read as one and fail)
+  for (const m of text.matchAll(/>([^<]+)</g)) { const t = normalise(m[1]); if (t && !A[lang].has(t)) fail(rel, `text not in the allowlist: "${t.slice(0, 80)}"`); }
   const card = /<section id="card"[^>]*>([\s\S]*?)<\/section>/.exec(html); if (!card) fail(rel, 'no <section id="card">');
   else { const inner = card[1].replace(/<[^>]+>/g, '\n'), lines = inner.split('\n').map(s => normalise(s)).filter(Boolean), src = lang === 'tl' ? (cardTl || cardEn) : cardEn;
     if (src) { const want = new Set(blocks(src).flatMap(b => b.split('\n')).map(s => normalise(s)).filter(Boolean)); lines.forEach(l => { if (!want.has(l)) fail(rel, `card block line not in the card file: "${l.slice(0, 60)}"`); }); }

@@ -9,7 +9,7 @@
 <meta property="og:description" content="Confess, confess, confess. Never stop, never stop, never stop.">
 <meta name="color-scheme" content="light dark">
 <style>
-/* 3r4l — "the-card-itself" r5: THE CARD ALONE. The drawn hand is gone (the owner's word). One quiet page: the headline in the family serif at regular weight; the card as paper (a warmer cream, a crisp 1 px edge, a soft shadow to the right and below only, the lifted corner, Jeff's gold rule printed inside it above the wording in ink); a dawn rising BEHIND the card's top edge by day (half its disc hidden, low-chroma cream-gold, five faint rays), the lamp over its pool by night; one hairline horizon under the card that is also the threshold of the link row; the verse the page's one jewel (italic serif, one small gold mark at its opening, the reference and the translation in two quiet lines); on what-next the forty days as one vertical path with a mark per day and today's mark gold, the share row one quiet line of text links. One spacing token (--gap) between every block. Jeff's inks exact (navy #1b2440 · gold #b9892e · cream); his own serif (Source Serif 4: 400 for the headline, the card and the verse — one voice; 400 italic for the verse; the 500 subset rides for the real card's title). Inlined by build.mjs;  is the page's depth prefix ('' · '../' · '../../'). Every drawing is an inline SVG with no text node, width-bound, aria-hidden, print-hidden; dark is its own drawing by token pairs (the pool for the dawn, a cream-derived deep paper for the card, gold one step down, the owner's lines one step softer than the headline). */
+/* 3r4l — "the-card-itself" r6b: THE OPEN TOP. Round 5 (the card alone) with the owner's two words on it: "Should top grab us more" → the headline one size larger and one weight stronger (500), the dawn larger behind the card; and "could this be broken up or illustrated better" → his six lines set as a litany (the promise, the lead line with its saying pulled out, the four "He will help you…" lines as a list with a gold mark and a gold line drawing each). No band; everything else as r5. */
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/source-serif-4-500.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201D,U+2026}
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/source-serif-4-400.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201D,U+2026}
 @font-face{font-family:"Source Serif 4";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/source-serif-4-400i.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201D,U+2026}
@@ -30,17 +30,18 @@ p,h1,h2,li{overflow-wrap:break-word}
 .prose{max-width:34ch;text-wrap:pretty}
 .lang{position:absolute;top:.25rem;right:var(--pad);margin:0;font:1rem/1.25 var(--sans);height:1.25rem}
 .lang a{color:var(--mute);text-decoration:underline;text-decoration-color:var(--door-rule);text-underline-offset:.15em;padding:0}
-/* THE HEADLINE — the family serif at regular weight (one step quieter than r4's medium), three lines at 390, nothing above it, nothing beside it. */
-h1{font:400 1.75rem/1.16 var(--serif);color:var(--head);letter-spacing:0;margin:0;text-wrap:pretty}
+/* THE HEADLINE — one size larger and one weight stronger than r5 (500, the subset's medium), tracked −.01em at display size; the size steps by the measured column so "Confess, confess, confess." stays one line and the headline three: 30 px from 420, 29 at 384–419, 27 at 360–383, 24 under 360 (280 px holds 272). */
+h1{font:500 1.875rem/1.16 var(--serif);color:var(--head);letter-spacing:-.01em;margin:0;text-wrap:pretty}
 /* THE OWNER'S LINES — the phone's own sans; his question a quiet bold at body size. */
 h2{font:600 1.125rem/1.5 var(--sans);color:var(--head);margin:0 0 .75rem;text-wrap:pretty}
-@media (max-width:419px){h1{font-size:1.6875rem}}
+@media (max-width:419px){h1{font-size:1.8125rem}}
+@media (max-width:383px){h1{font-size:1.6875rem}}
 @media (max-width:359px){h1{font-size:1.5rem}.verse .text{font-size:1.1875rem}#card .prayer{font-size:1.1875rem}#card .rules{font-size:1.125rem}#card.placeholder p{font-size:1.25rem}}
 /* THE CARD, ALONE — paper: a warmer cream, a crisp 1 px edge, the corner lift, one soft shadow to the right and below only (the only alpha on the page), Jeff's gold rule printed inside above the wording. The dawn rises BEHIND its top edge (half the disc hidden; the SVG's bottom sits 1 px under the card's edge): five faint rays by day; by night the same disc is the lamp's pool and the pendant lamp hangs over it. The dawn's box is --dawn-h tall; the gap above the card is --gap + --dawn-h so the air between the headline and the rays' tips is --gap. */
 .held{position:relative;margin:calc(var(--gap) + var(--dawn-h)) 0 0}
 .held>svg{display:block;position:absolute;pointer-events:none;height:auto}
-.held>.dawn{right:1.5rem;top:1px;width:9rem;transform:translateY(-100%);z-index:0}
-.held>.lamp{display:none;right:4.375rem;top:-.625rem;width:3.25rem;transform:translateY(-100%);z-index:3}
+.held>.dawn{right:1.5rem;top:1px;width:11rem;transform:translateY(-100%);z-index:0}
+.held>.lamp{display:none;right:5.375rem;top:-.625rem;width:3.25rem;transform:translateY(-100%);z-index:3}
 #card{position:relative;z-index:1;background:var(--card-face);color:var(--card-body);border:1px solid var(--card-edge);border-radius:clamp(10px,3.7vw,16px);padding:2.125rem 1.25rem 1.5rem;margin:0;font-family:var(--serif);box-shadow:var(--card-shadow)}
 main>#card{margin-top:var(--gap)}
 #card::before{content:"";position:absolute;left:1.25rem;top:1.125rem;width:3rem;height:3px;background:var(--gold);border-radius:1.5px}
@@ -50,9 +51,16 @@ main>#card{margin-top:var(--gap)}
 #card .other{font:400 1.0625rem/1.45 var(--serif);margin:1rem 0 0;white-space:pre-line}
 /* THE INTERIM placeholder is set as the printed card will be: left-set under the gold rule, in the card's ink at reading size. */
 #card.placeholder p{margin:0;color:var(--card-ink);font:400 1.3125rem/1.5 var(--serif);max-width:30ch;text-wrap:pretty}
+/* THE LITANY — the owner's six lines set to be read, not scanned past (his word on r5: "broken up or illustrated better … bullet points"): his question as before; the promise one size up in the serif with air under it; the lead line in the body face, its saying pulled out on its own line in italic serif (the quotes as typed); the four "He will help you…" lines as a list, each on its own line with a hanging indent, a 4 px gold square at the margin and a small gold line drawing beside it (book · ball · hammer · moon and star) at the door glyph's stroke, 24 px, toned gold by night. */
 .taking{margin:var(--gap) 0 0}
-.taking p{margin:0 0 .75rem}
-.taking p:last-child{margin-bottom:0}
+.taking .promise{font:400 1.25rem/1.45 var(--serif);color:var(--head);margin:0 0 1.25rem}
+.taking .lead{margin:0 0 1.25rem}
+.taking .saying{display:block;font:italic 400 1.25rem/1.4 var(--serif);color:var(--head);margin:.5rem 0 0}
+.litany{list-style:none;margin:0;padding:0}
+.litany li{position:relative;padding-left:3.25rem;margin:0 0 1rem;min-height:1.6875rem}
+.litany li:last-child{margin-bottom:0}
+.litany li::before{content:"";position:absolute;left:0;top:.75rem;width:4px;height:4px;background:var(--gold)}
+.litany .pic{position:absolute;left:.75rem;top:.09375rem;width:1.5rem;height:1.5rem}
 .label{font:400 1rem/1.4 var(--sans);color:var(--mute);margin:0 0 .5rem}
 /* THE VERSE, THE PAGE'S ONE JEWEL — italic serif opened by one small gold mark; beneath it the reference and the translation's full name in two quiet 16 px lines; then the Knowing Jesus link as a 48 px tap box. The forty list and its one revealed row are display:contents so the rows flow in the section (order sets the reading order). */
 .verse{display:flex;flex-direction:column;align-items:flex-start;margin:var(--gap) 0 0;padding:0}
@@ -111,16 +119,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 <body>
 <main>
 <h1>Confess, confess, confess.<br>Never stop, never stop, never stop.</h1>
-<div class="held"><section id="card" class="placeholder"><p>The card's wording goes here, word for word from Jeff's card.</p></section><svg class="dawn" viewBox="0 0 200 100" aria-hidden="true" focusable="false"><circle cx="100" cy="100" r="48" fill="var(--sun)"/><path class="day" d="M100 46V34M73 53.2L68.5 45.4M127 53.2L131.5 45.4M53.2 73L47.2 69.5M146.8 73L152.8 69.5" fill="none" stroke="var(--ray)" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><svg class="lamp night" viewBox="0 0 60 68" aria-hidden="true" focusable="false"><path d="M30 0V26" fill="none" stroke="var(--draw)" stroke-width="1.25" vector-effect="non-scaling-stroke"/><path d="M22 26H38L46 42H14Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.25" stroke-linejoin="round" vector-effect="non-scaling-stroke"/><circle cx="30" cy="47" r="4" fill="var(--bulb)"/><path d="M19 54L15 60M30 55V62M41 54L45 60" fill="none" stroke="var(--ray)" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+<div class="held"><section id="card" class="placeholder"><p>The card's wording goes here, word for word from Jeff's card.</p></section><svg class="dawn" viewBox="0 0 200 100" aria-hidden="true" focusable="false"><circle cx="100" cy="100" r="54" fill="var(--sun)"/><path class="day" d="M100 41V32M70.5 48.9L66 41.1M129.5 48.9L134 41.1M48.9 70.5L41.1 66M151.1 70.5L158.9 66" fill="none" stroke="var(--ray)" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><svg class="lamp night" viewBox="0 0 60 68" aria-hidden="true" focusable="false"><path d="M30 0V26" fill="none" stroke="var(--draw)" stroke-width="1.25" vector-effect="non-scaling-stroke"/><path d="M22 26H38L46 42H14Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.25" stroke-linejoin="round" vector-effect="non-scaling-stroke"/><circle cx="30" cy="47" r="4" fill="var(--bulb)"/><path d="M19 54L15 60M30 55V62M41 54L45 60" fill="none" stroke="var(--ray)" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
 <p class="next under-card"><a class="door" href="what-next/"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="lite" d="M15.5 5.5L20 3V22L15.5 21.5Z" fill="var(--gold)"/><path d="M4 23V3H20V23" fill="none" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><path class="leaf" d="M4 3L15.5 5.5V21.5L4 23Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="13" cy="13.5" r="1" fill="var(--draw)"/></svg>Have you used the prayer, what next</a></p>
 <section class="taking">
 <h2 class="prose">If you use the rules everyday, where will God be taking you?</h2>
-<p class="prose">Ultimately, He will take you to be with Him in heaven; wherever He is, you will be there.</p>
-<p class="prose">In this life He will walk you to school everyday, and He will attend every class with you. &quot;This life is a schoolhouse.&quot;</p>
-<p class="prose">He will help you with your homework.</p>
-<p class="prose">He will help you when it's time to play.</p>
-<p class="prose">He will help you when it's time to work.</p>
-<p class="prose">He will help you when it's time to rest, and worship.</p>
+<p class="promise prose">Ultimately, He will take you to be with Him in heaven; wherever He is, you will be there.</p>
+<p class="lead prose">In this life He will walk you to school everyday, and He will attend every class with you. <em class="saying">&quot;This life is a schoolhouse.&quot;</em></p>
+<ul class="litany" role="list">
+<li><svg class="pic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7C10 5.3 7.2 4.7 3.5 5.2V18.7C7.2 18.2 10 18.8 12 20.5C14 18.8 16.8 18.2 20.5 18.7V5.2C16.8 4.7 14 5.3 12 7ZM12 7V20.5" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>He will help you with your homework.</li>
+<li><svg class="pic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.5A8.5 8.5 0 1 1 12 20.5A8.5 8.5 0 1 1 12 3.5ZM12 3.5V20.5M3.5 12H20.5M6 6C9.3 9.3 9.3 14.7 6 18M18 6C14.7 9.3 14.7 14.7 18 18" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>He will help you when it's time to play.</li>
+<li><svg class="pic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 7.5H19V12.5H5ZM12 12.5V21" transform="rotate(-45 12 12)" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>He will help you when it's time to work.</li>
+<li><svg class="pic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4A6 6 0 0 0 19.5 12.5A8.5 8.5 0 1 1 11 4ZM19 2L19.9 4.1L22 5L19.9 5.9L19 8L18.1 5.9L16 5L18.1 4.1Z" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>He will help you when it's time to rest, and worship.</li>
+</ul>
 </section>
 <section class="verse">
 <p class="label">Today's verse</p>
