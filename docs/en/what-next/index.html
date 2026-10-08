@@ -367,6 +367,7 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
 </ol>
 <svg class="cross-end" viewBox="0 0 24 40" aria-hidden="true" focusable="false"><path d="M12 3V38M5 12H19" pathLength="1" fill="none" stroke="var(--draw)" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
 </section>
+<p class="next"><a class="door" href="../forty.pdf">Print the forty days ›</a></p>
 <section id="card"><div class="face front"><p class="rules">1. Confess all sins to God (Tell it) daily.
 2. Surrender your will to God daily.
 3. Forgive others and yourself daily.</p></div></section>
@@ -394,7 +395,7 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
   var N=d<0?1:(d%40)+1;
   var lis=document.querySelectorAll('li[data-day="'+N+'"]');
   for(var i=0;i<lis.length;i++){lis[i].classList.add('is-today');}
-  var pl=document.querySelector('.hero .play'),v=document.querySelector('.hero video');
+  var pl=document.querySelector('.hero button.play'),v=document.querySelector('.hero video');
   if(pl&&v){pl.addEventListener('click',function(){
     v.hidden=false;pl.hidden=true;
     if(v.textTracks&&v.textTracks[0]){v.textTracks[0].mode='showing';}

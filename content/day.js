@@ -5,7 +5,7 @@
   var N=d<0?1:(d%40)+1;
   var lis=document.querySelectorAll('li[data-day="'+N+'"]');
   for(var i=0;i<lis.length;i++){lis[i].classList.add('is-today');}
-  var pl=document.querySelector('.hero .play'),v=document.querySelector('.hero video');
+  var pl=document.querySelector('.hero button.play'),v=document.querySelector('.hero video');
   if(pl&&v){pl.addEventListener('click',function(){
     v.hidden=false;pl.hidden=true;
     if(v.textTracks&&v.textTracks[0]){v.textTracks[0].mode='showing';}
