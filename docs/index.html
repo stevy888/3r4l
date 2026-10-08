@@ -106,6 +106,12 @@ main>#card{margin-top:var(--gap)}
 .door:active .lite,.door:focus-visible .lite{transform:scaleX(1.5)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
 .next{margin:var(--gap) calc(-1*var(--pad)) 0;padding:0 var(--pad);border-top:1px solid var(--horizon)}
+/* THE BIG DOOR (owner 2026-10-08: "a big beautiful button at the bottom called What next"): at the foot of the home, after the verse — full width, the family's gold, navy words in the serif, the door glyph, 60 px tall, one soft shadow; the small text door under the card stays. */
+.next.big{border-top:0;margin-top:var(--gap);padding:0}
+.door.big{justify-content:center;min-height:3.75rem;padding:.75rem 1rem;background:var(--gold);color:#1b2440;border-radius:clamp(10px,3.7vw,16px);font:500 1.375rem/1.2 var(--serif);text-decoration:none;box-shadow:var(--card-shadow)}
+.door.big>svg{width:1.75rem;height:1.75rem;margin-right:.75rem}
+.door.big .leaf{fill:#f7efdc}.door.big .lite{fill:#1b2440}.door.big path,.door.big circle{stroke:#1b2440}
+.door.big:hover{filter:brightness(1.05)}
 @media (max-width:374px){.next .door{font-size:1.0625rem}}
 @media (max-width:359px){.next .door{font-size:.9375rem}.next .door>svg{width:1.25rem;height:1.25rem;margin-right:.5rem}}
 .clause{font:1.125rem/1.5 var(--sans);margin:.75rem 0 0}
@@ -211,6 +217,7 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
 <li data-day="40"><p class="ref">John 10:28</p><p class="text">And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/john-10-28">Read it on Knowing Jesus ›</a></li>
 </ol>
 </section>
+<p class="next big"><a class="door big" href="what-next/"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="lite" d="M15.5 5.5L20 3V22L15.5 21.5Z" fill="var(--gold)"/><path d="M4 23V3H20V23" fill="none" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><path class="leaf" d="M4 3L15.5 5.5V21.5L4 23Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="13" cy="13.5" r="1" fill="var(--draw)"/></svg>What next ›</a></p>
 </main>
 <script>
 (function(){
