@@ -86,9 +86,25 @@ def main():
                 if d > 0.005: raise SystemExit(f'kit.pdf {name} {face} cell {i + 1}/{n}: renders unlike the card\'s {face} ({d:.3%} of samples differ)')
             print(f'kit.pdf {name} {face}: {n} cards, every cell renders as the card\'s {face} (worst cell {worst:.3%} differing samples); the card\'s text == card.txt')
         print(f'kit.pdf: {len(doc)} sheets at {KIT_PDF} (private until Jeff\'s yes)')
+        # THE EXACT CARD (owner 2026-10-08 "The card should be exact layout I gave"; TR-card-picture B by his letter): both faces rendered from the card file at 300 dpi
+        # (1050 × 600 px, 3× of a 350 px column) as lossless WebP — the printed card's own layout, pixel for pixel; PRIVATE beside kit.pdf until brother Daniel's yes
+        try:
+            from PIL import Image
+            for pno, name in ((0, 'card-front'), (1, 'card-back')):
+                png = os.path.join(PRIVATE, name + '.png'); src[pno].get_pixmap(dpi=300, alpha=False).save(png)
+                im = Image.open(png).convert('L'); os.remove(png)  # the print is blue on white: read it as ink (dark) on paper (light) …
+                lo = min(im.getdata()); SAND, NAVY = (247, 239, 220), (27, 36, 64)  # … and lay the ink in the family's navy on the family's sand (owner 2026-10-08 "Use sand color and all"); every pixel keeps its place — the layout is the card's own
+                px = [tuple(round(s + (n - s) * min(1.0, (255 - v) / (255 - lo))) for s, n in zip(SAND, NAVY)) for v in im.getdata()]
+                out = Image.new('RGB', im.size); out.putdata(px); out.save(os.path.join(PRIVATE, name + '.webp'), 'WEBP', lossless=True, quality=100, method=6)
+                print(f'{name}.webp: 1050 x 600, {os.path.getsize(os.path.join(PRIVATE, name + ".webp"))} B (the exact card, private until the yes)')
+        except ImportError:
+            print('card-front/back.webp SKIPPED: Pillow is not in this python (python3 -c "import PIL" — the system python carries it)')
         if '--publish' in args:  # Jeff's yes, recorded in INPUTS.md first
             if not re.search(r'^- jeff_yes_to_download: YES', open(os.path.join(INPUTS, 'INPUTS.md'), encoding='utf-8').read(), re.M): raise SystemExit('--publish needs the line "- jeff_yes_to_download: YES …" in INPUTS.md')
-            shutil.copyfile(CARD, os.path.join(DOCS, 'card.pdf')); shutil.copyfile(KIT_PDF, os.path.join(DOCS, 'kit.pdf')); print('published: docs/card.pdf and docs/kit.pdf (now run node build.mjs for the doors)')
+            shutil.copyfile(CARD, os.path.join(DOCS, 'card.pdf')); shutil.copyfile(KIT_PDF, os.path.join(DOCS, 'kit.pdf'))
+            for name in ('card-front.webp', 'card-back.webp'):
+                if os.path.exists(os.path.join(PRIVATE, name)): shutil.copyfile(os.path.join(PRIVATE, name), os.path.join(DOCS, name))
+            print('published: docs/card.pdf, docs/kit.pdf and the exact card faces docs/card-front.webp + card-back.webp (now run node build.mjs for the doors and the exact card)')
     else:
         print('kit.pdf SKIPPED: no card-of-record.pdf / card.txt on disk (the owner sends the card)')
     if '--kit-only' in args: return  # the kit and its proof alone; the manual (a dated Chromium PDF, tracked in the repo) is left as it is

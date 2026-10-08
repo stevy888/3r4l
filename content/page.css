@@ -231,3 +231,5 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .real .face p:last-child{margin-bottom:0}
 .whole>.real+svg.dawn{z-index:0}
 @media print{.real{display:none}}
+/* THE EXACT CARD (owner 2026-10-08 "exact layout I gave"): the printed faces as pictures, the card's own shape, on the yes */
+.real.exact img{display:block;width:100%;height:auto;aspect-ratio:252/144;background:#fff;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42)}
