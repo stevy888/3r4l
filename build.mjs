@@ -29,7 +29,8 @@ const SVG_BOOK = PIC('M12 7C10 5.3 7.2 4.7 3.5 5.2V18.7C7.2 18.2 10 18.8 12 20.5
 const SVG_BALL = PIC('M12 3.5A8.5 8.5 0 1 1 12 20.5A8.5 8.5 0 1 1 12 3.5ZM12 3.5V20.5M3.5 12H20.5M6 6C9.3 9.3 9.3 14.7 6 18M18 6C14.7 9.3 14.7 14.7 18 18');
 const SVG_HAMMER = `<svg class="pic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 7.5H19V12.5H5ZM12 12.5V21" transform="rotate(-45 12 12)" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const SVG_CROSS = PIC('M12 3.5V20.5M6.5 9H17.5');
-const PICS = [SVG_BOOK, SVG_BALL, SVG_HAMMER, SVG_CROSS];
+const SVG_NOTE = PIC('M14 17.5A3.5 2.5 0 1 1 7 17.5A3.5 2.5 0 1 1 14 17.5ZM14 17.5V4.5L18.5 7'); // a single note — the fifth line, "when you worship" (owner 2026-10-08): singing, no symbol another faith owns
+const PICS = [SVG_BOOK, SVG_BALL, SVG_HAMMER, SVG_CROSS, SVG_NOTE];
 // THE LITANY (DESIGN r6, the owner's word on round 5: "broken up or illustrated better … bullet points"): his six lines from the sheet byte for byte — the promise line; the lead line with its saying wrapped in <em> (the fence unwraps em before it reads the line, so the line is still read whole); the four "He will help you…" lines as a list, one drawing each. Nothing is retyped: the saying is split off by the sheet's own closing quotes.
 function litany(S) { const [promise, lead, ...helps] = S.lines, m = /^(.*\S)\s+("[^"]+")$/.exec(lead);
   return `<p class="promise prose">${esc(promise)}</p>\n<p class="lead prose">${m ? `${esc(m[1])} <em class="saying">${esc(m[2])}</em>` : esc(lead)}</p>\n<ul class="litany" role="list">\n${helps.map((l, i) => `<li>${PICS[i] || ''}${esc(l)}</li>`).join('\n')}\n</ul>`; }
