@@ -24,7 +24,8 @@ function allow(lang) { const S = lang === 'tl' ? J(C('sheet-tl.json')) : sheet, 
   Object.values(tr.en).forEach(t => add(t.name)); Object.values(tr.tl).forEach(t => add(t.name)); return A; }
 const A = { en: allow('en'), tl: checked ? allow('tl') : null }; let bad = 0; const fail = (f, m) => { bad++; console.log(`FAIL ${f}: ${m}`); };
 const pages = []; (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else if (e.name === 'index.html') pages.push(p); } })(dir);
-for (const f of pages) { const html = fs.readFileSync(f, 'utf8'), rel = path.relative(dir, f);
+const ALLOWED_SCRIPTS = ['theme-head.js', 'theme.js'].map(n => fs.readFileSync(C(n), 'utf8').trim()); // THE ONE STORAGE ALLOWANCE (owner 2026-10-08, the light/dark switch): these two files' exact bytes may name localStorage; any other mention still fails
+for (const f of pages) { const html0 = fs.readFileSync(f, 'utf8'), html = ALLOWED_SCRIPTS.reduce((h, s) => h.split(s).join(''), html0), rel = path.relative(dir, f);
   if (/http-equiv="refresh"/.test(html)) continue; // a short door: one link, no prose
   const lang = (/<html lang="(\w+)"/.exec(html) || [])[1]; if (!lang || !A[lang]) { fail(rel, `lang="${lang}" is not a served language today`); continue; }
   if (/<script[^>]+src=|<img\b|<iframe\b|<link\b[^>]*stylesheet|@import|url\((?![\"']?(?!\/)[\w./-]+\.woff2[\"']?\))|fetch\(|XMLHttpRequest|document\.cookie|localStorage|sessionStorage|gtag|analytics|fbq\(/.test(html)) fail(rel, 'a script src, img, iframe, external request or cookie word'); // THE ONE url( ALLOWED (seat 1007c, the self-hosted Source Serif 4 subsets of DESIGN r5/r6): a RELATIVE woff2 path only — fonts/… or ../fonts/… — no leading / (so //cdn and /abs are refused) and no scheme or host (http(s):// is refused); every other url( still fails

@@ -19,7 +19,7 @@
  "whatnext_link": "Have you used the prayer, what next",
  "whatnext_clause": "Keep using the rules daily and especially confession. Never stop.",
  "labels": {
-  "_note": "TR-labels A — the only labels and strings not in the owner's words, flagged once + 2026-10-08 (TR2 mock-ups of the home shapes D and C, flagged once): \"Hear the card\" (the film row) · \"Read the whole card\" (the /card/ door). + 2026-10-08 (the owner: \"a big beautiful button at the bottom called What next\"): \"What next\" — the big door at the foot of the home to the forty-day challenge page.",
+  "_note": "TR-labels A — the only labels and strings not in the owner's words, flagged once + 2026-10-08 (TR2 mock-ups of the home shapes D and C, flagged once): \"Hear the card\" (the film row) · \"Read the whole card\" (the /card/ door). + 2026-10-08 (the owner: \"a big beautiful button at the bottom called What next\"): \"What next\" — the big door at the foot of the home to the forty-day challenge page. + 2026-10-08 (the owner: a switch to light and dark in the footer): \"Light\" · \"Dark\".",
   "lang_link": "Tagalog",
   "read_on_kj": "Read it on Knowing Jesus",
   "print_card": "Print the card",
@@ -38,7 +38,9 @@
   "title_whatnext_suffix": " — Have you used the prayer, what next",
   "hear_card": "Hear the card",
   "whole_card": "Read the whole card",
-  "what_next_button": "What next"
+  "what_next_button": "What next",
+  "light": "Light",
+  "dark": "Dark"
  },
  "placeholder": {
   "_note": "THE INTERIM ONLY (plan §4 THE INPUTS GATE: a greyed placeholder until Jeff's PDF lands). Nothing here claims to be the prayer or the rules. Removed by build.mjs the moment content/card.txt exists.",

@@ -8,6 +8,7 @@
 <meta property="og:title" content="Confess, confess, confess. God will forgive... God will change our lives.">
 <meta property="og:description" content="Confess, confess, confess. God will forgive... God will change our lives.">
 <meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t)}}catch(e){}</script>
 <style>
 /* 3r4l — "the-card-itself" r7: A REAL DAWN on the hero band (the owner on the served r6a, 2026-10-07: "What about top of page. More standing out and beautiful too."): the sun larger and half behind the card with ten long tapered rays across the band and two flat glow discs; faint stars high in the band; the band's lower edge a low hill with a lit horizon line; a short gold rule under the headline; the card lifted by a warmer, deeper one-side shadow and a fine gold edge. By night the same scene under the lamp. Print: navy type on paper, the sun a line drawing. Below, r6a as it was: THE HERO BAND. Round 5 (the card alone) with the owner's two words on it: "Should top grab us more" → the family's navy from the top edge as a hero band, the headline in cream serif on it one size larger and one weight stronger, the dawn's light rising flat out of the band behind the card, the card lifted out of the night into the day (its top third in the band, the rest on the paper); and "could this be broken up or illustrated better" → his six lines set as a litany (the promise, the lead line with its saying pulled out, the four "He will help you…" lines as a list with a gold mark and a gold line drawing each). Dark: the band is the page, the lamp over its pool. Everything else as r5. */
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:500;font-display:swap;src:url(../../fonts/source-serif-4-500.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201D,U+2026}
@@ -139,9 +140,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 .share button:hover{text-decoration-color:var(--door)}
 .addr{font:1rem/1.4 var(--sans);color:var(--mute);margin:.5rem 0 0}
 .notice{font:400 0.9375rem/1.45 var(--sans);color:var(--mute);margin:var(--gap) 0 0;max-width:36ch}
+/* THE LIGHT/DARK SWITCH (owner 2026-10-08): two quiet words at the foot of every page; the pressed one in the head colour, the other underlined as a door; print hides the row. */
+.theme{display:flex;justify-content:center;gap:1.5rem;margin:var(--gap) 0 0}
+.theme button{min-height:3rem;padding:.75rem .5rem;font:400 1rem/1.3 var(--sans);color:var(--door);background:none;border:0;text-decoration:underline;text-decoration-color:var(--door-rule);text-decoration-thickness:1px;text-underline-offset:.26em;cursor:pointer}
+.theme button[aria-pressed="true"]{color:var(--head);font-weight:600;text-decoration:none}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){.door,.share button,.door .leaf,.door .lite{transition:none}}
-@media print{body{background:#fff;color:#000}main>*{display:none}main>.band{display:block;background:none;color:#1b2440;margin:0;padding:0;border:0;border-radius:0}main>.band h1{color:#1b2440}.band .stars,.band .lang{display:none!important}.band.lifts h1::after{background:#1b2440}.band h1 .beat{color:#1b2440}main>.held{display:block;margin:4.5rem 0 0}main>.held>svg{display:none!important}main>.held>.dawn{display:block!important}.dawn .glow,.dawn .ray{display:none}.dawn .sun{fill:#fff;stroke:#1b2440;stroke-width:1.25}#card{display:block}.face,#card.placeholder{box-shadow:none;border-color:#000;background:#fff;color:#000}.face::before,#card.placeholder::before{background:#000}#card .title,#card .daily_prayer,#card .prayer{color:#000}.verse{background:#f7efdc;border:1px solid #1b2440;color:#1b2440}.verse::before,.verse .label,.verse .ref,.verse .tr,.verse .text,.verse .door{color:#1b2440}.verse .door{border-top-color:#1b2440;text-decoration-color:#1b2440}}
+@media print{.theme{display:none!important}body{background:#fff;color:#000}main>*{display:none}main>.band{display:block;background:none;color:#1b2440;margin:0;padding:0;border:0;border-radius:0}main>.band h1{color:#1b2440}.band .stars,.band .lang{display:none!important}.band.lifts h1::after{background:#1b2440}.band h1 .beat{color:#1b2440}main>.held{display:block;margin:4.5rem 0 0}main>.held>svg{display:none!important}main>.held>.dawn{display:block!important}.dawn .glow,.dawn .ray{display:none}.dawn .sun{fill:#fff;stroke:#1b2440;stroke-width:1.25}#card{display:block}.face,#card.placeholder{box-shadow:none;border-color:#000;background:#fff;color:#000}.face::before,#card.placeholder::before{background:#000}#card .title,#card .daily_prayer,#card .prayer{color:#000}.verse{background:#f7efdc;border:1px solid #1b2440;color:#1b2440}.verse::before,.verse .label,.verse .ref,.verse .tr,.verse .text,.verse .door{color:#1b2440}.verse .door{border-top-color:#1b2440;text-decoration-color:#1b2440}}
 .poster{position:relative;display:grid;grid-template-columns:1fr auto;align-items:center;gap:1rem;margin:1.25rem 0 0;padding:1.25rem 1.375rem;background:var(--panel);color:var(--panel-ink);border-radius:clamp(10px,3.7vw,16px)}.poster.hero{margin:0 0 var(--gap)}.poster .mini{position:relative;width:5.25rem;height:3rem;background:var(--card-face);border:1px solid var(--gold);border-radius:4px;grid-row:1/3}.poster .mini .rule{position:absolute;left:.5rem;top:.45rem;width:1rem;height:2px;background:var(--gold)}.poster .mini .l{position:absolute;left:.5rem;height:2px;background:#8a8070;opacity:.55}.poster .mini .l1{top:1.1rem;width:3.6rem}.poster .mini .l2{top:1.55rem;width:4rem}.poster .mini .l3{top:2rem;width:3.2rem}.poster .mini .l4{top:2.45rem;width:3.8rem}.poster .play{display:block;width:3.5rem;height:3.5rem;justify-self:end}.poster .play svg{width:100%;height:100%}.poster .hear{grid-column:1/3;min-height:3rem;color:var(--panel-ink);text-decoration-color:var(--panel-gold);border-top:1px solid var(--panel-rule);margin-top:.25rem;padding-top:.5rem}.whole{margin:1rem 0 0}</style>
 </head>
 <body>
@@ -220,6 +225,7 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
 </ol>
 </section>
 <p class="next big"><a class="door big" href="../../what-next/"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="lite" d="M15.5 5.5L20 3V22L15.5 21.5Z" fill="var(--gold)"/><path d="M4 23V3H20V23" fill="none" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><path class="leaf" d="M4 3L15.5 5.5V21.5L4 23Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="13" cy="13.5" r="1" fill="var(--draw)"/></svg>What next ›</a></p>
+<p class="theme" role="group"><button type="button" data-set="light">Light</button><button type="button" data-set="dark">Dark</button></p>
 </main>
 <script>
 (function(){
@@ -238,6 +244,17 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
       navigator.share({title:b.getAttribute('data-title'),text:b.getAttribute('data-text'),url:'https://3r4l.org/'}).catch(function(){});
     });
   }
+})();
+(function(){
+  var r=document.documentElement,bs=document.querySelectorAll('.theme button[data-set]');
+  function mark(){var c=r.getAttribute('data-theme')||'';for(var i=0;i<bs.length;i++){bs[i].setAttribute('aria-pressed',bs[i].getAttribute('data-set')===c?'true':'false');}}
+  for(var i=0;i<bs.length;i++){bs[i].addEventListener('click',function(){
+    var v=this.getAttribute('data-set');
+    if(r.getAttribute('data-theme')===v){r.removeAttribute('data-theme');v='';}else{r.setAttribute('data-theme',v);}
+    try{if(v){localStorage.setItem('theme',v);}else{localStorage.removeItem('theme');}}catch(e){}
+    mark();
+  });}
+  mark();
 })();
 </script>
 <noscript><style>.forty>li[data-day="1"]{display:contents}</style></noscript>
