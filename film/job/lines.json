@@ -1,0 +1,222 @@
+[
+ {
+  "beat": "b1",
+  "seg": "seg-00-b1",
+  "name": "title",
+  "block": "title",
+  "card": "THREE RULES FOR LIVING FROM THE LORD'S PRAYER:",
+  "text": "Three rules for living from the Lord's Prayer:",
+  "pre_s": 0.8,
+  "lead_s": 0,
+  "slow": false
+ },
+ {
+  "beat": "b2",
+  "seg": "seg-01-b2",
+  "name": "r1",
+  "block": "rules",
+  "card": "1. Confess all sins to God (Tell it) daily.",
+  "text": "One. Confess all sins to God (Tell it) daily.",
+  "pre_s": 0.8,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b3",
+  "seg": "seg-02-b3",
+  "name": "r2",
+  "block": "rules",
+  "card": "2. Surrender your will to God daily.",
+  "text": "Two. Surrender your will to God daily.",
+  "pre_s": 0.8,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b4",
+  "seg": "seg-03-b4",
+  "name": "r3",
+  "block": "rules",
+  "card": "3. Forgive others and yourself daily.",
+  "text": "Three. Forgive others and yourself daily.",
+  "pre_s": 0.8,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b5",
+  "seg": "seg-04-b5",
+  "name": "n1",
+  "block": "note",
+  "card": "Dear friend, rule 1 is the key to our success.",
+  "text": "Dear friend, rule one is the key to our success.",
+  "pre_s": 1.2,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b6",
+  "seg": "seg-05-b6",
+  "name": "n2",
+  "block": "note",
+  "card": "When we can't do rule 2 or 3, we must always go to rule 1 and confess it; God will forgive...",
+  "text": "When we can't do rule two or three, we must always go to rule one and confess it; God will forgive...",
+  "pre_s": 0.6,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b7",
+  "seg": "seg-06-b7",
+  "name": "n3",
+  "block": "note",
+  "card": "We must never stop confessing, even if they are the same old sins we can't seem to stop doing.",
+  "text": "We must never stop confessing, even if they are the same old sins we can't seem to stop doing.",
+  "pre_s": 0.45,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b8",
+  "seg": "seg-07-b8",
+  "name": "n4",
+  "block": "note",
+  "card": "As we practice these rules everyday...",
+  "text": "As we practice these rules everyday...",
+  "pre_s": 0.6,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b9",
+  "seg": "seg-08-b9",
+  "name": "n5",
+  "block": "note",
+  "card": "God will change our lives.",
+  "text": "God will change our lives.",
+  "pre_s": 0.45,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b10",
+  "seg": "seg-09-b10",
+  "name": "also",
+  "block": "note",
+  "card": "Also, practice the following little prayer all day:",
+  "text": "Also, practice the following little prayer all day:",
+  "pre_s": 1,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b11",
+  "seg": "seg-10-b11",
+  "name": "dp",
+  "block": "daily_prayer",
+  "card": "Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.",
+  "text": "Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.",
+  "pre_s": 0.9,
+  "lead_s": 0.25,
+  "slow": true
+ },
+ {
+  "beat": "b12",
+  "seg": "seg-11-b12",
+  "name": "turn",
+  "block": "turn",
+  "card": "See The Other Side Of This Card For More Help.",
+  "text": "See The Other Side Of This Card For More Help.",
+  "pre_s": 1.4,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b14",
+  "seg": "seg-12-b14",
+  "name": "inv",
+  "block": "invite",
+  "card": "Dear friend, if you're not sure where you'll spend eternity, and you want to know now, please pray this simple prayer from the bottom of your heart; as he heard my prayer, He will hear yours also.",
+  "text": "Dear friend, if you're not sure where you'll spend eternity, and you want to know now, please pray this simple prayer from the bottom of your heart; as he heard my prayer, He will hear yours also.",
+  "pre_s": 2.4,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b15",
+  "seg": "seg-13-b15",
+  "name": "p1",
+  "block": "prayer",
+  "card": "Dear Lord Jesus, I understand I am a sinner; I also believe You died for my sins and Your Father in Heaven raised you from the dead.",
+  "text": "Dear Lord Jesus, I understand I am a sinner; I also believe You died for my sins and Your Father in Heaven raised you from the dead.",
+  "pre_s": 1.2,
+  "lead_s": 0.25,
+  "slow": true
+ },
+ {
+  "beat": "b16",
+  "seg": "seg-14-b16",
+  "name": "p2",
+  "block": "prayer",
+  "card": "I simply ask You to have mercy on my life and save my soul.",
+  "text": "I simply ask You to have mercy on my life and save my soul.",
+  "pre_s": 0.6,
+  "lead_s": 0.25,
+  "slow": true
+ },
+ {
+  "beat": "b17",
+  "seg": "seg-15-b17",
+  "name": "p3",
+  "block": "prayer",
+  "card": "Come into my heart and my life and take me to Your home someday.",
+  "text": "Come into my heart and my life and take me to Your home someday.",
+  "pre_s": 0.6,
+  "lead_s": 0.25,
+  "slow": true
+ },
+ {
+  "beat": "b18",
+  "seg": "seg-16-b18",
+  "name": "p4",
+  "block": "prayer",
+  "card": "In Your Name Lord Jesus I pray and thank You.",
+  "text": "In Your Name Lord Jesus I pray and thank You.",
+  "pre_s": 0.6,
+  "lead_s": 0.25,
+  "slow": true
+ },
+ {
+  "beat": "b19",
+  "seg": "seg-17-b19",
+  "name": "amen",
+  "block": "prayer",
+  "card": "Amen.",
+  "text": "Amen.",
+  "pre_s": 0.9,
+  "lead_s": 0.25,
+  "slow": true
+ },
+ {
+  "beat": "b20",
+  "seg": "seg-18-b20",
+  "name": "back",
+  "block": "turn_back",
+  "card": "For continuous help from God, see other side...",
+  "text": "For continuous help from God, see other side...",
+  "pre_s": 1.8,
+  "lead_s": 0.25,
+  "slow": false
+ },
+ {
+  "beat": "b22",
+  "seg": "seg-19-b22",
+  "name": "credit",
+  "block": "credit",
+  "card": "The card's words by brother Daniel · read by a synthesized voice · 3r4l.org",
+  "text": "The card's words by brother Daniel. Read by a synthesized voice. 3 R 4 L dot org.",
+  "pre_s": 2.6,
+  "lead_s": 0,
+  "slow": false
+ }
+]

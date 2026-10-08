@@ -1,0 +1,137 @@
+{
+ "format": "kj-film-narration/1",
+ "slug": "3r4l-card",
+ "source": "content/card.txt (every spoken word is a card word under the aloud normalisation) + sheet2.json film.credit",
+ "lines": [
+  {
+   "beat": "b1",
+   "text": "Three rules for living from the Lord's Prayer:",
+   "card": "THREE RULES FOR LIVING FROM THE LORD'S PRAYER:",
+   "block": "title"
+  },
+  {
+   "beat": "b2",
+   "text": "One. Confess all sins to God (Tell it) daily.",
+   "card": "1. Confess all sins to God (Tell it) daily.",
+   "block": "rules"
+  },
+  {
+   "beat": "b3",
+   "text": "Two. Surrender your will to God daily.",
+   "card": "2. Surrender your will to God daily.",
+   "block": "rules"
+  },
+  {
+   "beat": "b4",
+   "text": "Three. Forgive others and yourself daily.",
+   "card": "3. Forgive others and yourself daily.",
+   "block": "rules"
+  },
+  {
+   "beat": "b5",
+   "text": "Dear friend, rule one is the key to our success.",
+   "card": "Dear friend, rule 1 is the key to our success.",
+   "block": "note"
+  },
+  {
+   "beat": "b6",
+   "text": "When we can't do rule two or three, we must always go to rule one and confess it; God will forgive...",
+   "card": "When we can't do rule 2 or 3, we must always go to rule 1 and confess it; God will forgive...",
+   "block": "note"
+  },
+  {
+   "beat": "b7",
+   "text": "We must never stop confessing, even if they are the same old sins we can't seem to stop doing.",
+   "card": "We must never stop confessing, even if they are the same old sins we can't seem to stop doing.",
+   "block": "note"
+  },
+  {
+   "beat": "b8",
+   "text": "As we practice these rules everyday...",
+   "card": "As we practice these rules everyday...",
+   "block": "note"
+  },
+  {
+   "beat": "b9",
+   "text": "God will change our lives.",
+   "card": "God will change our lives.",
+   "block": "note"
+  },
+  {
+   "beat": "b10",
+   "text": "Also, practice the following little prayer all day:",
+   "card": "Also, practice the following little prayer all day:",
+   "block": "note"
+  },
+  {
+   "beat": "b11",
+   "text": "Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.",
+   "card": "Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.",
+   "block": "daily_prayer"
+  },
+  {
+   "beat": "b12",
+   "text": "See The Other Side Of This Card For More Help.",
+   "card": "See The Other Side Of This Card For More Help.",
+   "block": "turn"
+  },
+  {
+   "beat": "b13",
+   "silence": true,
+   "direction": "THE TURN: the card turns (one transform) after the turn line, before the invite"
+  },
+  {
+   "beat": "b14",
+   "text": "Dear friend, if you're not sure where you'll spend eternity, and you want to know now, please pray this simple prayer from the bottom of your heart; as he heard my prayer, He will hear yours also.",
+   "card": "Dear friend, if you're not sure where you'll spend eternity, and you want to know now, please pray this simple prayer from the bottom of your heart; as he heard my prayer, He will hear yours also.",
+   "block": "invite"
+  },
+  {
+   "beat": "b15",
+   "text": "Dear Lord Jesus, I understand I am a sinner; I also believe You died for my sins and Your Father in Heaven raised you from the dead.",
+   "card": "Dear Lord Jesus, I understand I am a sinner; I also believe You died for my sins and Your Father in Heaven raised you from the dead.",
+   "block": "prayer"
+  },
+  {
+   "beat": "b16",
+   "text": "I simply ask You to have mercy on my life and save my soul.",
+   "card": "I simply ask You to have mercy on my life and save my soul.",
+   "block": "prayer"
+  },
+  {
+   "beat": "b17",
+   "text": "Come into my heart and my life and take me to Your home someday.",
+   "card": "Come into my heart and my life and take me to Your home someday.",
+   "block": "prayer"
+  },
+  {
+   "beat": "b18",
+   "text": "In Your Name Lord Jesus I pray and thank You.",
+   "card": "In Your Name Lord Jesus I pray and thank You.",
+   "block": "prayer"
+  },
+  {
+   "beat": "b19",
+   "text": "Amen.",
+   "card": "Amen.",
+   "block": "prayer"
+  },
+  {
+   "beat": "b20",
+   "text": "For continuous help from God, see other side...",
+   "card": "For continuous help from God, see other side...",
+   "block": "turn_back"
+  },
+  {
+   "beat": "b21",
+   "silence": true,
+   "direction": "THE END CARD: the card turns back to its front and rests; 3r4l.org and the credit arrive before the credit is spoken"
+  },
+  {
+   "beat": "b22",
+   "text": "The card's words by brother Daniel. Read by a synthesized voice. 3 R 4 L dot org.",
+   "card": "The card's words by brother Daniel · read by a synthesized voice · 3r4l.org",
+   "block": "credit"
+  }
+ ]
+}

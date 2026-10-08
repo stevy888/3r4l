@@ -1,0 +1,163 @@
+{
+ "slug": "3r4l-card",
+ "template": "../projects/3r4l/film/job/card.template.html",
+ "built": "../projects/3r4l/film/build/card.html",
+ "mix_out": "../projects/3r4l-inputs/film/work/card-mix.m4a",
+ "segments_dir": "~/projects/3r4l-inputs/film/segments/trimmed",
+ "workdir": "~/projects/3r4l-inputs/film/work",
+ "bed": "~/projects/3r4l-inputs/film/work/bed-silent.wav",
+ "intro_ms": 1600,
+ "mix": {
+  "bed_vol": 0.17,
+  "fade_in_s": 3,
+  "outro_alone_s": 1.5,
+  "fade_out_s": 6,
+  "apad_s": 3.5,
+  "loudnorm": "I=-17.4:TP=-2.2:LRA=11",
+  "target_lufs": -17.8
+ },
+ "voice": {
+  "voice_id": "BuzrlCKSqvkbAqccvkin",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+   "stability": 0.72,
+   "similarity_boost": 0.85,
+   "style": 0.08,
+   "use_speaker_boost": true,
+   "speed": 0.9
+  }
+ },
+ "assembly": {
+  "beat_count": 22,
+  "tail_s": 4,
+  "segments": [
+   {
+    "seg": "seg-00-b1",
+    "pre_s": 0.8,
+    "lead_s": 0
+   },
+   {
+    "seg": "seg-01-b2",
+    "pre_s": 0.8,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-02-b3",
+    "pre_s": 0.8,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-03-b4",
+    "pre_s": 0.8,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-04-b5",
+    "pre_s": 1.2,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-05-b6",
+    "pre_s": 0.6,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-06-b7",
+    "pre_s": 0.45,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-07-b8",
+    "pre_s": 0.6,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-08-b9",
+    "pre_s": 0.45,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-09-b10",
+    "pre_s": 1,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-10-b11",
+    "pre_s": 0.9,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-11-b12",
+    "pre_s": 1.4,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-12-b14",
+    "pre_s": 2.4,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-13-b15",
+    "pre_s": 1.2,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-14-b16",
+    "pre_s": 0.6,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-15-b17",
+    "pre_s": 0.6,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-16-b18",
+    "pre_s": 0.6,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-17-b19",
+    "pre_s": 0.9,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-18-b20",
+    "pre_s": 1.8,
+    "lead_s": 0.25
+   },
+   {
+    "seg": "seg-19-b22",
+    "pre_s": 2.6,
+    "lead_s": 0
+   }
+  ],
+  "extra_beats": [
+   {
+    "beat": "b13",
+    "anchor": "b14",
+    "hold_s": 1.8
+   },
+   {
+    "beat": "b21",
+    "anchor": "b22",
+    "hold_s": 1.2
+   }
+  ]
+ },
+ "takes": "tts_segments.py writes the raw takes with --out ~/projects/3r4l-inputs/film/segments (both passes); film/trim-tails.mjs cuts their trailing silence into segments/trimmed = segments_dir, the dir assemble.py reads",
+ "meditate_rule": "INVERTED for this film by the owner's word of 2026-10-08 (the card's exact words, animated): the paper IS the meditation and the words ARE the video — never cure it back to the ask films' rule",
+ "pace": {
+  "default_speed": 1,
+  "prayer_speed": 0.9,
+  "prayer_beats": [
+   "b11",
+   "b15",
+   "b16",
+   "b17",
+   "b18",
+   "b19"
+  ]
+ },
+ "pass": "the prayer pass: speed 0.90 on the prayer beats only (run after deleting their segments)"
+}

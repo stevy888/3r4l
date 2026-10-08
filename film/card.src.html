@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<style>
+/* 3r4l — THE CARD FILM TEMPLATE (a sibling of the KJ studio's Believe template, scripts/media-plates/held/saved-template.html, in the 3r4l family's
+   paper). The engine, the BEATS/TOTAL anchors (retime.mjs), the #render mode and the 1600 ms poster wait are Believe's; the scene is the home's
+   hero drawing (build.mjs SVG_SKY: the sun in three flat steps rising behind the hill, the cross on its crest, the dawn and the path arriving
+   stroke by stroke through the holds) and the card's two faces TYPESET from card.txt, each line lit as J reads it (.speak → .spoken, never popping
+   off); front → THE TURN (one transform) → back → the held end card (the card at rest, 3r4l.org, the credit). THE MEDITATE RULE IS INVERTED for
+   this film by the owner's word (the words ARE the video). Ambient motion: the disc breathes ≤ 1 % scale; nothing else drifts; text never moves
+   while readable. The at-brace tokens are the beat numbers, filled by make-narration.mjs. */
+/*__FONTS__*/
+:root{--serif:"Source Serif 4","Iowan Old Style",Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;
+--band:#1b2440;--band-ink:#f8f3e8;--band-mute:#aeb4c6;--halo:#242b49;--halo2:#333a5a;--sun:#e8d9b8;--hill:#1b2440;--draw:#1b2440;--horizon-ink:#8a7c57;--star:#d9d3c4;
+--card-face:#f7efdc;--gold:#b9892e;--panel-gold:#d4b36a;--card-ink:#1b2440;--card-body:#262626;--card-shadow:8px 10px 22px -8px rgba(80,56,16,.42);--ease:cubic-bezier(0.2,0,0,1)}
+html,body{margin:0;background:var(--band);overflow:hidden}
+#film{position:relative;width:100vw;height:100vh;overflow:hidden;background:var(--band);font-family:var(--serif);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+/* ---- the sky: the home's hero drawing, 1000 × 520, xMidYMax meet, the disc running on below the canvas ---- */
+.sky{position:absolute;left:0;bottom:0;width:100%;height:auto;overflow:visible;pointer-events:none}
+.breathe{transform-box:fill-box;transform-origin:center;animation:breathe 11s ease-in-out infinite alternate}
+@keyframes breathe{from{transform:scale(1)}to{transform:scale(1.008)}}
+.disc{transform:translateY(26px);transition:transform 22s linear}
+.h1,.h2,.sun{opacity:0;transition:opacity 1.8s var(--ease)}
+.draw{stroke-dasharray:1;stroke-dashoffset:1;opacity:0;transition:stroke-dashoffset 1.6s var(--ease),opacity .6s var(--ease)}
+.path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.3s var(--ease)}
+.star{position:absolute;width:90px;height:90px;right:160px;top:70px;opacity:1;transition:opacity 2.4s var(--ease);animation:star 5s ease-in-out infinite}
+@keyframes star{50%{opacity:.55}}
+/* the dawn's steps arrive one per rule; the horizon draws under the title; the path arrives through the note's holds; the cross at the little prayer */
+#film.f@{title} .crest{stroke-dashoffset:0;opacity:1}
+#film.f@{r1} .h1{opacity:1}
+#film.f@{r2} .h2{opacity:1}
+#film.f@{r3} .sun{opacity:1}
+#film.f@{r3} .star{opacity:0;animation:none}
+#film.f@{n1} .path{opacity:1;stroke-dashoffset:.8334}
+#film.f@{n2} .path{stroke-dashoffset:.6667}
+#film.f@{n3} .path{stroke-dashoffset:.5}
+#film.f@{n4} .path{stroke-dashoffset:.3334}
+#film.f@{n5} .path{stroke-dashoffset:.1667}
+#film.f@{also} .path{stroke-dashoffset:0}
+#film.f@{dp} .c1{stroke-dashoffset:0;opacity:1}
+#film.f@{dp} .c2{stroke-dashoffset:0;opacity:1;transition-delay:.8s}
+#film.f@{inv} .disc{transform:translateY(0)}
+/* ---- the poster (the 1600 ms before play in #render): pre-dawn, the title alone in the sky ---- */
+.poster-title{position:absolute;left:12%;right:12%;top:16%;margin:0;text-align:center;color:var(--band-ink);font:500 48px/1.2 var(--serif);letter-spacing:.02em;text-wrap:balance;transition:opacity .6s var(--ease)}
+#film.started .poster-title{opacity:0}
+/* ---- the paper: the two faces back to back; arrives at play; the TURN at the turn beat; the end card ---- */
+.paper-pos{position:absolute;left:760px;top:118px;width:1120px;perspective:2600px;opacity:0;transform:translateY(24px);transition:opacity .2s linear,transform .5s var(--ease);transform-origin:50% 0}
+#film.started .paper-pos{opacity:1;transform:none}
+.paper{position:relative;transform-style:preserve-3d;transition:transform 1.2s var(--ease)}
+#film.f@{flip} .paper{transform:rotateY(180deg)}
+#film.f@{end} .paper{transform:rotateY(360deg)}
+#film.f@{end} .paper-pos{transform:translateY(352px) scale(.6);transition:transform 1.6s var(--ease)}
+.face{position:relative;background:var(--card-face);color:var(--card-body);border:1px solid var(--gold);border-radius:16px;padding:46px 54px 40px;box-shadow:var(--card-shadow);backface-visibility:hidden;-webkit-backface-visibility:hidden;box-sizing:border-box}
+.face::before{content:"";position:absolute;left:54px;top:26px;width:48px;height:3px;background:var(--gold);border-radius:1.5px}
+.back{position:absolute;inset:0;transform:rotateY(180deg)}
+.face p{margin:0 0 14px;font:400 30px/1.42 var(--serif);text-wrap:pretty}
+.face p:last-child{margin-bottom:0}
+.face .title{font-weight:500;font-size:32px;letter-spacing:.02em;color:var(--card-ink);margin-bottom:18px;text-wrap:balance}
+.face .rules{font-size:33px;margin-bottom:20px}
+.face .daily_prayer,.face .prayer{font-weight:500;font-size:31px;color:var(--card-ink)}
+.face .turn,.face .turn_back{font-style:italic;font-size:28px;margin-top:4px}
+/* the back carries fewer words: one size up so the prayer fills its paper */
+.back p{font-size:34px}
+.back .prayer{font-size:35px}
+.back .turn_back{font-size:31px}
+/* each line lit as read: unread at low ink, read at full — never popping off */
+.speak{opacity:.34;transition:opacity .45s var(--ease)}
+.speak.spoken{opacity:1}
+.speak[data-b="1"]{transition-duration:.15s} /* the first line lights sharp: the A/V onset is measured on it */
+/* ---- the end card: 3r4l.org and the credit in the sky ---- */
+.wordmark,.credit{position:absolute;margin:0;text-align:center;color:var(--band-ink);opacity:0;transition:opacity .9s var(--ease) .4s}
+.wordmark{left:984px;width:672px;top:120px;font:500 96px/1 var(--serif);letter-spacing:.01em}
+.credit{left:900px;width:840px;top:236px;font:400 26px/1.3 var(--sans);color:var(--band-mute)}
+.credit br{display:none}
+#film.f@{end} .wordmark,#film.f@{end} .credit{opacity:1}
+/* ---- portrait recomposition (1080 × 1920): the sky above, the paper below at the phone's reading size; the end card keeps the card at rest at its reading size ---- */
+@media (orientation: portrait){
+  .sky{bottom:auto;top:138px}
+  .star{right:110px;top:60px}
+  .poster-title{left:8%;right:8%;top:14%;font-size:56px}
+  .paper-pos{left:60px;top:600px;width:960px}
+  .face{padding:44px 48px 40px;border-radius:18px}
+  .face::before{left:48px;top:24px}
+  /* the legibility floor: 13 px at 390 wide = 36 px at 1080; every line sits above it (37 × 390/1080 = 13.4) */
+  .face p{font-size:37px;line-height:1.4}
+  .face .title{font-size:39px}
+  .face .rules{font-size:39px}
+  .face .daily_prayer,.face .prayer{font-size:38px}
+  .face .turn,.face .turn_back{font-size:37px}
+  .back p{font-size:40px}
+  .back .prayer{font-size:41px}
+  .back .turn_back{font-size:38px}
+  #film.f@{end} .paper-pos{transform:none}
+  .wordmark{left:0;width:100%;top:56px;font-size:88px}
+  .credit{left:60px;width:960px;top:165px;font-size:38px;line-height:1.25}
+  .credit br{display:inline}
+  .credit .dot{display:none}
+}
+</style>
+</head>
+<body>
+<div id="film" data-beat="0">
+  <svg class="sky" viewBox="0 0 1000 520" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false">
+    <g class="breathe"><g class="disc">
+      <circle class="h1" cx="500" cy="540" r="500" fill="var(--halo)"/>
+      <circle class="h2" cx="500" cy="540" r="460" fill="var(--halo2)"/>
+      <circle class="sun" cx="500" cy="540" r="420" fill="var(--sun)"/>
+    </g></g>
+    <path class="hill" d="M0 450C110 420 220 355 320 355C440 355 560 440 1000 500V520H0Z" fill="var(--hill)"/>
+    <path class="crest draw" d="M0 450C110 420 220 355 320 355C440 355 560 440 1000 500" fill="none" stroke="var(--horizon-ink)" stroke-width="1.6" stroke-linecap="round" pathLength="1"/>
+    <path class="path" d="M10 476C110 452 215 410 318 358" fill="none" stroke="var(--horizon-ink)" stroke-width="2.6" stroke-linecap="round" pathLength="1" opacity="0"/>
+    <path class="cross c1 draw" d="M320 355V215" fill="none" stroke="var(--draw)" stroke-width="6" stroke-linecap="round" pathLength="1"/>
+    <path class="cross c2 draw" d="M270 260H370" fill="none" stroke="var(--draw)" stroke-width="6" stroke-linecap="round" pathLength="1"/>
+  </svg>
+  <svg class="star" viewBox="0 0 60 60" aria-hidden="true" focusable="false"><circle cx="30" cy="30" r="14" fill="var(--star)" fill-opacity=".08"/><circle cx="30" cy="30" r="7" fill="var(--star)" fill-opacity=".14"/><path d="M30 15Q30 30 45 30Q30 30 30 45Q30 30 15 30Q30 30 30 15Z" fill="var(--star)"/><path d="M30 24.5Q30 30 35.5 30Q30 30 30 35.5Q30 30 24.5 30Q30 30 30 24.5Z" fill="#fff" fill-opacity=".9"/></svg>
+  <p class="poster-title">__TITLE__</p>
+  <div class="paper-pos"><div class="paper">
+    <div class="face front">__FRONT__</div>
+    <div class="face back">__BACK__</div>
+  </div></div>
+  <p class="wordmark">__WORDMARK__</p>
+  <p class="credit">__CREDIT1__<span class="dot"> · </span><br>__CREDIT2__</p>
+</div>
+<script>
+(function(){
+  'use strict';
+  /* ---------- timeline (retime.mjs injects BEATS/TOTAL fail-closed: exactly one match each) ---------- */
+  var BEATS=[];
+  var TOTAL=0;
+  var film=document.getElementById('film'), speaks=[].slice.call(document.querySelectorAll('.speak'));
+  var playing=false, t0=0, acc=0, curBeat=-1, raf=0, ended=false;
+  function elapsed(){ return playing ? acc+(performance.now()-t0) : acc; }
+  function applyBeat(e){
+    var b=0; for(var i=0;i<BEATS.length;i++){ if(e>=BEATS[i]) b=i+1; }
+    if(b!==curBeat){
+      for(var j=1;j<=BEATS.length;j++) film.classList.toggle('f'+j, j<=b);
+      film.setAttribute('data-beat', String(b));
+      for(var k=0;k<speaks.length;k++) speaks[k].classList.toggle('spoken', +speaks[k].getAttribute('data-b')<=b);
+      curBeat=b;
+    }
+  }
+  function tick(){ var e=elapsed(); applyBeat(e); if(e>=TOTAL){ finish(); return; } if(playing) raf=requestAnimationFrame(tick); }
+  function play(){ if(playing||ended) return; playing=true; t0=performance.now(); film.classList.add('started'); raf=requestAnimationFrame(tick); }
+  function finish(){ playing=false; ended=true; acc=TOTAL; cancelAnimationFrame(raf); applyBeat(TOTAL); film.classList.add('ended'); }
+  /* the measure's hand: __seek(ms) sets the film to the state it holds at ms (−1 = the poster) without the clock; __state() reads it */
+  window.__seek=function(ms){ cancelAnimationFrame(raf); playing=false; ended=false; acc=Math.max(0,ms); curBeat=-1; film.classList.toggle('started', ms>=0); film.classList.remove('ended'); applyBeat(acc); if(ms>=TOTAL){ ended=true; film.classList.add('ended'); } };
+  window.__state=function(){ return {beat:curBeat, elapsed:elapsed(), total:TOTAL, beats:BEATS, started:film.classList.contains('started'), ended:ended}; };
+  window.__play=play;
+  var RENDER = location.hash==='#render';
+  if(RENDER){ document.documentElement.classList.add('render'); setTimeout(play, 1600); }
+  /* #record: render chrome, no timer — the recorder (film/record.mjs) calls __play() once its capture holds more than the 1600 ms poster the mux cuts to */
+  if(location.hash==='#record') document.documentElement.classList.add('render');
+  if(location.hash==='#play') setTimeout(play, 200);
+})();
+</script>
+</body>
+</html>

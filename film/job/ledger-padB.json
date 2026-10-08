@@ -1,0 +1,40 @@
+{
+ "slug": "3r4l-card",
+ "compiled_at": "2026-10-08T09:50:59.801Z",
+ "voice": {
+  "voice_id": "BuzrlCKSqvkbAqccvkin",
+  "model": "eleven_multilingual_v2",
+  "settings": {
+   "stability": 0.72,
+   "similarity_boost": 0.85,
+   "style": 0.08,
+   "use_speaker_boost": true
+  }
+ },
+ "mix": {
+  "bed_vol": 0.17,
+  "fade_in_s": 3,
+  "outro_alone_s": 1.5,
+  "fade_out_s": 6,
+  "apad_s": 3.5,
+  "loudnorm": "I=-17.4:TP=-2.2:LRA=11",
+  "target_lufs": -17.8
+ },
+ "intro_ms": 1600,
+ "beats": {
+  "count": 22,
+  "total_s": 141.37
+ },
+ "hashes": {
+  "template": "40f16c213e8fde91b8e1bbe1bbdf29ae5e7b9d750bc7f365bc667a8310ab036a",
+  "built": "f731c752d47ce4635338c57ad45a81cfe119b894f6c3c5ecd29f817614fa50f0",
+  "mix": "db99db2b8c196a656800fd942510cbbc999026546c6f0f13abdb4a9bcd23b100",
+  "beats": "7add6b5ed70ed0dc4aec0fc30dbe129327afa098595a8e22fc4a5d1f9de00995",
+  "bed": "6239a5f3c91bb3bf94ae43b292ccd0a74ed9c46a6dd2a92f544b135e86dc7de1"
+ },
+ "sources": {
+  "segments_dir": "~/projects/3r4l-inputs/film/segments/trimmed",
+  "bed": "~/projects/3r4l-inputs/film/work/bed-silent.wav"
+ },
+ "preflight": "SKIPPED"
+}
