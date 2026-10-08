@@ -11,7 +11,7 @@
 cd "$(dirname "$0")" || exit 1; export CW_DIR="${1:-docs}" CW_ROOT="$PWD"
 exec node --input-type=module - <<'JS'
 import fs from 'node:fs'; import path from 'node:path';
-const root = process.env.CW_ROOT, dir = path.resolve(process.env.CW_DIR), ROUTE = process.env.CW_ROUTE || '', { normalise } = await import(path.join(root, 'normalise.mjs'));
+const root = process.env.CW_ROOT, dir = path.resolve(process.env.CW_DIR), ROUTE = process.env.CW_ROUTE || '', { normalise, fill } = await import(path.join(root, 'normalise.mjs'));
 const J = p => JSON.parse(fs.readFileSync(p, 'utf8')), C = p => path.join(root, 'content', p), D = p => path.join(root, 'docs', p), has = p => fs.existsSync(p);
 const sheet = J(C('sheet.json')), verses = J(C('verses.json')), tr = J(C('translations.json')), ADDRESS = 'https://3r4l.org/', KIT_ADDRESS = 'https://3r4l.org/kit.pdf'; // the TWO absolute addresses of record (the plan §0b "Decided, no letter")
 const PAGES = J(C('pages.json')).pages, pageOf = route => PAGES.find(p => p.path === route) || null, DEFAULT = { card: 'lines', forty: true, share: true }; // a route outside the table (the mock-ups until rung 2) is read under the strictest default and carries no lifted shape
@@ -26,10 +26,12 @@ const hasFilm = has(D('film/card-720.mp4')) && has(D('film/card.vtt')); // the s
 const contact = has(C('contact.json')) ? J(C('contact.json')) : null, CONTACT_HREFS = new Set(contact ? Object.values(contact.doors || {}).map(d => d.href).filter(Boolean) : []); // the literals of TR2-contact-doors (mailto:hello@3r4l.org?…, https://m.me/<handle>, viber://…, sms:…)
 const sheet2 = has(C('sheet2.json')) ? J(C('sheet2.json')) : null, sheet2tl = has(C('sheet2-tl.json')) ? J(C('sheet2-tl.json')) : null; // rung 1's strings, DRAFT or owner — every string leaf is allowlisted (a DRAFT serves on the preview for his eye; the keys status/ruled/source/note and _-keys are paper, never copy)
 const testimonials = has(C('testimonials.json')) ? (J(C('testimonials.json')).rows || []) : []; // {rows:[{lang, name, text, consent:"YES", date}]} — consented rows only ever serve
+const line1 = f => has(f) ? fs.readFileSync(f, 'utf8').split('\n')[0].trim() : '', film = has(C('film.json')) ? J(C('film.json')) : {}; // THE FILL VARS (normalise.mjs fill): the inputs on disk, the same ones build.mjs fills with
+const VARS = { controller: line1(path.join(inputs, 'controller.txt')), vendor: signup ? signup.vendor : '', name: contact ? contact.answerer : '', length: film.length, size_mb: film.size_mb };
 const leaves = (o, out = []) => { if (typeof o === 'string') out.push(o); else if (Array.isArray(o)) o.forEach(x => leaves(x, out)); else if (o && typeof o === 'object') Object.entries(o).forEach(([k, v]) => { if (k[0] !== '_' && !['status', 'ruled', 'source', 'note', 'written'].includes(k)) leaves(v, out); }); return out; };
 function allow(lang) { const S = lang === 'tl' ? J(C('sheet-tl.json')) : sheet, S2 = lang === 'tl' ? sheet2tl : sheet2, card = lang === 'tl' ? (cardTl || cardEn) : cardEn, A = new Set(), add = s => { if (s) A.add(normalise(s)); };
   [S.h1, S.h2, S.whatnext_link, S.whatnext_clause, ...S.h1_lines, ...S.lines].forEach(add); Object.entries(S.labels).forEach(([k, v]) => { if (k[0] !== '_') { add(v); add(v + ' ›'); } });
-  if (S2) leaves(S2).forEach(s => { add(s); add(s + ' ›'); });
+  if (S2) leaves(S2).forEach(s => { add(s); add(s + ' ›'); const f = fill(s, VARS); if (f !== s) { add(f); add(f + ' ›'); } }); // raw and filled alike (a placeholder shows until its input lands)
   const title = card ? blocks(card)[0] : '3R4L'; add(title); add(title + S.labels.title_whatnext_suffix); add(ADDRESS); add(KIT_ADDRESS); add(NOTICE); // the legal string, both languages
   if (card) blocks(card).forEach(b => { add(b); b.split('\n').forEach(add); }); else add(sheet.placeholder.card); // THE INTERIM: the one placeholder sentence is allowed
   verses.forEach(v => { add(lang === 'tl' ? v.ref_tl : v.ref); add(lang === 'tl' ? v.text_tl : v.text); add(lang === 'tl' ? v.translation_tl : v.translation_name); });

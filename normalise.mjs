@@ -10,4 +10,11 @@ export function normalise(s, form = 'NFC') {
   return decodeEntities(s).normalize(form).replace(/[   ]/g, ' ').replace(/\s+/g, ' ').trim();
 }
 export function normalisePdf(s) { return normalise(s, 'NFKC'); }
+// fill(s, vars) — THE ONE PLACEHOLDER FILL (phase 2 rung 1): a sheet2.json string shows its bracket placeholder on the preview until its input lands, then
+// the same string filled: [controller] ← controller.txt · [the list vendor] ← signup.json vendor · [name] ← contact.json answerer · [m:ss] and [N] MB ← film.json.
+// build.mjs fills with the inputs on disk; check-wording allowlists the raw string AND its filled form from the same inputs, so the two never disagree.
+export function fill(s, v = {}) {
+  return String(s).replace(/\[controller\]/g, m => v.controller || m).replace(/\[the (?:list )?vendor\]/g, m => v.vendor || m).replace(/\[name\]/g, m => v.name || m)
+    .replace(/\[m:ss\]/g, m => v.length || m).replace(/\[N\] MB/g, m => (v.size_mb ? `${v.size_mb} MB` : m));
+}
 export default normalise;
