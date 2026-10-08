@@ -19,9 +19,9 @@
 --card-face:#f7efdc;--card-edge:#1b2440;--card-ink:#1b2440;--card-body:#262626;--card-shadow:8px 10px 22px -8px rgba(80,56,16,.42);
 --door:#1b2440;--door-rule:#a3781f;--focus:#a3781f;--panel:#1b2440;--panel-ink:#f8f3e8;--panel-mute:#aeb4c6;--panel-gold:#d4b36a;--panel-rule:#3a4466;--band:#1b2440;--band-ink:#f8f3e8;--band-mute:#aeb4c6;--glow:#222944;--glow2:#2c3250;--glow3:#383b53;--lamp-ray:#8c7d55;--star:#d9d3c4;--star-dim:#8b90a6;--horizon-ink:#8a7c57;--lift:2.5rem;--pad:1.5rem;--top:1.75rem;--gap:2.5rem;--dawn-h:3rem;color-scheme:light dark}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141b31;--ink:#d6cfc0;--head:#f8f3e8;--mute:#aeb4c6;--gold:#a6802c;--gold-text:#cdb272;--horizon:#665b45;--draw:#cfc6b3;--sun:#3a362e;--ray:#4f4b40;--bulb:#cdb272;--card-face:#413a2e;--card-edge:#7d7059;--card-ink:#f8f3e8;--card-body:#efe9dc;--card-shadow:8px 10px 22px -8px rgba(0,0,0,.7);--door:#f8f3e8;--door-rule:#c9ad6a;--focus:#c9ad6a;--panel:#232c4a;--panel-rule:#4a5480;--band:#141b31;--glow:#171e34;--glow2:#1c2339;--glow3:#232a40;--star:#a3a4b4;--star-dim:#5a5f78;--horizon-ink:#273050}
-:root:not([data-theme="light"]) .day{display:none}:root:not([data-theme="light"]) .night{display:block}}
+:root:not([data-theme="light"]) .day{display:none}:root:not([data-theme="light"]) .night{display:block}:root:not([data-theme="light"]) .theme .ico-moon{display:none}:root:not([data-theme="light"]) .theme .ico-sun{display:block}}
 :root[data-theme="dark"]{--paper:#141b31;--ink:#d6cfc0;--head:#f8f3e8;--mute:#aeb4c6;--gold:#a6802c;--gold-text:#cdb272;--horizon:#665b45;--draw:#cfc6b3;--sun:#3a362e;--ray:#4f4b40;--bulb:#cdb272;--card-face:#413a2e;--card-edge:#7d7059;--card-ink:#f8f3e8;--card-body:#efe9dc;--card-shadow:8px 10px 22px -8px rgba(0,0,0,.7);--door:#f8f3e8;--door-rule:#c9ad6a;--focus:#c9ad6a;--panel:#232c4a;--panel-rule:#4a5480;--band:#141b31;--glow:#171e34;--glow2:#1c2339;--glow3:#232a40;--star:#a3a4b4;--star-dim:#5a5f78;--horizon-ink:#273050}
-:root[data-theme="dark"] .day{display:none}:root[data-theme="dark"] .night{display:block}
+:root[data-theme="dark"] .day{display:none}:root[data-theme="dark"] .night{display:block}:root[data-theme="dark"] .theme .ico-moon{display:none}:root[data-theme="dark"] .theme .ico-sun{display:block}
 @media (max-width:359px){:root{--pad:1.25rem}}
 html{font-size:100%;-webkit-text-size-adjust:100%;hyphens:none;-webkit-hyphens:none}
 *{box-sizing:border-box}
@@ -141,9 +141,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 .addr{font:1rem/1.4 var(--sans);color:var(--mute);margin:.5rem 0 0}
 .notice{font:400 0.9375rem/1.45 var(--sans);color:var(--mute);margin:var(--gap) 0 0;max-width:36ch}
 /* THE LIGHT/DARK SWITCH (owner 2026-10-08): two quiet words at the foot of every page; the pressed one in the head colour, the other underlined as a door; print hides the row. */
-.theme{display:flex;justify-content:center;gap:1.5rem;margin:var(--gap) 0 0}
-.theme button{min-height:3rem;padding:.75rem .5rem;font:400 1rem/1.3 var(--sans);color:var(--door);background:none;border:0;text-decoration:underline;text-decoration-color:var(--door-rule);text-decoration-thickness:1px;text-underline-offset:.26em;cursor:pointer}
-.theme button[aria-pressed="true"]{color:var(--head);font-weight:600;text-decoration:none}
+.theme{display:flex;justify-content:center;margin:var(--gap) 0 0}
+.theme button{width:3rem;height:3rem;padding:.75rem;background:none;border:0;cursor:pointer;border-radius:50%}
+.theme button svg{width:1.5rem;height:1.5rem;display:block}
+.theme .ico-sun{display:none}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){.door,.share button,.door .leaf,.door .lite{transition:none}}
 @media print{.theme{display:none!important}body{background:#fff;color:#000}main>*{display:none}main>.band{display:block;background:none;color:#1b2440;margin:0;padding:0;border:0;border-radius:0}main>.band h1{color:#1b2440}.band .stars,.band .lang{display:none!important}.band.lifts h1::after{background:#1b2440}.band h1 .beat{color:#1b2440}main>.held{display:block;margin:4.5rem 0 0}main>.held>svg{display:none!important}main>.held>.dawn{display:block!important}.dawn .glow,.dawn .ray{display:none}.dawn .sun{fill:#fff;stroke:#1b2440;stroke-width:1.25}#card{display:block}.face,#card.placeholder{box-shadow:none;border-color:#000;background:#fff;color:#000}.face::before,#card.placeholder::before{background:#000}#card .title,#card .daily_prayer,#card .prayer{color:#000}.verse{background:#f7efdc;border:1px solid #1b2440;color:#1b2440}.verse::before,.verse .label,.verse .ref,.verse .tr,.verse .text,.verse .door{color:#1b2440}.verse .door{border-top-color:#1b2440;text-decoration-color:#1b2440}}
@@ -223,7 +224,7 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
 </ol>
 </section>
 <p class="next big"><a class="door big" href="what-next/"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="lite" d="M15.5 5.5L20 3V22L15.5 21.5Z" fill="var(--gold)"/><path d="M4 23V3H20V23" fill="none" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><path class="leaf" d="M4 3L15.5 5.5V21.5L4 23Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="13" cy="13.5" r="1" fill="var(--draw)"/></svg>What next ›</a></p>
-<p class="theme" role="group"><button type="button" data-set="light">Light</button><button type="button" data-set="dark">Dark</button></p>
+<p class="theme"><button type="button" id="theme" aria-label="Dark" data-label-light="Light" data-label-dark="Dark"><svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linejoin="round"/></svg><svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="var(--gold)" stroke-width="1.4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round"/></svg></button></p>
 </main>
 <script>
 (function(){
@@ -244,14 +245,10 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
   }
 })();
 (function(){
-  var r=document.documentElement,bs=document.querySelectorAll('.theme button[data-set]');
-  function mark(){var c=r.getAttribute('data-theme')||'';for(var i=0;i<bs.length;i++){bs[i].setAttribute('aria-pressed',bs[i].getAttribute('data-set')===c?'true':'false');}}
-  for(var i=0;i<bs.length;i++){bs[i].addEventListener('click',function(){
-    var v=this.getAttribute('data-set');
-    if(r.getAttribute('data-theme')===v){r.removeAttribute('data-theme');v='';}else{r.setAttribute('data-theme',v);}
-    try{if(v){localStorage.setItem('theme',v);}else{localStorage.removeItem('theme');}}catch(e){}
-    mark();
-  });}
+  var r=document.documentElement,b=document.getElementById('theme');if(!b){return;}
+  function dark(){var t=r.getAttribute('data-theme');if(t){return t==='dark';}return window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;}
+  function mark(){b.setAttribute('aria-label',dark()?b.getAttribute('data-label-light'):b.getAttribute('data-label-dark'));}
+  b.addEventListener('click',function(){var v=dark()?'light':'dark';r.setAttribute('data-theme',v);try{localStorage.setItem('theme',v);}catch(e){}mark();});
   mark();
 })();
 </script>
