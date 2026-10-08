@@ -106,11 +106,6 @@
    "status": "DRAFT",
    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
   },
-  "print_page": {
-   "text": "Print this page",
-   "status": "DRAFT",
-   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
-  },
   "send_shop": {
    "text": "Send the sheet to a print shop",
    "status": "DRAFT",
@@ -126,6 +121,31 @@
    "status": "absent",
    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
    "_note": "his typed line only, with its date — e.g. '[N] cards given since [year]. Counted by hand.' — from the giver's paper count; absent until then"
+  },
+  "_struck": {
+   "print_page": {
+    "text": "Print this page",
+    "status": "DRAFT",
+    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+   },
+   "why": "owner 2026-10-08: \"No use saying print this page\" — the doors print the actual card"
+  },
+  "print_h2": {
+   "text": "Print your card",
+   "status": "owner",
+   "written": "2026-10-08 owner in chat: \"print your card with them showing exactly like the cards I gave\""
+  },
+  "print_en": {
+   "text": "Print the card (English)",
+   "status": "DRAFT",
+   "written": "2026-10-08T12:1xZ seat:build-3r4l-p2-1008",
+   "_note": "the actual card file card.pdf, on brother Daniel's yes"
+  },
+  "print_tl": {
+   "text": "Print the card (Tagalog)",
+   "status": "DRAFT",
+   "written": "2026-10-08T12:1xZ seat:build-3r4l-p2-1008",
+   "_note": "the day a Tagalog card exists (card-tl.pdf, pastor-checked, printed by brother Daniel)"
   }
  },
  "home": {

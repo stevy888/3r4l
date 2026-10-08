@@ -233,3 +233,12 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 @media print{.real{display:none}}
 /* THE EXACT CARD (owner 2026-10-08 "exact layout I gave"): the printed faces as pictures, the card's own shape, on the yes */
 .real.exact img{display:block;width:100%;height:auto;aspect-ratio:252/144;background:#fff;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42)}
+/* THE RULES CARD on the home (owner 2026-10-08 "just the three rules 1. 2. 3. written out beautifully in that box"): the title line and the three rules at reading size on the cream paper, nothing else — the picture is still the card and the door to /card/. */
+.picture.rules-card .face{padding:2.125rem 1.25rem 1.5rem}
+#card.rules-card .title{font:500 1.1875rem/1.35 var(--serif);letter-spacing:.02em;margin:0 0 1rem;text-wrap:balance}
+#card.rules-card .rules{font:400 1.4375rem/1.5 var(--serif);white-space:pre-line;margin:0;text-wrap:pretty}
+/* THE PRINT SECTION at the foot of /card/ (owner 2026-10-08): "Print your card" — the exact cards shown as he gave them, the doors to the actual card files per language, the shop line, the steps, the close line. */
+.print{margin:var(--gap) 0 0}
+.print h2{font:600 1.25rem/1.4 var(--sans);color:var(--head);margin:0 0 1rem}
+.print .real{margin:0 auto}
+.print .doors{margin:1.25rem 0 0}
