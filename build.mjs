@@ -9,6 +9,7 @@ const R = path.dirname(new URL(import.meta.url).pathname), C = p => path.join(R,
 const J = p => JSON.parse(fs.readFileSync(p, 'utf8')), argv = process.argv.slice(2), REFRESH = argv.includes('--refresh'), CANON = argv.includes('--canonical');
 const INPUTS = '/Users/aibrain/projects/3r4l-inputs', ADDRESS = 'https://3r4l.org/', KJ = 'https://www.knowing-jesus.com';
 const sheet = J(C('sheet.json')), verses = J(C('verses.json')), books = J(C('books.json')).books, tr = J(C('translations.json')), journey = J(C('journey.json'));
+const PAGES = J(C('pages.json')).pages; // THE PAGE TABLE (phase 2 rung 0, INSTRUMENT-SPEC 1 and 7): every served page, its tongue, its pair, its needs, its frame and the flag that hides it; the fence and the rig read the same table
 const redirects = J('/Users/aibrain/kj-rebuild/apps/web/src/lib/generated/legacy-www-redirects.json').rows;
 const themeHead = fs.readFileSync(C('theme-head.js'), 'utf8').trim(), themeJs = fs.readFileSync(C('theme.js'), 'utf8').trim(); // THE LIGHT/DARK SWITCH (owner 2026-10-08 "Let's have a switch to light and dark in the footer"): the early line in <head> applies a remembered choice before paint; the footer row sets it; ONE key (theme) in the phone's own storage, no personal data — the fence allows exactly these two files' bytes and nothing else that names storage
 const css = fs.readFileSync(C('page.css'), 'utf8').trim(), dayjs = fs.readFileSync(C('day.js'), 'utf8').replace('__START__', JSON.stringify({ y: journey.y, m: journey.m, d: journey.d })).trim();
@@ -82,6 +83,14 @@ const cardBlock = (rulesOnly) => card ? `<section id="card">${rulesOnly ? face('
   : `<section id="card" class="placeholder"><p>${esc(sheet.placeholder.card)}</p></section>`;
 const cardHtml = (rulesOnly, held) => held ? `<div class="held">${cardBlock(rulesOnly)}${SVG_DAWN}${SVG_LAMP}</div>` : cardBlock(rulesOnly); // DESIGN r5: the card alone under its dawn (home only)
 const title = card ? card.title : '3R4L', hasPdf = fs.existsSync(D('card.pdf')) && fs.existsSync(D('kit.pdf'));
+// THE ABSENT-AND-WHOLE PATTERN (phase 2 rung 0, INSTRUMENT-SPEC 7): every input gates its own block, so a missing input serves an honest page — the film and its play door (rung 2; make_kit.py --publish-film on brother Daniel's yes), the sign-up form (rung 7's signup.json), the contact doors (doors.txt → contact.json), the Email door and the privacy@ line (dns-rows.txt hasMail), the founder's page and its foot door (founder.txt), the print doors (hasPdf, the yes), the testimonials block (consented rows only). Nothing below draws a new page yet: the home and /what-next/ keep their r8 bytes until rung 2 (the served home's sha reads the same before and after this instrument).
+const hasFilm = fs.existsSync(D('film/card-720.mp4')) && fs.existsSync(D('film/card.vtt'));
+const signup = fs.existsSync(C('signup.json')) ? J(C('signup.json')) : null, hasForm = !!(signup && signup.form_id && signup.action);
+const contact = fs.existsSync(C('contact.json')) ? J(C('contact.json')) : null, hasContact = !!(contact && Object.keys(contact.doors || {}).length);
+const hasMail = fs.existsSync(path.join(INPUTS, 'dns-rows.txt')) && /^hasMail:\s*yes/im.test(fs.readFileSync(path.join(INPUTS, 'dns-rows.txt'), 'utf8'));
+const hasFounder = fs.existsSync(path.join(INPUTS, 'founder.txt'));
+const testimonials = fs.existsSync(C('testimonials.json')) ? (J(C('testimonials.json')).rows || []).filter(r => r.consent === 'YES') : [];
+const FLAGS = { hasFilm, hasForm, hasContact, hasMail, hasFounder, hasPdf, testimonials: testimonials.length };
 const checked = fs.existsSync(C('sheet-tl.json')) && fs.existsSync(path.join(INPUTS, 'pastor-check.txt')); // the Tagalog pair serves only on the pastor's signed check
 const L = { en: sheet, tl: checked ? J(C('sheet-tl.json')) : null };
 const rows = lang => verses.map(v => lang === 'tl' ? { ...v, ref_l: v.ref_tl, text_l: v.text_tl, tr_l: v.translation_tl } : { ...v, ref_l: v.ref, text_l: v.text, tr_l: v.translation_name });
@@ -101,9 +110,12 @@ if (checked) { W('index.html', home('tl', link('tl', 'en/'))); W('what-next/inde
   W('en/index.html', home('en', link('en', '../'), '../')); W('en/what-next/index.html', next('en', link('en', '../../what-next/'), '../../')); }
 else { W('index.html', home('en')); W('what-next/index.html', next('en', '', '../')); W('en/index.html', home('en', '', '../')); W('en/what-next/index.html', next('en', '', '../../')); } // THE INTERIM (TR-language-door A)
 W('next/index.html', shortDoor('../what-next/', 'what next')); W('40/index.html', shortDoor('../what-next/#forty', 'the forty days'));
-if (hasPdf) { W('card/index.html', shortDoor('../card.pdf', 'the card')); W('kit/index.html', shortDoor('../kit.pdf', 'a sheet of cards')); }
+if (hasPdf) W('kit/index.html', shortDoor('../kit.pdf', 'a sheet of cards')); // the `/card` meta-refresh short door RETIRED 2026-10-08 (phase 2 rung 0, INSTRUMENT-SPEC 7): /card/ is a PAGE from rung 2 — the whole card large, the ribbon tab, the print doors and the shop line; the kit's short door stays for the clerk's link
 W('.nojekyll', ''); W('robots.txt', 'User-agent: *\nAllow: /\n');
 if (fs.existsSync(C('fonts'))) fs.cpSync(C('fonts'), D('fonts'), { recursive: true }); // DESIGN the-card-itself: the self-hosted Source Serif 4 subsets ride beside the pages
-for (const pair of [['index.html', 'what-next/index.html'], ['en/index.html', 'en/what-next/index.html']]) { const sz = pair.map(f => fs.statSync(D(f)).size), sum = sz[0] + sz[1];
-  if (sz.some(s => s > 60 * 1024) || sum > 120 * 1024) throw new Error(`size: ${pair.join(' + ')} = ${sz.join(' + ')} = ${sum} B (> 60 KB a page or > 120 KB a pair)`); console.log(`${pair[0]} + ${pair[1]} = ${sum} B`); }
+// THE BYTE BARS from the page table (INSTRUMENT-SPEC 7): every page ≤ 60 KB AND the home + any one other page of its tongue ≤ 120 KB; a page the table names but no rung has drawn yet is reported, never counted
+const built = PAGES.map(p => ({ ...p, file: p.path.replace(/^\//, '') + 'index.html' })).filter(p => fs.existsSync(D(p.file))), notYet = PAGES.filter(p => !built.some(b => b.path === p.path));
+for (const root of ['/', '/en/']) { const mine = built.filter(p => p.path === root || (root === '/en/' ? p.path.startsWith('/en/') : !p.path.startsWith('/en/'))), home = mine.find(p => p.path === root); if (!home) continue;
+  const size = p => fs.statSync(D(p.file)).size, hs = size(home); for (const p of mine) { const s = size(p); if (s > 60 * 1024) throw new Error(`size: ${p.path} = ${s} B (> 60 KB a page)`); if (p !== home && hs + s > 120 * 1024) throw new Error(`size: ${home.path} + ${p.path} = ${hs} + ${s} = ${hs + s} B (> 120 KB a pair)`); if (p !== home) console.log(`${home.file} + ${p.file} = ${hs + s} B`); } }
 console.log(checked ? 'built: Tagalog at the apex, English under /en/' : 'built: THE INTERIM — the English pair at the apex and under /en/, no language link (the Tagalog pair waits on sheet-tl.json + pastor-check.txt)', card ? '· the card from card.txt' : '· the card block a greyed placeholder (no card.txt yet)', CANON ? '· --canonical' : '');
+console.log('flags:', JSON.stringify(FLAGS), notYet.length ? `· not drawn yet (their rungs): ${[...new Set(notYet.map(p => p.pair))].join(' · ')}` : '');

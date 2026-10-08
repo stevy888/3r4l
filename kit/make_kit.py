@@ -17,7 +17,8 @@ import json, os, re, shutil, subprocess, sys, unicodedata
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); INPUTS = '/Users/aibrain/projects/3r4l-inputs'
 CARD = os.path.join(INPUTS, 'card-of-record.pdf'); CARD_TXT = os.path.join(R, 'content', 'card.txt'); DOCS = os.path.join(R, 'docs'); KIT = os.path.join(R, 'kit')
 PRIVATE = os.path.join(INPUTS, 'kit'); KIT_PDF = os.path.join(PRIVATE, 'kit.pdf')
-MM = 72 / 25.4; MARGIN = 10 * MM; MARK = 3 * MM; SIZES = {'A4': (595.276, 841.89), 'Letter': (612, 792)}
+MM = 72 / 25.4; MARGIN = 10 * MM; MARK = 3 * MM; SIZES = {'A4': (595.276, 841.89), 'Letter': (612, 792), 'Long': (612, 936)}  # Long = Philippine long bond 8.5 × 13 in (TR2-paper A, 2026-10-08; the shop line says "short bond, long bond or A4"); the per-cell proof runs on all three
+FILM_SRC = os.path.join(INPUTS, 'film'); FILM_DOCS = os.path.join(DOCS, 'film')  # the film's masters wait PRIVATE under the inputs folder until brother Daniel's yes (--publish-film), apart from the PDFs' yes (--publish)
 
 def normalise(s):  # the twin of normalise.mjs for the pdftotext side: NFKC, whitespace collapsed
     return re.sub(r'\s+', ' ', unicodedata.normalize('NFKC', s)).strip()
@@ -65,6 +66,14 @@ def main():
     import fitz
     args = sys.argv[1:]; os.makedirs(KIT, exist_ok=True)
     if '--stamp-back' in args: print('--stamp-back RETIRED: the card has a printed back; the QR files and the-address.txt go into the card\'s own design on the next run')
+    if '--publish-film' in args:  # brother Daniel's yes IN HIS NAME on the film (TR2-film-yes A: the words read aloud by a synthesized voice in public, the printed face on screen, the credit) — a yes apart from the PDFs' yes, so one never publishes the other
+        if not re.search(r'^- film_yes: YES', open(os.path.join(INPUTS, 'INPUTS.md'), encoding='utf-8').read(), re.M): raise SystemExit('--publish-film needs the line "- film_yes: YES …" in INPUTS.md')
+        for f in ('card-720.mp4', 'card.vtt'):
+            if not os.path.exists(os.path.join(FILM_SRC, f)): raise SystemExit(f'--publish-film: {FILM_SRC}/{f} is not on disk (rung 8 builds the masters private)')
+        os.makedirs(FILM_DOCS, exist_ok=True)
+        for f in ('card-720.mp4', 'card.vtt'): shutil.copyfile(os.path.join(FILM_SRC, f), os.path.join(FILM_DOCS, f))
+        print('published: docs/film/card-720.mp4 and docs/film/card.vtt (now run node build.mjs for the hero\'s video and play door)')
+        if '--kit-only' not in args and '--manual-only' not in args: return
     if '--manual-only' not in args and os.path.exists(CARD) and os.path.exists(CARD_TXT):
         os.makedirs(PRIVATE, exist_ok=True); src = fitz.open(CARD); want = card_text()
         pdf_text = subprocess.run(['pdftotext', '-layout', CARD, '-'], capture_output=True, text=True, check=True).stdout  # THE WORDING PROOF (the plan's tool)
@@ -82,6 +91,7 @@ def main():
             shutil.copyfile(CARD, os.path.join(DOCS, 'card.pdf')); shutil.copyfile(KIT_PDF, os.path.join(DOCS, 'kit.pdf')); print('published: docs/card.pdf and docs/kit.pdf (now run node build.mjs for the doors)')
     else:
         print('kit.pdf SKIPPED: no card-of-record.pdf / card.txt on disk (the owner sends the card)')
+    if '--kit-only' in args: return  # the kit and its proof alone; the manual (a dated Chromium PDF, tracked in the repo) is left as it is
     # the manual: ONE path, Chromium page.pdf through @playwright/test (one page per language; the Tagalog only on the pastor's check)
     files = [os.path.join(KIT, 'manual.html')]
     if os.path.exists(os.path.join(KIT, 'manual-tl.html')) and os.path.exists(os.path.join(INPUTS, 'pastor-check.txt')): files.append(os.path.join(KIT, 'manual-tl.html'))

@@ -1,11 +1,38 @@
 #!/bin/bash
-# dod-probe: read-only, under 20 s. Prints <done>\t4 where done = the four paths of https://3r4l.org answering 200 AND passing check-wording AND carrying the right tongue. 0 until markers/tr-live.marker exists.
-D=/Users/aibrain/projects/3r4l; test -f $D/markers/tr-live.marker || { printf '0\t4\n'; exit 0; }
-T=${TMPDIR:-/tmp}/3r4l-probe; rm -rf $T; n=0
-for p in / /what-next/ /en/ /en/what-next/; do
-  mkdir -p $T$p; c=$(curl -s -m 10 -o $T${p}index.html -w '%{http_code}' https://3r4l.org$p); [ "$c" = 200 ] || continue
-  case $p in /en*) want=en;; *) want=tl;; esac
-  grep -q "<html lang=\"$want\"" $T${p}index.html || continue
-  bash $D/check-wording $T$p >/dev/null 2>&1 && n=$((n+1))
+# dod-probe: read-only, under 20 s, no model, no writes beyond $TMPDIR. Prints <done>\t8 — the eight DoD units of Prog-ThreeRulesSite2
+# (the phase-2 plan §3): the five page PAIRS of content/pages.json (home · what-next · card · contact · privacy; /story/ is outside the
+# count) — a pair counts when BOTH its pages answer 200 at https://3r4l.org, carry their tongue (lang="tl" at the apex, lang="en" under
+# /en/) and pass check-wording — + the FILM (film/card-720.mp4 answering 200 and the served VTT's cues == card.txt through the one
+# normaliser) + the LIST (content/signup.json carrying a form_id and the served apex what-next carrying the one <form> whose action is
+# signup.json's) + the TAGALOG apex (markers/p2-tagalog.marker). 0 until markers/p2-live.marker exists (the ship). Phase 1's four-path
+# probe retired 2026-10-08 (rung 0 of phase 2; INSTRUMENT-SPEC (8)).
+D=/Users/aibrain/projects/3r4l; test -f $D/markers/p2-live.marker || { printf '0\t8\n'; exit 0; }
+T=${TMPDIR:-/tmp}/3r4l-probe; rm -rf $T; mkdir -p $T; n=0
+get() { curl -s -m 4 -o "$2" -w '%{http_code}' "https://3r4l.org$1"; }
+# the pairs: content/pages.json rows with count true, grouped by pair; every page of a pair must pass
+for pair in $(node -e "const P=require('$D/content/pages.json').pages.filter(p=>p.count);console.log([...new Set(P.map(p=>p.pair))].join(' '))"); do
+  ok=1
+  for p in $(node -e "console.log(require('$D/content/pages.json').pages.filter(p=>p.count&&p.pair==='$pair').map(p=>p.path).join(' '))"); do
+    mkdir -p "$T$p"; c=$(get "$p" "$T${p}index.html"); [ "$c" = 200 ] || { ok=0; break; }
+    case $p in /en/*) want=en;; *) want=tl;; esac
+    grep -q "<html lang=\"$want\"" "$T${p}index.html" || { ok=0; break; }
+    CW_ROUTE="$p" bash $D/check-wording "$T$p" >/dev/null 2>&1 || { ok=0; break; }
+  done
+  [ $ok = 1 ] && n=$((n+1))
 done
-printf '%s\t4\n' $n
+# the film: the master answers 200 and the served captions are the card's words, cue by cue, through normalise.mjs
+if [ "$(curl -s -m 4 -o /dev/null -w '%{http_code}' -r 0-0 https://3r4l.org/film/card-720.mp4)" = 206 ] || [ "$(curl -s -m 4 -o /dev/null -w '%{http_code}' -I https://3r4l.org/film/card-720.mp4)" = 200 ]; then
+  if [ "$(get /film/card.vtt $T/card.vtt)" = 200 ] && node --input-type=module -e "
+    import fs from 'node:fs'; const { normalise } = await import('$D/normalise.mjs');
+    const vtt = fs.readFileSync('$T/card.vtt', 'utf8').split(/\r?\n/).filter(l => l && !/^WEBVTT|^NOTE|^\d+$|-->/.test(l)).join(' ');
+    const card = [...fs.readFileSync('$D/content/card.txt', 'utf8').matchAll(/^== \w+ ==\n([\s\S]*?)(?=\n== \w+ ==\n|(?![\s\S]))/gm)].map(m => m[1]).join(' ');
+    process.exit(normalise(vtt) === normalise(card) ? 0 : 1);" 2>/dev/null; then n=$((n+1)); fi
+fi
+# the list: signup.json names the form and the served apex what-next carries exactly that form
+if [ -f $D/content/signup.json ] && node -e "const s=require('$D/content/signup.json');process.exit(s.form_id&&s.action?0:1)" 2>/dev/null; then
+  a=$(node -e "console.log(require('$D/content/signup.json').action)"); mkdir -p $T/what-next
+  [ "$(get /what-next/ $T/what-next/index.html)" = 200 ] && grep -q "<form action=\"$a\"" $T/what-next/index.html && n=$((n+1))
+fi
+# the Tagalog apex
+test -f $D/markers/p2-tagalog.marker && n=$((n+1))
+printf '%s\t8\n' $n

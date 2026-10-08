@@ -1,37 +1,64 @@
 #!/usr/bin/env node
-// measure.mjs <base-url> [--frames <dir>] — the served page's regions by getBoundingClientRect at the plan's widths, light and dark,
-// two face passes (the second with the first serif face of the stack removed — the Android fallback), against every bar of §3 DoD 3.
-// Writes markers/measures.json; rc 1 on any red row. Usage: node measure.mjs http://127.0.0.1:8077/3r4l/ [--frames /path]
+// measure.mjs <base-url> [--frames <dir>] — THE RIG (phase 2 rung 0, INSTRUMENT-SPEC (6)): every page of content/pages.json that the build wrote,
+// at the plan's widths, light and dark, THREE passes — stack · fallback (the first serif face of the stack removed — the Android fallback) ·
+// reduced (prefers-reduced-motion: the static page, zero animations, every rect equal to the stack pass) — against every bar of the DoD (§3).
+// SETTLE before any rect or frame: document.fonts.ready, then every document-timeline animation's .finished raced against 3 s, and ≥ 2 s since
+// load; frames ×2 per view (-t0 with every animation paused at 0 — the first paint's words — and -settled). A buffered layout-shift observer
+// must sum to 0. THE REQUEST LOG at load ⊂ the three font files with 0 requests to film/* (⊂ not ==: a page with no italic glyph never asks
+// for the 400i face). Writes markers/measures.json; rc 1 on any red row. Usage: node measure.mjs http://127.0.0.1:8077/3r4l/ [--frames /path]
 import { chromium } from '@playwright/test'; import fs from 'node:fs'; import path from 'node:path';
 const base = process.argv[2]; if (!base) { console.error('usage: node measure.mjs <base-url> [--frames <dir>]'); process.exit(2); }
 const fi = process.argv.indexOf('--frames'), frames = fi > 0 ? process.argv[fi + 1] : null; if (frames) fs.mkdirSync(frames, { recursive: true });
-const R = path.dirname(new URL(import.meta.url).pathname), pages = ['', 'what-next/', 'en/', 'en/what-next/'];
-const views = [[320, 568], [393, 660], [390, 844], [300, 600]], schemes = ['light', 'dark'], passes = ['stack', 'fallback'];
-const FALLBACK = ':root{--serif:Palatino,"Palatino Linotype",Georgia,"Noto Serif",serif !important}';
-const bar = (name, ok, got, want) => ({ name, ok, got, want });
-const browser = await chromium.launch(); const rows = []; let red = 0;
-for (const pg of pages) for (const [w, h] of views) for (const scheme of schemes) for (const pass of passes) {
-  const ctx = await browser.newContext({ viewport: { width: w, height: h }, colorScheme: scheme, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
-  const page = await ctx.newPage(); const reqs = []; page.on('request', r => { if (!r.url().startsWith(base.replace(/\/[^/]*$/, ''))) reqs.push(r.url()); });
-  const res = await page.goto(base + pg, { waitUntil: 'load' }); if (pass === 'fallback') await page.addStyleTag({ content: FALLBACK });
+const R = path.dirname(new URL(import.meta.url).pathname), J = p => JSON.parse(fs.readFileSync(p, 'utf8'));
+const PAGES = J(path.join(R, 'content', 'pages.json')).pages.filter(p => fs.existsSync(path.join(R, 'docs', p.path.replace(/^\//, ''), 'index.html'))); // the table's pages the build wrote (the rig measures the build; dod-probe counts what the host serves)
+const views = [[320, 568], [393, 660], [390, 844], [300, 600]], schemes = ['light', 'dark'], passes = ['stack', 'fallback', 'reduced'];
+const FALLBACK = ':root{--serif:Palatino,"Palatino Linotype",Georgia,"Noto Serif",serif !important}', FONT = /\/fonts\/source-serif-4-(400|500|400i)\.woff2$/;
+const hasFilm = fs.existsSync(path.join(R, 'docs', 'film', 'card-720.mp4')) && fs.existsSync(path.join(R, 'docs', 'film', 'card.vtt'));
+const origin = new URL(base).origin, bar = (name, ok, got, want) => ({ name, ok, got, want }), eq = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+const browser = await chromium.launch(); const rows = []; let red = 0; const settled = {}; // the stack pass's settled rects per page·view·scheme — the reduced pass must equal them
+for (const P of PAGES) for (const [w, h] of views) for (const scheme of schemes) for (const pass of passes) {
+  const pg = P.path.replace(/^\//, ''), lang = pg.startsWith('en/') || !fs.existsSync(path.join(R, 'content', 'sheet-tl.json')) ? 'en' : 'tl', kind = P.page, key = `${P.path}|${w}x${h}|${scheme}`;
+  const ctx = await browser.newContext({ viewport: { width: w, height: h }, colorScheme: scheme, deviceScaleFactor: 2, isMobile: true, hasTouch: true, reducedMotion: pass === 'reduced' ? 'reduce' : 'no-preference' });
+  const page = await ctx.newPage(); const reqs = []; page.on('request', r => reqs.push(r.url()));
+  await page.addInitScript(() => { window.__cls = 0; try { new PerformanceObserver(l => { for (const e of l.getEntries()) if (!e.hadRecentInput) window.__cls += e.value; }).observe({ type: 'layout-shift', buffered: true }); } catch (e) {} });
+  const t0ms = Date.now(), res = await page.goto(base + pg, { waitUntil: 'load' }); if (pass === 'fallback') await page.addStyleTag({ content: FALLBACK });
+  const hiddenWords = () => [...document.querySelectorAll('body *')].filter(e => e.offsetParent !== null && e.children.length === 0 && e.textContent && e.textContent.trim()).filter(e => { const s = getComputedStyle(e); return s.opacity === '0' || s.visibility === 'hidden'; }).length;
+  const t0 = await page.evaluate(hw => { const anims = document.getAnimations(); anims.forEach(a => { a.pause(); a.currentTime = 0; }); const hidden = eval(hw)(); return { anims: anims.length, hiddenCardWords: [...document.querySelectorAll('#card *')].filter(e => e.offsetParent !== null && e.children.length === 0 && e.textContent.trim()).filter(e => { const s = getComputedStyle(e); return s.opacity === '0' || s.visibility === 'hidden'; }).length, hiddenWords: hidden }; }, hiddenWords.toString()); // T0: every animation held at its start — the card picture carries its words at first paint (INSTRUMENT-SPEC 6; DoD 9 "every word visible at t0")
+  const frameView = frames && pass === 'stack' && ((w === 390 && h === 844) || (w === 320 && h === 568)), n = `${(pg || 'home').replace(/\/$/, '').replace(/\//g, '-')}-${w}x${h}-${scheme}`;
+  if (frameView) await page.screenshot({ path: path.join(frames, n + '-t0.png') });
+  await page.evaluate(() => document.getAnimations().forEach(a => a.play()));
+  await page.evaluate(() => Promise.race([Promise.all([document.fonts.ready, ...document.getAnimations().map(a => a.finished.catch(() => {}))]), new Promise(r => setTimeout(r, 3000))])); // THE SETTLE: fonts, then every document-timeline animation finished (the one loop — the star's breath — is caught by the 3 s race)
+  const wait = 2000 - (Date.now() - t0ms); if (wait > 0) await page.waitForTimeout(wait);
   const m = await page.evaluate(() => { const r = s => { const e = document.querySelector(s); if (!e) return null; const b = e.getBoundingClientRect(); return { top: Math.round(b.top), bottom: Math.round(b.bottom), h: Math.round(b.height) }; };
     const fonts = [...document.querySelectorAll('body *')].filter(e => e.offsetParent !== null && e.innerText && e.innerText.trim()).map(e => parseFloat(getComputedStyle(e).fontSize));
-    const doors = [...document.querySelectorAll('.door, .share button')].filter(e => e.offsetParent !== null).map(e => Math.round(e.getBoundingClientRect().height));
-    const widths = [...document.querySelectorAll('body *')].map(e => Math.round(e.getBoundingClientRect().right));
-    return { h1: r('h1'), lang: r('.lang'), card: r('#card'), next: r('.next .door'), scrollW: document.documentElement.scrollWidth, maxRight: Math.max(...widths), minFont: Math.min(...fonts), body: parseFloat(getComputedStyle(document.body).fontSize), doors, lang: r('.lang'), lis: document.querySelectorAll('li.is-today').length, cookies: document.cookie.length }; });
-  const lang = pg.startsWith('en/') || !fs.existsSync(path.join(R, 'content', 'sheet-tl.json')) ? 'en' : 'tl', home = !pg.endsWith('what-next/');
-  const bars = [bar('status 200', res.status() === 200, res.status(), 200), bar('no external request', reqs.length === 0, reqs.length, 0), bar('no cookie', m.cookies === 0, m.cookies, 0),
+    const doors = [...document.querySelectorAll('.door, .share button, .play, a.tab')].filter(e => e.offsetParent !== null).map(e => Math.round(e.getBoundingClientRect().height));
+    const widths = [...document.querySelectorAll('body *')].map(e => Math.round(e.getBoundingClientRect().right)), shop = document.querySelector('p.shop');
+    return { h1: r('h1'), lang: r('.lang'), card: r('#card'), picture: !!document.querySelector('#card.picture'), hero: r('.hero'), play: r('.play'), pair: r('.next.pair'), next: r('.next.under-card .door') || r('.next .door'), tab: r('a.tab'), face: r('#card .face.front'), door1: r('.doors .door'), form: r('form'), verse: r('.verse'), shopPx: shop ? parseFloat(getComputedStyle(shop).fontSize) : null,
+      scrollW: document.documentElement.scrollWidth, maxRight: Math.max(...widths), minFont: Math.min(...fonts), body: parseFloat(getComputedStyle(document.body).fontSize), doors, lis: document.querySelectorAll('li.is-today').length, cookies: document.cookie.length, anims: document.getAnimations().length, cls: window.__cls }; });
+  if (frameView) { await page.screenshot({ path: path.join(frames, n + '-settled.png') }); await page.screenshot({ path: path.join(frames, n + '-full.png'), fullPage: true }); }
+  if (frames && pass === 'fallback' && kind === 'home' && !pg.startsWith('en/') && w === 390 && h === 844 && scheme === 'light') await page.screenshot({ path: path.join(frames, 'home-390x844-light-fallback-serif.png') });
+  const hiddenAtFoot = await page.evaluate(async hw => { window.scrollTo(0, document.body.scrollHeight); await new Promise(r => setTimeout(r, 1200)); const n = eval(hw)(); window.scrollTo(0, 0); return n; }, hiddenWords.toString()); // "every word visible" after a scroll to the bottom (view-driven motion must have ended at rest)
+  const same = reqs.filter(u => u.startsWith(origin) && u !== res.url()), external = reqs.filter(u => !u.startsWith(origin)), offList = same.filter(u => !FONT.test(u)), film = reqs.filter(u => /\/film\//.test(u));
+  const rects = { h1: m.h1, card: m.card, next: m.next, hero: m.hero, pair: m.pair }; if (pass === 'stack') settled[key] = rects;
+  const bars = [bar('status 200', res.status() === 200, res.status(), 200), bar('no external request', external.length === 0, external.length, 0), bar('the request log ⊂ the three font files (0 to film/*)', offList.length === 0 && film.length === 0, offList.length + film.length, 0), bar('no cookie', m.cookies === 0, m.cookies, 0),
     bar('nothing above the h1 but the language link (≤ 20 px)', !m.lang || (m.lang.h <= 20 && m.lang.bottom <= m.h1.top), m.lang ? m.lang.h : 0, '≤ 20'),
     bar('no box wider than the device', m.scrollW <= w && m.maxRight <= w, Math.max(m.scrollW, m.maxRight), '≤ ' + w), bar('nothing under 13 px', m.minFont >= 13, m.minFont, '≥ 13'), bar('body ≥ 18 px', m.body >= 18, m.body, '≥ 18'),
-    bar('every door ≥ 44 px', m.doors.every(d => d >= 44), Math.min(...m.doors), '≥ 44'), bar('one day row revealed', m.lis === 1, m.lis, 1)];
-  if (home) { if (w === 320 && h === 568) { bars.push(bar(`${lang} h1 whole by y ≤ ${lang === 'en' ? 165 : 200} at 320×568`, m.h1.bottom <= (lang === 'en' ? 165 : 200), m.h1.bottom, '≤ ' + (lang === 'en' ? 165 : 200))); if (lang === 'en') bars.push(bar("the card's title by y ≤ 210 at 320", m.card.top <= 210, m.card.top, '≤ 210')); }
-    if (w === 393 && h === 660) bars.push(bar(`${lang} h1 whole by y ≤ ${lang === 'en' ? 145 : 175} at 393×660`, m.h1.bottom <= (lang === 'en' ? 145 : 175), m.h1.bottom, '≤ ' + (lang === 'en' ? 145 : 175)), bar('h1 and the card visible at 393×660', m.card.top < 660 - 120, m.card.top, '< 540'));
-    // TR-link-place B (owner/3r4l-link-place-B-2026-10-07): the door sits DIRECTLY UNDER the card, so the row of record is that gap, not A's "≤ 2 × viewport" (void once the card is the real two-face card: its own height passes 2 × 568 at 320).
-    if ((w === 390 && h === 844) || (w === 320 && h === 568)) bars.push(bar('the what-next door directly under the card (door top − card bottom ≤ 56)', m.next.top - m.card.bottom <= 56, m.next.top - m.card.bottom, '≤ 56')); }
-  const fail = bars.filter(b => !b.ok); red += fail.length; rows.push({ page: pg || '/', lang, view: `${w}x${h}`, scheme, pass, h1: m.h1, card: m.card, next: m.next, bars, fail: fail.map(b => `${b.name}: ${b.got} (want ${b.want})`) });
-  if (frames && pass === 'stack' && ((w === 390 && h === 844) || (w === 320 && h === 568))) { const n = `${(pg || 'home').replace(/\/$/, '').replace(/\//g, '-')}-${w}x${h}-${scheme}`; await page.screenshot({ path: path.join(frames, n + '.png') }); await page.screenshot({ path: path.join(frames, n + '-full.png'), fullPage: true }); }
-  if (frames && pass === 'fallback' && pg === '' && w === 390 && h === 844 && scheme === 'light') await page.screenshot({ path: path.join(frames, 'home-390x844-light-fallback-serif.png') });
+    bar('every door ≥ 44 px', m.doors.every(d => d >= 44), Math.min(...m.doors), '≥ 44'), bar('layout-shift 0', m.cls === 0, Math.round(m.cls * 1000) / 1000, 0),
+    bar('every word visible at t0 (the card picture\'s words at first paint)', t0.hiddenCardWords === 0 && t0.hiddenWords === 0, t0.hiddenCardWords + t0.hiddenWords, 0), bar('every word visible after a scroll to the foot', hiddenAtFoot === 0, hiddenAtFoot, 0)];
+  if (P.needs.forty) bars.push(bar('one day row revealed', m.lis === 1, m.lis, 1)); else bars.push(bar('no day row on a page without the forty', m.lis === 0, m.lis, 0));
+  if (pass === 'reduced') bars.push(bar('reduced motion: zero animations', m.anims === 0, m.anims, 0), bar('reduced motion: every rect equals the stack pass', eq(rects, settled[key]), eq(rects, settled[key]) ? 'equal' : JSON.stringify(rects), 'equal'));
+  if (kind === 'home') { const stackBottom = Math.max(m.card.bottom, m.pair ? m.pair.bottom : m.card.bottom); // THE PICTURE STACK = #card(.picture) + its door row (E2's pair of text doors)
+    if (w === 320 && h === 568) { bars.push(bar(`${lang} h1 whole by y ≤ ${lang === 'en' ? 165 : 200} at 320×568`, m.h1.bottom <= (lang === 'en' ? 165 : 200), m.h1.bottom, '≤ ' + (lang === 'en' ? 165 : 200)), bar("the card picture's top ≤ 2 × 568 at 320", m.card.top <= 2 * 568, m.card.top, '≤ 1136')); // "the card's title by 210" RETIRED by his E word (DECISIONS 8877; delegate-row 2026-10-08)
+      if (hasFilm) bars.push(bar("the play door's top ≤ 568 at 320×568", !!m.play && m.play.top <= 568, m.play ? m.play.top : 'none', '≤ 568')); if (m.picture) bars.push(bar('the card picture ≤ 360 px tall at 320', m.card.h <= 360, m.card.h, '≤ 360')); }
+    if (w === 393 && h === 660) bars.push(bar(`${lang} h1 whole by y ≤ ${lang === 'en' ? 145 : 175} at 393×660`, m.h1.bottom <= (lang === 'en' ? 145 : 175), m.h1.bottom, '≤ ' + (lang === 'en' ? 145 : 175)), m.hero ? bar('the hero visible at 393×660', m.hero.top < 540, m.hero.top, '< 540') : bar('h1 and the card visible at 393×660', m.card.top < 540, m.card.top, '< 540'));
+    if ((w === 390 && h === 844) || (w === 320 && h === 568)) { bars.push(bar('the what-next door directly under the picture stack (door top − stack bottom ≤ 56)', m.next.top - stackBottom <= 56, m.next.top - stackBottom, '≤ 56')); // TR-link-place B re-pointed under shape E (delegate-row Prog-ThreeRulesSite2 rung-0, 2026-10-08)
+      if (m.hero) bars.push(bar("a breath of air: the illustration's top ≥ 20 px under the h1's box", m.hero.top - m.h1.bottom >= 20, m.hero.top - m.h1.bottom, '≥ 20')); } } // DECISIONS 8890
+  if (kind === 'what-next' && m.form && w === 320 && h === 568) bars.push(bar("the sign-up block after the verse panel and ≤ 2 × 568 at 320×568", m.form.top > m.verse.bottom && m.form.top <= 2 * 568, m.form.top, `> ${m.verse.bottom} and ≤ 1136`));
+  if (kind === 'card') { if (w === 320 && h === 568) bars.push(bar('the ribbon tab is the first print door, top ≤ 568 at 320×568', !!m.tab && m.tab.top <= 568 && (!m.door1 || m.tab.top <= m.door1.top), m.tab ? m.tab.top : 'none', '≤ 568'), bar('the front face within the first screen at 320×568', !!m.face && m.face.top < 568, m.face ? m.face.top : 'none', '< 568'));
+    bars.push(bar('every print door ≥ 48 px', m.doors.every(d => d >= 48), Math.min(...m.doors), '≥ 48'), bar('the shop line ≥ 18 px', m.shopPx !== null && m.shopPx >= 18, m.shopPx, '≥ 18')); }
+  if (kind === 'contact' && w === 320 && h === 568) bars.push(bar("the first door's top ≤ 568 at 320×568", !!m.door1 && m.door1.top <= 568, m.door1 ? m.door1.top : 'none', '≤ 568'));
+  const fail = bars.filter(b => !b.ok); red += fail.length; rows.push({ page: P.path, lang, view: `${w}x${h}`, scheme, pass, h1: m.h1, card: m.card, next: m.next, hero: m.hero, cls: m.cls, anims: m.anims, requests: same.map(u => u.replace(origin, '')), bars, fail: fail.map(b => `${b.name}: ${b.got} (want ${b.want})`) });
   await ctx.close(); }
 await browser.close(); fs.mkdirSync(path.join(R, 'markers'), { recursive: true }); fs.writeFileSync(path.join(R, 'markers', 'measures.json'), JSON.stringify({ base, measured: new Date().toISOString(), red, rows }, null, 1));
 for (const r of rows) if (r.fail.length) console.log(`RED ${r.page} ${r.view} ${r.scheme} ${r.pass}: ${r.fail.join(' · ')}`);
-console.log(`${rows.length} rows, ${red} red → markers/measures.json`); process.exit(red ? 1 : 0);
+console.log(`${rows.length} rows, ${red} red → markers/measures.json (${PAGES.length} pages × ${views.length} views × ${schemes.length} schemes × ${passes.length} passes)`); process.exit(red ? 1 : 0);

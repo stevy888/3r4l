@@ -1,47 +1,84 @@
 #!/bin/bash
-# check-wording <dir> — the zero-model copy fence (plan §2). Every text node of each served page must be in that page's ALLOWLIST
-# (its language's card file + sheet file + the TR-labels labels + the forty references + the forty texts + the translation names)
-# after the ONE normalisation (normalise.mjs); the card block == its card file; the forty refs == the pool; zero <script src>, <img>,
-# cookie words, external requests; the share hrefs URL-decoded == the h1 line + the address. rc 1 on anything else. Usage: bash check-wording docs/
+# check-wording <dir> — the zero-model copy fence (plan §2; phase 2 rung 0: THE PAGE TABLE of content/pages.json, INSTRUMENT-SPEC (1)–(5)).
+# Every text node of each served page must be in that page's ALLOWLIST (its language's card file + sheet file + sheet2's strings + the TR-labels
+# labels + the forty references + the forty texts + the translation names + the consented testimonials) after the ONE normalisation (normalise.mjs);
+# the card block ⊂ its card file on every page and == it WHOLE and unbroken where the table says 'whole' (/card/); the forty refs == the pool where
+# the table carries the forty and ABSENT elsewhere; THE TWO LIFTED SHAPES — ONE <form> on /what-next/ under signup.json's literal grammar, ONE
+# <video preload="none"> on the home under hasFilm, its <track> without default — and nothing else of their kind anywhere; zero <script src>, <img>,
+# iframe, data: URI, cookie words, external requests; https hrefs ⊂ knowing-jesus.com | wa.me | the two addresses of record; every other scheme ⊂
+# the share grammar + content/contact.json's literals; no Facebook address (TR2-fb-door B). rc 1 on anything else.
+# Usage: bash check-wording docs/        · one page in its own dir (dod-probe): CW_ROUTE=/en/card/ bash check-wording <dir>
 cd "$(dirname "$0")" || exit 1; export CW_DIR="${1:-docs}" CW_ROOT="$PWD"
 exec node --input-type=module - <<'JS'
 import fs from 'node:fs'; import path from 'node:path';
-const root = process.env.CW_ROOT, dir = path.resolve(process.env.CW_DIR), { normalise } = await import(path.join(root, 'normalise.mjs'));
-const J = p => JSON.parse(fs.readFileSync(p, 'utf8')), C = p => path.join(root, 'content', p);
-const sheet = J(C('sheet.json')), verses = J(C('verses.json')), tr = J(C('translations.json')), ADDRESS = 'https://3r4l.org/';
-// THE ONE LEGAL STRING beside the owner's and Jeff's words (TR-translation; owner word 2026-10-07 "use NIV translation"): Biblica's gratis-use notice,
-// printed once at the foot of each page by build.mjs from translations.json — the record there and this fence must agree, byte for byte.
+const root = process.env.CW_ROOT, dir = path.resolve(process.env.CW_DIR), ROUTE = process.env.CW_ROUTE || '', { normalise } = await import(path.join(root, 'normalise.mjs'));
+const J = p => JSON.parse(fs.readFileSync(p, 'utf8')), C = p => path.join(root, 'content', p), D = p => path.join(root, 'docs', p), has = p => fs.existsSync(p);
+const sheet = J(C('sheet.json')), verses = J(C('verses.json')), tr = J(C('translations.json')), ADDRESS = 'https://3r4l.org/', KIT_ADDRESS = 'https://3r4l.org/kit.pdf'; // the TWO absolute addresses of record (the plan §0b "Decided, no letter")
+const PAGES = J(C('pages.json')).pages, pageOf = route => PAGES.find(p => p.path === route) || null, DEFAULT = { card: 'lines', forty: true, share: true }; // a route outside the table (the mock-ups until rung 2) is read under the strictest default and carries no lifted shape
 let NOTICE = ''; // THE ONE LEGAL STRING beside the owner's and brother Daniel's words: the default English translation's OWN notice from translations.json (NIV: Biblica's line; KJV: none — public domain; owner word 2026-10-08 "Let all scripture on site be taken from kjv")
 const enDefault = Object.values(tr.en).find(t => t.default); NOTICE = enDefault ? (enDefault.notice || '') : ''; if (!enDefault) { console.log('FAIL: the default English translation\'s notice in translations.json is not the legal string of record'); process.exit(1); }
-const inputs = '/Users/aibrain/projects/3r4l-inputs', checked = fs.existsSync(C('sheet-tl.json')) && fs.existsSync(path.join(inputs, 'pastor-check.txt'));
-const cardOf = f => fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : null, cardEn = cardOf(C('card.txt')), cardTl = cardOf(path.join(inputs, 'card-tl.txt'));
+const inputs = '/Users/aibrain/projects/3r4l-inputs', checked = has(C('sheet-tl.json')) && has(path.join(inputs, 'pastor-check.txt'));
+const cardOf = f => has(f) ? fs.readFileSync(f, 'utf8') : null, cardEn = cardOf(C('card.txt')), cardTl = cardOf(path.join(inputs, 'card-tl.txt'));
 const blocks = t => t ? [...t.matchAll(/^== \w+ ==\n([\s\S]*?)(?=\n== \w+ ==\n|(?![\s\S]))/gm)].map(m => m[1].replace(/\n$/, '')) : []; // a block ends at the next header or EOF, never at a line end (the plan's `$` under the m flag cut each block to its first line; defect met 2026-10-07)
-function allow(lang) { const S = lang === 'tl' ? J(C('sheet-tl.json')) : sheet, card = lang === 'tl' ? (cardTl || cardEn) : cardEn, A = new Set(), add = s => { if (s) A.add(normalise(s)); };
+// THE TWO LIFTED SHAPES (INSTRUMENT-SPEC 3, 4) — each gated by its input, so an absent input means the shape is REFUSED on every page
+const signup = has(C('signup.json')) ? J(C('signup.json')) : null, hasForm = !!(signup && signup.form_id && signup.action); // content/signup.json = {action, method:"post", fields:{email, lang|none, honeypot|none}, lands_on, form_id} under the VENDOR'S field names (rung 7)
+const hasFilm = has(D('film/card-720.mp4')) && has(D('film/card.vtt')); // the same-origin copy served only on brother Daniel's yes (make_kit.py --publish-film)
+const contact = has(C('contact.json')) ? J(C('contact.json')) : null, CONTACT_HREFS = new Set(contact ? Object.values(contact.doors || {}).map(d => d.href).filter(Boolean) : []); // the literals of TR2-contact-doors (mailto:hello@3r4l.org?…, https://m.me/<handle>, viber://…, sms:…)
+const sheet2 = has(C('sheet2.json')) ? J(C('sheet2.json')) : null, sheet2tl = has(C('sheet2-tl.json')) ? J(C('sheet2-tl.json')) : null; // rung 1's strings, DRAFT or owner — every string leaf is allowlisted (a DRAFT serves on the preview for his eye; the keys status/ruled/source/note and _-keys are paper, never copy)
+const testimonials = has(C('testimonials.json')) ? (J(C('testimonials.json')).rows || []) : []; // {rows:[{lang, name, text, consent:"YES", date}]} — consented rows only ever serve
+const leaves = (o, out = []) => { if (typeof o === 'string') out.push(o); else if (Array.isArray(o)) o.forEach(x => leaves(x, out)); else if (o && typeof o === 'object') Object.entries(o).forEach(([k, v]) => { if (k[0] !== '_' && !['status', 'ruled', 'source', 'note', 'written'].includes(k)) leaves(v, out); }); return out; };
+function allow(lang) { const S = lang === 'tl' ? J(C('sheet-tl.json')) : sheet, S2 = lang === 'tl' ? sheet2tl : sheet2, card = lang === 'tl' ? (cardTl || cardEn) : cardEn, A = new Set(), add = s => { if (s) A.add(normalise(s)); };
   [S.h1, S.h2, S.whatnext_link, S.whatnext_clause, ...S.h1_lines, ...S.lines].forEach(add); Object.entries(S.labels).forEach(([k, v]) => { if (k[0] !== '_') { add(v); add(v + ' ›'); } });
-  const title = card ? blocks(card)[0] : '3R4L'; add(title); add(title + S.labels.title_whatnext_suffix); add(ADDRESS); add(NOTICE); // the legal string, both languages
+  if (S2) leaves(S2).forEach(s => { add(s); add(s + ' ›'); });
+  const title = card ? blocks(card)[0] : '3R4L'; add(title); add(title + S.labels.title_whatnext_suffix); add(ADDRESS); add(KIT_ADDRESS); add(NOTICE); // the legal string, both languages
   if (card) blocks(card).forEach(b => { add(b); b.split('\n').forEach(add); }); else add(sheet.placeholder.card); // THE INTERIM: the one placeholder sentence is allowed
   verses.forEach(v => { add(lang === 'tl' ? v.ref_tl : v.ref); add(lang === 'tl' ? v.text_tl : v.text); add(lang === 'tl' ? v.translation_tl : v.translation_name); });
-  Object.values(tr.en).forEach(t => add(t.name)); Object.values(tr.tl).forEach(t => add(t.name)); return A; }
+  Object.values(tr.en).forEach(t => add(t.name)); Object.values(tr.tl).forEach(t => add(t.name));
+  testimonials.filter(r => r.consent === 'YES' && r.lang === lang).forEach(r => { add(r.text); add(r.name); }); return A; }
 const A = { en: allow('en'), tl: checked ? allow('tl') : null }; let bad = 0; const fail = (f, m) => { bad++; console.log(`FAIL ${f}: ${m}`); };
 const pages = []; (function walk(d) { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) walk(p); else if (e.name === 'index.html') pages.push(p); } })(dir);
 const ALLOWED_SCRIPTS = ['theme-head.js', 'theme.js'].map(n => fs.readFileSync(C(n), 'utf8').trim()); // THE ONE STORAGE ALLOWANCE (owner 2026-10-08, the light/dark switch): these two files' exact bytes may name localStorage; any other mention still fails
+const rx = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 for (const f of pages) { const html0 = fs.readFileSync(f, 'utf8'), html = ALLOWED_SCRIPTS.reduce((h, s) => h.split(s).join(''), html0), rel = path.relative(dir, f);
-  if (/http-equiv="refresh"/.test(html)) continue; // a short door: one link, no prose
+  if (/http-equiv="refresh"/.test(html)) continue; // a short door: one link, no prose (/next/ and /40/; the /card short door RETIRED at phase 2 rung 0 — /card/ is a page)
+  const route = ROUTE || ('/' + rel.split(path.sep).join('/').replace(/index\.html$/, '')), P = pageOf(route), need = P ? P.needs : DEFAULT, kind = P ? P.page : null;
   const lang = (/<html lang="(\w+)"/.exec(html) || [])[1]; if (!lang || !A[lang]) { fail(rel, `lang="${lang}" is not a served language today`); continue; }
-  if (/<script[^>]+src=|<img\b|<iframe\b|<link\b[^>]*stylesheet|@import|url\((?![\"']?(?!\/)[\w./-]+\.woff2[\"']?\))|fetch\(|XMLHttpRequest|document\.cookie|localStorage|sessionStorage|gtag|analytics|fbq\(/.test(html)) fail(rel, 'a script src, img, iframe, external request or cookie word'); // THE ONE url( ALLOWED (seat 1007c, the self-hosted Source Serif 4 subsets of DESIGN r5/r6): a RELATIVE woff2 path only — fonts/… or ../fonts/… — no leading / (so //cdn and /abs are refused) and no scheme or host (http(s):// is refused); every other url( still fails
+  if (/<script[^>]+src=|<img\b|<iframe\b|<link\b[^>]*stylesheet|@import|url\((?![\"']?(?!\/)[\w./-]+\.woff2[\"']?\))|fetch\(|XMLHttpRequest|document\.cookie|localStorage|sessionStorage|gtag|analytics|fbq\(/.test(html)) fail(rel, 'a script src, img, iframe, external request or cookie word'); // THE ONE url( ALLOWED (seat 1007c, the self-hosted Source Serif 4 subsets of DESIGN r5/r6): a RELATIVE woff2 path only — fonts/… or ../fonts/… — no leading / (so //cdn and /abs are refused) and no scheme or host (http(s):// is refused); every other url( still fails; @keyframes are CSS, allowed (INSTRUMENT-SPEC 5)
+  if (/\b(src|href|poster)="data:|url\(["']?data:/.test(html)) fail(rel, 'a data: URI (INSTRUMENT-SPEC 5: the card picture is the scaled text block, never bytes)');
+  if (/https?:\/\/(www\.|m\.)?(facebook|fb)\.com/.test(html)) fail(rel, 'a Facebook address (TR2-fb-door B: no door out of the site; the share grammar carries the address IN)');
+  // THE ONE <form> — on /what-next/ only, only when signup.json carries the form id, EXACTLY the vendor's field names, no script inside (INSTRUMENT-SPEC 3)
+  const forms = (html.match(/<form\b/g) || []).length, wantForm = kind === 'what-next' && hasForm ? 1 : 0;
+  if (forms !== wantForm) fail(rel, `<form> count ${forms} (want ${wantForm}: ${hasForm ? 'the one sign-up form on /what-next/' : 'no form until content/signup.json carries the vendor\'s form id'})`);
+  if (forms && wantForm) { const fm = /<form\b([^>]*)>([\s\S]*?)<\/form>/.exec(html), attrs = fm[1], inner = fm[2];
+    if (!new RegExp(`\\baction="${rx(signup.action)}"`).test(attrs)) fail(rel, 'the form action is not signup.json\'s literal'); if (!/\bmethod="post"/i.test(attrs)) fail(rel, 'the form is not method="post"');
+    const names = [...inner.matchAll(/<(?:input|select|textarea)\b[^>]*\bname="([^"]+)"/g)].map(m => m[1]).sort(), want = Object.values(signup.fields || {}).filter(v => v && v !== 'none').sort();
+    if (JSON.stringify(names) !== JSON.stringify(want)) fail(rel, `the form's inputs [${names}] are not signup.json's fields [${want}]`); if (/<script/.test(inner)) fail(rel, 'a script inside the form'); }
+  // THE ONE <video> — on the home only, only when the film is on disk, preload="none" playsinline controls, no autoplay, NO poster, one relative source, one captions track WITHOUT default (INSTRUMENT-SPEC 4)
+  const videos = (html.match(/<video\b/g) || []).length, wantVideo = kind === 'home' && hasFilm ? 1 : 0;
+  if (videos !== wantVideo) fail(rel, `<video> count ${videos} (want ${wantVideo}: ${hasFilm ? 'the one film in the home\'s hero' : 'no video until docs/film/ carries the master and the VTT'})`);
+  if (videos && wantVideo) { const vm = /<video\b([^>]*)>([\s\S]*?)<\/video>/.exec(html), a = vm[1], inner = vm[2];
+    if (!/\bpreload="none"/.test(a) || !/\bplaysinline\b/.test(a) || !/\bcontrols\b/.test(a) || /\bautoplay\b/.test(a) || /\bposter=/.test(a)) fail(rel, 'the video is not <video preload="none" playsinline controls> without autoplay or poster (the drawn illustration is the poster)');
+    const srcs = [...inner.matchAll(/<source\b[^>]*\bsrc="([^"]+)"/g)].map(m => m[1]), tracks = [...inner.matchAll(/<track\b([^>]*)>/g)].map(m => m[1]);
+    if (srcs.length !== 1 || !/^(\.\.\/)*film\/card-720\.mp4$/.test(srcs[0])) fail(rel, 'the video source is not the one relative film/card-720.mp4');
+    if (tracks.length !== 1 || !/\bkind="captions"/.test(tracks[0]) || !/\bsrclang="\w+"/.test(tracks[0]) || !/\bsrc="(\.\.\/)*film\/card\.vtt"/.test(tracks[0]) || /\bdefault\b/.test(tracks[0])) fail(rel, 'the track is not one <track kind="captions" srclang src="film/card.vtt"> WITHOUT default (a default track is fetched at load — measured 2026-10-08)'); }
+  if (/<track\b/.test(html) && !videos) fail(rel, 'a <track> outside the one video');
   const body = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<noscript>[\s\S]*?<\/noscript>|<!--[\s\S]*?-->/g, '');
   const text = body.replace(/<\/?em\b[^>]*>/g, ''); // DESIGN r6: an italic pull-out (<em>) inside one of the owner's lines is unwrapped before the text nodes are read, so the line is read whole, as typed; nothing else is joined (two separate strings around an <em> would read as one and fail)
-  for (const m of text.matchAll(/>([^<]+)</g)) { const t = normalise(m[1]); if (t && !A[lang].has(t)) fail(rel, `text not in the allowlist: "${t.slice(0, 80)}"`); }
-  const card = /<section id="card"[^>]*>([\s\S]*?)<\/section>/.exec(html); if (!card) fail(rel, 'no <section id="card">');
+  const nodes = [...text.matchAll(/>([^<]+)</g)].map(m => normalise(m[1])).filter(Boolean); for (const t of nodes) if (!A[lang].has(t)) fail(rel, `text not in the allowlist: "${t.slice(0, 80)}"`);
+  const card = /<section id="card"[^>]*>([\s\S]*?)<\/section>/.exec(html); if (!card) fail(rel, 'no <section id="card"> (the family\'s signature on every page)');
   else { const inner = card[1].replace(/<[^>]+>/g, '\n'), lines = inner.split('\n').map(s => normalise(s)).filter(Boolean), src = lang === 'tl' ? (cardTl || cardEn) : cardEn;
-    if (src) { const want = new Set(blocks(src).flatMap(b => b.split('\n')).map(s => normalise(s)).filter(Boolean)); lines.forEach(l => { if (!want.has(l)) fail(rel, `card block line not in the card file: "${l.slice(0, 60)}"`); }); }
+    if (src) { const wantLines = blocks(src).flatMap(b => b.split('\n')).map(s => normalise(s)).filter(Boolean), want = new Set(wantLines); lines.forEach(l => { if (!want.has(l)) fail(rel, `card block line not in the card file: "${l.slice(0, 60)}"`); });
+      if (need.card === 'whole' && lines.join('\n') !== wantLines.join('\n')) fail(rel, `the card block is not card.txt WHOLE and unbroken (${lines.length} of ${wantLines.length} lines, in the card's order, nothing else inside #card — the doors and the ribbon tab are siblings)`); }
     else if (lines.length !== 1 || lines[0] !== normalise(sheet.placeholder.card) || !/class="placeholder"/.test(card[0])) fail(rel, 'no card file: the card block must be the one greyed placeholder sentence'); }
   const refs = [...html.matchAll(/<li data-day="(\d+)"><(?:p|span) class="ref">([^<]+)</g)].map(m => [+m[1], normalise(m[2])]), pool = verses.map(v => [v.day, normalise(lang === 'tl' ? v.ref_tl : v.ref)]);
-  if (JSON.stringify(refs) !== JSON.stringify(pool)) fail(rel, `the forty references differ from content/verses.json (${refs.length} rows)`);
-  const h1 = normalise(lang === 'tl' ? J(C('sheet-tl.json')).h1 : sheet.h1), msg = `${h1} ${ADDRESS}`;
-  for (const m of html.matchAll(/href="(viber:\/\/forward\?text=|sms:\?&amp;body=|https:\/\/wa\.me\/\?text=|mailto:\?subject=[^&]*&amp;body=)([^"]+)"/g)) if (normalise(decodeURIComponent(m[2])) !== msg) fail(rel, `share text differs: ${decodeURIComponent(m[2]).slice(0, 60)}`);
+  if (need.forty) { if (JSON.stringify(refs) !== JSON.stringify(pool)) fail(rel, `the forty references differ from content/verses.json (${refs.length} rows)`); } else if (refs.length) fail(rel, `a forty list on a page outside the forty's shape (${refs.length} rows; pages.json says forty: false)`);
+  const S = lang === 'tl' ? J(C('sheet-tl.json')) : sheet, h1 = normalise(S.h1), msg = `${h1} ${ADDRESS}`;
+  if (kind === 'what-next') { const set = new Set(nodes); for (const [k, v] of [['h1', S.h1], ['whatnext_clause', S.whatnext_clause]]) if (!set.has(normalise(v))) fail(rel, `/what-next/ does not carry sheet.json ${k} as its own text node (steps 1–2 are his keys sliced, never retyped)`);
+    const steps = [...text.matchAll(/<li class="step"[^>]*>([\s\S]*?)<\/li>/g)].map(m => normalise(m[1].replace(/<[^>]+>/g, ' '))); if (steps.length && (steps[0] !== normalise(S.h1) || steps[1] !== normalise(S.whatnext_clause))) fail(rel, 'steps 1–2 are not sheet.json h1 / whatnext_clause byte for byte'); }
+  for (const m of html.matchAll(/href="(viber:\/\/forward\?text=|sms:\?&amp;body=|https:\/\/wa\.me\/\?text=|mailto:\?subject=[^&]*&amp;body=)([^"]+)"/g)) { const t = normalise(decodeURIComponent(m[2])); if (t !== msg && !(kind === 'card' && t === KIT_ADDRESS)) fail(rel, `share text differs: ${decodeURIComponent(m[2]).slice(0, 60)}`); }
   for (const m of html.matchAll(/href="fb-messenger:\/\/share\?link=([^"]+)"/g)) if (decodeURIComponent(m[1]) !== ADDRESS) fail(rel, 'messenger link is not the address');
-  for (const m of html.matchAll(/href="(https?:\/\/[^"]+)"/g)) if (!/^https:\/\/(www\.knowing-jesus\.com\/|wa\.me\/)/.test(m[1])) fail(rel, `external href ${m[1]}`);
+  for (const m of html.matchAll(/href="(https?:\/\/[^"]+)"/g)) if (!/^https:\/\/(www\.knowing-jesus\.com\/|wa\.me\/)/.test(m[1]) && m[1] !== ADDRESS && m[1] !== KIT_ADDRESS && !CONTACT_HREFS.has(m[1].replace(/&amp;/g, '&'))) fail(rel, `external href ${m[1]}`);
+  for (const m of html.matchAll(/href="((?:mailto|sms|tel|viber|fb-messenger):[^"]*)"/g)) { const h = m[1].replace(/&amp;/g, '&'); if (/^(viber:\/\/forward\?text=|sms:\?&body=|mailto:\?subject=|fb-messenger:\/\/share\?link=)/.test(h)) continue; if (!CONTACT_HREFS.has(h)) fail(rel, `a door not in content/contact.json: ${h.slice(0, 60)}`); } // INSTRUMENT-SPEC 2: beside the share grammar, only the literals of contact.json
   if (lang === 'en' && checked && !/class="lang"/.test(html)) fail(rel, 'no language link'); if (!checked && /class="lang"/.test(html)) fail(rel, 'a language link under the interim'); }
-console.log(`${pages.length} pages checked, ${bad} failures${checked ? '' : ' (the interim: the English pair at the apex; the one placeholder sentence allowed)'}`); process.exit(bad ? 1 : 0);
+console.log(`${pages.length} pages checked, ${bad} failures${checked ? '' : ' (the interim: the English pair at the apex; the one placeholder sentence allowed)'} · shapes: form ${hasForm ? 'on /what-next/' : 'refused (no signup.json form id)'} · video ${hasFilm ? 'on the home' : 'refused (no film on disk)'}`); process.exit(bad ? 1 : 0);
 JS
