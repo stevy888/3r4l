@@ -11,8 +11,8 @@ const J = p => JSON.parse(fs.readFileSync(p, 'utf8')), C = p => path.join(root, 
 const sheet = J(C('sheet.json')), verses = J(C('verses.json')), tr = J(C('translations.json')), ADDRESS = 'https://3r4l.org/';
 // THE ONE LEGAL STRING beside the owner's and Jeff's words (TR-translation; owner word 2026-10-07 "use NIV translation"): Biblica's gratis-use notice,
 // printed once at the foot of each page by build.mjs from translations.json — the record there and this fence must agree, byte for byte.
-const NOTICE = 'Scripture quotations taken from The Holy Bible, New International Version® NIV® Copyright © 2011 by Biblica, Inc.™ Used by permission. All rights reserved worldwide.';
-const enDefault = Object.values(tr.en).find(t => t.default); if (!enDefault || enDefault.notice !== NOTICE) { console.log('FAIL: the default English translation\'s notice in translations.json is not the legal string of record'); process.exit(1); }
+let NOTICE = ''; // THE ONE LEGAL STRING beside the owner's and brother Daniel's words: the default English translation's OWN notice from translations.json (NIV: Biblica's line; KJV: none — public domain; owner word 2026-10-08 "Let all scripture on site be taken from kjv")
+const enDefault = Object.values(tr.en).find(t => t.default); NOTICE = enDefault ? (enDefault.notice || '') : ''; if (!enDefault) { console.log('FAIL: the default English translation\'s notice in translations.json is not the legal string of record'); process.exit(1); }
 const inputs = '/Users/aibrain/projects/3r4l-inputs', checked = fs.existsSync(C('sheet-tl.json')) && fs.existsSync(path.join(inputs, 'pastor-check.txt'));
 const cardOf = f => fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : null, cardEn = cardOf(C('card.txt')), cardTl = cardOf(path.join(inputs, 'card-tl.txt'));
 const blocks = t => t ? [...t.matchAll(/^== \w+ ==\n([\s\S]*?)(?=\n== \w+ ==\n|(?![\s\S]))/gm)].map(m => m[1].replace(/\n$/, '')) : []; // a block ends at the next header or EOF, never at a line end (the plan's `$` under the m flag cut each block to its first line; defect met 2026-10-07)
