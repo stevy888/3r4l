@@ -183,7 +183,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 .whole>svg{display:block;position:absolute;pointer-events:none;height:auto}
 .whole>.dawn{right:calc(-1*var(--pad));top:1px;width:min(100vw,48rem);height:5.5rem;transform:translateY(-100%);z-index:0}
 .whole>.lamp{display:none;right:calc(7.125rem - var(--pad));top:-.625rem;width:3.5rem;transform:translateY(-100%);z-index:3}
-a.tab{position:absolute;right:.75rem;top:-.5rem;z-index:4;display:inline-flex;align-items:center;min-height:3rem;padding:.5rem .9rem 1.1rem;background:var(--gold);color:#1b2440;font:500 1rem/1 var(--sans);text-decoration:none;border-radius:4px 4px 0 0;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%);box-shadow:var(--card-shadow)}
+a.tab{position:absolute;right:.75rem;top:-2.2rem;z-index:4;display:inline-flex;align-items:center;min-height:3rem;padding:.5rem .9rem 1.1rem;background:var(--gold);color:#1b2440;font:500 1rem/1 var(--sans);text-decoration:none;border-radius:4px 4px 0 0;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%);box-shadow:var(--card-shadow)}
 a.tab:focus-visible{outline-offset:-3px}
 #doors{margin:var(--gap) 0 0}
 .doors .door{min-height:3rem}
@@ -234,7 +234,7 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 /* THE CARD AT ITS PRINTED SHAPE AND SIZE (/card/; owner 2026-10-08 "shaped like the card photo and same size so clear"): two landscape faces of 252 × 144 pt (3.5 × 2 in = 336 × 192 px; the column's width on a 390 phone IS the card's width), the words from card.txt in the serif at ≈ the card's own 9.5–10 pt, cream in both themes (a card is paper), the gold rule printed inside; the large readable faces follow below. The rig exempts .real from the 13 px floor by this word and asserts the faces unclipped and 1.75 : 1. */
 .real{display:grid;gap:.75rem;max-width:21rem;margin:0 auto;position:relative;z-index:1;container-type:inline-size}
 .real .face{aspect-ratio:252/144;overflow:hidden;box-sizing:border-box;padding:1.6cqw 2cqw;background:#f7efdc;color:#1b2440;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42);font-family:var(--serif);font-size:10.4px;font-size:3.1cqw;line-height:1.08} /* the type in container units so the card scales as one picture at every width (a photo of a card scales); the px line is the fallback */
-.real .face::before{content:"";display:block;width:2.25rem;height:2px;background:#b9892e;margin:0 0 .3em}
+.real .face::before{content:"";position:static;display:block;width:2.25rem;height:2px;background:#b9892e;margin:0 0 .3em;border-radius:1px} /* position:static — the large faces' rule is absolute at the corner; here it is printed in flow above the title */
 .real .face p{margin:0 0 .2em;padding:0;font:inherit;font-size:inherit;line-height:inherit;color:inherit;text-wrap:pretty}
 .real .face p.title{font-weight:600;text-transform:uppercase;letter-spacing:.02em}
 .real .face p.rules{white-space:pre-line}
