@@ -219,3 +219,15 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .message+.doors{margin-top:1.25rem}
 /* REDUCED MOTION, the challenge's view-driven rows: this rule stands AFTER the @supports block so it wins the cascade — the static page is the final page; the small cross is drawn whole. */
 @media (prefers-reduced-motion:reduce){.steps .step{animation:none}svg.cross-end path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}}
+/* THE CARD AT ITS PRINTED SHAPE AND SIZE (/card/; owner 2026-10-08 "shaped like the card photo and same size so clear"): two landscape faces of 252 × 144 pt (3.5 × 2 in = 336 × 192 px; the column's width on a 390 phone IS the card's width), the words from card.txt in the serif at ≈ the card's own 9.5–10 pt, cream in both themes (a card is paper), the gold rule printed inside; the large readable faces follow below. The rig exempts .real from the 13 px floor by this word and asserts the faces unclipped and 1.75 : 1. */
+.real{display:grid;gap:.75rem;max-width:21rem;margin:0 auto;position:relative;z-index:1;container-type:inline-size}
+.real .face{aspect-ratio:252/144;overflow:hidden;box-sizing:border-box;padding:1.6cqw 2cqw;background:#f7efdc;color:#1b2440;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42);font-family:var(--serif);font-size:10.4px;font-size:3.1cqw;line-height:1.08} /* the type in container units so the card scales as one picture at every width (a photo of a card scales); the px line is the fallback */
+.real .face::before{content:"";display:block;width:2.25rem;height:2px;background:#b9892e;margin:0 0 .3em}
+.real .face p{margin:0 0 .2em;padding:0;font:inherit;font-size:inherit;line-height:inherit;color:inherit;text-wrap:pretty}
+.real .face p.title{font-weight:600;text-transform:uppercase;letter-spacing:.02em}
+.real .face p.rules{white-space:pre-line}
+.real .face p.daily_prayer,.real .face p.prayer{font-weight:600}
+.real .face p.turn,.real .face p.turn_back{font-style:italic}
+.real .face p:last-child{margin-bottom:0}
+.whole>.real+svg.dawn{z-index:0}
+@media print{.real{display:none}}

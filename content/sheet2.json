@@ -1,13 +1,10 @@
 {
  "_note": "PHASE 2 STRINGS OF RECORD (rung 1, penned 2026-10-08 by seat build-3r4l-p2-1008 from handoffs/evidence/2026-10-08-3r4l-phase2-fleet/DRAFT-STRINGS.md §8). NOTHING HERE IS THE OWNER'S UNTIL HIS LINE IN CHAT: every row is status DRAFT — his to keep, retype or strike at the eye (rung 6), byte-for-byte; a kept or retyped row becomes status owner with the chat timestamp in written. The Tagalog twin of every row lives in sheet2-tl.DRAFT.json (gitignored) until the pastor's one sitting (TR2-pastor-2) turns it into sheet2-tl.json. STEPS 1–2 OF THE CHALLENGE ARE NOT HERE: they are sheet.json h1 and whatnext_clause, sliced by build.mjs, asserted by check-wording. NO CARD WORD IS HERE: card.txt is the only source of the prayer and the rules. The fence (check-wording) allowlists every string leaf of this file except the keys status, written, ruled, source, note and any _-key, each raw and FILLED (normalise.mjs fill(): [controller] from controller.txt · [the list vendor] from signup.json vendor · [name] from contact.json answerer · [m:ss] and [N] MB from film.json) — a bracket placeholder shows on the preview until its input lands. Door labels carry no ›: the build appends it and the fence allows label + ' ›'. Alternates sit under _alt and never serve.",
  "challenge": {
-  "h2": {
-   "text": "The forty-day challenge",
-   "status": "DRAFT",
-   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
-   "_alt": {
-    "B": "The forty days"
-   }
+  "h1": {
+   "text": "Forty day challenge",
+   "status": "owner",
+   "written": "2026-10-08T10:0xZ owner in chat: \"Forty day challenge main title could be forty day challenge\" — his words, the title's own capital (the UX delegation of 10-07); the home's door keeps his sheet line"
   },
   "step3": {
    "text": "A verse a day for forty days — let God change your life a morning at a time.",
@@ -18,6 +15,17 @@
    "text": "Forty days is not a test. Nothing here is earned — God forgave you when you asked Him. The forty days are simply forty mornings of the three rules, said again. Each morning there is one verse, the same for everyone who holds this card, and the three rules under it. Read the verse. Use the rules. If you miss a morning, there is nothing to make up — start again where you are. On the fortieth day nothing ends. The rules are for every day after that one.",
    "status": "DRAFT",
    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "_struck": {
+   "h2": {
+    "text": "The forty-day challenge",
+    "status": "DRAFT",
+    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
+    "_alt": {
+     "B": "The forty days"
+    }
+   },
+   "why": "the h1 is now his title; a second title line would repeat it (owner 2026-10-08)"
   }
  },
  "signup": {
