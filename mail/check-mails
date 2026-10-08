@@ -1,0 +1,30 @@
+#!/bin/bash
+# mail/check-mails — the zero-model fence on the 41 mails (phase 2 rung 7): every line of every mail is one of — a forty reference · its KJV text
+# (== verses.json, the span on one line) · a label › door line whose label ∈ the sheets and whose door ∈ {the verse's own door, the reader's row
+# /what-next/#day-N for THIS mail's day, /privacy/} · a rule line ⊂ card.txt · his clause · a sheet2 mail frame (DRAFT or his) · the stop line ·
+# the [unsubscribe] token · the sender line; the subject == the frame for the day; ≤ 1,200 chars; no other http, no <img, no pixel; exactly 41 files.
+# rc 1 on anything else. Usage: bash mail/check-mails
+cd "$(dirname "$0")/.." || exit 1; export CW_ROOT="$PWD"
+exec node --input-type=module - <<'JS'
+import fs from 'node:fs'; import path from 'node:path';
+const root = process.env.CW_ROOT, { normalise } = await import(path.join(root, 'normalise.mjs')), J = p => JSON.parse(fs.readFileSync(p, 'utf8')), C = p => path.join(root, 'content', p);
+const sheet = J(C('sheet.json')), S2 = J(C('sheet2.json')), verses = J(C('verses.json')), card = fs.readFileSync(C('card.txt'), 'utf8'), OUT = path.join(root, 'mail', 'out');
+const cardLines = new Set([...card.matchAll(/^== \w+ ==\n([\s\S]*?)(?=\n== \w+ ==\n|(?![\s\S]))/gm)].flatMap(m => m[1].split('\n')).map(s => normalise(s)).filter(Boolean));
+const ADDRESS = 'https://3r4l.org/', FROM = 'forty@3r4l.org', T = (g, k) => S2[g][k].text, labels = new Set(Object.values(sheet.labels).map(s => normalise(s))), S2strings = new Set(Object.values(S2).flatMap(g => Object.values(g).filter(r => r && typeof r === 'object' && r.text).map(r => normalise(r.text))));
+let bad = 0; const fail = (f, m) => { bad++; console.log(`FAIL ${f}: ${m}`); };
+const files = fs.existsSync(OUT) ? fs.readdirSync(OUT).filter(f => /^day-\d\d\.txt$/.test(f)).sort() : []; if (files.length !== 41) fail('mail/out', `${files.length} files (want 41: day-00 … day-40)`);
+for (const f of files) { const day = +f.slice(4, 6), raw = fs.readFileSync(path.join(OUT, f), 'utf8'), v = verses.find(x => x.day === day);
+  if (raw.length > 1200) fail(f, `${raw.length} chars (> 1,200)`); if (/<img|\.gif|pixel|<script/i.test(raw)) fail(f, 'a picture, pixel or script');
+  const [subjectLine, blank, ...body] = raw.replace(/\n$/, '').split('\n'); if (!subjectLine.startsWith('Subject: ') || blank !== '') fail(f, 'no Subject line + blank line');
+  const subject = subjectLine.slice(9), wantSubject = day === 0 ? T('mails', 'day0_subject') : T('mails', 'subject').replace('{n}', day).replace('{ref}', v.ref); if (subject !== wantSubject) fail(f, `subject "${subject}" is not the frame's`);
+  for (const line of body) { if (!line) continue; const t = normalise(line);
+    if (line === '[unsubscribe]' || line === `${FROM} · ${ADDRESS}privacy/`) continue;
+    if (v && (t === normalise(v.ref) || t === normalise((v.parts ? v.parts.join(' ') : v.text).replace(/\n/g, ' ')))) continue;
+    const m = /^(.+?) › (https?:\/\/\S+)$/.exec(line); if (m) { const label = normalise(m[1]), ok = (labels.has(label) || S2strings.has(label)) && (m[2] === (v && v.door) || m[2] === `${ADDRESS}what-next/#day-${day}` || m[2] === `${ADDRESS}privacy/`); if (!ok) fail(f, `a door line outside the allowlist: ${line.slice(0, 60)}`); continue; }
+    if (/https?:\/\//.test(line)) { fail(f, `a bare link: ${line.slice(0, 60)}`); continue; }
+    if (cardLines.has(t) || t === normalise(sheet.whatnext_clause) || S2strings.has(t)) continue;
+    fail(f, `a line not in the texts of record: "${t.slice(0, 70)}"`); }
+  if (day > 0 && !body.some(l => normalise(l) === normalise(v.ref))) fail(f, 'no reference'); if (day > 0 && !body.includes(`${sheet.whatnext_clause}`)) fail(f, 'his clause missing');
+  if (day > 0 && !cardLines.has(normalise(body.find(l => /^1\. /.test(l)) || ''))) fail(f, 'the rules missing'); if (day === 40 && !body.includes(T('mails', 'day40'))) fail(f, "the forty's end line missing"); }
+console.log(`${files.length} mails checked, ${bad} failures`); process.exit(bad ? 1 : 0);
+JS
