@@ -1,69 +1,280 @@
 {
  "_note": "PHASE 2 STRINGS OF RECORD (rung 1, penned 2026-10-08 by seat build-3r4l-p2-1008 from handoffs/evidence/2026-10-08-3r4l-phase2-fleet/DRAFT-STRINGS.md §8). NOTHING HERE IS THE OWNER'S UNTIL HIS LINE IN CHAT: every row is status DRAFT — his to keep, retype or strike at the eye (rung 6), byte-for-byte; a kept or retyped row becomes status owner with the chat timestamp in written. The Tagalog twin of every row lives in sheet2-tl.DRAFT.json (gitignored) until the pastor's one sitting (TR2-pastor-2) turns it into sheet2-tl.json. STEPS 1–2 OF THE CHALLENGE ARE NOT HERE: they are sheet.json h1 and whatnext_clause, sliced by build.mjs, asserted by check-wording. NO CARD WORD IS HERE: card.txt is the only source of the prayer and the rules. The fence (check-wording) allowlists every string leaf of this file except the keys status, written, ruled, source, note and any _-key, each raw and FILLED (normalise.mjs fill(): [controller] from controller.txt · [the list vendor] from signup.json vendor · [name] from contact.json answerer · [m:ss] and [N] MB from film.json) — a bracket placeholder shows on the preview until its input lands. Door labels carry no ›: the build appends it and the fence allows label + ' ›'. Alternates sit under _alt and never serve.",
  "challenge": {
-  "h2": { "text": "The forty-day challenge", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008", "_alt": { "B": "The forty days" } },
-  "step3": { "text": "A verse a day for forty days — let God change your life a morning at a time.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "explanation": { "text": "Forty days is not a test. Nothing here is earned — God forgave you when you asked Him. The forty days are simply forty mornings of the three rules, said again. Each morning there is one verse, the same for everyone who holds this card, and the three rules under it. Read the verse. Use the rules. If you miss a morning, there is nothing to make up — start again where you are. On the fortieth day nothing ends. The rules are for every day after that one.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" }
+  "h2": {
+   "text": "The forty-day challenge",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
+   "_alt": {
+    "B": "The forty days"
+   }
+  },
+  "step3": {
+   "text": "A verse a day for forty days — let God change your life a morning at a time.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "explanation": {
+   "text": "Forty days is not a test. Nothing here is earned — God forgave you when you asked Him. The forty days are simply forty mornings of the three rules, said again. Each morning there is one verse, the same for everyone who holds this card, and the three rules under it. Read the verse. Use the rules. If you miss a morning, there is nothing to make up — start again where you are. On the fortieth day nothing ends. The rules are for every day after that one.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  }
  },
  "signup": {
-  "field": { "text": "Your email", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "button": { "text": "Join the forty days", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "what": { "text": "One short mail a morning for forty days: the day's verse and the three rules. Nothing else.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "stop": { "text": "Stop any day with one tap. We delete your address after day 47.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "age": { "text": "18 or older, or join with a parent.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "hold": { "text": "We hold only your email and your language, to send the forty.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "notice_door": { "text": "Full notice", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "what_happens": { "text": "Pressing the button opens [the list vendor]'s page, where you confirm from your inbox.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" }
+  "field": {
+   "text": "Your email",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "button": {
+   "text": "Join the forty days",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "what": {
+   "text": "One short mail a morning for forty days: the day's verse and the three rules. Nothing else.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "stop": {
+   "text": "Stop any day with one tap. We delete your address after day 47.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "age": {
+   "text": "18 or older, or join with a parent.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "hold": {
+   "text": "We hold only your email and your language, to send the forty.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "notice_door": {
+   "text": "Full notice",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "what_happens": {
+   "text": "Pressing the button opens [the list vendor]'s page, where you confirm from your inbox.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  }
  },
  "card": {
-  "h1": { "text": "Print the card and give it.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "tab": { "text": "Print", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "step1": { "text": "Tap the file.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "step2": { "text": "Send it to a print shop, or print it at home — ten cards fit on one sheet (twelve on long bond).", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "step3": { "text": "Cut on the marks. Keep one, give the rest.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "shop": { "text": "Both sides · flip on the long edge · 100 %, no scaling · short bond, long bond or A4 · board paper if the shop has it", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "no_duplex": { "text": "No two-sided printer? Print page 1, put the sheet back, print page 2.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "print_page": { "text": "Print this page", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "send_shop": { "text": "Send the sheet to a print shop", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "close": { "text": "A card weighs nothing. In a hand it can carry a whole life home.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "honest_number": { "text": "", "status": "absent", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008", "_note": "his typed line only, with its date — e.g. '[N] cards given since [year]. Counted by hand.' — from the giver's paper count; absent until then" }
+  "h1": {
+   "text": "Print the card and give it.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "tab": {
+   "text": "Print",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "step1": {
+   "text": "Tap the file.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "step2": {
+   "text": "Send it to a print shop, or print it at home — ten cards fit on one sheet (twelve on long bond).",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "step3": {
+   "text": "Cut on the marks. Keep one, give the rest.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "shop": {
+   "text": "Both sides · flip on the long edge · 100 %, no scaling · short bond, long bond or A4 · board paper if the shop has it",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "no_duplex": {
+   "text": "No two-sided printer? Print page 1, put the sheet back, print page 2.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "print_page": {
+   "text": "Print this page",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "send_shop": {
+   "text": "Send the sheet to a print shop",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "close": {
+   "text": "A card weighs nothing. In a hand it can carry a whole life home.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "honest_number": {
+   "text": "",
+   "status": "absent",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
+   "_note": "his typed line only, with its date — e.g. '[N] cards given since [year]. Counted by hand.' — from the giver's paper count; absent until then"
+  }
  },
  "home": {
-  "play": { "text": "Hear the card read · [m:ss] · [N] MB", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008", "_note": "the figures from the master (film.json), never a guess; the door exists only when hasFilm" },
-  "foot_how": { "text": "How are you doing?", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "foot_who": { "text": "Who gives these cards?", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008", "_note": "shown only when hasFounder (/story/ served)" }
+  "play": {
+   "text": "Hear the card read · [m:ss] · [N] MB",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
+   "_note": "the figures from the master (film.json), never a guess; the door exists only when hasFilm"
+  },
+  "foot_how": {
+   "text": "How are you doing?",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "foot_who": {
+   "text": "Who gives these cards?",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
+   "_note": "shown only when hasFounder (/story/ served)"
+  }
  },
  "contact": {
-  "h1": { "text": "How are you doing?", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "who_reads_named": { "text": "Write to [name]. He reads every message himself.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008", "_note": "when doors.txt names the answerer" },
-  "who_reads": { "text": "Write to us.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "testimony": { "text": "Did you pray the prayer? Tell us what happened. If you'd like your words on this page, say so — first name or initials only, never your surname or a photo; we take them down the day you ask. Under 18? A parent says yes first.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "low_day": { "text": "Not doing well? Say so. You don't have to write it well. Rule 1 still works today.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "mail_body": { "text": "Did you pray the prayer? Tell us what happened.\n\nMay we put your words on 3r4l.org with your first name only? Write YES or NO here: ", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008", "_note": "the mailto body: the consent is a QUESTION the sender answers in their own hand (RA 10173 §3(b)); never a pre-written yes" }
+  "h1": {
+   "text": "How are you doing?",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "who_reads_named": {
+   "text": "Write to [name]. He reads every message himself.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
+   "_note": "when doors.txt names the answerer"
+  },
+  "who_reads": {
+   "text": "Write to us.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "testimony": {
+   "text": "Did you pray the prayer? Tell us what happened. If you'd like your words on this page, say so — first name or initials only, never your surname or a photo; we take them down the day you ask. Under 18? A parent says yes first.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "low_day": {
+   "text": "Not doing well? Say so. You don't have to write it well. Rule 1 still works today.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "mail_body": {
+   "text": "Did you pray the prayer? Tell us what happened.\n\nMay we put your words on 3r4l.org with your first name only? Write YES or NO here: ",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
+   "_note": "the mailto body: the consent is a QUESTION the sender answers in their own hand (RA 10173 §3(b)); never a pre-written yes"
+  }
  },
  "privacy": {
-  "h1": { "text": "Privacy", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "who": { "text": "Who holds your details: [controller] — privacy@3r4l.org.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "what": { "text": "What we hold: for the forty days, your email address and your language; if you write to us, your message and the name you give.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "why": { "text": "Why: to send you one verse a day for forty days; to reply to you.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "how_long": { "text": "How long: the forty days and seven more, or until you stop — one tap in every mail; messages until we have replied, then deleted, unless you wrote that we may share them.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "processors": { "text": "Who processes it for us: [the list vendor] sends the mails; Cloudflare routes our email.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "rights": { "text": "Your rights under the Data Privacy Act of 2012: to see, correct or delete what we hold, and to complain to the National Privacy Commission.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "children": { "text": "Children: 18 or older, or with a parent.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "no_tracking": { "text": "No cookies, no tracking, no advertising on this site.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" }
+  "h1": {
+   "text": "Privacy",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "who": {
+   "text": "Who holds your details: [controller] — privacy@3r4l.org.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "what": {
+   "text": "What we hold: for the forty days, your email address and your language; if you write to us, your message and the name you give.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "why": {
+   "text": "Why: to send you one verse a day for forty days; to reply to you.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "how_long": {
+   "text": "How long: the forty days and seven more, or until you stop — one tap in every mail; messages until we have replied, then deleted, unless you wrote that we may share them.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "processors": {
+   "text": "Who processes it for us: [the list vendor] sends the mails; Cloudflare routes our email.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "rights": {
+   "text": "Your rights under the Data Privacy Act of 2012: to see, correct or delete what we hold, and to complain to the National Privacy Commission.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "children": {
+   "text": "Children: 18 or older, or with a parent.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "no_tracking": {
+   "text": "No cookies, no tracking, no advertising on this site.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  }
  },
  "mails": {
   "_note": "the 41 mails are built zero-model at rung 7 from verses.json (the KJV text) + card.txt (the three rules, sliced) + sheet.json + these frames; no devotional line; {n} and {ref} are filled per mail and never appear on a page",
-  "day0_subject": { "text": "The forty begin tomorrow", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "day0": { "text": "You asked for the forty. Day 1 comes tomorrow morning: 1 John 1:9. Until then the card is at 3r4l.org.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "subject": { "text": "Day {n} of forty · {ref}", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" },
-  "page_link": { "text": "Today's verse on the page", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008", "_note": "links the reader's own row /what-next/#day-{n}" },
-  "day40": { "text": "That is the forty. Nothing ends today — the rules are for every day after this one.", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008" }
+  "day0_subject": {
+   "text": "The forty begin tomorrow",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "day0": {
+   "text": "You asked for the forty. Day 1 comes tomorrow morning: 1 John 1:9. Until then the card is at 3r4l.org.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "subject": {
+   "text": "Day {n} of forty · {ref}",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  },
+  "page_link": {
+   "text": "Today's verse on the page",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
+   "_note": "links the reader's own row /what-next/#day-{n}"
+  },
+  "day40": {
+   "text": "That is the forty. Nothing ends today — the rules are for every day after this one.",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
+  }
  },
  "film": {
-  "credit": { "text": "The card's words by brother Daniel · read by a synthesized voice · 3r4l.org", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008", "_note": "the name RULED (owner/3r4l-names-brother-daniel-2026-10-08); the voice named as synthesized" }
+  "credit": {
+   "text": "The card's words by brother Daniel · read by a synthesized voice · 3r4l.org",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
+   "_note": "the name RULED (owner/3r4l-names-brother-daniel-2026-10-08); the voice named as synthesized"
+  }
  },
  "story": {
-  "placeholder": { "text": "[His words go here — the interview has not been held]", "status": "DRAFT", "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008", "_note": "the PREVIEW only (TR2-founder-page B); no sentence of his is drafted; founder.txt carries his words in his order under at most three heads that are his own phrases" }
+  "placeholder": {
+   "text": "[His words go here — the interview has not been held]",
+   "status": "DRAFT",
+   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
+   "_note": "the PREVIEW only (TR2-founder-page B); no sentence of his is drafted; founder.txt carries his words in his order under at most three heads that are his own phrases"
+  },
+  "door_print": {
+   "text": "Print the card and give it",
+   "status": "DRAFT",
+   "written": "2026-10-08T09:05Z seat:build-3r4l-p2-1008",
+   "_note": "/story/'s first quiet door → ../card/"
+  },
+  "door_write": {
+   "text": "Write to us",
+   "status": "DRAFT",
+   "written": "2026-10-08T09:05Z seat:build-3r4l-p2-1008",
+   "_note": "/story/'s second quiet door → ../contact/"
+  }
  }
 }

@@ -10,19 +10,20 @@
 <meta name="color-scheme" content="light dark">
 <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t)}}catch(e){}</script>
 <style>
-/* 3r4l — "the-card-itself" r7: A REAL DAWN on the hero band (the owner on the served r6a, 2026-10-07: "What about top of page. More standing out and beautiful too."): the sun larger and half behind the card with ten long tapered rays across the band and two flat glow discs; faint stars high in the band; the band's lower edge a low hill with a lit horizon line; a short gold rule under the headline; the card lifted by a warmer, deeper one-side shadow and a fine gold edge. By night the same scene under the lamp. Print: navy type on paper, the sun a line drawing. Below, r6a as it was: THE HERO BAND. Round 5 (the card alone) with the owner's two words on it: "Should top grab us more" → the family's navy from the top edge as a hero band, the headline in cream serif on it one size larger and one weight stronger, the dawn's light rising flat out of the band behind the card, the card lifted out of the night into the day (its top third in the band, the rest on the paper); and "could this be broken up or illustrated better" → his six lines set as a litany (the promise, the lead line with its saying pulled out, the four "He will help you…" lines as a list with a gold mark and a gold line drawing each). Dark: the band is the page, the lamp over its pool. Everything else as r5. */
+/* 3r4l — E2 OF RECORD (2026-10-08, the design round at the 9.5 bar; the blind panel's winner "lifted" with the three judges' cures cut in): THE CROSS ON THE HILL AT DAWN, THE CARD LIFTED OUT OF THE LIGHT. Under the headline band (unchanged: the three gold beats, the one morning star, the short gold rule) a breath of air (--air, 2.25 rem ≥ the owner's 20 px), then the HERO (--hero-h, .52 of the column, the canvas's aspect): the sun in three flat steps rising BEHIND A HILL of the band's own navy (--hill; a darker mass by night), the cross a silhouette on the hill's crest left of centre (--draw), the film's play glyph (inert) on the sun's face, the card's PICTURE (its front face at zoom .72 in a framed link) rising out of the hill's foot with its top edge inside the light; the band's navy runs on behind the hero and the picture's top (--lift) and ends on a straight edge — the hill's crest is the horizon, no rays, no gradient. By night the lamp hangs centred from the hero's top on a longer cord over the picture and the film's door, the sun's core the lamp's pool. Under the picture one quiet row of two text doors (Hear the card › · Read the whole card ›), then the what-next door and everything of r7/r8 untouched but the air. MOTIONS (five, CSS, transform/opacity only, once on arrival, ≤ 1.6 s, all off under prefers-reduced-motion): the dawn rising — the sun and its play lift 26 units (≈ 9 px) behind the still hill while the two outer steps brighten in (1.4 s); the gold rule drawing itself (scaleX from the left, .7 s — the judges' graft from the kit); the three beats warming cream → gold in sequence (a cream overlay of the same word fades out, .2 / .55 / .9 s, ends 1.6 s); the picture lifting out of the light (1.5 rem up, transform only — the disc runs on behind it, so nothing shows through, after .25 s); the morning star breathing (a 5 s opacity drift, the one loop allowed). Below, r7 as it was: A REAL DAWN on the hero band (the owner on the served r6a, 2026-10-07: "What about top of page. More standing out and beautiful too."): the sun larger and half behind the card with ten long tapered rays across the band and two flat glow discs; faint stars high in the band; the band's lower edge a low hill with a lit horizon line; a short gold rule under the headline; the card lifted by a warmer, deeper one-side shadow and a fine gold edge. By night the same scene under the lamp. Print: navy type on paper, the sun a line drawing. Below, r6a as it was: THE HERO BAND. Round 5 (the card alone) with the owner's two words on it: "Should top grab us more" → the family's navy from the top edge as a hero band, the headline in cream serif on it one size larger and one weight stronger, the dawn's light rising flat out of the band behind the card, the card lifted out of the night into the day (its top third in the band, the rest on the paper); and "could this be broken up or illustrated better" → his six lines set as a litany (the promise, the lead line with its saying pulled out, the four "He will help you…" lines as a list with a gold mark and a gold line drawing each). Dark: the band is the page, the lamp over its pool. Everything else as r5. */
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:500;font-display:swap;src:url(../../fonts/source-serif-4-500.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201D,U+2026}
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:400;font-display:swap;src:url(../../fonts/source-serif-4-400.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201D,U+2026}
 @font-face{font-family:"Source Serif 4";font-style:italic;font-weight:400;font-display:swap;src:url(../../fonts/source-serif-4-400i.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201D,U+2026}
 :root{--serif:"Source Serif 4","Iowan Old Style",Palatino,"Palatino Linotype",Georgia,"Noto Serif",serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;
 --paper:#ffffff;--ink:#262626;--head:#1b2440;--mute:#5d5d5d;--gold:#b9892e;--gold-text:#6e4e14;--horizon:#dccfb1;--draw:#1b2440;--sun:#e8d9b8;--ray:#d6bd86;--bulb:#d9be7a;
 --card-face:#f7efdc;--card-edge:#1b2440;--card-ink:#1b2440;--card-body:#262626;--card-shadow:8px 10px 22px -8px rgba(80,56,16,.42);
---door:#1b2440;--door-rule:#a3781f;--focus:#a3781f;--panel:#1b2440;--panel-ink:#f8f3e8;--panel-mute:#aeb4c6;--panel-gold:#d4b36a;--panel-rule:#3a4466;--band:#1b2440;--band-ink:#f8f3e8;--band-mute:#aeb4c6;--glow:#222944;--glow2:#2c3250;--glow3:#383b53;--lamp-ray:#8c7d55;--star:#d9d3c4;--star-dim:#8b90a6;--horizon-ink:#8a7c57;--lift:2.5rem;--pad:1.5rem;--top:1.75rem;--gap:2.5rem;--dawn-h:3rem;color-scheme:light dark}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141b31;--ink:#d6cfc0;--head:#f8f3e8;--mute:#aeb4c6;--gold:#a6802c;--gold-text:#cdb272;--horizon:#665b45;--draw:#cfc6b3;--sun:#3a362e;--ray:#4f4b40;--bulb:#cdb272;--card-face:#413a2e;--card-edge:#7d7059;--card-ink:#f8f3e8;--card-body:#efe9dc;--card-shadow:8px 10px 22px -8px rgba(0,0,0,.7);--door:#f8f3e8;--door-rule:#c9ad6a;--focus:#c9ad6a;--panel:#232c4a;--panel-rule:#4a5480;--band:#141b31;--glow:#171e34;--glow2:#1c2339;--glow3:#232a40;--star:#a3a4b4;--star-dim:#5a5f78;--horizon-ink:#273050}
+--door:#1b2440;--door-rule:#a3781f;--focus:#a3781f;--panel:#1b2440;--panel-ink:#f8f3e8;--panel-mute:#aeb4c6;--panel-gold:#d4b36a;--panel-rule:#3a4466;--band:#1b2440;--band-ink:#f8f3e8;--band-mute:#aeb4c6;--glow:#222944;--glow2:#2c3250;--glow3:#383b53;--lamp-ray:#8c7d55;--star:#d9d3c4;--star-dim:#8b90a6;--horizon-ink:#8a7c57;--halo:#242b49;--halo2:#333a5a;--hill:#1b2440;--lift:2.5rem;--pad:1.5rem;--top:1.75rem;--gap:2.5rem;--air:2.25rem;--hero-h:calc((100vw - 2*var(--pad))*.52);color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141b31;--ink:#d6cfc0;--head:#f8f3e8;--mute:#aeb4c6;--gold:#a6802c;--gold-text:#cdb272;--horizon:#665b45;--draw:#cfc6b3;--sun:#34322d;--ray:#4f4b40;--bulb:#cdb272;--card-face:#413a2e;--card-edge:#7d7059;--card-ink:#f8f3e8;--card-body:#efe9dc;--card-shadow:8px 10px 22px -8px rgba(0,0,0,.7);--door:#f8f3e8;--door-rule:#c9ad6a;--focus:#c9ad6a;--panel:#232c4a;--panel-rule:#4a5480;--band:#141b31;--glow:#171e34;--glow2:#1c2339;--glow3:#232a40;--star:#a3a4b4;--star-dim:#5a5f78;--horizon-ink:#273050;--halo:#1a2139;--halo2:#222a45;--hill:#0e1424}
 :root:not([data-theme="light"]) .day{display:none}:root:not([data-theme="light"]) .night{display:block}:root:not([data-theme="light"]) .theme .ico-moon{display:none}:root:not([data-theme="light"]) .theme .ico-sun{display:block}}
-:root[data-theme="dark"]{--paper:#141b31;--ink:#d6cfc0;--head:#f8f3e8;--mute:#aeb4c6;--gold:#a6802c;--gold-text:#cdb272;--horizon:#665b45;--draw:#cfc6b3;--sun:#3a362e;--ray:#4f4b40;--bulb:#cdb272;--card-face:#413a2e;--card-edge:#7d7059;--card-ink:#f8f3e8;--card-body:#efe9dc;--card-shadow:8px 10px 22px -8px rgba(0,0,0,.7);--door:#f8f3e8;--door-rule:#c9ad6a;--focus:#c9ad6a;--panel:#232c4a;--panel-rule:#4a5480;--band:#141b31;--glow:#171e34;--glow2:#1c2339;--glow3:#232a40;--star:#a3a4b4;--star-dim:#5a5f78;--horizon-ink:#273050}
+:root[data-theme="dark"]{--paper:#141b31;--ink:#d6cfc0;--head:#f8f3e8;--mute:#aeb4c6;--gold:#a6802c;--gold-text:#cdb272;--horizon:#665b45;--draw:#cfc6b3;--sun:#34322d;--ray:#4f4b40;--bulb:#cdb272;--card-face:#413a2e;--card-edge:#7d7059;--card-ink:#f8f3e8;--card-body:#efe9dc;--card-shadow:8px 10px 22px -8px rgba(0,0,0,.7);--door:#f8f3e8;--door-rule:#c9ad6a;--focus:#c9ad6a;--panel:#232c4a;--panel-rule:#4a5480;--band:#141b31;--glow:#171e34;--glow2:#1c2339;--glow3:#232a40;--star:#a3a4b4;--star-dim:#5a5f78;--horizon-ink:#273050;--halo:#1a2139;--halo2:#222a45;--hill:#0e1424}
 :root[data-theme="dark"] .day{display:none}:root[data-theme="dark"] .night{display:block}:root[data-theme="dark"] .theme .ico-moon{display:none}:root[data-theme="dark"] .theme .ico-sun{display:block}
 @media (max-width:359px){:root{--pad:1.25rem}}
+@media (min-width:640px){:root{--hero-h:calc(37rem*.52)}}
 html{font-size:100%;-webkit-text-size-adjust:100%;hyphens:none;-webkit-hyphens:none}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font:1.125rem/1.5 var(--sans);overflow-x:hidden}
@@ -43,18 +44,41 @@ h2{font:600 1.125rem/1.5 var(--sans);color:var(--head);margin:0 0 .75rem;text-wr
 .band h1{color:var(--band-ink)}
 .band .clause{color:var(--band-ink)}
 .band .lang a{color:var(--band-mute);text-decoration-color:var(--door-rule)}
-/* r7 — THE HILL AND THE HORIZON (home): the band's lower edge is a low half-ellipse (50 % × 1 rem) instead of a straight cut, so the paper rises under the card like a gentle hill and the card sits on its crest; the edge is drawn with a 1 px line in --horizon-ink, the dawn lighting the crest (the pad gives that 1 px back so every measured row keeps r6a's geometry). The stars ride in the band behind the headline (isolation makes the band their stacking context; z −1 puts them under the type). Under the headline a short gold rule, the card's own rule's width, positioned so the h1's box is unchanged. */
-.band.lifts{padding-bottom:calc(var(--gap) + var(--dawn-h) + var(--lift) - 1px);isolation:isolate;border-radius:0 0 50% 50%/0 0 1rem 1rem;border-bottom:1px solid var(--horizon-ink)}
-.band>.stars{position:absolute;top:0;left:calc(50% - 50vw);width:100vw;height:8.5rem;z-index:-1;pointer-events:none}
+/* E2 — THE BAND'S FOOT (home): the band runs on under the air, the hero and the picture's top third (--lift) and ends on a straight edge — the r7 hill and its horizon line are gone (the direction: no horizon); the paper simply begins under the lifted picture. The stars ride in the band behind the headline (isolation makes the band their stacking context; z −1 puts them under the type). Under the headline a short gold rule, the card's own rule's width, positioned so the h1's box is unchanged. */
+.band.lifts{padding-bottom:calc(var(--air) + var(--hero-h) + var(--lift));isolation:isolate}
+.band>.stars{position:absolute;top:0;left:calc(50% - 50vw);width:100vw;height:8.5rem;z-index:-1;pointer-events:none;animation:breathe 5s ease-in-out infinite}
 .band.lifts h1{position:relative}
-.band.lifts h1::after{content:"";position:absolute;left:0;top:calc(100% + .75rem);width:3rem;height:3px;background:var(--gold);border-radius:1.5px}
-.band h1 .beat{font-style:normal;color:var(--panel-gold)}
-.band.lifts+.held{margin-top:calc(-1*var(--lift))}
-/* THE CARD, ALONE — paper: a warmer cream, a crisp 1 px edge, the corner lift, one soft shadow to the right and below only (the only alpha on the page), brother Daniel's gold rule printed inside above the wording. The dawn rises BEHIND its top edge (half the disc hidden; the SVG's bottom sits 1 px under the card's edge): five faint rays by day; by night the same disc is the lamp's pool and the pendant lamp hangs over it. The dawn's box is --dawn-h tall; the gap above the card is --gap + --dawn-h so the air between the headline and the rays' tips is --gap. */
-.held{position:relative;margin:calc(var(--gap) + var(--dawn-h)) 0 0}
-.held>svg{display:block;position:absolute;pointer-events:none;height:auto}
-.held>.dawn{right:calc(-1*var(--pad));top:1px;width:min(100vw,48rem);height:5.5rem;transform:translateY(-100%);z-index:0}
-.held>.lamp{display:none;right:calc(7.125rem - var(--pad));top:-.625rem;width:3.5rem;transform:translateY(-100%);z-index:3}
+.band.lifts h1::after{content:"";position:absolute;left:0;top:calc(100% + .75rem);width:3rem;height:3px;background:var(--gold);border-radius:1.5px;transform-origin:0 50%;animation:draw .7s ease-out both} /* E2 motion: the gold rule draws itself from the left (transform only) */
+.band h1 .beat{font-style:normal;color:var(--panel-gold);position:relative;display:inline-block}
+/* THE BEATS WARMING (E2 motion): the word is gold underneath; a cream copy of it (from data-w, alt text empty so it is never read aloud) lies exactly over it and fades out — confess, then forgive, then change. Opacity only; a browser without the alt-text syntax drops the overlay and shows the gold at once. The beat is an inline-block so the overlay's line box is the word's own (inside a plain inline the pseudo sat on the font's content box, 10 px high). */
+.band h1 .beat::before{content:attr(data-w) / "";position:absolute;left:0;top:0;color:var(--band-ink);animation:warm .7s ease-out both;animation-delay:.2s}
+.band h1 em:nth-of-type(2)::before{animation-delay:.55s}
+.band h1 em:nth-of-type(3)::before{animation-delay:.9s}
+.band.lifts+.held{margin-top:calc(-1*(var(--hero-h) + var(--lift)))}
+/* E2 — THE HERO: a block in flow at the top of .held, --hero-h tall (.52 of the column, the canvas's aspect), holding the sky drawing with its bottom on the picture's top edge; the sun's steps, the play on its face, the hill, the cross on its crest and the night lamp are all drawn in build.mjs in the one canvas, so they keep their places at every width. The lamp is a .night group: hidden by day, shown by the theme rules. */
+.held{position:relative;margin:0}
+.hero{position:relative;height:var(--hero-h);z-index:0}
+.hero>svg{display:block;position:absolute;pointer-events:none}
+.hero>.sky{left:0;bottom:0;width:100%;height:auto;overflow:visible}
+.sky .lamp{display:none}
+.sky .disc{animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
+.sky .halo{animation:fadein 1.4s ease-out both}
+/* E2 — THE PICTURE: the front face at zoom .72 inside a framed link (the frame carries the gold edge, the radius, the one shadow; the face inside gives up its own), lifted out of the light on arrival. The tap is the whole picture. */
+.picture a{display:block;color:inherit;text-decoration:none}
+.picture .frame{overflow:hidden;border:1px solid var(--gold);border-radius:clamp(10px,3.7vw,16px);box-shadow:var(--card-shadow);background:var(--card-face)}
+.picture .shot{zoom:.72;pointer-events:none}
+.picture .face{border:0;border-radius:0;box-shadow:none}
+.picture{animation:lift 1.2s cubic-bezier(.2,.7,.2,1) .25s both}
+@keyframes rise{from{transform:translateY(26px)}}
+@keyframes draw{from{transform:scaleX(0)}}
+@keyframes fadein{from{opacity:0}}
+@keyframes lift{from{transform:translateY(1.5rem)}}
+@keyframes warm{to{opacity:0}}
+@keyframes breathe{50%{opacity:.55}}
+/* THE PAIR (E2): the film's door and the whole card's door on one quiet line under the picture (they stack on the narrowest phone), no hairline; the what-next door keeps its hairline a little closer. */
+.next.pair{display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:1rem;margin-top:.5rem;border-top:0}
+.next.pair .door{width:auto}
+.pair+.next{margin-top:1.25rem}
 #card{position:relative;z-index:1;margin:0;font-family:var(--serif)}
 main>#card{margin-top:var(--gap)}
 /* THE TWO FACES (the card on disk 2026-10-07): brother Daniel's card is printed on both sides, so the block is two papers one under the other — the FRONT (his title, the three rules, his note, the little prayer, the turn line) and the BACK (the invitation, the prayer, its turn line) — the same cream paper, the gold rule on each, 1 rem apart; the dawn still rises behind the front's top edge. The title in his own capitals, lightly tracked; the two prayers one weight up in the card's ink, as the card sets them bold; the turn lines italic and quieter. */
@@ -146,71 +170,185 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 .theme button svg{width:1.5rem;height:1.5rem;display:block}
 .theme .ico-sun{display:none}
 [hidden]{display:none!important}
-@media (prefers-reduced-motion:reduce){.door,.share button,.door .leaf,.door .lite{transition:none}}
-@media print{.theme{display:none!important}body{background:#fff;color:#000}main>*{display:none}main>.band{display:block;background:none;color:#1b2440;margin:0;padding:0;border:0;border-radius:0}main>.band h1{color:#1b2440}.band .stars,.band .lang{display:none!important}.band.lifts h1::after{background:#1b2440}.band h1 .beat{color:#1b2440}main>.held{display:block;margin:4.5rem 0 0}main>.held>svg{display:none!important}main>.held>.dawn{display:block!important}.dawn .glow,.dawn .ray{display:none}.dawn .sun{fill:#fff;stroke:#1b2440;stroke-width:1.25}#card{display:block}.face,#card.placeholder{box-shadow:none;border-color:#000;background:#fff;color:#000}.face::before,#card.placeholder::before{background:#000}#card .title,#card .daily_prayer,#card .prayer{color:#000}.verse{background:#f7efdc;border:1px solid #1b2440;color:#1b2440}.verse::before,.verse .label,.verse .ref,.verse .tr,.verse .text,.verse .door{color:#1b2440}.verse .door{border-top-color:#1b2440;text-decoration-color:#1b2440}}
+@media (prefers-reduced-motion:reduce){.door,.share button,.door .leaf,.door .lite{transition:none}.sky .disc,.sky .halo,.picture,.band>.stars,.band.lifts h1::after,.step,.list li.is-today::before{animation:none}.cross-end path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}.band h1 .beat::before{content:none}}
+@media print{.theme{display:none!important}body{background:#fff;color:#000}main>*{display:none}main>.band{display:block;background:none;color:#1b2440;margin:0;padding:0;border:0;border-radius:0}main>.band h1{color:#1b2440}.band .stars,.band .lang{display:none!important}.band.lifts h1::after{background:#1b2440}.band h1 .beat{color:#1b2440}.band h1 .beat::before{content:none}main>.held{display:block;margin:4.5rem 0 0}.sky .lamp{display:none!important}.sky .halo,.sky .play{display:none}.sky .sun{fill:#fff;stroke:#1b2440;stroke-width:1.25}.sky .hill{fill:#fff;stroke:#1b2440;stroke-width:1.25}.sky .cross{stroke:#1b2440}.sky .disc,.sky .halo,.picture{animation:none}.band.lifts h1::after{animation:none}.picture .shot{zoom:1}.picture .frame{box-shadow:none;border-color:#000}#card{display:block}.face,#card.placeholder{box-shadow:none;border-color:#000;background:#fff;color:#000}.face::before,#card.placeholder::before{background:#000}#card .title,#card .daily_prayer,#card .prayer{color:#000}.verse{background:#f7efdc;border:1px solid #1b2440;color:#1b2440}.verse::before,.verse .label,.verse .ref,.verse .tr,.verse .text,.verse .door{color:#1b2440}.verse .door{border-top-color:#1b2440;text-decoration-color:#1b2440}}
+/* E2 — THE FILM IN THE HERO (hasFilm only; TR2-film-door A): the video hidden inside the hero's box, un-hidden IN PLACE on the tap (zero shift; day.js shows the track, then play() in the gesture's tick); the play door a 48 px button over the sun's face; absent the film, nothing here renders. */
+.hero video{position:absolute;inset:0;width:100%;height:100%;background:#000;z-index:2}
+.hero .play{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);min-height:3rem;padding:.5rem 1rem;border:1px solid var(--panel-gold);border-radius:999px;background:var(--band);color:var(--band-ink);font:500 1rem/1.2 var(--sans);cursor:pointer;z-index:3}
+/* THE FOOT ROW (home; TR2-frame A): two text doors at most — "How are you doing? ›" (/contact/, rung 4) · "Who gives these cards? ›" (/story/, hasFounder); no Privacy door (the notice sits at the point of consent). */
+.next.foot{display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:1rem}
+.next.foot .door{width:auto}
+/* /CARD/ — THE WHOLE CARD LARGE on its paper under the r8 dawn by day and the lamp by night (DECISIONS 8879), the gold ribbon TAB at its top-right corner (TR2-print-flag A; a SIBLING of #card, its text outside the fence's card block), the print doors (48 px), the shop line (18 px), the no-duplex line, the three steps, the close line. The r7 held geometry lives on here under .whole. */
+.held.whole{--dawn-h:3rem;position:relative;margin:calc(var(--gap) + var(--dawn-h)) 0 0}
+.whole>svg{display:block;position:absolute;pointer-events:none;height:auto}
+.whole>.dawn{right:calc(-1*var(--pad));top:1px;width:min(100vw,48rem);height:5.5rem;transform:translateY(-100%);z-index:0}
+.whole>.lamp{display:none;right:calc(7.125rem - var(--pad));top:-.625rem;width:3.5rem;transform:translateY(-100%);z-index:3}
+a.tab{position:absolute;right:.75rem;top:-.5rem;z-index:4;display:inline-flex;align-items:center;min-height:3rem;padding:.5rem .9rem 1.1rem;background:var(--gold);color:#1b2440;font:500 1rem/1 var(--sans);text-decoration:none;border-radius:4px 4px 0 0;clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%);box-shadow:var(--card-shadow)}
+a.tab:focus-visible{outline-offset:-3px}
+#doors{margin:var(--gap) 0 0}
+.doors .door{min-height:3rem}
+button.door{appearance:none;-webkit-appearance:none;background:none;border:0;border-bottom:1px solid var(--door-rule);color:var(--door);font:inherit;text-align:left;cursor:pointer;width:100%}
+.shop{font-size:1.125rem;line-height:1.5;color:var(--mute);margin:1rem 0 0}
+.duplex{font-size:1rem;color:var(--mute);margin:.5rem 0 0}
+.how{margin:var(--gap) 0 0;padding-left:1.5rem}
+.how li{margin:0 0 .5rem}
+.close{margin:var(--gap) 0 0;font:400 1.25rem/1.45 var(--serif);color:var(--head)}
+.number{margin:.75rem 0 0;color:var(--mute)}
+@media print{a.tab,#doors,.shop,.duplex,.how,.close,.number,.whole>svg{display:none}}
+/* THE CHALLENGE (rung 3): the h2 under the band; THREE STEPS as three papers with gold numerals (1 his h1 · 2 his clause · 3 DRAFT) that arrive as they enter — transform/opacity on the PAPER, never the words; a view timeline where the browser has one, the static page elsewhere; the explanation; the sign-up block (no animation; the field and the button 48 px); the forty's hairline running on into the small cross that draws itself as the foot enters; today's disc pulsing once. Cap: three animated things on the page. */
+h2.challenge{margin:var(--gap) 0 0;font:600 1.25rem/1.4 var(--sans);color:var(--head)}
+.steps{margin:1rem 0 0;padding:0;list-style:none;counter-reset:step}
+.step{position:relative;margin:0 0 .75rem;padding:1rem 1.125rem 1rem 3.25rem;background:var(--card-face);border:1px solid var(--card-edge);border-radius:clamp(10px,3.7vw,16px);box-shadow:var(--card-shadow)}
+.step::before{content:counter(step);counter-increment:step;position:absolute;left:1.125rem;top:.9rem;font:500 1.5rem/1.2 var(--serif);color:var(--gold-text)}
+.step p{margin:0;font:400 1.1875rem/1.45 var(--serif);color:var(--card-ink);text-wrap:pretty}
+.explain{margin:var(--gap) 0 0;font:400 1.125rem/1.55 var(--sans);text-wrap:pretty;max-width:36ch}
+.signup{position:relative;margin:var(--gap) 0 0;padding:1.25rem 1.125rem;background:var(--card-face);border:1px solid var(--card-edge);border-radius:clamp(10px,3.7vw,16px)}
+.signup label{display:block;font:600 1rem/1.4 var(--sans);color:var(--card-ink);margin:0 0 .5rem}
+.signup input[type=email]{display:block;width:100%;min-height:3rem;padding:.5rem .75rem;font:1.125rem/1.4 var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--card-edge);border-radius:8px}
+.signup .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.signup button.door.big{display:flex;width:100%;margin:.75rem 0 0;border:0;cursor:pointer}
+.signup .fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
+.signup .fine a{color:var(--door);text-decoration-color:var(--door-rule)}
+.list::before{bottom:-1.75rem}
+.list li{scroll-margin-top:1rem}
+.cross-end{display:block;width:1.5rem;height:2.5rem;margin:.75rem 0 0 1.5rem}
+.list li.is-today::before{animation:pulse .9s .3s ease-out}
+@keyframes pulse{0%{transform:scale(.6)}60%{transform:scale(1.15)}}
+@supports (animation-timeline:view()){.step{animation:arrive linear both;animation-timeline:view();animation-range:entry 0% entry 40%}.cross-end path{stroke-dasharray:1;stroke-dashoffset:1;animation:walk linear both;animation-timeline:view();animation-range:entry 10% entry 80%}}
+@keyframes arrive{from{opacity:0;transform:translateY(12px)}}
+@keyframes walk{to{stroke-dashoffset:0}}
+/* /CONTACT/ · /PRIVACY/ · /STORY/ (rung 4): the band with the h1, a message line, the doors (48 px, the Philippines' order), the prose lines, the front face as the signature, the foot frame. No form, no figure. */
+.doors.contact .door{min-height:3rem}
+.testimony,.low{margin:var(--gap) 0 0;font:400 1.125rem/1.55 var(--sans);text-wrap:pretty;max-width:36ch}
+.low{margin-top:1rem}
+p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
+.privacy{margin:var(--gap) 0 0}
+.privacy p{margin:0 0 .75rem;font:400 1.0625rem/1.55 var(--sans);text-wrap:pretty}
+.story{margin:var(--gap) 0 0}
+.story h2{font:600 1.125rem/1.4 var(--sans);color:var(--head);margin:0 0 .5rem}
+.story p{margin:0 0 .75rem;font:400 1.1875rem/1.5 var(--serif);color:var(--ink);text-wrap:pretty}
+.story-placeholder{margin:var(--gap) 0 0;color:var(--mute);font-style:italic}
+.message+.doors{margin-top:1.25rem}
+/* REDUCED MOTION, the challenge's view-driven rows: this rule stands AFTER the @supports block so it wins the cascade — the static page is the final page; the small cross is drawn whole. */
+@media (prefers-reduced-motion:reduce){.steps .step{animation:none}svg.cross-end path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}}
 </style>
 </head>
 <body>
 <main>
 <header class="band"><h1>Have you used the prayer, what next</h1>
-<p class="clause prose">Keep using the rules daily and especially confession. Never stop.</p>
 </header>
-<p class="message">Confess, confess, confess. God will forgive... God will change our lives.</p>
+<h2 class="prose challenge">The forty-day challenge</h2>
+<ol class="steps" role="list">
+<li class="step"><p>Confess, confess, confess. God will forgive... God will change our lives.</p></li>
+<li class="step"><p>Keep using the rules daily and especially confession. Never stop.</p></li>
+<li class="step"><p>A verse a day for forty days — let God change your life a morning at a time.</p></li>
+</ol>
 <section class="verse">
-<p class="ref">1 John 1:9</p>
-<p class="text">If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.</p>
-<p class="tr">King James Version</p>
-<a class="door" href="https://www.knowing-jesus.com/1-john-1-9">Read it on Knowing Jesus ›</a>
+<p class="label">Today's verse</p>
+<ol class="forty">
+<li data-day="1"><p class="ref">1 John 1:9</p><p class="text">If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.</p></li>
+<li data-day="2"><p class="ref">Luke 18:13</p><p class="text">And the publican, standing afar off, would not lift up so much as his eyes unto heaven, but smote upon his breast, saying, God be merciful to me a sinner.</p></li>
+<li data-day="3"><p class="ref">Psalm 51:1</p><p class="text">Have mercy upon me, O God, according to thy lovingkindness: according unto the multitude of thy tender mercies blot out my transgressions.</p></li>
+<li data-day="4"><p class="ref">Psalm 32:5</p><p class="text">I acknowledge my sin unto thee, and mine iniquity have I not hid. I said, I will confess my transgressions unto the LORD; and thou forgavest the iniquity of my sin. Selah.</p></li>
+<li data-day="5"><p class="ref">Proverbs 28:13</p><p class="text">He that covereth his sins shall not prosper: but whoso confesseth and forsaketh them shall have mercy.</p></li>
+<li data-day="6"><p class="ref">Hebrews 4:16</p><p class="text">Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need.</p></li>
+<li data-day="7"><p class="ref">Lamentations 3:22-23</p><p class="text">It is of the LORD's mercies that we are not consumed, because his compassions fail not.
+They are new every morning: great is thy faithfulness.</p></li>
+<li data-day="8"><p class="ref">Matthew 28:20</p><p class="text">Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you always, even unto the end of the world. Amen.</p></li>
+<li data-day="9"><p class="ref">John 14:3</p><p class="text">And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also.</p></li>
+<li data-day="10"><p class="ref">1 Timothy 2:1</p><p class="text">I exhort therefore, that, first of all, supplications, prayers, intercessions, and giving of thanks, be made for all men;</p></li>
+<li data-day="11"><p class="ref">Psalm 103:12</p><p class="text">As far as the east is from the west, so far hath he removed our transgressions from us.</p></li>
+<li data-day="12"><p class="ref">Micah 7:18-19</p><p class="text">Who is a God like unto thee, that pardoneth iniquity, and passeth by the transgression of the remnant of his heritage? he retaineth not his anger for ever, because he delighteth in mercy.
+He will turn again, he will have compassion upon us; he will subdue our iniquities; and thou wilt cast all their sins into the depths of the sea.</p></li>
+<li data-day="13"><p class="ref">Isaiah 1:18</p><p class="text">Come now, and let us reason together, saith the LORD: though your sins be as scarlet, they shall be as white as snow; though they be red like crimson, they shall be as wool.</p></li>
+<li data-day="14"><p class="ref">1 John 2:1</p><p class="text">My little children, these things write I unto you, that ye sin not. And if any man sin, we have an advocate with the Father, Jesus Christ the righteous:</p></li>
+<li data-day="15"><p class="ref">Psalm 130:3-4</p><p class="text">If thou, LORD, shouldest mark iniquities, O Lord, who shall stand?
+But there is forgiveness with thee, that thou mayest be feared.</p></li>
+<li data-day="16"><p class="ref">Psalm 139:23-24</p><p class="text">Search me, O God, and know my heart: try me, and know my thoughts:
+And see if there be any wicked way in me, and lead me in the way everlasting.</p></li>
+<li data-day="17"><p class="ref">James 5:16</p><p class="text">Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much.</p></li>
+<li data-day="18"><p class="ref">Ephesians 4:32</p><p class="text">And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.</p></li>
+<li data-day="19"><p class="ref">Matthew 5:7</p><p class="text">Blessed are the merciful: for they shall obtain mercy.</p></li>
+<li data-day="20"><p class="ref">Luke 6:36</p><p class="text">Be ye therefore merciful, as your Father also is merciful.</p></li>
+<li data-day="21"><p class="ref">Titus 3:5</p><p class="text">Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost;</p></li>
+<li data-day="22"><p class="ref">Ephesians 2:4-5</p><p class="text">But God, who is rich in mercy, for his great love wherewith he loved us,
+Even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;)</p></li>
+<li data-day="23"><p class="ref">Psalm 86:5</p><p class="text">For thou, Lord, art good, and ready to forgive; and plenteous in mercy unto all them that call upon thee.</p></li>
+<li data-day="24"><p class="ref">Micah 6:8</p><p class="text">He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?</p></li>
+<li data-day="25"><p class="ref">Matthew 5:44</p><p class="text">But I say unto you, Love your enemies, bless them that curse you, do good to them that hate you, and pray for them which despitefully use you, and persecute you;</p></li>
+<li data-day="26"><p class="ref">Philippians 4:6-7</p><p class="text">Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.
+And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.</p></li>
+<li data-day="27"><p class="ref">Colossians 4:2</p><p class="text">Continue in prayer, and watch in the same with thanksgiving;</p></li>
+<li data-day="28"><p class="ref">1 Thessalonians 5:17</p><p class="text">Pray without ceasing.</p></li>
+<li data-day="29"><p class="ref">Galatians 6:9</p><p class="text">And let us not be weary in well doing: for in due season we shall reap, if we faint not.</p></li>
+<li data-day="30"><p class="ref">Luke 9:23</p><p class="text">And he said to them all, If any man will come after me, let him deny himself, and take up his cross daily, and follow me.</p></li>
+<li data-day="31"><p class="ref">Psalm 32:8</p><p class="text">I will instruct thee and teach thee in the way which thou shalt go: I will guide thee with mine eye.</p></li>
+<li data-day="32"><p class="ref">Proverbs 3:5-6</p><p class="text">Trust in the LORD with all thine heart; and lean not unto thine own understanding.
+In all thy ways acknowledge him, and he shall direct thy paths.</p></li>
+<li data-day="33"><p class="ref">Joshua 1:9</p><p class="text">Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.</p></li>
+<li data-day="34"><p class="ref">Hebrews 13:5</p><p class="text">Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee.</p></li>
+<li data-day="35"><p class="ref">Matthew 11:28-29</p><p class="text">Come unto me, all ye that labour and are heavy laden, and I will give you rest.
+Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls.</p></li>
+<li data-day="36"><p class="ref">Colossians 3:23</p><p class="text">And whatsoever ye do, do it heartily, as to the Lord, and not unto men;</p></li>
+<li data-day="37"><p class="ref">Philippians 1:6</p><p class="text">Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:</p></li>
+<li data-day="38"><p class="ref">1 John 5:13</p><p class="text">These things have I written unto you that believe on the name of the Son of God; that ye may know that ye have eternal life, and that ye may believe on the name of the Son of God.</p></li>
+<li data-day="39"><p class="ref">Romans 8:38-39</p><p class="text">For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,
+Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.</p></li>
+<li data-day="40"><p class="ref">John 10:28</p><p class="text">And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand.</p></li>
+</ol>
 </section>
-<section id="card"><div class="face front"><p class="rules">1. Confess all sins to God (Tell it) daily.
-2. Surrender your will to God daily.
-3. Forgive others and yourself daily.</p></div></section>
+<p class="explain prose">Forty days is not a test. Nothing here is earned — God forgave you when you asked Him. The forty days are simply forty mornings of the three rules, said again. Each morning there is one verse, the same for everyone who holds this card, and the three rules under it. Read the verse. Use the rules. If you miss a morning, there is nothing to make up — start again where you are. On the fortieth day nothing ends. The rules are for every day after that one.</p>
 <section id="forty">
 <h2>The forty days</h2>
 <p class="label">One a day. Start at 1.</p>
 <ol class="list" role="list">
-<li data-day="1"><span class="ref">1 John 1:9</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-john-1-9">Read it on Knowing Jesus</a></li>
-<li data-day="2"><span class="ref">Luke 18:13</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Luke/18/13">Read it on Knowing Jesus</a></li>
-<li data-day="3"><span class="ref">Psalm 51:1</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/51/1">Read it on Knowing Jesus</a></li>
-<li data-day="4"><span class="ref">Psalm 32:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/32/5">Read it on Knowing Jesus</a></li>
-<li data-day="5"><span class="ref">Proverbs 28:13</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Proverbs/28/13">Read it on Knowing Jesus</a></li>
-<li data-day="6"><span class="ref">Hebrews 4:16</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/hebrews-4-16">Read it on Knowing Jesus</a></li>
-<li data-day="7"><span class="ref">Lamentations 3:22-23</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/lamentations-3-22">Read it on Knowing Jesus</a></li>
-<li data-day="8"><span class="ref">Matthew 28:20</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/matthew-28-20">Read it on Knowing Jesus</a></li>
-<li data-day="9"><span class="ref">John 14:3</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/john-14-3">Read it on Knowing Jesus</a></li>
-<li data-day="10"><span class="ref">1 Timothy 2:1</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-timothy-2-1">Read it on Knowing Jesus</a></li>
-<li data-day="11"><span class="ref">Psalm 103:12</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/psalm-103-12">Read it on Knowing Jesus</a></li>
-<li data-day="12"><span class="ref">Micah 7:18-19</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/micah-7-18">Read it on Knowing Jesus</a></li>
-<li data-day="13"><span class="ref">Isaiah 1:18</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/isaiah-1-18">Read it on Knowing Jesus</a></li>
-<li data-day="14"><span class="ref">1 John 2:1</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-john-2-1">Read it on Knowing Jesus</a></li>
-<li data-day="15"><span class="ref">Psalm 130:3-4</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/psalm-130-3">Read it on Knowing Jesus</a></li>
-<li data-day="16"><span class="ref">Psalm 139:23-24</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/139/23">Read it on Knowing Jesus</a></li>
-<li data-day="17"><span class="ref">James 5:16</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/james-5-16">Read it on Knowing Jesus</a></li>
-<li data-day="18"><span class="ref">Ephesians 4:32</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/ephesians-4-32">Read it on Knowing Jesus</a></li>
-<li data-day="19"><span class="ref">Matthew 5:7</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/matthew-5-7">Read it on Knowing Jesus</a></li>
-<li data-day="20"><span class="ref">Luke 6:36</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/luke-6-36">Read it on Knowing Jesus</a></li>
-<li data-day="21"><span class="ref">Titus 3:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/titus-3-5">Read it on Knowing Jesus</a></li>
-<li data-day="22"><span class="ref">Ephesians 2:4-5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/ephesians-2-4">Read it on Knowing Jesus</a></li>
-<li data-day="23"><span class="ref">Psalm 86:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/86/5">Read it on Knowing Jesus</a></li>
-<li data-day="24"><span class="ref">Micah 6:8</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/micah-6-8">Read it on Knowing Jesus</a></li>
-<li data-day="25"><span class="ref">Matthew 5:44</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Matthew/5/44">Read it on Knowing Jesus</a></li>
-<li data-day="26"><span class="ref">Philippians 4:6-7</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/philippians-4-6">Read it on Knowing Jesus</a></li>
-<li data-day="27"><span class="ref">Colossians 4:2</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/colossians-4-2">Read it on Knowing Jesus</a></li>
-<li data-day="28"><span class="ref">1 Thessalonians 5:17</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-thessalonians-5-17">Read it on Knowing Jesus</a></li>
-<li data-day="29"><span class="ref">Galatians 6:9</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/galatians-6-9">Read it on Knowing Jesus</a></li>
-<li data-day="30"><span class="ref">Luke 9:23</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/luke-9-23">Read it on Knowing Jesus</a></li>
-<li data-day="31"><span class="ref">Psalm 32:8</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/32/8">Read it on Knowing Jesus</a></li>
-<li data-day="32"><span class="ref">Proverbs 3:5-6</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/proverbs-3-5">Read it on Knowing Jesus</a></li>
-<li data-day="33"><span class="ref">Joshua 1:9</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/joshua-1-9">Read it on Knowing Jesus</a></li>
-<li data-day="34"><span class="ref">Hebrews 13:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/hebrews-13-5">Read it on Knowing Jesus</a></li>
-<li data-day="35"><span class="ref">Matthew 11:28-29</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/matthew-11-28">Read it on Knowing Jesus</a></li>
-<li data-day="36"><span class="ref">Colossians 3:23</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/colossians-3-23">Read it on Knowing Jesus</a></li>
-<li data-day="37"><span class="ref">Philippians 1:6</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/philippians-1-6">Read it on Knowing Jesus</a></li>
-<li data-day="38"><span class="ref">1 John 5:13</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-john-5-13">Read it on Knowing Jesus</a></li>
-<li data-day="39"><span class="ref">Romans 8:38-39</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/romans-8-38">Read it on Knowing Jesus</a></li>
-<li data-day="40"><span class="ref">John 10:28</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/john-10-28">Read it on Knowing Jesus</a></li>
+<li data-day="1" id="day-1"><span class="ref">1 John 1:9</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-john-1-9">Read it on Knowing Jesus</a></li>
+<li data-day="2" id="day-2"><span class="ref">Luke 18:13</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Luke/18/13">Read it on Knowing Jesus</a></li>
+<li data-day="3" id="day-3"><span class="ref">Psalm 51:1</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/51/1">Read it on Knowing Jesus</a></li>
+<li data-day="4" id="day-4"><span class="ref">Psalm 32:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/32/5">Read it on Knowing Jesus</a></li>
+<li data-day="5" id="day-5"><span class="ref">Proverbs 28:13</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Proverbs/28/13">Read it on Knowing Jesus</a></li>
+<li data-day="6" id="day-6"><span class="ref">Hebrews 4:16</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/hebrews-4-16">Read it on Knowing Jesus</a></li>
+<li data-day="7" id="day-7"><span class="ref">Lamentations 3:22-23</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/lamentations-3-22">Read it on Knowing Jesus</a></li>
+<li data-day="8" id="day-8"><span class="ref">Matthew 28:20</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/matthew-28-20">Read it on Knowing Jesus</a></li>
+<li data-day="9" id="day-9"><span class="ref">John 14:3</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/john-14-3">Read it on Knowing Jesus</a></li>
+<li data-day="10" id="day-10"><span class="ref">1 Timothy 2:1</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-timothy-2-1">Read it on Knowing Jesus</a></li>
+<li data-day="11" id="day-11"><span class="ref">Psalm 103:12</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/psalm-103-12">Read it on Knowing Jesus</a></li>
+<li data-day="12" id="day-12"><span class="ref">Micah 7:18-19</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/micah-7-18">Read it on Knowing Jesus</a></li>
+<li data-day="13" id="day-13"><span class="ref">Isaiah 1:18</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/isaiah-1-18">Read it on Knowing Jesus</a></li>
+<li data-day="14" id="day-14"><span class="ref">1 John 2:1</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-john-2-1">Read it on Knowing Jesus</a></li>
+<li data-day="15" id="day-15"><span class="ref">Psalm 130:3-4</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/psalm-130-3">Read it on Knowing Jesus</a></li>
+<li data-day="16" id="day-16"><span class="ref">Psalm 139:23-24</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/139/23">Read it on Knowing Jesus</a></li>
+<li data-day="17" id="day-17"><span class="ref">James 5:16</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/james-5-16">Read it on Knowing Jesus</a></li>
+<li data-day="18" id="day-18"><span class="ref">Ephesians 4:32</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/ephesians-4-32">Read it on Knowing Jesus</a></li>
+<li data-day="19" id="day-19"><span class="ref">Matthew 5:7</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/matthew-5-7">Read it on Knowing Jesus</a></li>
+<li data-day="20" id="day-20"><span class="ref">Luke 6:36</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/luke-6-36">Read it on Knowing Jesus</a></li>
+<li data-day="21" id="day-21"><span class="ref">Titus 3:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/titus-3-5">Read it on Knowing Jesus</a></li>
+<li data-day="22" id="day-22"><span class="ref">Ephesians 2:4-5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/ephesians-2-4">Read it on Knowing Jesus</a></li>
+<li data-day="23" id="day-23"><span class="ref">Psalm 86:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/86/5">Read it on Knowing Jesus</a></li>
+<li data-day="24" id="day-24"><span class="ref">Micah 6:8</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/micah-6-8">Read it on Knowing Jesus</a></li>
+<li data-day="25" id="day-25"><span class="ref">Matthew 5:44</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Matthew/5/44">Read it on Knowing Jesus</a></li>
+<li data-day="26" id="day-26"><span class="ref">Philippians 4:6-7</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/philippians-4-6">Read it on Knowing Jesus</a></li>
+<li data-day="27" id="day-27"><span class="ref">Colossians 4:2</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/colossians-4-2">Read it on Knowing Jesus</a></li>
+<li data-day="28" id="day-28"><span class="ref">1 Thessalonians 5:17</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-thessalonians-5-17">Read it on Knowing Jesus</a></li>
+<li data-day="29" id="day-29"><span class="ref">Galatians 6:9</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/galatians-6-9">Read it on Knowing Jesus</a></li>
+<li data-day="30" id="day-30"><span class="ref">Luke 9:23</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/luke-9-23">Read it on Knowing Jesus</a></li>
+<li data-day="31" id="day-31"><span class="ref">Psalm 32:8</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/Psalm/32/8">Read it on Knowing Jesus</a></li>
+<li data-day="32" id="day-32"><span class="ref">Proverbs 3:5-6</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/proverbs-3-5">Read it on Knowing Jesus</a></li>
+<li data-day="33" id="day-33"><span class="ref">Joshua 1:9</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/joshua-1-9">Read it on Knowing Jesus</a></li>
+<li data-day="34" id="day-34"><span class="ref">Hebrews 13:5</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/hebrews-13-5">Read it on Knowing Jesus</a></li>
+<li data-day="35" id="day-35"><span class="ref">Matthew 11:28-29</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/matthew-11-28">Read it on Knowing Jesus</a></li>
+<li data-day="36" id="day-36"><span class="ref">Colossians 3:23</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/colossians-3-23">Read it on Knowing Jesus</a></li>
+<li data-day="37" id="day-37"><span class="ref">Philippians 1:6</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/philippians-1-6">Read it on Knowing Jesus</a></li>
+<li data-day="38" id="day-38"><span class="ref">1 John 5:13</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/1-john-5-13">Read it on Knowing Jesus</a></li>
+<li data-day="39" id="day-39"><span class="ref">Romans 8:38-39</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/romans-8-38">Read it on Knowing Jesus</a></li>
+<li data-day="40" id="day-40"><span class="ref">John 10:28</span><span class="today">today</span><a class="door" href="https://www.knowing-jesus.com/john-10-28">Read it on Knowing Jesus</a></li>
 </ol>
+<svg class="cross-end" viewBox="0 0 24 40" aria-hidden="true" focusable="false"><path d="M12 3V38M5 12H19" pathLength="1" fill="none" stroke="var(--draw)" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
 </section>
+<section id="card"><div class="face front"><p class="rules">1. Confess all sins to God (Tell it) daily.
+2. Surrender your will to God daily.
+3. Forgive others and yourself daily.</p></div></section>
+<p class="next"><a class="door" href="../card/">Print the card ›</a></p>
 <section class="share">
 <p class="label">Share</p>
 <button id="share" hidden data-title="THREE RULES FOR LIVING FROM THE LORD'S PRAYER:" data-text="Confess, confess, confess. God will forgive... God will change our lives.">Share</button>
@@ -232,8 +370,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
   var t=new Date();
   var d=Math.floor((Date.UTC(t.getFullYear(),t.getMonth(),t.getDate())-Date.UTC(S.y,S.m-1,S.d))/86400000);
   var N=d<0?1:(d%40)+1;
-  var li=document.querySelector('li[data-day="'+N+'"]');
-  if(li){li.classList.add('is-today');}
+  var lis=document.querySelectorAll('li[data-day="'+N+'"]');
+  for(var i=0;i<lis.length;i++){lis[i].classList.add('is-today');}
+  var pl=document.querySelector('.hero .play'),v=document.querySelector('.hero video');
+  if(pl&&v){pl.addEventListener('click',function(){
+    v.hidden=false;pl.hidden=true;
+    if(v.textTracks&&v.textTracks[0]){v.textTracks[0].mode='showing';}
+    v.play();
+  });}
   var b=document.getElementById('share');
   if(b&&navigator.share){
     var f=document.getElementById('share-links');
@@ -252,6 +396,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
   mark();
 })();
 </script>
-<noscript><style>.list>li[data-day="1"] .today{display:inline}.list>li[data-day="1"] .door{display:flex}</style></noscript>
+<noscript><style>.forty>li[data-day="1"]{display:contents}.list>li[data-day="1"] .today{display:inline}.list>li[data-day="1"] .door{display:flex}</style></noscript>
 </body>
 </html>
