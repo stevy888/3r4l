@@ -40,23 +40,21 @@ const translation = verses[0].translation_name, title = S2.challenge.h1.text, da
 
 // ---- THE DRAWING (mm; the safe box is 182 x 250) ----------------------------------------------------------------------------------------------
 const W = 182, H = 250; // the safe box: 182 × 244 so a top-left-anchored 100 % print on 8.5 × 11 short bond keeps the foot inside 12 mm (the refuter's Letter caveat, 2026-10-09)
-const CREST = { x: 80, y: 68 };  // 4 mm more sky than the fleet's final: the 'I began on' writing rule clears the sun's crown and the cross's top (the refuter's p1 catch)                                   // the hill's crest, left of centre, as the home's hero
+const CREST = { x: 91, y: 76 };  // 4 mm more sky than the fleet's final: the 'I began on' writing rule clears the sun's crown and the cross's top (the refuter's p1 catch)                                   // the hill's crest, left of centre, as the home's hero
 const SUN = { x: 80, y: 86, r: [26, 20, 15] };  // one thin line of a rising sun, its crown under the 'I began on' rule                  // three flat steps rising behind the hill; no rays, no gradient
-const RING = 3.25, Y1 = 235, Y40 = 88, XL = 62, XR = 120;          // ROUND 2 (the two blind judges, 2026-10-09): rings 7 mm across in TWO STRAIGHT COLUMNS flanking the road (never touching — a column's rings 7.95 mm apart), day 1 at the foot, day 40 under the crest
+const RING = 3.25, Y1 = 234, Y40 = 92, XL = 62, XR = 120;          // ROUND 2 (the two blind judges, 2026-10-09): rings 7 mm across in TWO STRAIGHT COLUMNS flanking the road (never touching — a column's rings 7.95 mm apart), day 1 at the foot, day 40 under the crest
 const PITCH = (Y1 - Y40) / 39;                                    // 3.97 mm; a column's rings every 7.95 mm — a breath between 7 mm rings
 // ONE path: a cubic from the foot straight up, one leaning bend, then straight to the crest where the cross stands
-const P = [[91, 239], [113, 190], [69, 132], [CREST.x, CREST.y + 0.6]];  // the road: one winding climb inside the corridor between the two columns (x 69–113), to the crest
+const P = [[91, 238], [113, 190], [69, 132], [CREST.x, CREST.y + 0.6]];  // the road: one winding climb inside the corridor between the two columns (x 69–113), to the crest
 const bez = t => { const u = 1 - t; return [0, 1].map(i => u * u * u * P[0][i] + 3 * u * u * t * P[1][i] + 3 * u * t * t * P[2][i] + t * t * t * P[3][i]); };
 const xAt = y => { let lo = 0, hi = 1; for (let i = 0; i < 40; i++) { const m = (lo + hi) / 2; if (bez(m)[1] > y) lo = m; else hi = m; } return bez((lo + hi) / 2)[0]; };
 const rings = verses.map((v, i) => { const y = Y1 - i * PITCH, right = v.day % 2 === 1; return { v, y, right, x: right ? XR : XL, tenth: v.day % 10 === 0 }; }); // odd days the right column, even the left — the eye climbs the road between them
 const f = n => (Math.round(n * 100) / 100).toString();
-const hill = `M-2 ${CREST.y + 20}C26 ${CREST.y + 14} 56 ${CREST.y} ${CREST.x} ${CREST.y}C108 ${CREST.y} 136 ${CREST.y + 12} 184 ${CREST.y + 26}`; // the horizon: gentle, the crest left of centre
+const hill = `M12 ${CREST.y + 10}C40 ${CREST.y + 7} 70 ${CREST.y} ${CREST.x} ${CREST.y}C112 ${CREST.y} 142 ${CREST.y + 7} 170 ${CREST.y + 10}`; // the horizon: gentle, the crest left of centre
 const svg = `<svg class="draw" viewBox="0 0 ${W} ${H}" width="${W}mm" height="${H}mm" aria-hidden="true" focusable="false">
-<path d="${hill}V${H + 2}H-2Z" fill="#fff"/>
 <path d="${hill}" fill="none" stroke="#1b2440" stroke-width=".5" stroke-linecap="round"/>
 <path d="M${P[0][0]} ${P[0][1]}C${P[1][0]} ${P[1][1]} ${P[2][0]} ${P[2][1]} ${P[3][0]} ${P[3][1]}" fill="none" stroke="#1b2440" stroke-width=".3" stroke-linecap="round"/>
-<path d="M${CREST.x} ${CREST.y}V${CREST.y - 13}M${CREST.x - 4.2} ${CREST.y - 8.6}H${CREST.x + 4.2}" fill="none" stroke="#1b2440" stroke-width=".95" stroke-linecap="round"/>
-<rect x="-2" y="0" width="14" height="${H}" fill="#fff"/><rect x="${W - 12}" y="0" width="14" height="${H}" fill="#fff"/>
+<path d="M${CREST.x} ${CREST.y}V${CREST.y - 13}M${CREST.x - 4.2} ${CREST.y - 8.6}H${CREST.x + 4.2}" fill="none" stroke="#1b2440" stroke-width="1.3" stroke-linecap="round"/>
 ${rings.map(r => r.tenth || r.v.day === 1
   ? `<circle cx="${f(r.x)}" cy="${f(r.y)}" r="${RING}" fill="#fff" stroke="#1b2440" stroke-width="1"/>`
   : `<circle cx="${f(r.x)}" cy="${f(r.y)}" r="${RING}" fill="#fff" stroke="#1b2440" stroke-width=".6"/>`).join('\n')}
@@ -105,6 +103,7 @@ p{margin:0}
 .lab .dn{display:inline-block;min-width:5mm;font:600 9.5pt/4.3mm "Source Serif 4";color:#1b2440;font-variant-numeric:tabular-nums}
 .lab.r .dn{margin-right:1.8mm}.lab.l .dn{margin-left:1.8mm;text-align:right}
 .foot1{position:absolute;left:0;right:0;bottom:0}
+.foot1 .row{font-size:9.5pt;color:#1b2440}
 .clause{text-align:center;font:600 11pt/1.3 "Source Serif 4";color:#1b2440;margin-bottom:1.6mm}
 /* p2 the card */
 .head2{display:flex;justify-content:space-between;align-items:baseline;border-bottom:.3mm solid #b9892e;padding-bottom:1.6mm;margin-bottom:5mm}
@@ -115,7 +114,7 @@ p{margin:0}
 .words{width:152mm;margin:3.5mm auto 0;font:400 10pt/1.33 "Source Serif 4";color:#1b2440}
 .words p{margin:0 0 1.4mm}
 .words .title{font-weight:500;font-size:9.5pt;letter-spacing:.04em;text-transform:uppercase}
-.words .rules{white-space:pre-line;font-weight:500}
+.words .rules{white-space:pre-line;font-weight:500;font-size:12.5pt;line-height:1.35}
 .words .daily_prayer,.words .prayer{font-weight:500}
 .words .turn,.words .turn_back{font-style:italic;color:#5d5d5d}
 .wr{display:flex;align-items:flex-end;gap:3mm;width:152mm;margin:4mm auto 0;font:italic 400 10.5pt/1.3 "Source Serif 4";color:#5d5d5d}
@@ -154,7 +153,7 @@ ${cardEl}
 ${wordsEl}
 ${writeRule(DRAFT.giver)}
 ${writeRule(DRAFT.person)}
-<div class="notes"><p class="h">${esc(DRAFT.notes)}</p>${'<div class="line"></div>'.repeat(3)}</div>
+<div class="notes"><p class="h">${esc(DRAFT.notes)}</p>${'<div class="line"></div>'.repeat(6)}</div>
 <div class="footc">${footRow(esc(DRAFT.friend))}</div>
 </section>
 ${readingSide(verses.slice(0, 20), false)}
