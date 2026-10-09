@@ -39,51 +39,51 @@ const FACE = f => `file://${R}/docs/card-${f}.webp`; // the exact faces of the c
 const translation = verses[0].translation_name, title = S2.challenge.h1.text, day40 = S2.mails.day40.text;
 
 // ---- THE DRAWING (mm; the safe box is 182 x 250) ----------------------------------------------------------------------------------------------
-const W = 182, H = 244; // the safe box: 182 × 244 so a top-left-anchored 100 % print on 8.5 × 11 short bond keeps the foot inside 12 mm (the refuter's Letter caveat, 2026-10-09)
+const W = 182, H = 250; // the safe box: 182 × 244 so a top-left-anchored 100 % print on 8.5 × 11 short bond keeps the foot inside 12 mm (the refuter's Letter caveat, 2026-10-09)
 const CREST = { x: 80, y: 68 };  // 4 mm more sky than the fleet's final: the 'I began on' writing rule clears the sun's crown and the cross's top (the refuter's p1 catch)                                   // the hill's crest, left of centre, as the home's hero
 const SUN = { x: 80, y: 86, r: [26, 20, 15] };  // one thin line of a rising sun, its crown under the 'I began on' rule                  // three flat steps rising behind the hill; no rays, no gradient
-const RING = 3.5, Y1 = 229, Y40 = 74, XL = 62, XR = 120;          // ROUND 2 (the two blind judges, 2026-10-09): rings 7 mm across in TWO STRAIGHT COLUMNS flanking the road (never touching — a column's rings 7.95 mm apart), day 1 at the foot, day 40 under the crest
+const RING = 3.25, Y1 = 235, Y40 = 88, XL = 62, XR = 120;          // ROUND 2 (the two blind judges, 2026-10-09): rings 7 mm across in TWO STRAIGHT COLUMNS flanking the road (never touching — a column's rings 7.95 mm apart), day 1 at the foot, day 40 under the crest
 const PITCH = (Y1 - Y40) / 39;                                    // 3.97 mm; a column's rings every 7.95 mm — a breath between 7 mm rings
 // ONE path: a cubic from the foot straight up, one leaning bend, then straight to the crest where the cross stands
-const P = [[91, 233], [113, 186], [69, 128], [CREST.x, CREST.y + 0.6]];  // the road: one winding climb inside the corridor between the two columns (x 69–113), to the crest
+const P = [[91, 239], [113, 190], [69, 132], [CREST.x, CREST.y + 0.6]];  // the road: one winding climb inside the corridor between the two columns (x 69–113), to the crest
 const bez = t => { const u = 1 - t; return [0, 1].map(i => u * u * u * P[0][i] + 3 * u * u * t * P[1][i] + 3 * u * t * t * P[2][i] + t * t * t * P[3][i]); };
 const xAt = y => { let lo = 0, hi = 1; for (let i = 0; i < 40; i++) { const m = (lo + hi) / 2; if (bez(m)[1] > y) lo = m; else hi = m; } return bez((lo + hi) / 2)[0]; };
 const rings = verses.map((v, i) => { const y = Y1 - i * PITCH, right = v.day % 2 === 1; return { v, y, right, x: right ? XR : XL, tenth: v.day % 10 === 0 }; }); // odd days the right column, even the left — the eye climbs the road between them
 const f = n => (Math.round(n * 100) / 100).toString();
 const hill = `M-2 ${CREST.y + 20}C26 ${CREST.y + 14} 56 ${CREST.y} ${CREST.x} ${CREST.y}C108 ${CREST.y} 136 ${CREST.y + 12} 184 ${CREST.y + 26}`; // the horizon: gentle, the crest left of centre
 const svg = `<svg class="draw" viewBox="0 0 ${W} ${H}" width="${W}mm" height="${H}mm" aria-hidden="true" focusable="false">
-<circle cx="${SUN.x}" cy="${SUN.y}" r="${SUN.r[0]}" fill="none" stroke="#1b2440" stroke-width=".35"/>
 <path d="${hill}V${H + 2}H-2Z" fill="#fff"/>
 <path d="${hill}" fill="none" stroke="#1b2440" stroke-width=".5" stroke-linecap="round"/>
 <path d="M${P[0][0]} ${P[0][1]}C${P[1][0]} ${P[1][1]} ${P[2][0]} ${P[2][1]} ${P[3][0]} ${P[3][1]}" fill="none" stroke="#1b2440" stroke-width=".3" stroke-linecap="round"/>
 <path d="M${CREST.x} ${CREST.y}V${CREST.y - 13}M${CREST.x - 4.2} ${CREST.y - 8.6}H${CREST.x + 4.2}" fill="none" stroke="#1b2440" stroke-width=".95" stroke-linecap="round"/>
-${rings.map(r => r.tenth
+<rect x="-2" y="0" width="14" height="${H}" fill="#fff"/><rect x="${W - 12}" y="0" width="14" height="${H}" fill="#fff"/>
+${rings.map(r => r.tenth || r.v.day === 1
   ? `<circle cx="${f(r.x)}" cy="${f(r.y)}" r="${RING}" fill="#fff" stroke="#1b2440" stroke-width="1"/>`
-  : `<circle cx="${f(r.x)}" cy="${f(r.y)}" r="${RING}" fill="#fff" stroke="#1b2440" stroke-width=".45"/>`).join('\n')}
+  : `<circle cx="${f(r.x)}" cy="${f(r.y)}" r="${RING}" fill="#fff" stroke="#1b2440" stroke-width=".6"/>`).join('\n')}
 </svg>`;
-const label = r => `<b class="dn${r.tenth ? ' t' : ''}" style="left:${f(r.x - RING)}mm;top:${f(r.y - RING)}mm">${r.v.day}</b>` + (r.right
-  ? `<p class="lab r${r.tenth ? ' t' : ''}" style="left:${f(r.x + RING + 2)}mm;top:${f(r.y - 2.15)}mm"><span class="ref">${esc(r.v.ref)}</span></p>`
-  : `<p class="lab l${r.tenth ? ' t' : ''}" style="right:${f(W - (r.x - RING - 2))}mm;top:${f(r.y - 2.15)}mm"><span class="ref">${esc(r.v.ref)}</span></p>`); // the day INSIDE its ring (a light navy the tick covers), the reference in a straight column outside
+const label = r => r.right
+  ? `<p class="lab r${r.tenth || r.v.day === 1 ? ' t' : ''}" style="left:${f(r.x + RING + 1.2)}mm;top:${f(r.y - 2.15)}mm"><b class="dn">${r.v.day}</b><span class="ref">${esc(r.v.ref)}</span></p>`
+  : `<p class="lab l${r.tenth || r.v.day === 1 ? ' t' : ''}" style="right:${f(W - (r.x - RING - 1.2))}mm;top:${f(r.y - 2.15)}mm"><span class="ref">${esc(r.v.ref)}</span><b class="dn">${r.v.day}</b></p>`; // the day HARD AGAINST its ring on the reference's side (the tick never covers it), the reference beyond it in a straight column // the day INSIDE its ring (a light navy the tick covers), the reference in a straight column outside
 
 // ---- THE CARD, its exact faces (docs/card-front.webp, docs/card-back.webp) at true size ---------------------------------------------------------
 const cardEl = `<div class="card"><img src="${FACE('front')}" alt=""><img src="${FACE('back')}" alt=""></div>`; // the exhibit: the exact faces, small, side by side, no shadow (his 'exact layout' word)
 const KEYS = ['title', 'rules', 'note', 'daily_prayer', 'turn', 'invite', 'prayer', 'turn_back'];
-const wordsEl = `<div class="words">${KEYS.filter(k => block(k)).map(k => block(k).split('\n').map(l => `<p class="${k}">${esc(l)}</p>`).join('')).join('')}</div>`; // D3 (the two judges): the card's words reset in the sheet's own serif at 10 pt, byte for byte from card.txt — readable to an older eye on a photocopy, and in the text layer
+const wordsEl = `<div class="words">${KEYS.filter(k => block(k) && k !== 'turn' && k !== 'turn_back').map(k => block(k).split('\n').map(l => `<p class="${k}">${esc(l)}</p>`).join('')).join('')}</div>`; // D3 (the two judges): the card's words reset in the sheet's own serif at 10 pt, byte for byte from card.txt — readable to an older eye on a photocopy, and in the text layer
 const writeRule = (label, cls = 'wr') => `<div class="${cls}"><span>${esc(label)}</span><span class="line"></span></div>`;
 
 // ---- THE READING SHEET -----------------------------------------------------------------------------------------------------------------------
 const verse = v => `<p class="verse"><b class="d">${v.day}</b><b class="ref">${esc(v.ref)}</b> <span class="t">${esc((v.parts ? v.parts.join(' ') : v.text).replace(/\n/g, ' '))}</span></p>`;
 const head = right => `<div class="head2"><p class="kicker">${esc(title)}</p><p class="tr">${right}</p></div>`;
 const footRow = (left, right = SITE) => `<p class="row"><span>${left}</span><span>${right}</span></p>`;
-const closeEl = `<div class="close"><p class="day40">${esc(day40)}</p><p class="clause">${esc(sheet.whatnext_clause)}</p></div>`; // after the fortieth row, before his clause (§6 item 10)
+const closeEl = `<div class="close"><p class="day40">${esc(day40)}</p></div>`; // the coda one line (his clause stands on p1's foot) // after the fortieth row, before his clause (§6 item 10)
 const readingSide = (vs, last) => `<section class="side read">${head(esc(translation))}<div class="cols">${vs.map(verse).join('\n')}</div>${last ? closeEl : ''}
-<div class="foot2"><p class="pr">${esc(block('daily_prayer'))}</p>${footRow(esc(DRAFT.again))}</div></section>`;
+<div class="foot2">${footRow(esc(DRAFT.again))}</div></section>`; // the little prayer once a leaf (p1's head, p2's words) — not at every foot (restraint, round 2)
 
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${esc(title)} — ${SITE}</title><style>
 @font-face{font-family:"Source Serif 4";font-weight:400;font-style:normal;src:url(${F('400')}) format("woff2")}
 @font-face{font-family:"Source Serif 4";font-weight:500;font-style:normal;src:url(${F('500')}) format("woff2")}
 @font-face{font-family:"Source Serif 4";font-weight:400;font-style:italic;src:url(${F('400i')}) format("woff2")}
-@page{size:A4;margin:20mm 14mm 33mm}
+@page{size:A4;margin:20mm 14mm 27mm}
 html,body{margin:0;padding:0}body{color:#1b2440;font:10pt/1.3 "Source Serif 4";-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .side{position:relative;width:${W}mm;height:${H}mm;overflow:hidden;page-break-after:always;break-after:page}
 .side:last-child{page-break-after:auto;break-after:auto}
@@ -102,8 +102,8 @@ p{margin:0}
 .began .line{display:inline-block;width:46mm;height:0;border-bottom:.3mm solid #8a7c57;margin-bottom:.7mm}
 .lab{position:absolute;white-space:nowrap;font:500 10.5pt/4.3mm "Source Serif 4";color:#1b2440}
 .lab.t{font-weight:600}
-.dn{position:absolute;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;font:500 7.5pt/1 "Source Serif 4";color:#6b7390;font-variant-numeric:tabular-nums}
-.dn.t{color:#1b2440;font-weight:600}
+.lab .dn{display:inline-block;min-width:5mm;font:600 9.5pt/4.3mm "Source Serif 4";color:#1b2440;font-variant-numeric:tabular-nums}
+.lab.r .dn{margin-right:1.8mm}.lab.l .dn{margin-left:1.8mm;text-align:right}
 .foot1{position:absolute;left:0;right:0;bottom:0}
 .clause{text-align:center;font:600 11pt/1.3 "Source Serif 4";color:#1b2440;margin-bottom:1.6mm}
 /* p2 the card */
