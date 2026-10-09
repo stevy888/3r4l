@@ -4,7 +4,11 @@ Four static pages that hold up a card: the home page and the what-next page, in 
 
 No menu, no sign-up, no cookie, no tracker, no server: HTML files served by GitHub Pages from `docs/`.
 
-## The state today (2026-10-07)
+## The state today (2026-10-09)
+
+2026-10-09 (seat build-3r4l-p2b-1009): THE LIVING CARD serves — the one audio docs/film/card.m4a (the film master's track; the video retired), the cues of content/card.vtt baked into the lines, the play glyph on the sun and the hear door under the rules card, /card/'s round play and the lit cue; THE ENGRAVED RULES CARD (the fleet's winner); the foot row on every page; /what-next/ without the forty list — the big door opens docs/forty.pdf, THE PATH TO THE CROSS (kit/make-forty-sheet.mjs; four blind rounds ≈ 7.7); the tl/ur card doors wait on card-tl.pdf / card-ur.pdf. Panel r2: home 7.94 · card 7.80 · what-next 7.70 · contact 7.08 · privacy 7.33. Proof: `bash check-wording docs/` · `node measure.mjs <base> --frames <dir>` · `node prove-reading.mjs <base>` (Chrome for the decoder). The owner's eye is the next gate (TR2B-eye-pages).
+
+The state of 2026-10-07 follows.
 THE INTERIM: the English pair serves at the apex and under `/en/`; the Tagalog pair is built the moment a named pastor's signed check of the Tagalog lines exists. THE CARD (2026-10-07): brother Daniel's card is on disk beside the repo and `content/card.txt` is its wording of record (eight blocks in the card's order, both faces; `content/card.sha`); the page serves it as the two printed faces. The print files stay OUT of this public repo until brother Daniel's yes.
 
 ## The runbook (no model, no token; ten minutes)
