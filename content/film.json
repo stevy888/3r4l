@@ -1,7 +1,9 @@
 {
- "_note": "the served film's figures for the play door's label ([m:ss] \u00b7 [N] MB), read from the master (never a guess); written at the publish 2026-10-08",
+ "_note": "the served reading's figures for the play door's label ([m:ss] · [N] MB), read from the master (never a guess); the owner's word 2026-10-09: the voice and the guitar as the one AUDIO (the film master's own AAC track, bit-identical: ffmpeg -vn -c:a copy), the video retired from the site",
  "length": "2:27",
- "size_mb": 5.6,
- "file": "film/card-720.mp4",
- "pad": "A (quiet nylon guitar)"
+ "size_mb": 2.4,
+ "file": "film/card.m4a",
+ "cues": "content/card.vtt",
+ "pad": "A (quiet nylon guitar)",
+ "sha256": "adfa04e6d8bd6e29947aae643f36953d9510ffebd70d6c24324f8918cd9bc904"
 }

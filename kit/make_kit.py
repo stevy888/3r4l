@@ -68,11 +68,11 @@ def main():
     if '--stamp-back' in args: print('--stamp-back RETIRED: the card has a printed back; the QR files and the-address.txt go into the card\'s own design on the next run')
     if '--publish-film' in args:  # brother Daniel's yes IN HIS NAME on the film (TR2-film-yes A: the words read aloud by a synthesized voice in public, the printed face on screen, the credit) — a yes apart from the PDFs' yes, so one never publishes the other
         if not re.search(r'^- film_yes: YES', open(os.path.join(INPUTS, 'INPUTS.md'), encoding='utf-8').read(), re.M): raise SystemExit('--publish-film needs the line "- film_yes: YES …" in INPUTS.md')
-        for f in ('card-720.mp4', 'card.vtt'):
-            if not os.path.exists(os.path.join(FILM_SRC, f)): raise SystemExit(f'--publish-film: {FILM_SRC}/{f} is not on disk (rung 8 builds the masters private)')
+        for f in ('card.m4a', 'card.vtt'):  # THE LIVING CARD (owner 2026-10-09): the master's own AAC track (ffmpeg -i card-720.mp4 -vn -c:a copy card.m4a — bit-identical to the film's sound) and the cues it was read to; the video is no longer served (the masters stay private for the channels)
+            if not os.path.exists(os.path.join(FILM_SRC, f)): raise SystemExit(f'--publish-film: {FILM_SRC}/{f} is not on disk (rung 8 builds the masters private; card.m4a = the master\'s audio track, copied, never re-encoded)')
         os.makedirs(FILM_DOCS, exist_ok=True)
-        for f in ('card-720.mp4', 'card.vtt'): shutil.copyfile(os.path.join(FILM_SRC, f), os.path.join(FILM_DOCS, f))
-        print('published: docs/film/card-720.mp4 and docs/film/card.vtt (now run node build.mjs for the hero\'s video and play door)')
+        shutil.copyfile(os.path.join(FILM_SRC, 'card.m4a'), os.path.join(FILM_DOCS, 'card.m4a')); shutil.copyfile(os.path.join(FILM_SRC, 'card.vtt'), os.path.join(R, 'content', 'card.vtt'))
+        print('published: docs/film/card.m4a (the voice and the guitar) and content/card.vtt (the cues, baked by the build — never fetched) (now run node build.mjs for the play doors and the cued lines)')
         if '--kit-only' not in args and '--manual-only' not in args: return
     if '--manual-only' not in args and os.path.exists(CARD) and os.path.exists(CARD_TXT):
         os.makedirs(PRIVATE, exist_ok=True); src = fitz.open(CARD); want = card_text()

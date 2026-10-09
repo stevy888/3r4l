@@ -25,13 +25,20 @@
      "B": "The forty days"
     }
    },
-   "why": "the h1 is now his title; a second title line would repeat it (owner 2026-10-08)"
+   "why": "the h1 is now his title; a second title line would repeat it (owner 2026-10-08)",
+   "print_forty": {
+    "text": "Print the forty days",
+    "status": "DRAFT",
+    "written": "2026-10-08T12:5xZ seat:build-3r4l-p2-1008",
+    "_note": "the door to forty.pdf — the printable forty-day sheet (owner 2026-10-08 'a beautiful inspirational pdf to click and print out to mark off the days')",
+    "_struck_why": "owner 2026-10-09: the forty list and its door struck; the PDF is the big door (download_forty)"
+   }
   },
-  "print_forty": {
-   "text": "Print the forty days",
+  "download_forty": {
+   "text": "Get the forty-day challenge (PDF)",
    "status": "DRAFT",
-   "written": "2026-10-08T12:5xZ seat:build-3r4l-p2-1008",
-   "_note": "the door to forty.pdf — the printable forty-day sheet (owner 2026-10-08 'a beautiful inspirational pdf to click and print out to mark off the days')"
+   "written": "2026-10-09T06:1xZ seat:build-3r4l-p2b-1009",
+   "_note": "the big gold door on /what-next/ to docs/forty.pdf (owner 2026-10-09: the PDF they can download, in place of the forty list)"
   }
  },
  "signup": {
@@ -152,6 +159,12 @@
    "status": "DRAFT",
    "written": "2026-10-08T12:1xZ seat:build-3r4l-p2-1008",
    "_note": "the day a Tagalog card exists (card-tl.pdf, pastor-checked, printed by brother Daniel)"
+  },
+  "print_ur": {
+   "text": "Print the card (Urdu)",
+   "status": "DRAFT",
+   "written": "2026-10-09T06:1xZ seat:build-3r4l-p2b-1009",
+   "_note": "the print door for the Urdu card, on card-ur.pdf"
   }
  },
  "home": {
@@ -171,6 +184,24 @@
    "status": "DRAFT",
    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
    "_note": "shown only when hasFounder (/story/ served)"
+  },
+  "pause": {
+   "text": "Pause",
+   "status": "DRAFT",
+   "written": "2026-10-09T06:1xZ seat:build-3r4l-p2b-1009",
+   "_note": "the play door's label while the card is being read (an attribute at build, a text node only at the tap)"
+  },
+  "lang_tl": {
+   "text": "Tagalog",
+   "status": "DRAFT",
+   "written": "2026-10-09T06:1xZ seat:build-3r4l-p2b-1009",
+   "_note": "the foot's language row: the card in Tagalog (card-tl.pdf) the day the file lands — brother Daniel's own printed words"
+  },
+  "lang_ur": {
+   "text": "Urdu",
+   "status": "DRAFT",
+   "written": "2026-10-09T06:1xZ seat:build-3r4l-p2b-1009",
+   "_note": "the foot's language row: the card in Urdu (card-ur.pdf) the day the file lands — owner 2026-10-09 \"card is in both languages\""
   }
  },
  "contact": {

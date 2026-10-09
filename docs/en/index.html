@@ -10,7 +10,6 @@
 <meta name="color-scheme" content="light dark">
 <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t)}}catch(e){}</script>
 <style>
-/* 3r4l — E2 OF RECORD (2026-10-08, the design round at the 9.5 bar; the blind panel's winner "lifted" with the three judges' cures cut in): THE CROSS ON THE HILL AT DAWN, THE CARD LIFTED OUT OF THE LIGHT. Under the headline band (unchanged: the three gold beats, the one morning star, the short gold rule) a breath of air (--air, 2.25 rem ≥ the owner's 20 px), then the HERO (--hero-h, .52 of the column, the canvas's aspect): the sun in three flat steps rising BEHIND A HILL of the band's own navy (--hill; a darker mass by night), the cross a silhouette on the hill's crest left of centre (--draw), the film's play glyph (inert) on the sun's face, the card's PICTURE (its front face at zoom .72 in a framed link) rising out of the hill's foot with its top edge inside the light; the band's navy runs on behind the hero and the picture's top (--lift) and ends on a straight edge — the hill's crest is the horizon, no rays, no gradient. By night the lamp hangs centred from the hero's top on a longer cord over the picture and the film's door, the sun's core the lamp's pool. Under the picture one quiet row of two text doors (Hear the card › · Read the whole card ›), then the what-next door and everything of r7/r8 untouched but the air. MOTIONS (five, CSS, transform/opacity only, once on arrival, ≤ 1.6 s, all off under prefers-reduced-motion): the dawn rising — the sun and its play lift 26 units (≈ 9 px) behind the still hill while the two outer steps brighten in (1.4 s); the gold rule drawing itself (scaleX from the left, .7 s — the judges' graft from the kit); the three beats warming cream → gold in sequence (a cream overlay of the same word fades out, .2 / .55 / .9 s, ends 1.6 s); the picture lifting out of the light (1.5 rem up, transform only — the disc runs on behind it, so nothing shows through, after .25 s); the morning star breathing (a 5 s opacity drift, the one loop allowed). Below, r7 as it was: A REAL DAWN on the hero band (the owner on the served r6a, 2026-10-07: "What about top of page. More standing out and beautiful too."): the sun larger and half behind the card with ten long tapered rays across the band and two flat glow discs; faint stars high in the band; the band's lower edge a low hill with a lit horizon line; a short gold rule under the headline; the card lifted by a warmer, deeper one-side shadow and a fine gold edge. By night the same scene under the lamp. Print: navy type on paper, the sun a line drawing. Below, r6a as it was: THE HERO BAND. Round 5 (the card alone) with the owner's two words on it: "Should top grab us more" → the family's navy from the top edge as a hero band, the headline in cream serif on it one size larger and one weight stronger, the dawn's light rising flat out of the band behind the card, the card lifted out of the night into the day (its top third in the band, the rest on the paper); and "could this be broken up or illustrated better" → his six lines set as a litany (the promise, the lead line with its saying pulled out, the four "He will help you…" lines as a list with a gold mark and a gold line drawing each). Dark: the band is the page, the lamp over its pool. Everything else as r5. */
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/source-serif-4-500.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201D,U+2026}
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/source-serif-4-400.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201D,U+2026}
 @font-face{font-family:"Source Serif 4";font-style:italic;font-weight:400;font-display:swap;src:url(../fonts/source-serif-4-400i.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201D,U+2026}
@@ -32,30 +31,24 @@ p,h1,h2,li{overflow-wrap:break-word}
 .prose{max-width:34ch;text-wrap:pretty}
 .lang{position:absolute;top:.25rem;right:var(--pad);margin:0;font:1rem/1.25 var(--sans);height:1.25rem}
 .lang a{color:var(--mute);text-decoration:underline;text-decoration-color:var(--door-rule);text-underline-offset:.15em;padding:0}
-/* THE HEADLINE — one size larger and one weight stronger than r5 (500, the subset's medium), tracked −.01em at display size; the size steps by the measured column so "Confess, confess, confess." stays one line and the headline three: 30 px from 420, 29 at 384–419, 27 at 360–383, 24 under 360 (280 px holds 272). */
 h1{font:500 1.875rem/1.2 var(--serif);color:var(--head);letter-spacing:-.01em;margin:0;text-wrap:pretty}
-/* THE OWNER'S LINES — the phone's own sans; his question a quiet bold at body size. */
 h2{font:600 1.125rem/1.5 var(--sans);color:var(--head);margin:0 0 .75rem;text-wrap:pretty}
 @media (max-width:419px){h1{font-size:1.8125rem}}
 @media (max-width:383px){h1{font-size:1.6875rem}}
 @media (max-width:359px){h1{font-size:1.5rem}.verse .text{font-size:1.25rem}.verse{padding-left:1.125rem;padding-right:1.125rem}.verse::before{left:1rem}#card .daily_prayer,#card .prayer{font-size:1.0625rem}#card .rules{font-size:1.125rem}#card .note,#card .invite{font-size:1rem}#card.placeholder p{font-size:1.25rem}}
-/* THE HERO BAND — the family's navy from the top edge, full-bleed (the margins reach the device's edges, the padding brings the words back to the one left edge); the headline in cream serif on it, three lines at 390, the strongest thing on the page. It adds no height above the headline: its top pad IS main's top pad (the negative margin takes main's back). On the home it runs on under the dawn and behind the card's top third (--lift), and the card block pulls up by the same --lift, so the card reads as lifted out of the night into the day while every measured row below the headline keeps r5's geometry; on what-next it holds the headline and the clause. By night the band is the page (--band = --paper). The rays' tips and the glow's crown stay under the headline: 28 and 25 px of air at 390. */
 .band{background:var(--band);color:var(--band-ink);margin:calc(-1*var(--top)) calc(50% - 50vw) 0;padding:var(--top) calc(50vw - 50%) var(--gap)}
 .band h1{color:var(--band-ink)}
 .band .clause{color:var(--band-ink)}
 .band .lang a{color:var(--band-mute);text-decoration-color:var(--door-rule)}
-/* E2 — THE BAND'S FOOT (home): the band runs on under the air, the hero and the picture's top third (--lift) and ends on a straight edge — the r7 hill and its horizon line are gone (the direction: no horizon); the paper simply begins under the lifted picture. The stars ride in the band behind the headline (isolation makes the band their stacking context; z −1 puts them under the type). Under the headline a short gold rule, the card's own rule's width, positioned so the h1's box is unchanged. */
 .band.lifts{padding-bottom:calc(var(--air) + var(--hero-h) + var(--lift));isolation:isolate}
 .band>.stars{position:absolute;top:0;left:calc(50% - 50vw);width:100vw;height:8.5rem;z-index:-1;pointer-events:none;animation:breathe 5s ease-in-out infinite}
 .band.lifts h1{position:relative}
-.band.lifts h1::after{content:"";position:absolute;left:0;top:calc(100% + .75rem);width:3rem;height:3px;background:var(--gold);border-radius:1.5px;transform-origin:0 50%;animation:draw .7s ease-out both} /* E2 motion: the gold rule draws itself from the left (transform only) */
+.band.lifts h1::after{content:"";position:absolute;left:0;top:calc(100% + .75rem);width:3rem;height:3px;background:var(--gold);border-radius:1.5px;transform-origin:0 50%;animation:draw .7s ease-out both}
 .band h1 .beat{font-style:normal;color:var(--panel-gold);position:relative;display:inline-block}
-/* THE BEATS WARMING (E2 motion): the word is gold underneath; a cream copy of it (from data-w, alt text empty so it is never read aloud) lies exactly over it and fades out — confess, then forgive, then change. Opacity only; a browser without the alt-text syntax drops the overlay and shows the gold at once. The beat is an inline-block so the overlay's line box is the word's own (inside a plain inline the pseudo sat on the font's content box, 10 px high). */
 .band h1 .beat::before{content:attr(data-w) / "";position:absolute;left:0;top:0;color:var(--band-ink);animation:warm .7s ease-out both;animation-delay:.2s}
 .band h1 em:nth-of-type(2)::before{animation-delay:.55s}
 .band h1 em:nth-of-type(3)::before{animation-delay:.9s}
 .band.lifts+.held{margin-top:calc(-1*(var(--hero-h) + var(--lift)))}
-/* E2 — THE HERO: a block in flow at the top of .held, --hero-h tall (.52 of the column, the canvas's aspect), holding the sky drawing with its bottom on the picture's top edge; the sun's steps, the play on its face, the hill, the cross on its crest and the night lamp are all drawn in build.mjs in the one canvas, so they keep their places at every width. The lamp is a .night group: hidden by day, shown by the theme rules. */
 .held{position:relative;margin:0}
 .hero{position:relative;height:var(--hero-h);z-index:0}
 .hero>svg{display:block;position:absolute;pointer-events:none}
@@ -63,7 +56,6 @@ h2{font:600 1.125rem/1.5 var(--sans);color:var(--head);margin:0 0 .75rem;text-wr
 .sky .lamp{display:none}
 .sky .disc{animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
 .sky .halo{animation:fadein 1.4s ease-out both}
-/* E2 — THE PICTURE: the front face at zoom .72 inside a framed link (the frame carries the gold edge, the radius, the one shadow; the face inside gives up its own), lifted out of the light on arrival. The tap is the whole picture. */
 .picture a{display:block;color:inherit;text-decoration:none}
 .picture .frame{overflow:hidden;border:1px solid var(--gold);border-radius:clamp(10px,3.7vw,16px);box-shadow:var(--card-shadow);background:var(--card-face)}
 .picture .shot{zoom:.72;pointer-events:none}
@@ -75,13 +67,11 @@ h2{font:600 1.125rem/1.5 var(--sans);color:var(--head);margin:0 0 .75rem;text-wr
 @keyframes lift{from{transform:translateY(1.5rem)}}
 @keyframes warm{to{opacity:0}}
 @keyframes breathe{50%{opacity:.55}}
-/* THE PAIR (E2): the film's door and the whole card's door on one quiet line under the picture (they stack on the narrowest phone), no hairline; the what-next door keeps its hairline a little closer. */
 .next.pair{display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:1rem;margin-top:.5rem;border-top:0}
 .next.pair .door{width:auto}
 .pair+.next{margin-top:1.25rem}
 #card{position:relative;z-index:1;margin:0;font-family:var(--serif)}
 main>#card{margin-top:var(--gap)}
-/* THE TWO FACES (the card on disk 2026-10-07): brother Daniel's card is printed on both sides, so the block is two papers one under the other — the FRONT (his title, the three rules, his note, the little prayer, the turn line) and the BACK (the invitation, the prayer, its turn line) — the same cream paper, the gold rule on each, 1 rem apart; the dawn still rises behind the front's top edge. The title in his own capitals, lightly tracked; the two prayers one weight up in the card's ink, as the card sets them bold; the turn lines italic and quieter. */
 .face{position:relative;background:var(--card-face);color:var(--card-body);border:1px solid var(--gold);border-radius:clamp(10px,3.7vw,16px);padding:2.125rem 1.25rem 1.5rem;box-shadow:var(--card-shadow)}
 .face+.face{margin-top:1rem}
 .face::before{content:"";position:absolute;left:1.25rem;top:1.125rem;width:3rem;height:3px;background:var(--gold);border-radius:1.5px}
@@ -91,11 +81,9 @@ main>#card{margin-top:var(--gap)}
 #card .daily_prayer,#card .prayer{font:500 1.125rem/1.45 var(--serif);color:var(--card-ink);margin:0 0 1rem;text-wrap:pretty}
 #card .turn,#card .turn_back{font:italic 400 1rem/1.4 var(--serif);margin:0}
 #card .face>p:last-child{margin-bottom:0}
-/* THE INTERIM placeholder (dead once card.txt exists; kept for the fence's negative test) is set as the printed card will be: left-set under the gold rule, in the card's ink at reading size. */
 #card.placeholder{background:var(--card-face);color:var(--card-body);border:1px solid var(--gold);border-radius:clamp(10px,3.7vw,16px);padding:2.125rem 1.25rem 1.5rem;box-shadow:var(--card-shadow)}
 #card.placeholder::before{content:"";position:absolute;left:1.25rem;top:1.125rem;width:3rem;height:3px;background:var(--gold);border-radius:1.5px}
 #card.placeholder p{margin:0;color:var(--card-ink);font:400 1.3125rem/1.5 var(--serif);max-width:30ch;text-wrap:pretty}
-/* THE LITANY — the owner's six lines set to be read, not scanned past (his word on r5: "broken up or illustrated better … bullet points"): his question as before; the promise one size up in the serif with air under it; the lead line in the body face, its saying pulled out on its own line in italic serif (the quotes as typed); the four "He will help you…" lines as a list, each on its own line with a hanging indent, a 4 px gold square at the margin and a small gold line drawing beside it (book · ball · hammer · cross) at the door glyph's stroke, 24 px, toned gold by night. */
 .taking{margin:var(--gap) 0 0}
 .taking .promise{font:400 1.25rem/1.45 var(--serif);color:var(--head);margin:0 0 1.25rem}
 .taking .lead{margin:0 0 1.25rem}
@@ -106,7 +94,6 @@ main>#card{margin-top:var(--gap)}
 .litany li::before{content:"";position:absolute;left:0;top:.75rem;width:4px;height:4px;background:var(--gold)}
 .litany .pic{position:absolute;left:.75rem;top:.09375rem;width:1.5rem;height:1.5rem}
 .label{font:400 1rem/1.4 var(--sans);color:var(--mute);margin:0 0 .5rem}
-/* THE VERSE PANEL (DESIGN r7 — the owner's word on the live site, 2026-10-07: "Beautiful design. Different color / box. Big quote mark / beautiful font / maybe box / visual"): the page's second navy moment, lower down, echoing the band — a full-width panel inside the gutter at the card's radius, the family's navy with cream type; the serif's own opening quotation mark in gold at 96 px hanging over the panel's top-left edge (generated content, no text node for the fence; the empty alternative text keeps it off the screen reader); the label small and gold, lightly tracked; the verse in the italic serif at 22 px cream, ≤ 30 ch; the reference in gold, the translation's full name in muted cream; the Knowing Jesus door the panel's foot — a 48 px row under a hairline, cream with the gold underline, the › its last glyph (the fence allows each label with " ›"). By night the panel is one step lighter than the page so it still reads as a panel. The forty list and its one revealed row are display:contents so the rows flow in the panel (order sets the reading order). On what-next the owner's line stands on the paper above the panel (.message) and the panel holds the verse alone: the same component. */
 .verse{position:relative;display:flex;flex-direction:column;align-items:stretch;margin:var(--gap) 0 0;padding:1.75rem 1.375rem .5rem;background:var(--panel);color:var(--panel-ink);border-radius:clamp(10px,3.7vw,16px)}
 .verse::before{content:"\201C";content:"\201C" / "";position:absolute;left:1.25rem;top:-1.5rem;font:500 6rem/1 var(--serif);color:var(--panel-gold)}
 .verse .label{order:0;margin:0 0 .625rem;font:400 .9375rem/1.4 var(--sans);letter-spacing:.04em;color:var(--panel-gold)}
@@ -121,7 +108,6 @@ main>#card{margin-top:var(--gap)}
 .forty{display:contents;margin:0;padding:0;list-style:none}
 .forty>li{display:none}
 .forty>li.is-today{display:contents}
-/* THE DOORS — the one link a 48 px row under a hairline (on the home that hairline is the horizon the card stands on); the door-ajar glyph inside the <a>; the label at body size, stepping down by width so it never wraps at 320; the underline the threshold. */
 .door{display:flex;align-items:center;width:100%;min-height:3rem;padding:.375rem 0;font:400 1.125rem/1.3 var(--sans);color:var(--door);text-decoration:underline;text-decoration-color:var(--door-rule);text-decoration-thickness:1px;text-underline-offset:.26em;margin:0;transition:text-decoration-color .15s}
 .door:hover{text-decoration-color:var(--door)}
 .door>svg{flex:none;width:1.5rem;height:1.5rem;margin-right:.625rem}
@@ -131,7 +117,6 @@ main>#card{margin-top:var(--gap)}
 .door:active .lite,.door:focus-visible .lite{transform:scaleX(1.5)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
 .next{margin:var(--gap) calc(-1*var(--pad)) 0;padding:0 var(--pad);border-top:1px solid var(--horizon)}
-/* THE BIG DOOR (owner 2026-10-08: "a big beautiful button at the bottom called What next"): at the foot of the home, after the verse — full width, the family's gold, navy words in the serif, the door glyph, 60 px tall, one soft shadow; the small text door under the card stays. */
 .next.big{border-top:0;margin-top:var(--gap);padding:0}
 .door.big{justify-content:center;min-height:3.75rem;padding:.75rem 1rem;background:var(--gold);color:#1b2440;border-radius:clamp(10px,3.7vw,16px);font:500 1.375rem/1.2 var(--serif);text-decoration:none;box-shadow:var(--card-shadow)}
 .door.big>svg{width:1.75rem;height:1.75rem;margin-right:.75rem}
@@ -140,7 +125,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 @media (max-width:374px){.next .door{font-size:1.0625rem}}
 @media (max-width:359px){.next .door{font-size:.9375rem}.next .door>svg{width:1.25rem;height:1.25rem;margin-right:.5rem}}
 .clause{font:1.125rem/1.5 var(--sans);margin:.75rem 0 0}
-/* THE FORTY AS ONE VERTICAL PATH (what-next) — one hairline, a small ring per day, today's mark a gold disc with the day's door open beneath it; the numerals in the references' own sans figures at the left; the line runs on past the last mark. day.js untouched (it adds .is-today). */
 #forty{position:relative;margin:var(--gap) 0 0}
 #forty h2{margin-bottom:.25rem}
 #forty .label{margin:0 0 .875rem}
@@ -156,7 +140,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 .list li.is-today .door{display:flex;padding:.5rem 0}
 .doors{margin:var(--gap) 0 0}
 .doors .door{margin:0}
-/* THE SHARE ROW — one quiet line of text links (they wrap on the narrow phone), each a 48 px tap box; the native share button, when the phone has one, set the same way. */
 .share{margin:var(--gap) 0 0}
 #share-links{display:flex;flex-wrap:wrap;column-gap:1rem}
 .share .door{display:inline-flex;width:auto;min-height:3rem;padding:.75rem 0;font-size:1rem}
@@ -164,7 +147,6 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 .share button:hover{text-decoration-color:var(--door)}
 .addr{font:1rem/1.4 var(--sans);color:var(--mute);margin:.5rem 0 0}
 .notice{font:400 0.9375rem/1.45 var(--sans);color:var(--mute);margin:var(--gap) 0 0;max-width:36ch}
-/* THE LIGHT/DARK SWITCH (owner 2026-10-08): two quiet words at the foot of every page; the pressed one in the head colour, the other underlined as a door; print hides the row. */
 .theme{display:flex;justify-content:center;margin:var(--gap) 0 0}
 .theme button{width:3rem;height:3rem;padding:.75rem;background:none;border:0;cursor:pointer;border-radius:50%}
 .theme button svg{width:1.5rem;height:1.5rem;display:block}
@@ -172,13 +154,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){.door,.share button,.door .leaf,.door .lite{transition:none}.sky .disc,.sky .halo,.picture,.band>.stars,.band.lifts h1::after,.step,.list li.is-today::before{animation:none}.cross-end path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}.band h1 .beat::before{content:none}}
 @media print{.theme{display:none!important}body{background:#fff;color:#000}main>*{display:none}main>.band{display:block;background:none;color:#1b2440;margin:0;padding:0;border:0;border-radius:0}main>.band h1{color:#1b2440}.band .stars,.band .lang{display:none!important}.band.lifts h1::after{background:#1b2440}.band h1 .beat{color:#1b2440}.band h1 .beat::before{content:none}main>.held{display:block;margin:4.5rem 0 0}.sky .lamp{display:none!important}.sky .halo,.sky .play{display:none}.sky .sun{fill:#fff;stroke:#1b2440;stroke-width:1.25}.sky .hill{fill:#fff;stroke:#1b2440;stroke-width:1.25}.sky .cross{stroke:#1b2440}.sky .disc,.sky .halo,.picture{animation:none}.band.lifts h1::after{animation:none}.picture .shot{zoom:1}.picture .frame{box-shadow:none;border-color:#000}#card{display:block}.face,#card.placeholder{box-shadow:none;border-color:#000;background:#fff;color:#000}.face::before,#card.placeholder::before{background:#000}#card .title,#card .daily_prayer,#card .prayer{color:#000}.verse{background:#f7efdc;border:1px solid #1b2440;color:#1b2440}.verse::before,.verse .label,.verse .ref,.verse .tr,.verse .text,.verse .door{color:#1b2440}.verse .door{border-top-color:#1b2440;text-decoration-color:#1b2440}}
-/* E2 — THE FILM IN THE HERO (hasFilm only; TR2-film-door A): the video hidden inside the hero's box, un-hidden IN PLACE on the tap (zero shift; day.js shows the track, then play() in the gesture's tick); the play door a 48 px button over the sun's face; absent the film, nothing here renders. */
-.hero video{position:absolute;inset:0;width:100%;height:100%;background:#000;z-index:2}
-.hero button.play{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);min-height:3rem;padding:.5rem 1rem;border:1px solid var(--panel-gold);border-radius:999px;background:var(--band);color:var(--band-ink);font:500 1rem/1.2 var(--sans);cursor:pointer;z-index:3}
-/* THE FOOT ROW (home; TR2-frame A): two text doors at most — "How are you doing? ›" (/contact/, rung 4) · "Who gives these cards? ›" (/story/, hasFounder); no Privacy door (the notice sits at the point of consent). */
+.hero audio,.whole audio{display:none}
+.hero button.play{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);min-height:3rem;padding:.5rem 1.125rem;border:1px solid var(--panel-gold);border-radius:999px;background:var(--band);color:var(--band-ink);font:500 .9375rem/1.2 var(--sans);white-space:nowrap;cursor:pointer;z-index:3}
+.hero button.play.on{background:var(--gold);color:#1b2440;border-color:var(--gold)}
 .next.foot{display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:1rem}
 .next.foot .door{width:auto}
-/* /CARD/ — THE WHOLE CARD LARGE on its paper under the r8 dawn by day and the lamp by night (DECISIONS 8879), the gold ribbon TAB at its top-right corner (TR2-print-flag A; a SIBLING of #card, its text outside the fence's card block), the print doors (48 px), the shop line (18 px), the no-duplex line, the three steps, the close line. The r7 held geometry lives on here under .whole. */
 .held.whole{--dawn-h:3rem;position:relative;margin:calc(var(--gap) + var(--dawn-h)) 0 0}
 .whole>svg{display:block;position:absolute;pointer-events:none;height:auto}
 .whole>.dawn{right:calc(-1*var(--pad));top:1px;width:min(100vw,48rem);height:5.5rem;transform:translateY(-100%);z-index:0}
@@ -195,7 +175,6 @@ button.door{appearance:none;-webkit-appearance:none;background:none;border:0;bor
 .close{margin:var(--gap) 0 0;font:400 1.25rem/1.45 var(--serif);color:var(--head)}
 .number{margin:.75rem 0 0;color:var(--mute)}
 @media print{a.tab,#doors,.shop,.duplex,.how,.close,.number,.whole>svg{display:none}}
-/* THE CHALLENGE (rung 3): the h2 under the band; THREE STEPS as three papers with gold numerals (1 his h1 · 2 his clause · 3 DRAFT) that arrive as they enter — transform/opacity on the PAPER, never the words; a view timeline where the browser has one, the static page elsewhere; the explanation; the sign-up block (no animation; the field and the button 48 px); the forty's hairline running on into the small cross that draws itself as the foot enters; today's disc pulsing once. Cap: three animated things on the page. */
 h2.challenge{margin:var(--gap) 0 0;font:600 1.25rem/1.4 var(--sans);color:var(--head)}
 .steps{margin:1rem 0 0;padding:0;list-style:none;counter-reset:step}
 .step{position:relative;margin:0 0 .75rem;padding:1rem 1.125rem 1rem 3.25rem;background:var(--card-face);border:1px solid var(--card-edge);border-radius:clamp(10px,3.7vw,16px);box-shadow:var(--card-shadow)}
@@ -217,7 +196,6 @@ h2.challenge{margin:var(--gap) 0 0;font:600 1.25rem/1.4 var(--sans);color:var(--
 @supports (animation-timeline:view()){.step{animation:arrive linear both;animation-timeline:view();animation-range:entry 0% entry 40%}.cross-end path{stroke-dasharray:1;stroke-dashoffset:1;animation:walk linear both;animation-timeline:view();animation-range:entry 10% entry 80%}}
 @keyframes arrive{from{opacity:0;transform:translateY(12px)}}
 @keyframes walk{to{stroke-dashoffset:0}}
-/* /CONTACT/ · /PRIVACY/ · /STORY/ (rung 4): the band with the h1, a message line, the doors (48 px, the Philippines' order), the prose lines, the front face as the signature, the foot frame. No form, no figure. */
 .doors.contact .door{min-height:3rem}
 .testimony,.low{margin:var(--gap) 0 0;font:400 1.125rem/1.55 var(--sans);text-wrap:pretty;max-width:36ch}
 .low{margin-top:1rem}
@@ -229,12 +207,10 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .story p{margin:0 0 .75rem;font:400 1.1875rem/1.5 var(--serif);color:var(--ink);text-wrap:pretty}
 .story-placeholder{margin:var(--gap) 0 0;color:var(--mute);font-style:italic}
 .message+.doors{margin-top:1.25rem}
-/* REDUCED MOTION, the challenge's view-driven rows: this rule stands AFTER the @supports block so it wins the cascade — the static page is the final page; the small cross is drawn whole. */
 @media (prefers-reduced-motion:reduce){.steps .step{animation:none}svg.cross-end path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}}
-/* THE CARD AT ITS PRINTED SHAPE AND SIZE (/card/; owner 2026-10-08 "shaped like the card photo and same size so clear"): two landscape faces of 252 × 144 pt (3.5 × 2 in = 336 × 192 px; the column's width on a 390 phone IS the card's width), the words from card.txt in the serif at ≈ the card's own 9.5–10 pt, cream in both themes (a card is paper), the gold rule printed inside; the large readable faces follow below. The rig exempts .real from the 13 px floor by this word and asserts the faces unclipped and 1.75 : 1. */
 .real{display:grid;gap:.75rem;max-width:21rem;margin:0 auto;position:relative;z-index:1;container-type:inline-size}
-.real .face{aspect-ratio:252/144;overflow:hidden;box-sizing:border-box;padding:1.6cqw 2cqw;background:#f7efdc;color:#1b2440;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42);font-family:var(--serif);font-size:10.4px;font-size:3.1cqw;line-height:1.08} /* the type in container units so the card scales as one picture at every width (a photo of a card scales); the px line is the fallback */
-.real .face::before{content:"";position:static;display:block;width:2.25rem;height:2px;background:#b9892e;margin:0 0 .3em;border-radius:1px} /* position:static — the large faces' rule is absolute at the corner; here it is printed in flow above the title */
+.real .face{aspect-ratio:252/144;overflow:hidden;box-sizing:border-box;padding:1.6cqw 2cqw;background:#f7efdc;color:#1b2440;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42);font-family:var(--serif);font-size:10.4px;font-size:3.1cqw;line-height:1.08}
+.real .face::before{content:"";position:static;display:block;width:2.25rem;height:2px;background:#b9892e;margin:0 0 .3em;border-radius:1px}
 .real .face p{margin:0 0 .2em;padding:0;font:inherit;font-size:inherit;line-height:inherit;color:inherit;text-wrap:pretty}
 .real .face p.title{font-weight:600;text-transform:uppercase;letter-spacing:.02em}
 .real .face p.rules{white-space:pre-line}
@@ -243,25 +219,46 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .real .face p:last-child{margin-bottom:0}
 .whole>.real+svg.dawn{z-index:0}
 @media print{.real{display:none}}
-/* THE EXACT CARD (owner 2026-10-08 "exact layout I gave"): the printed faces as pictures, the card's own shape, on the yes */
 .real.exact img{display:block;width:100%;height:auto;aspect-ratio:252/144;background:#fff;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42)}
-/* THE RULES CARD on the home (owner 2026-10-08 "just the three rules 1. 2. 3. written out beautifully in that box"): the title line and the three rules at reading size on the cream paper, nothing else — the picture is still the card and the door to /card/. */
 .picture.rules-card .face{padding:2.125rem 1.25rem 1.5rem}
 #card.rules-card .title{font:500 1.1875rem/1.35 var(--serif);letter-spacing:.02em;margin:0 0 1rem;text-wrap:balance}
 #card.rules-card .rules{font:400 1.4375rem/1.5 var(--serif);white-space:pre-line;margin:0;text-wrap:pretty}
-/* THE PRINT SECTION at the foot of /card/ (owner 2026-10-08): "Print your card" — the exact cards shown as he gave them, the doors to the actual card files per language, the shop line, the steps, the close line. */
 .print{margin:var(--gap) 0 0}
 .print h2{font:600 1.25rem/1.4 var(--sans);color:var(--head);margin:0 0 1rem}
 .print .real{margin:0 auto}
 .print .doors{margin:1.25rem 0 0}
+.next.foot,.next.langs{display:flex;flex-wrap:wrap;column-gap:1.25rem}
+.next.foot .door,.next.langs .door{width:auto}
+.next.langs{margin-top:.5rem;border-top:0;padding-top:0}
+:root{--hl:rgba(163,120,31,.2)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--hl:rgba(212,179,106,.26)}}
+:root[data-theme="dark"]{--hl:rgba(212,179,106,.26)}
+em.c{font-style:inherit;border-radius:3px;text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:2px;text-underline-offset:.16em;transition:background-color .25s,text-decoration-color .25s;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+em.c.now{background:var(--hl);box-shadow:0 0 0 3px var(--hl);text-decoration-color:var(--gold)}
+.rules-card .read{display:none;padding:0 1.25rem 1.5rem;margin-top:-.25rem}
+.rules-card .read.on{display:block}
+.rules-card .read p{display:none}
+.rules-card .read p.on{display:block;animation:arrive .5s ease-out both}
+.held.whole{position:relative}
+.whole button.play{position:absolute;left:.75rem;top:-2.25rem;width:3rem;height:3rem;padding:0;border:1px solid var(--panel-gold);border-radius:50%;background:var(--band);color:var(--panel-gold);cursor:pointer;z-index:3;display:flex;align-items:center;justify-content:center;box-shadow:var(--card-shadow)}
+.whole button.play svg{width:1.5rem;height:1.5rem;display:block}
+.whole button.play .bars{display:none}
+.whole button.play.on .tri{display:none}
+.whole button.play.on .bars{display:block}
+.whole button.play.on{background:var(--gold);color:#1b2440;border-color:var(--gold)}
+.sky .cross{stroke-dasharray:1 1;stroke-dashoffset:0}
+body.reading .sky .cross{animation:drawon 1.8s ease-out both}
+@keyframes drawon{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@media print{.read,button.play,audio{display:none!important}em.c.now{background:none;box-shadow:none;text-decoration:none}}
+@media (prefers-reduced-motion:reduce){.rules-card .read p.on{animation:none}body.reading .sky .cross{animation:none}em.c{transition:none}}
 </style>
 </head>
 <body>
 <main>
 <header class="band lifts"><svg class="stars" viewBox="0 0 1200 136" preserveAspectRatio="xMaxYMin slice" aria-hidden="true" focusable="false"><circle cx="1150" cy="24" r="14" fill="var(--star)" fill-opacity=".08"/><circle cx="1150" cy="24" r="7" fill="var(--star)" fill-opacity=".14"/><path d="M1150 9Q1150 24 1165 24Q1150 24 1150 39Q1150 24 1135 24Q1150 24 1150 9Z" fill="var(--star)"/><path d="M1150 18.5Q1150 24 1155.5 24Q1150 24 1150 29.5Q1150 24 1144.5 24Q1150 24 1150 18.5Z" fill="#fff" fill-opacity=".9"/></svg><h1>Confess, <em class="beat" data-w="confess">confess</em>, confess.<br>God will <em class="beat" data-w="forgive">forgive</em>...<br>God will <em class="beat" data-w="change">change</em> our lives.</h1></header>
-<div class="held"><div class="hero" id="hero"><svg class="sky" viewBox="0 0 1000 520" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><g class="disc"><circle class="halo" cx="500" cy="540" r="500" fill="var(--halo)"/><circle class="halo" cx="500" cy="540" r="460" fill="var(--halo2)"/><circle class="sun" cx="500" cy="540" r="420" fill="var(--sun)"/><g class="play"><circle cx="500" cy="285" r="64" fill="var(--band)" stroke="var(--panel-gold)" stroke-width="2" vector-effect="non-scaling-stroke"/><path d="M482 253L546 285L482 317Z" fill="var(--panel-gold)"/></g></g><path class="hill" d="M0 450C110 420 220 355 320 355C440 355 560 440 1000 500V520H0Z" fill="var(--hill)"/><path class="cross" d="M320 355V215M270 260H370" fill="none" stroke="var(--draw)" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/><g class="lamp night" transform="translate(422 0) scale(2.6)"><path d="M30 0V40" fill="none" stroke="var(--draw)" stroke-width="1.25" vector-effect="non-scaling-stroke"/><path d="M22 40H38L46 56H14Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.25" stroke-linejoin="round" vector-effect="non-scaling-stroke"/><circle cx="30" cy="61" r="4" fill="var(--bulb)"/><path d="M19 68L15 74M30 69V76M41 68L45 74" fill="none" stroke="var(--lamp-ray)" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/></g></svg><video preload="none" playsinline controls hidden><source src="../film/card-720.mp4" type="video/mp4"><track kind="captions" srclang="en" src="../film/card.vtt"></video><button class="play" type="button">Hear the card read · 2:27 · 5.6 MB</button></div><section id="card" class="picture rules-card"><a href="card/"><div class="frame"><div class="face front"><p class="title">THREE RULES FOR LIVING FROM THE LORD'S PRAYER:</p><p class="rules">1. Confess all sins to God (Tell it) daily.
-2. Surrender your will to God daily.
-3. Forgive others and yourself daily.</p></div></div></a></section></div>
+<div class="held"><div class="hero" id="hero"><svg class="sky" viewBox="0 0 1000 520" preserveAspectRatio="xMidYMax meet" aria-hidden="true" focusable="false"><g class="disc"><circle class="halo" cx="500" cy="540" r="500" fill="var(--halo)"/><circle class="halo" cx="500" cy="540" r="460" fill="var(--halo2)"/><circle class="sun" cx="500" cy="540" r="420" fill="var(--sun)"/><g class="play"><circle cx="500" cy="285" r="64" fill="var(--band)" stroke="var(--panel-gold)" stroke-width="2" vector-effect="non-scaling-stroke"/><path d="M482 253L546 285L482 317Z" fill="var(--panel-gold)"/></g></g><path class="hill" d="M0 450C110 420 220 355 320 355C440 355 560 440 1000 500V520H0Z" fill="var(--hill)"/><path class="cross" d="M320 355V215M270 260H370" pathLength="1" fill="none" stroke="var(--draw)" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/><g class="lamp night" transform="translate(422 0) scale(2.6)"><path d="M30 0V40" fill="none" stroke="var(--draw)" stroke-width="1.25" vector-effect="non-scaling-stroke"/><path d="M22 40H38L46 56H14Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.25" stroke-linejoin="round" vector-effect="non-scaling-stroke"/><circle cx="30" cy="61" r="4" fill="var(--bulb)"/><path d="M19 68L15 74M30 69V76M41 68L45 74" fill="none" stroke="var(--lamp-ray)" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/></g></svg><audio class="card" preload="none"><source src="../film/card.m4a" type="audio/mp4"></audio><button class="play" type="button" data-pause="Pause">Hear the card read · 2:27 · 2.4 MB</button></div><section id="card" class="picture rules-card"><a href="card/"><div class="frame"><div class="face front"><p class="title"><em class="c" data-c="0">THREE RULES FOR LIVING FROM THE LORD'S PRAYER:</em></p><p class="rules"><em class="c" data-c="1">1. Confess all sins to God (Tell it) daily.</em>
+<em class="c" data-c="2">2. Surrender your will to God daily.</em>
+<em class="c" data-c="3">3. Forgive others and yourself daily.</em></p></div><div class="read"><p class="note"><em class="c" data-c="4">Dear friend, rule 1 is the key to our success.</em> <em class="c" data-c="5">When we can't do rule 2 or 3, we must always go to rule 1 and confess it; God will forgive...</em> <em class="c" data-c="6">We must never stop confessing, even if they are the same old sins we can't seem to stop doing.</em> <em class="c" data-c="7">As we practice these rules everyday...</em> <em class="c" data-c="8">God will change our lives.</em></p><p class="note"><em class="c" data-c="9">Also, practice the following little prayer all day:</em></p><p class="daily_prayer"><em class="c" data-c="10">Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.</em></p><p class="turn"><em class="c" data-c="11">See The Other Side Of This Card For More Help.</em></p><p class="invite"><em class="c" data-c="12">Dear friend, if you're not sure where you'll spend eternity, and you want to know now, please pray this simple prayer from the bottom of your heart; as he heard my prayer, He will hear yours also.</em></p><p class="prayer"><em class="c" data-c="13">Dear Lord Jesus, I understand I am a sinner; I also believe You died for my sins and Your Father in Heaven raised you from the dead.</em> <em class="c" data-c="14">I simply ask You to have mercy on my life and save my soul.</em> <em class="c" data-c="15">Come into my heart and my life and take me to Your home someday.</em> <em class="c" data-c="16">In Your Name Lord Jesus I pray and thank You.</em> <em class="c" data-c="17">Amen.</em></p><p class="turn_back"><em class="c" data-c="18">For continuous help from God, see other side...</em></p></div></div></a></section></div>
 <p class="next pair"><a class="door" href="#hero">Hear the card ›</a><a class="door" href="card/">Read the whole card ›</a></p>
 <p class="next under-card"><a class="door" href="what-next/"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="lite" d="M15.5 5.5L20 3V22L15.5 21.5Z" fill="var(--gold)"/><path d="M4 23V3H20V23" fill="none" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><path class="leaf" d="M4 3L15.5 5.5V21.5L4 23Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="13" cy="13.5" r="1" fill="var(--draw)"/></svg>Have you used the prayer, what next</a></p>
 <section class="taking">
@@ -331,7 +328,7 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
 </ol>
 </section>
 <p class="next big"><a class="door big" href="what-next/"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="lite" d="M15.5 5.5L20 3V22L15.5 21.5Z" fill="var(--gold)"/><path d="M4 23V3H20V23" fill="none" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><path class="leaf" d="M4 3L15.5 5.5V21.5L4 23Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="13" cy="13.5" r="1" fill="var(--draw)"/></svg>What next ›</a></p>
-<p class="next foot"><a class="door" href="contact/">How are you doing? ›</a></p>
+<p class="next foot"><a class="door" href="../contact/">How are you doing? ›</a><a class="door" href="../card/">Read the whole card ›</a><a class="door" href="../card/#doors">Print the card ›</a><a class="door" href="../#hero">Hear the card ›</a><a class="door" href="../what-next/">Forty day challenge ›</a></p>
 <p class="theme"><button type="button" id="theme" aria-label="Dark" data-label-light="Light" data-label-dark="Dark"><svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linejoin="round"/></svg><svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="var(--gold)" stroke-width="1.4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round"/></svg></button></p>
 </main>
 <script>
@@ -342,12 +339,33 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
   var N=d<0?1:(d%40)+1;
   var lis=document.querySelectorAll('li[data-day="'+N+'"]');
   for(var i=0;i<lis.length;i++){lis[i].classList.add('is-today');}
-  var pl=document.querySelector('.hero button.play'),v=document.querySelector('.hero video');
-  if(pl&&v){pl.addEventListener('click',function(){
-    v.hidden=false;pl.hidden=true;
-    if(v.textTracks&&v.textTracks[0]){v.textTracks[0].mode='showing';}
-    v.play();
-  });}
+  var CU=[[2.4,6.758],[7.008,13.909],[14.159,18.834],[19.084,25.096],[25.346,30.31],[30.56,37.675],[37.925,44.781],[45.031,48.899],[49.149,52.019],[52.269,57.098],[57.348,67.97],[68.22,75.943],[76.193,89.963],[90.213,101.941],[102.191,108.19800000000001],[108.44800000000001,115.001],[115.251,119.747],[119.997,122.484],[122.734,126.06]],au=document.querySelector('audio.card'),pl=document.querySelector('button.play');
+  if(au&&pl&&CU.length){
+    var label=pl.textContent,pause=pl.getAttribute('data-pause'),round=pl.classList.contains('round'),cur=-1,fold=null;
+    var ems=function(i){return document.querySelectorAll('em.c[data-c="'+i+'"]');};
+    var set=function(i){
+      if(i===cur){return;}
+      var k,e,p;
+      if(cur>=0){e=ems(cur);for(k=0;k<e.length;k++){e[k].classList.remove('now');}}
+      cur=i;
+      if(i<0){return;}
+      e=ems(i);
+      for(k=0;k<e.length;k++){
+        e[k].classList.add('now');
+        p=e[k].parentNode;
+        if(p&&p.parentNode&&p.parentNode.classList.contains('read')){p.parentNode.classList.add('on');p.classList.add('on');}
+      }
+      if(e.length){var r=e[0].getBoundingClientRect();if(r.top<72||r.bottom>window.innerHeight-72){e[0].scrollIntoView({block:'center',behavior:'smooth'});}}
+    };
+    var tick=function(t){var i,at=-1;for(i=0;i<CU.length;i++){if(t>=CU[i][0]-0.1&&t<CU[i][1]+0.3){at=i;}}set(at);};
+    var off=function(){document.body.classList.remove('reading');pl.classList.remove('on');if(!round){pl.textContent=label;}};
+    au.addEventListener('timeupdate',function(){tick(au.currentTime);});
+    au.addEventListener('play',function(){clearTimeout(fold);document.body.classList.add('reading');pl.classList.add('on');if(!round){pl.textContent=pause;}});
+    au.addEventListener('pause',off);
+    au.addEventListener('ended',function(){set(-1);off();fold=setTimeout(function(){var on=document.querySelectorAll('.read.on, .read .on');for(var k=0;k<on.length;k++){on[k].classList.remove('on');}},4000);});
+    pl.addEventListener('click',function(ev){ev.preventDefault();ev.stopPropagation();if(au.paused){au.play();}else{au.pause();}});
+    window.__at=tick;
+  }
   var b=document.getElementById('share');
   if(b&&navigator.share){
     var f=document.getElementById('share-links');

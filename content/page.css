@@ -160,9 +160,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--focus);outline-offs
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){.door,.share button,.door .leaf,.door .lite{transition:none}.sky .disc,.sky .halo,.picture,.band>.stars,.band.lifts h1::after,.step,.list li.is-today::before{animation:none}.cross-end path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}.band h1 .beat::before{content:none}}
 @media print{.theme{display:none!important}body{background:#fff;color:#000}main>*{display:none}main>.band{display:block;background:none;color:#1b2440;margin:0;padding:0;border:0;border-radius:0}main>.band h1{color:#1b2440}.band .stars,.band .lang{display:none!important}.band.lifts h1::after{background:#1b2440}.band h1 .beat{color:#1b2440}.band h1 .beat::before{content:none}main>.held{display:block;margin:4.5rem 0 0}.sky .lamp{display:none!important}.sky .halo,.sky .play{display:none}.sky .sun{fill:#fff;stroke:#1b2440;stroke-width:1.25}.sky .hill{fill:#fff;stroke:#1b2440;stroke-width:1.25}.sky .cross{stroke:#1b2440}.sky .disc,.sky .halo,.picture{animation:none}.band.lifts h1::after{animation:none}.picture .shot{zoom:1}.picture .frame{box-shadow:none;border-color:#000}#card{display:block}.face,#card.placeholder{box-shadow:none;border-color:#000;background:#fff;color:#000}.face::before,#card.placeholder::before{background:#000}#card .title,#card .daily_prayer,#card .prayer{color:#000}.verse{background:#f7efdc;border:1px solid #1b2440;color:#1b2440}.verse::before,.verse .label,.verse .ref,.verse .tr,.verse .text,.verse .door{color:#1b2440}.verse .door{border-top-color:#1b2440;text-decoration-color:#1b2440}}
-/* E2 — THE FILM IN THE HERO (hasFilm only; TR2-film-door A): the video hidden inside the hero's box, un-hidden IN PLACE on the tap (zero shift; day.js shows the track, then play() in the gesture's tick); the play door a 48 px button over the sun's face; absent the film, nothing here renders. */
-.hero video{position:absolute;inset:0;width:100%;height:100%;background:#000;z-index:2}
-.hero button.play{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);min-height:3rem;padding:.5rem 1rem;border:1px solid var(--panel-gold);border-radius:999px;background:var(--band);color:var(--band-ink);font:500 1rem/1.2 var(--sans);cursor:pointer;z-index:3}
+/* THE LIVING CARD (owner 2026-10-09, in place of the film in the hero): the one audio hidden (0 bytes before the tap); the play door a 48 px pill over the sun's face, gold while reading (its label swaps to the DRAFT "Pause"); absent the audio, nothing here renders. The rest of the living card's sheet is at the foot of this file. */
+.hero audio,.whole audio{display:none}
+.hero button.play{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);min-height:3rem;padding:.5rem 1.125rem;border:1px solid var(--panel-gold);border-radius:999px;background:var(--band);color:var(--band-ink);font:500 .9375rem/1.2 var(--sans);white-space:nowrap;cursor:pointer;z-index:3}
+.hero button.play.on{background:var(--gold);color:#1b2440;border-color:var(--gold)}
 /* THE FOOT ROW (home; TR2-frame A): two text doors at most — "How are you doing? ›" (/contact/, rung 4) · "Who gives these cards? ›" (/story/, hasFounder); no Privacy door (the notice sits at the point of consent). */
 .next.foot{display:flex;justify-content:space-between;flex-wrap:wrap;column-gap:1rem}
 .next.foot .door{width:auto}
@@ -242,3 +243,29 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .print h2{font:600 1.25rem/1.4 var(--sans);color:var(--head);margin:0 0 1rem}
 .print .real{margin:0 auto}
 .print .doors{margin:1.25rem 0 0}
+/* THE FOOT ROW (owner 2026-10-09 "links to other parts of site"): one quiet wrapping row of text doors under the last hairline — the site's doors less the page itself; under it, when the card exists in another language, the language row (the card's own file per tongue). Each door a 48 px tap box. */
+.next.foot,.next.langs{display:flex;flex-wrap:wrap;column-gap:1.25rem}
+.next.foot .door,.next.langs .door{width:auto}
+.next.langs{margin-top:.5rem;border-top:0;padding-top:0}
+/* THE LIVING CARD — THE READING (owner 2026-10-09 "an animation at the top … instead" of the video; "a play button … it highlights the card … just like scripture is highlighted when audio played on Knowing Jesus"): while the voice reads (body.reading) the cross on the hill draws itself once more (pathLength 1 — the one stroke motion beside the small cross); the cue being read wears a gold wash AND a gold underline (two marks: colour alone never carries it — KJ's lyric mark); on the home the hidden lines of the paper arrive one by one as the voice reaches them (transform/opacity on the line's block, the ask plate's rise; the words themselves never fade) and fold away four seconds after the reading, the paper his rules card again; on /card/ the round play door hangs at the card's top-left corner, the tab's twin, the triangle at rest and two bars while reading. Reduced motion: no rise, no draw — the wash still moves (a reading aid, not decoration). Print: none of it. */
+:root{--hl:rgba(163,120,31,.2)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--hl:rgba(212,179,106,.26)}}
+:root[data-theme="dark"]{--hl:rgba(212,179,106,.26)}
+em.c{font-style:inherit;border-radius:3px;text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:2px;text-underline-offset:.16em;transition:background-color .25s,text-decoration-color .25s;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+em.c.now{background:var(--hl);box-shadow:0 0 0 3px var(--hl);text-decoration-color:var(--gold)}
+.rules-card .read{display:none;padding:0 1.25rem 1.5rem;margin-top:-.25rem}
+.rules-card .read.on{display:block}
+.rules-card .read p{display:none}
+.rules-card .read p.on{display:block;animation:arrive .5s ease-out both}
+.held.whole{position:relative}
+.whole button.play{position:absolute;left:.75rem;top:-2.25rem;width:3rem;height:3rem;padding:0;border:1px solid var(--panel-gold);border-radius:50%;background:var(--band);color:var(--panel-gold);cursor:pointer;z-index:3;display:flex;align-items:center;justify-content:center;box-shadow:var(--card-shadow)}
+.whole button.play svg{width:1.5rem;height:1.5rem;display:block}
+.whole button.play .bars{display:none}
+.whole button.play.on .tri{display:none}
+.whole button.play.on .bars{display:block}
+.whole button.play.on{background:var(--gold);color:#1b2440;border-color:var(--gold)}
+.sky .cross{stroke-dasharray:1 1;stroke-dashoffset:0}
+body.reading .sky .cross{animation:drawon 1.8s ease-out both}
+@keyframes drawon{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@media print{.read,button.play,audio{display:none!important}em.c.now{background:none;box-shadow:none;text-decoration:none}}
+@media (prefers-reduced-motion:reduce){.rules-card .read p.on{animation:none}body.reading .sky .cross{animation:none}em.c{transition:none}}
