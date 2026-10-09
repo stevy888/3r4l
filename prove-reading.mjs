@@ -20,7 +20,7 @@ for (const pg of ['', 'card/']) {
   bar(name, 'one audio, one play door', await page.evaluate(() => document.querySelectorAll('audio.card').length === 1 && document.querySelectorAll('button.play').length === 1), await page.evaluate(() => document.querySelectorAll('audio.card').length + '/' + document.querySelectorAll('button.play').length));
   bar(name, 'nothing lit before the tap', await page.evaluate(() => document.querySelectorAll('em.c.now').length === 0), 'none');
   await page.click('button.play'); if (decoder) { for (let i = 0; i < 16; i++) { if (await page.evaluate(() => document.querySelector('audio.card').currentTime > 0.5)) break; await page.waitForTimeout(500); } } else await page.waitForTimeout(500); // the first page's media pipeline warms up; poll to 8 s for the first half-second of sound
-  const playing = await page.evaluate(() => { const a = document.querySelector('audio.card'); return { paused: a.paused, t: a.currentTime, reading: document.body.classList.contains('reading'), label: document.querySelector('button.play').textContent.trim(), on: document.querySelector('button.play').classList.contains('on') }; });
+  const playing = await page.evaluate(() => { const a = document.querySelector('audio.card'), lab = document.querySelector('button.hear') || document.querySelector('button.play'); return { paused: a.paused, t: a.currentTime, reading: document.body.classList.contains('reading'), label: lab.textContent.trim(), on: document.querySelector('button.play').classList.contains('on') }; }); // the labelled hand: the hear door on the home, the round glyph on /card/
   if (decoder) { bar(name, 'the tap plays the audio (a real decoder)', !playing.paused && playing.t > 0.5, `paused ${playing.paused} t ${playing.t.toFixed(1)}`); bar(name, 'a request to film/card.m4a after the tap', reqs.some(u => /\/film\/card\.m4a/.test(u)), reqs.filter(u => /\/film\//.test(u)).length); }
   bar(name, 'body.reading + the door on', playing.reading && playing.on, `reading ${playing.reading} on ${playing.on} label "${playing.label}"`);
   if (pg === '') bar(name, 'the door reads the pause label', playing.label === 'Pause', playing.label);
@@ -36,7 +36,8 @@ for (const pg of ['', 'card/']) {
     if (frames) await page.screenshot({ path: path.join(frames, `reading-${name.replace('/', '')}-t${t}.png`) });
   }
   await page.evaluate(() => { const a = document.querySelector('audio.card'); window.__at(999); a.dispatchEvent(new Event('ended')); }); await page.waitForTimeout(4600);
-  const after = await page.evaluate(() => ({ lit: document.querySelectorAll('em.c.now').length, reading: document.body.classList.contains('reading'), readOn: document.querySelectorAll('.read.on, .read .on').length, label: document.querySelector('button.play').textContent.trim() }));
+  const after = await page.evaluate(() => ({ lit: document.querySelectorAll('em.c.now').length, reading: document.body.classList.contains('reading'), readOn: document.querySelectorAll('.read.on, .read .on').length, label: (document.querySelector('button.hear') || document.querySelector('button.play')).textContent.trim() }));
+  if (pg === '') bar(name, 'the hear door under the box also plays (a second tap hand)', await page.evaluate(() => { const h = document.querySelector('button.hear'); if (!h) return false; h.click(); const p = !document.querySelector('audio.card').paused; document.querySelector('audio.card').pause(); return p; }), 'see');
   bar(name, 'ended: nothing lit, not reading, the paper folded', after.lit === 0 && !after.reading && after.readOn === 0, JSON.stringify(after));
   if (frames) await page.screenshot({ path: path.join(frames, `reading-${name.replace('/', '')}-ended.png`) });
   await ctx.close();
