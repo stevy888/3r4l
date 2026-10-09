@@ -32,7 +32,7 @@ for (const pg of ['', 'card/']) {
     bar(name, `t ${t}: cue ${cue} lit`, lit.length >= 1 && lit.every(l => l.c === cue), JSON.stringify(lit.map(l => l.c)));
     bar(name, `t ${t}: the lit words are the card's words`, lit.every(l => card.includes(l.text)), lit.map(l => l.text.slice(0, 30)).join(' | '));
     bar(name, `t ${t}: the lit cue is shown and in view`, lit.every(l => l.shown && l.inView), JSON.stringify(lit.map(l => [l.shown, l.inView])));
-    if (pg === '' && extra) bar(name, `t ${t}: the home's hidden ${extra} line is shown (.read.on)`, await page.evaluate(k => { const r = document.querySelector('.rules-card .read'); const p = r && r.querySelector('p.' + k + '.on'); return !!(r && r.classList.contains('on') && p && p.offsetParent !== null); }, extra), 'see');
+    if (pg === '' && extra) bar(name, `t ${t}: the home's hidden ${extra} line is shown (.read.on)`, await page.evaluate(k => { const r = document.querySelector('.hero .read'); const p = r && r.querySelector('p.' + k + '.on'); return !!(r && r.classList.contains('on') && p && p.offsetParent !== null); }, extra), 'see');
     if (frames) await page.screenshot({ path: path.join(frames, `reading-${name.replace('/', '')}-t${t}.png`) });
   }
   await page.evaluate(() => { const a = document.querySelector('audio.card'); window.__at(999); a.dispatchEvent(new Event('ended')); }); await page.waitForTimeout(4600);
