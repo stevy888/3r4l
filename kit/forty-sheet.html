@@ -15,28 +15,34 @@ p{margin:0}
 .head{position:absolute;left:0;right:0;top:0;text-align:center}
 .ttl{font:500 9.5pt/1.3 "Source Serif 4";letter-spacing:.06em;margin:0 0 2mm}
 .rules{white-space:pre-line;font:500 14pt/1.34 "Source Serif 4"}
-.rules .num{font-style:normal;color:#a3781f}
-.prayer{font:italic 400 10.5pt/1.3 "Source Serif 4";color:#262626;margin-top:2.2mm}
+.rules .num{font-style:normal;font-weight:600;color:#1b2440}
+.head .prayer{font:italic 400 10.5pt/1.3 "Source Serif 4";color:#262626;margin:2.2mm auto 0;max-width:118mm}
 .began{display:flex;justify-content:center;align-items:flex-end;gap:2.2mm;margin-top:2.4mm;font:italic 400 9.5pt/4.2mm "Source Serif 4";color:#5d5d5d}
 .began .line{display:inline-block;width:46mm;height:0;border-bottom:.3mm solid #8a7c57;margin-bottom:.7mm}
 .lab{position:absolute;white-space:nowrap;font:500 10.5pt/4.3mm "Source Serif 4";color:#1b2440}
-.lab .n{font-weight:500;font-size:11pt;color:#1b2440;font-variant-numeric:tabular-nums;display:inline-block;min-width:4.8mm}
-.lab.t .n{color:#6e4e14}
-.lab.r .n{margin-right:2.4mm}.lab.l .n{margin-left:2.4mm;text-align:right}
+.lab.t{font-weight:600}
+.dn{position:absolute;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;font:500 7.5pt/1 "Source Serif 4";color:#6b7390;font-variant-numeric:tabular-nums}
+.dn.t{color:#1b2440;font-weight:600}
 .foot1{position:absolute;left:0;right:0;bottom:0}
-.clause{text-align:center;font:500 11pt/1.3 "Source Serif 4";color:#6e4e14;margin-bottom:1.6mm}
+.clause{text-align:center;font:600 11pt/1.3 "Source Serif 4";color:#1b2440;margin-bottom:1.6mm}
 /* p2 the card */
 .head2{display:flex;justify-content:space-between;align-items:baseline;border-bottom:.3mm solid #b9892e;padding-bottom:1.6mm;margin-bottom:5mm}
 .head2 .tr{font:italic 400 9pt/1.2 "Source Serif 4";color:#5d5d5d}
 .from{text-align:center;font:italic 400 10.5pt/1.3 "Source Serif 4";color:#262626;margin:0 0 4mm}
-.card{width:152mm;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:6mm}
-.card img{display:block;width:89mm;height:51mm;border:.3mm solid #1b2440}
-.wr{display:flex;align-items:flex-end;gap:3mm;width:152mm;margin:9mm auto 0;font:italic 400 10.5pt/1.3 "Source Serif 4";color:#5d5d5d}
+.card{width:152mm;margin:0 auto;display:flex;justify-content:center;gap:5mm}
+.card img{display:block;width:72mm;height:41.14mm;border:.25mm solid #1b2440}
+.words{width:152mm;margin:3.5mm auto 0;font:400 10pt/1.33 "Source Serif 4";color:#1b2440}
+.words p{margin:0 0 1.4mm}
+.words .title{font-weight:500;font-size:9.5pt;letter-spacing:.04em;text-transform:uppercase}
+.words .rules{white-space:pre-line;font-weight:500}
+.words .daily_prayer,.words .prayer{font-weight:500}
+.words .turn,.words .turn_back{font-style:italic;color:#5d5d5d}
+.wr{display:flex;align-items:flex-end;gap:3mm;width:152mm;margin:4mm auto 0;font:italic 400 10.5pt/1.3 "Source Serif 4";color:#5d5d5d}
 .wr .line{flex:1;border-bottom:.3mm solid #8a7c57;margin-bottom:1mm}
-.wr+.wr{margin-top:6mm}
-.notes{width:152mm;margin:8mm auto 0}
+.wr+.wr{margin-top:4.5mm}
+.notes{width:152mm;margin:4mm auto 0}
 .notes .h{font:500 9.5pt/1.3 "Source Serif 4";letter-spacing:.05em;color:#6e4e14;margin-bottom:2mm}
-.notes .line{height:10mm;border-bottom:.3mm solid #dccfb1}
+.notes .line{height:8mm;border-bottom:.3mm solid #b9a981}
 .footc{position:absolute;left:0;right:0;bottom:0}
 /* p3 p4 the reading sheet */
 .cols{columns:2;column-gap:7mm;column-fill:balance}
@@ -50,51 +56,51 @@ p{margin:0}
 .foot2 .pr{font:italic 400 9.5pt/1.3 "Source Serif 4";color:#262626;text-align:center;margin-bottom:1.4mm}
 </style></head><body>
 <section class="side s1"><svg class="draw" viewBox="0 0 182 244" width="182mm" height="244mm" aria-hidden="true" focusable="false">
-<circle cx="80" cy="86" r="33" fill="#f7efdc"/><circle cx="80" cy="86" r="26.5" fill="#efe3c4"/><circle cx="80" cy="86" r="20" fill="#e8d9b8"/>
+<circle cx="80" cy="86" r="26" fill="none" stroke="#1b2440" stroke-width=".35"/>
 <path d="M-2 88C26 82 56 68 80 68C108 68 136 80 184 94V246H-2Z" fill="#fff"/>
 <path d="M-2 88C26 82 56 68 80 68C108 68 136 80 184 94" fill="none" stroke="#1b2440" stroke-width=".5" stroke-linecap="round"/>
-<path d="M118 231.3C118 169 72 130 80 68.6" fill="none" stroke="#1b2440" stroke-width=".3" stroke-linecap="round"/>
-<path d="M80 68V55M75.8 59.4H84.2" fill="none" stroke="#1b2440" stroke-width=".7" stroke-linecap="round"/>
-<circle cx="122.13" cy="227.2" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="113.55" cy="223.39" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="121.66" cy="219.57" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="112.85" cy="215.76" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="120.73" cy="211.95" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="111.7" cy="208.14" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="119.36" cy="204.32" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="110.11" cy="200.51" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="117.57" cy="196.7" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="108.13" cy="192.88" r="3.6" fill="#fff" stroke="#b9892e" stroke-width=".7"/>
-<circle cx="115.4" cy="189.07" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="105.78" cy="185.26" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="112.89" cy="181.45" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="103.12" cy="177.63" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="110.09" cy="173.82" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="100.21" cy="170.01" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="107.09" cy="166.19" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="97.13" cy="162.38" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="103.95" cy="158.57" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="93.95" cy="154.76" r="3.6" fill="#fff" stroke="#b9892e" stroke-width=".7"/>
-<circle cx="100.76" cy="150.94" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="90.77" cy="147.13" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="97.61" cy="143.32" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="87.68" cy="139.51" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="94.59" cy="135.69" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="84.76" cy="131.88" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="91.8" cy="128.07" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="82.11" cy="124.25" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="89.3" cy="120.44" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="79.78" cy="116.63" r="3.6" fill="#fff" stroke="#b9892e" stroke-width=".7"/>
-<circle cx="87.17" cy="112.82" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="77.86" cy="109" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="85.46" cy="105.19" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="76.38" cy="101.38" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="84.23" cy="97.56" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="75.39" cy="93.75" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="83.49" cy="89.94" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="74.91" cy="86.13" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="83.27" cy="82.31" r="3.6" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
-<circle cx="74.95" cy="78.5" r="3.6" fill="#fff" stroke="#b9892e" stroke-width=".7"/>
+<path d="M91 233C113 186 69 128 80 68.6" fill="none" stroke="#1b2440" stroke-width=".3" stroke-linecap="round"/>
+<path d="M80 68V55M75.8 59.4H84.2" fill="none" stroke="#1b2440" stroke-width=".95" stroke-linecap="round"/>
+<circle cx="120" cy="229" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="225.03" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="221.05" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="217.08" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="213.1" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="209.13" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="205.15" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="201.18" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="197.21" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="193.23" r="3.5" fill="#fff" stroke="#1b2440" stroke-width="1"/>
+<circle cx="120" cy="189.26" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="185.28" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="181.31" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="177.33" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="173.36" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="169.38" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="165.41" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="161.44" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="157.46" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="153.49" r="3.5" fill="#fff" stroke="#1b2440" stroke-width="1"/>
+<circle cx="120" cy="149.51" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="145.54" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="141.56" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="137.59" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="133.62" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="129.64" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="125.67" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="121.69" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="117.72" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="113.74" r="3.5" fill="#fff" stroke="#1b2440" stroke-width="1"/>
+<circle cx="120" cy="109.77" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="105.79" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="101.82" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="97.85" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="93.87" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="89.9" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="85.92" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="81.95" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="120" cy="77.97" r="3.5" fill="#fff" stroke="#1b2440" stroke-width=".45"/>
+<circle cx="62" cy="74" r="3.5" fill="#fff" stroke="#1b2440" stroke-width="1"/>
 </svg>
 <div class="head">
 <p class="kicker">Forty day challenge</p>
@@ -106,55 +112,56 @@ p{margin:0}
 <p class="prayer">Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.</p>
 <div class="began"><span>I began on</span><span class="line"></span></div>
 </div>
-<p class="lab r" style="left:127.33mm;top:225.05mm"><b class="n">1</b><span class="ref">1 John 1:9</span></p>
-<p class="lab l" style="right:73.65mm;top:221.24mm"><span class="ref">Luke 18:13</span><b class="n">2</b></p>
-<p class="lab r" style="left:126.86mm;top:217.42mm"><b class="n">3</b><span class="ref">Psalm 51:1</span></p>
-<p class="lab l" style="right:74.35mm;top:213.61mm"><span class="ref">Psalm 32:5</span><b class="n">4</b></p>
-<p class="lab r" style="left:125.93mm;top:209.8mm"><b class="n">5</b><span class="ref">Proverbs 28:13</span></p>
-<p class="lab l" style="right:75.5mm;top:205.99mm"><span class="ref">Hebrews 4:16</span><b class="n">6</b></p>
-<p class="lab r" style="left:124.56mm;top:202.17mm"><b class="n">7</b><span class="ref">Lamentations 3:22-23</span></p>
-<p class="lab l" style="right:77.09mm;top:198.36mm"><span class="ref">Matthew 28:20</span><b class="n">8</b></p>
-<p class="lab r" style="left:122.77mm;top:194.55mm"><b class="n">9</b><span class="ref">John 14:3</span></p>
-<p class="lab l t" style="right:79.07mm;top:190.73mm"><span class="ref">1 Timothy 2:1</span><b class="n">10</b></p>
-<p class="lab r" style="left:120.6mm;top:186.92mm"><b class="n">11</b><span class="ref">Psalm 103:12</span></p>
-<p class="lab l" style="right:81.42mm;top:183.11mm"><span class="ref">Micah 7:18-19</span><b class="n">12</b></p>
-<p class="lab r" style="left:118.09mm;top:179.3mm"><b class="n">13</b><span class="ref">Isaiah 1:18</span></p>
-<p class="lab l" style="right:84.08mm;top:175.48mm"><span class="ref">1 John 2:1</span><b class="n">14</b></p>
-<p class="lab r" style="left:115.29mm;top:171.67mm"><b class="n">15</b><span class="ref">Psalm 130:3-4</span></p>
-<p class="lab l" style="right:86.99mm;top:167.86mm"><span class="ref">Psalm 139:23-24</span><b class="n">16</b></p>
-<p class="lab r" style="left:112.29mm;top:164.04mm"><b class="n">17</b><span class="ref">James 5:16</span></p>
-<p class="lab l" style="right:90.07mm;top:160.23mm"><span class="ref">Ephesians 4:32</span><b class="n">18</b></p>
-<p class="lab r" style="left:109.15mm;top:156.42mm"><b class="n">19</b><span class="ref">Matthew 5:7</span></p>
-<p class="lab l t" style="right:93.25mm;top:152.61mm"><span class="ref">Luke 6:36</span><b class="n">20</b></p>
-<p class="lab r" style="left:105.96mm;top:148.79mm"><b class="n">21</b><span class="ref">Titus 3:5</span></p>
-<p class="lab l" style="right:96.43mm;top:144.98mm"><span class="ref">Ephesians 2:4-5</span><b class="n">22</b></p>
-<p class="lab r" style="left:102.81mm;top:141.17mm"><b class="n">23</b><span class="ref">Psalm 86:5</span></p>
-<p class="lab l" style="right:99.52mm;top:137.36mm"><span class="ref">Micah 6:8</span><b class="n">24</b></p>
-<p class="lab r" style="left:99.79mm;top:133.54mm"><b class="n">25</b><span class="ref">Matthew 5:44</span></p>
-<p class="lab l" style="right:102.44mm;top:129.73mm"><span class="ref">Philippians 4:6-7</span><b class="n">26</b></p>
-<p class="lab r" style="left:97mm;top:125.92mm"><b class="n">27</b><span class="ref">Colossians 4:2</span></p>
-<p class="lab l" style="right:105.09mm;top:122.1mm"><span class="ref">1 Thessalonians 5:17</span><b class="n">28</b></p>
-<p class="lab r" style="left:94.5mm;top:118.29mm"><b class="n">29</b><span class="ref">Galatians 6:9</span></p>
-<p class="lab l t" style="right:107.42mm;top:114.48mm"><span class="ref">Luke 9:23</span><b class="n">30</b></p>
-<p class="lab r" style="left:92.37mm;top:110.67mm"><b class="n">31</b><span class="ref">Psalm 32:8</span></p>
-<p class="lab l" style="right:109.34mm;top:106.85mm"><span class="ref">Proverbs 3:5-6</span><b class="n">32</b></p>
-<p class="lab r" style="left:90.66mm;top:103.04mm"><b class="n">33</b><span class="ref">Joshua 1:9</span></p>
-<p class="lab l" style="right:110.82mm;top:99.23mm"><span class="ref">Hebrews 13:5</span><b class="n">34</b></p>
-<p class="lab r" style="left:89.43mm;top:95.41mm"><b class="n">35</b><span class="ref">Matthew 11:28-29</span></p>
-<p class="lab l" style="right:111.81mm;top:91.6mm"><span class="ref">Colossians 3:23</span><b class="n">36</b></p>
-<p class="lab r" style="left:88.69mm;top:87.79mm"><b class="n">37</b><span class="ref">Philippians 1:6</span></p>
-<p class="lab l" style="right:112.29mm;top:83.98mm"><span class="ref">1 John 5:13</span><b class="n">38</b></p>
-<p class="lab r" style="left:88.47mm;top:80.16mm"><b class="n">39</b><span class="ref">Romans 8:38-39</span></p>
-<p class="lab l t" style="right:112.25mm;top:76.35mm"><span class="ref">John 10:28</span><b class="n">40</b></p>
-<div class="foot1"><p class="clause">Keep using the rules daily and especially confession. Never stop.</p><p class="row"><span>One a day. Start at 1.</span><span>https://3r4l.org/</span></p></div>
+<b class="dn" style="left:116.5mm;top:225.5mm">1</b><p class="lab r" style="left:125.5mm;top:226.85mm"><span class="ref">1 John 1:9</span></p>
+<b class="dn" style="left:58.5mm;top:221.53mm">2</b><p class="lab l" style="right:125.5mm;top:222.88mm"><span class="ref">Luke 18:13</span></p>
+<b class="dn" style="left:116.5mm;top:217.55mm">3</b><p class="lab r" style="left:125.5mm;top:218.9mm"><span class="ref">Psalm 51:1</span></p>
+<b class="dn" style="left:58.5mm;top:213.58mm">4</b><p class="lab l" style="right:125.5mm;top:214.93mm"><span class="ref">Psalm 32:5</span></p>
+<b class="dn" style="left:116.5mm;top:209.6mm">5</b><p class="lab r" style="left:125.5mm;top:210.95mm"><span class="ref">Proverbs 28:13</span></p>
+<b class="dn" style="left:58.5mm;top:205.63mm">6</b><p class="lab l" style="right:125.5mm;top:206.98mm"><span class="ref">Hebrews 4:16</span></p>
+<b class="dn" style="left:116.5mm;top:201.65mm">7</b><p class="lab r" style="left:125.5mm;top:203mm"><span class="ref">Lamentations 3:22-23</span></p>
+<b class="dn" style="left:58.5mm;top:197.68mm">8</b><p class="lab l" style="right:125.5mm;top:199.03mm"><span class="ref">Matthew 28:20</span></p>
+<b class="dn" style="left:116.5mm;top:193.71mm">9</b><p class="lab r" style="left:125.5mm;top:195.06mm"><span class="ref">John 14:3</span></p>
+<b class="dn t" style="left:58.5mm;top:189.73mm">10</b><p class="lab l t" style="right:125.5mm;top:191.08mm"><span class="ref">1 Timothy 2:1</span></p>
+<b class="dn" style="left:116.5mm;top:185.76mm">11</b><p class="lab r" style="left:125.5mm;top:187.11mm"><span class="ref">Psalm 103:12</span></p>
+<b class="dn" style="left:58.5mm;top:181.78mm">12</b><p class="lab l" style="right:125.5mm;top:183.13mm"><span class="ref">Micah 7:18-19</span></p>
+<b class="dn" style="left:116.5mm;top:177.81mm">13</b><p class="lab r" style="left:125.5mm;top:179.16mm"><span class="ref">Isaiah 1:18</span></p>
+<b class="dn" style="left:58.5mm;top:173.83mm">14</b><p class="lab l" style="right:125.5mm;top:175.18mm"><span class="ref">1 John 2:1</span></p>
+<b class="dn" style="left:116.5mm;top:169.86mm">15</b><p class="lab r" style="left:125.5mm;top:171.21mm"><span class="ref">Psalm 130:3-4</span></p>
+<b class="dn" style="left:58.5mm;top:165.88mm">16</b><p class="lab l" style="right:125.5mm;top:167.23mm"><span class="ref">Psalm 139:23-24</span></p>
+<b class="dn" style="left:116.5mm;top:161.91mm">17</b><p class="lab r" style="left:125.5mm;top:163.26mm"><span class="ref">James 5:16</span></p>
+<b class="dn" style="left:58.5mm;top:157.94mm">18</b><p class="lab l" style="right:125.5mm;top:159.29mm"><span class="ref">Ephesians 4:32</span></p>
+<b class="dn" style="left:116.5mm;top:153.96mm">19</b><p class="lab r" style="left:125.5mm;top:155.31mm"><span class="ref">Matthew 5:7</span></p>
+<b class="dn t" style="left:58.5mm;top:149.99mm">20</b><p class="lab l t" style="right:125.5mm;top:151.34mm"><span class="ref">Luke 6:36</span></p>
+<b class="dn" style="left:116.5mm;top:146.01mm">21</b><p class="lab r" style="left:125.5mm;top:147.36mm"><span class="ref">Titus 3:5</span></p>
+<b class="dn" style="left:58.5mm;top:142.04mm">22</b><p class="lab l" style="right:125.5mm;top:143.39mm"><span class="ref">Ephesians 2:4-5</span></p>
+<b class="dn" style="left:116.5mm;top:138.06mm">23</b><p class="lab r" style="left:125.5mm;top:139.41mm"><span class="ref">Psalm 86:5</span></p>
+<b class="dn" style="left:58.5mm;top:134.09mm">24</b><p class="lab l" style="right:125.5mm;top:135.44mm"><span class="ref">Micah 6:8</span></p>
+<b class="dn" style="left:116.5mm;top:130.12mm">25</b><p class="lab r" style="left:125.5mm;top:131.47mm"><span class="ref">Matthew 5:44</span></p>
+<b class="dn" style="left:58.5mm;top:126.14mm">26</b><p class="lab l" style="right:125.5mm;top:127.49mm"><span class="ref">Philippians 4:6-7</span></p>
+<b class="dn" style="left:116.5mm;top:122.17mm">27</b><p class="lab r" style="left:125.5mm;top:123.52mm"><span class="ref">Colossians 4:2</span></p>
+<b class="dn" style="left:58.5mm;top:118.19mm">28</b><p class="lab l" style="right:125.5mm;top:119.54mm"><span class="ref">1 Thessalonians 5:17</span></p>
+<b class="dn" style="left:116.5mm;top:114.22mm">29</b><p class="lab r" style="left:125.5mm;top:115.57mm"><span class="ref">Galatians 6:9</span></p>
+<b class="dn t" style="left:58.5mm;top:110.24mm">30</b><p class="lab l t" style="right:125.5mm;top:111.59mm"><span class="ref">Luke 9:23</span></p>
+<b class="dn" style="left:116.5mm;top:106.27mm">31</b><p class="lab r" style="left:125.5mm;top:107.62mm"><span class="ref">Psalm 32:8</span></p>
+<b class="dn" style="left:58.5mm;top:102.29mm">32</b><p class="lab l" style="right:125.5mm;top:103.64mm"><span class="ref">Proverbs 3:5-6</span></p>
+<b class="dn" style="left:116.5mm;top:98.32mm">33</b><p class="lab r" style="left:125.5mm;top:99.67mm"><span class="ref">Joshua 1:9</span></p>
+<b class="dn" style="left:58.5mm;top:94.35mm">34</b><p class="lab l" style="right:125.5mm;top:95.7mm"><span class="ref">Hebrews 13:5</span></p>
+<b class="dn" style="left:116.5mm;top:90.37mm">35</b><p class="lab r" style="left:125.5mm;top:91.72mm"><span class="ref">Matthew 11:28-29</span></p>
+<b class="dn" style="left:58.5mm;top:86.4mm">36</b><p class="lab l" style="right:125.5mm;top:87.75mm"><span class="ref">Colossians 3:23</span></p>
+<b class="dn" style="left:116.5mm;top:82.42mm">37</b><p class="lab r" style="left:125.5mm;top:83.77mm"><span class="ref">Philippians 1:6</span></p>
+<b class="dn" style="left:58.5mm;top:78.45mm">38</b><p class="lab l" style="right:125.5mm;top:79.8mm"><span class="ref">1 John 5:13</span></p>
+<b class="dn" style="left:116.5mm;top:74.47mm">39</b><p class="lab r" style="left:125.5mm;top:75.82mm"><span class="ref">Romans 8:38-39</span></p>
+<b class="dn t" style="left:58.5mm;top:70.5mm">40</b><p class="lab l t" style="right:125.5mm;top:71.85mm"><span class="ref">John 10:28</span></p>
+<div class="foot1"><p class="clause">Keep using the rules daily and especially confession. Never stop.</p><p class="row"><span>One a day. Start at 1.</span><span>3r4l.org</span></p></div>
 </section>
 <section class="side s2"><div class="head2"><p class="kicker">Forty day challenge</p><p class="tr"></p></div>
 <p class="from">The card this challenge comes from.</p>
 <div class="card"><img src="file:///Users/aibrain/projects/3r4l/docs/card-front.webp" alt=""><img src="file:///Users/aibrain/projects/3r4l/docs/card-back.webp" alt=""></div>
+<div class="words"><p class="title">THREE RULES FOR LIVING FROM THE LORD'S PRAYER:</p><p class="rules">1. Confess all sins to God (Tell it) daily.</p><p class="rules">2. Surrender your will to God daily.</p><p class="rules">3. Forgive others and yourself daily.</p><p class="note">Dear friend, rule 1 is the key to our success. When we can't do rule 2 or 3, we must always go to rule 1 and confess it; God will forgive... We must never stop confessing, even if they are the same old sins we can't seem to stop doing. As we practice these rules everyday... God will change our lives.</p><p class="note">Also, practice the following little prayer all day:</p><p class="daily_prayer">Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.</p><p class="turn">See The Other Side Of This Card For More Help.</p><p class="invite">Dear friend, if you're not sure where you'll spend eternity, and you want to know now, please pray this simple prayer from the bottom of your heart; as he heard my prayer, He will hear yours also.</p><p class="prayer">Dear Lord Jesus, I understand I am a sinner; I also believe You died for my sins and Your Father in Heaven raised you from the dead. I simply ask You to have mercy on my life and save my soul. Come into my heart and my life and take me to Your home someday. In Your Name Lord Jesus I pray and thank You. Amen.</p><p class="turn_back">For continuous help from God, see other side...</p></div>
 <div class="wr"><span>Given to me by</span><span class="line"></span></div>
 <div class="wr"><span>One person I am praying for</span><span class="line"></span></div>
-<div class="notes"><p class="h">Notes</p><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
-<div class="footc"><p class="row"><span>Print one for a friend.</span><span>https://3r4l.org/</span></p></div>
+<div class="notes"><p class="h">Notes</p><div class="line"></div><div class="line"></div><div class="line"></div></div>
+<div class="footc"><p class="row"><span>Print one for a friend.</span><span>3r4l.org</span></p></div>
 </section>
 <section class="side read"><div class="head2"><p class="kicker">Forty day challenge</p><p class="tr">King James Version</p></div><div class="cols"><p class="verse"><b class="d">1</b><b class="ref">1 John 1:9</b> <span class="t">If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.</span></p>
 <p class="verse"><b class="d">2</b><b class="ref">Luke 18:13</b> <span class="t">And the publican, standing afar off, would not lift up so much as his eyes unto heaven, but smote upon his breast, saying, God be merciful to me a sinner.</span></p>
@@ -176,7 +183,7 @@ p{margin:0}
 <p class="verse"><b class="d">18</b><b class="ref">Ephesians 4:32</b> <span class="t">And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.</span></p>
 <p class="verse"><b class="d">19</b><b class="ref">Matthew 5:7</b> <span class="t">Blessed are the merciful: for they shall obtain mercy.</span></p>
 <p class="verse"><b class="d">20</b><b class="ref">Luke 6:36</b> <span class="t">Be ye therefore merciful, as your Father also is merciful.</span></p></div>
-<div class="foot2"><p class="pr">Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.</p><p class="row"><span>Any morning is a good morning to begin again.</span><span>https://3r4l.org/</span></p></div></section>
+<div class="foot2"><p class="pr">Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.</p><p class="row"><span>Any morning is a good morning to begin again.</span><span>3r4l.org</span></p></div></section>
 <section class="side read"><div class="head2"><p class="kicker">Forty day challenge</p><p class="tr">King James Version</p></div><div class="cols"><p class="verse"><b class="d">21</b><b class="ref">Titus 3:5</b> <span class="t">Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost;</span></p>
 <p class="verse"><b class="d">22</b><b class="ref">Ephesians 2:4-5</b> <span class="t">But God, who is rich in mercy, for his great love wherewith he loved us, Even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;)</span></p>
 <p class="verse"><b class="d">23</b><b class="ref">Psalm 86:5</b> <span class="t">For thou, Lord, art good, and ready to forgive; and plenteous in mercy unto all them that call upon thee.</span></p>
@@ -197,5 +204,5 @@ p{margin:0}
 <p class="verse"><b class="d">38</b><b class="ref">1 John 5:13</b> <span class="t">These things have I written unto you that believe on the name of the Son of God; that ye may know that ye have eternal life, and that ye may believe on the name of the Son of God.</span></p>
 <p class="verse"><b class="d">39</b><b class="ref">Romans 8:38-39</b> <span class="t">For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.</span></p>
 <p class="verse"><b class="d">40</b><b class="ref">John 10:28</b> <span class="t">And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand.</span></p></div><div class="close"><p class="day40">That is the forty. Nothing ends today — the rules are for every day after this one.</p><p class="clause">Keep using the rules daily and especially confession. Never stop.</p></div>
-<div class="foot2"><p class="pr">Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.</p><p class="row"><span>Any morning is a good morning to begin again.</span><span>https://3r4l.org/</span></p></div></section>
+<div class="foot2"><p class="pr">Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.</p><p class="row"><span>Any morning is a good morning to begin again.</span><span>3r4l.org</span></p></div></section>
 </body></html>
