@@ -352,6 +352,18 @@
    "status": "DRAFT",
    "written": "2026-10-10T09:0xZ rival:watch-C fleet-1010",
    "_note": "the text door to /watch/ in the home's pair row and in every foot row"
+  },
+  "download_9x16": {
+   "text": "Download the video to share (phone)",
+   "status": "DRAFT",
+   "written": "2026-10-10T10:xxZ seat:rules-box-1010",
+   "_note": "the 9:16 file for WhatsApp / Facebook / YouTube Shorts — the /watch/ page recorded with the master's own track"
+  },
+  "download_16x9": {
+   "text": "Download the video to share (wide)",
+   "status": "DRAFT",
+   "written": "2026-10-10T10:xxZ seat:rules-box-1010",
+   "_note": "the 16:9 file for YouTube / a screen"
   }
  },
  "story": {
