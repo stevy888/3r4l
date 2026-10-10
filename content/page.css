@@ -363,13 +363,16 @@ footer.sand .notice{margin:1rem 0 0}
 .plate .d{fill:none;stroke:var(--plate);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100}
 .plate-next .dawn{animation:dawn .9s ease-out .2s both}
 @keyframes dawn{0%{transform:translateY(30px);opacity:0}100%{transform:none;opacity:1}}
-.plate-next .r1{animation:kpd .9s ease-out both}
-.plate-next .r2{animation:kpd .4s ease-out .5s both}
-.plate-next .way{animation:kpd .95s cubic-bezier(.3,.4,.2,1) .3s both}
-.plate-next .w1{animation:kpd .3s ease-out .8s both}.plate-next .w2{animation:kpd .25s ease-out .85s both}.plate-next .w3{animation:kpd .2s ease-out .9s both}.plate-next .w4{animation:kpd .3s ease-out .95s both}
-.plate-next .x{stroke:var(--draw);stroke-width:9;animation:kpd .45s ease-out 1.15s both}
-@media print{.band .plate{margin:1rem 0}.plate .d,.plate-next .x{stroke:#1b2440}.plate .mass{fill:#fff}.plate .halo{display:none}.plate .sun{fill:#fff;stroke:#1b2440;stroke-width:1.25}}
-@media (prefers-reduced-motion:reduce){.plate .d,.plate-next .dawn,.plate-next .r1,.plate-next .r2,.plate-next .way,.plate-next .w1,.plate-next .w2,.plate-next .w3,.plate-next .w4,.plate-next .x{animation:none;stroke-dashoffset:0;opacity:1;transform:none}}
+/* GRACE (card-1010 rival B, the owner 2026-10-10 "make it more grace orientated / looks like we have to work our way to the cross"): the order is reversed — the ridge (0 → .6 s) and the sun (.2 → 1.1 s), THE CROSS FIRST (.5 → .9 s), then THE WAY DRAWS FROM THE CROSS'S FOOT DOWN to the walker (.8 → 1.3 s), the walker LAST (1.2 → 1.6 s); no steps in the way, no staff. */
+.plate-next .r1{animation:kpd .6s ease-out both}
+.plate-next .r2{animation:kpd .3s ease-out .35s both}
+.plate-next .x{stroke:var(--draw);stroke-width:9;animation:kpd .4s ease-out .5s both}
+.plate-next .way{animation:kpd .5s cubic-bezier(.3,.4,.2,1) .8s both}
+.plate-next .w1{animation:kpd .4s ease-out 1.2s both}
+.plate-next .lt{opacity:0;animation:lt .8s ease-out .9s both}
+@keyframes lt{to{opacity:.18}}
+@media print{.band .plate{margin:1rem 0}.plate .d,.plate-next .x{stroke:#1b2440}.plate .mass{fill:#fff}.plate .halo,.plate-next .lt{display:none}.plate .sun{fill:#fff;stroke:#1b2440;stroke-width:1.25}}
+@media (prefers-reduced-motion:reduce){.plate .d,.plate-next .dawn,.plate-next .r1,.plate-next .r2,.plate-next .way,.plate-next .w1,.plate-next .x{animation:none;stroke-dashoffset:0;opacity:1;transform:none}.plate-next .lt{animation:none;opacity:.18}}
 /* === end PLATE what-next === */
 /* === end PLATE:what-next === */
 /* === PLATE:contact === */
@@ -415,5 +418,22 @@ footer.sand .notice{margin:1rem 0 0}
 .watch .hero.on.s4 .sky .disc>circle:nth-child(2){transition-delay:.6s}
 @media (prefers-reduced-motion:reduce){.watch .sky .disc>circle{animation:none;opacity:1}.watch .hero.on .sky .disc>circle{transition:none}.watch .hero.on .sky .disc>circle:not(:first-child){opacity:0}.watch .hero.on.s4 .sky .disc>circle{opacity:1}}
 /* === end PLATE:watch === */
+/* === PLATE:card === */
+/* === PLATE /card/ — THE GIVING (card-1010, 2026-10-10; the drawing is SVG_GIVE in build.mjs) === */
+/* The page says "Print the card and give it", so the plate is the giving: inside the band after the h1, .45 of the column tall (--plate-h: 122 px at 320, 154 at 390), a breath of 1.25 rem under the h1, its negative bottom margin eating the band's --gap so the drawing's foot IS the band's foot — the two figures stand on the navy's edge and the card's own dawn rises under their feet. One ground line that climbs at the right to the hill's crest; the giver with the card held out, the one who receives with a hand come to it; THE CROSS on the crest, the heaviest mark — all in the plate's one cream line (--plate; the lamp's pale by night: the same drawing, never an inversion). No sun in this plate (the card's dawn under the band is the page's sun — each animation once). THE ARRIVAL, once, ≤ 1.6 s: every stroke a kpd draw-on (dashoffset 100 → 0 with pathLength 100), per-stroke --d / --u inline — the ground, the giver, the card, the receiver, the cross last. Print: hidden (the card is the print). The reduced rule is the LAST in this block (the law). */
+:root{--plate-h:calc((100vw - 2*var(--pad))*.45)}
+@media (min-width:640px){:root{--plate-h:calc(37rem*.45)}}
+.band .plate{position:relative;height:var(--plate-h);margin:1.25rem 0 calc(-1*var(--gap));pointer-events:none}
+.plate>svg{display:block;position:absolute;left:0;bottom:0;width:100%;height:100%}
+.plate .d{fill:none;stroke:var(--plate);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;opacity:0;animation:kpd var(--u,.45s) cubic-bezier(.3,.4,.2,1) var(--d,0s) both}
+.plate .t{stroke-width:5}
+.plate .x{stroke:var(--draw);stroke-width:16}
+.plate .f{opacity:0;animation:gf .7s ease-out .15s both}
+@keyframes gf{to{opacity:1}}
+.held.whole.plated{--dawn-h:1.25rem}
+.plate .lamp{display:none}
+@media print{.plate{display:none}}
+@media (prefers-reduced-motion:reduce){.plate .d{animation:none;stroke-dashoffset:0;opacity:1}.plate .f{animation:none;opacity:1}}
+/* === end PLATE:card === */
 /* REDUCED MOTION, LAST IN THE SHEET (the law): the arrival's strokes stand drawn — the scene selectors named one by one, since `.sky .k1 .d` outweighs `.sky .d`. */
 @media (prefers-reduced-motion:reduce){.sky .road,.sky .cross,.sky .k1 .d,.sky .k2 .d,.sky .k3 .d,.sky .k4 .d,.sky .k5 .d,.sky .k6 .d{animation:none;stroke-dashoffset:0;opacity:1}}
