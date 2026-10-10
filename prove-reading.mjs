@@ -12,7 +12,7 @@ const fi = process.argv.indexOf('--frames'), frames = fi > 0 ? process.argv[fi +
 const R = path.dirname(new URL(import.meta.url).pathname), card = fs.readFileSync(path.join(R, 'content', 'card.txt'), 'utf8');
 let browser, decoder = true; try { browser = await chromium.launch({ channel: 'chrome' }); } catch { browser = await chromium.launch(); decoder = false; }
 const rows = []; let red = 0; const bar = (page, name, ok, got) => { rows.push({ page, name, ok, got }); if (!ok) red++; console.log(`${ok ? 'ok ' : 'RED'} ${page} · ${name} · ${got}`); };
-for (const pg of ['', 'card/']) {
+for (const pg of ['', 'card/', 'watch/']) { // /watch/ (owner 2026-10-10): the one audio, the big door its one hand, the whole card lit line by line
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true }); const page = await ctx.newPage(); const reqs = []; page.on('request', r => reqs.push(r.url()));
   await page.goto(base + pg, { waitUntil: 'load' }); await page.waitForTimeout(1500);
   const name = pg || 'home';

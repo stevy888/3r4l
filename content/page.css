@@ -290,7 +290,7 @@ body.reading .sky .cross{animation:drawon 1.8s ease-out both}
 :root{--plate:#e8d9b8}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--plate:#cfc6b3}}
 :root[data-theme="dark"]{--plate:#cfc6b3}
-.sky .d{fill:none;stroke:var(--plate);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round}
+.sky .d{fill:none;stroke:var(--plate);stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
 .sky .t{stroke-width:5.5}
 .hero.on .sky .d{stroke-dasharray:100;stroke-dashoffset:100;opacity:0;animation:none}
 .hero.on .sky .road{animation:kpd 1.8s cubic-bezier(.3,.4,.2,1) var(--d,.1s) both}
@@ -315,14 +315,14 @@ body.reading .band.lifts .byline{visibility:hidden}
 /* === end PLATE === */
 /* === DESIGN RETURNS (plan 2b rung 4, 2026-10-10) === */
 /* THE PAPER IS PAPER BY NIGHT (the panel's dark lens on /what-next/ 6.4 and /card/ 7.2, both judges: "keep the card a true cream paper with navy text"; the owner's own word on the card, "cream in both themes (a card is paper)"; the home's rules card already does this): the three step papers and the whole card on /card/ take the night cream, navy ink, the gold a step darker on cream — one grammar for every paper on the night page. The hear door never prints (the print proof of rung 3 found it on the paper). */
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .step,:root:not([data-theme="light"]) .whole .face{--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28);--card-shadow:0 22px 38px -14px rgba(0,0,0,.85)}}
-:root[data-theme="dark"] .step,:root[data-theme="dark"] .whole .face{--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28);--card-shadow:0 22px 38px -14px rgba(0,0,0,.85)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .step,:root:not([data-theme="light"]) .whole .face,:root:not([data-theme="light"]) .watch .face{--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28);--card-shadow:0 22px 38px -14px rgba(0,0,0,.85)}}
+:root[data-theme="dark"] .step,:root[data-theme="dark"] .whole .face,:root[data-theme="dark"] .watch .face{--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28);--card-shadow:0 22px 38px -14px rgba(0,0,0,.85)}
 @media print{button.hear,.next.pair,a.tab,.whole button.play,.doors,.shop,.duplex,.how,.verse .door{display:none!important}}
-/* THE ARRIVAL (owner 2026-10-10 "What about animation at top of homepage? Simple animation?"): the plate draws itself ONCE as the page opens — the road (.2 → 1.5 s), then the figures left to right, the path up the hill and the rays, the cross last — all inside 1.6 s, transform-free strokes (dashoffset + opacity on drawings that hold no words); then still. The press (.hero.on) drops the arrival's fill (animation:none) and draws the scenes again to the voice. Reduced motion = the finished plate. */
+/* THE ARRIVAL (owner 2026-10-10 "What about animation at top of homepage? Simple animation?"; redrawn fleet-1010 rival C, THE ROAD IS THE STORY): the plate draws itself ONCE as the page opens, in the card's order — the road (.1 → 1.0 s), the man setting down his sack (.35), the open hands (.5), the reach (.65), the people (.8), the climb up to the summit (.95 → 1.45), the five rays (1.2), and THE CROSS LAST (1.1 → 1.6 s) — all inside 1.6 s, transform-free strokes (dashoffset + opacity on drawings that hold no words); then still. The press (.hero.on) drops the arrival's fill (animation:none) and draws the scenes again to the voice. Reduced motion = the finished plate. */
 .sky .d{stroke-dasharray:100}
-.sky .road{stroke-dasharray:100;stroke-dashoffset:100;animation:kpd 1.3s cubic-bezier(.3,.4,.2,1) .2s both}
-.sky .k1 .d{animation:kpd .45s ease-out .55s both}.sky .k2 .d{animation:kpd .45s ease-out .7s both}.sky .k3 .d{animation:kpd .45s ease-out .85s both}.sky .k5 .d{animation:kpd .45s ease-out 1s both}.sky .k6 .d{animation:kpd .5s ease-out 1.05s both}.sky .k4 .d{animation:kpd .4s ease-out 1.15s both}
-.sky .cross{animation:drawon .7s ease-out .9s both}
+.sky .road{stroke-dasharray:100;stroke-dashoffset:100;animation:kpd .9s cubic-bezier(.3,.4,.2,1) .1s both}
+.sky .k1 .d{animation:kpd .4s ease-out .35s both}.sky .k2 .d{animation:kpd .4s ease-out .5s both}.sky .k3 .d{animation:kpd .4s ease-out .65s both}.sky .k5 .d{animation:kpd .4s ease-out .8s both}.sky .k6 .d{animation:kpd .5s cubic-bezier(.3,.4,.2,1) .95s both}.sky .k4 .d{animation:kpd .35s ease-out 1.2s both}
+.sky .cross{animation:drawon .5s ease-out 1.1s both}
 /* === end DESIGN RETURNS === */
 /* === THE SAND FOOT (owner 2026-10-10 "Footer should be sand on all pages, make it over 9.5 rating") === */
 /* every page ends on the card's own paper: a full-bleed sand band from the foot row to the page's end, the hill-and-cross mark small at its head, the doors in two tidy columns in navy, the light/dark switch and the legal line inside it; the same sand by night (paper is paper), the ink navy in both themes. */
@@ -338,5 +338,67 @@ footer.sand .theme{justify-content:flex-start;margin:.75rem 0 0 -.75rem}
 footer.sand .notice{margin:1rem 0 0}
 @media print{footer.sand{display:none}}
 /* === end THE SAND FOOT === */
+/* === WATCH === */
+/* /WATCH/ — THE READING PAGE (rival C, fleet-1010; owner 2026-10-10 "explain the card the same way … people given the card can watch it on the site"): the home's plate laid out as a page to WATCH. The band holds the morning star, the h1 and one quiet line (.sub, the byline's grammar but never hidden — this page has no label over the drawing); the band's navy runs on under the plate and --lift below it as on the home; the plate is the home's hero at the column's full width (the same arrival: the road, the figures left to right, the path, the rays, the cross last — inside 1.6 s, then still; the same night: the pale line under the lamp; nothing here adds a motion). Under the plate ONE big gold door — button.hear in the .door.big grammar (gold, navy serif, the one shadow; day.js's labelled hand: its text swaps to "Pause" and the door turns navy with gold words while the card is read); it is lifted into the band's foot as the home's card is. Then THE WHOLE CARD on its paper (the two faces; cream by night as every paper is), every line cued, lit as the voice reads it; the page follows the line (/card/'s grammar). WHILE THE CARD IS READ THE PLATE STAYS: #hero.on is sticky at the top of the screen on the band's own navy, so the drawing and the lit line share one screen as the page follows the voice (the lit line keeps the plate's height of air above it and 5 rem below — scroll-margin, no script). Under the card the two quiet doors, then the frame. */
+.watch .hero{background:var(--band);box-shadow:calc(-1*var(--pad)) 0 0 0 var(--band),var(--pad) 0 0 0 var(--band)} /* the navy runs to the device's edges (the shadow) so the stuck plate is full-bleed */
+.watch .hero>.sky{overflow:hidden;height:calc(var(--hero-h) + 4rem)} /* the disc's lower half never leaves the plate (on the home the card's picture covers it; here nothing does): the SVG's own viewport clips it at the plate's foot — no clip-path (the cure of fleet-1010: a clip-path's edge on a fractional device pixel left the disc as a grey hairline under the road at 320, at 1 px and at 2 px alike; the SVG's viewport clip leaves none); the box 4 rem taller than the plate with the drawing at its foot (xMidYMax meet), so the halo's crown above the viewBox still shows */
+.watch .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--band);pointer-events:none} /* the plate's foot in the band's own navy: while the disc rises on arrival (a composited layer under the hill), the hill's anti-aliased bottom edge let the sun through as a grey hairline at the plate's foot in the 700 ms frame — three pixels of navy over the hill's last rows (6 px under the road's lowest ink at 320) end it; by night the band's navy, invisible as the hill meets the band there */
+.watch .hero.on{position:sticky;top:0;z-index:5}
+.watch .next.big{margin:.75rem 0 0;padding:0} /* the door inset to the column's pad as the card under it is (the judges' return: edge to edge it read as a band, not a button); .75 rem of air under the road's foot, the band's foot through the door's middle */
+.watch button.door.hear.big{display:flex;width:100%;justify-content:center;appearance:none;-webkit-appearance:none;border:0;padding:.75rem 1rem;background:var(--gold);color:#1b2440;text-align:center;text-decoration:none;cursor:pointer}
+.watch button.door.hear.big::before{content:"";flex:none;width:0;height:0;border:.5rem solid transparent;border-left:.875rem solid currentColor;border-right:0;margin-right:.75rem} /* THE PLAY GLYPH (both judges): a navy triangle drawn by CSS before the label — a pseudo-element, never a text node or an SVG child (day.js swaps the label by textContent, which would drop a child); two bars while the voice reads, in the door's own ink (gold on navy) */
+.watch button.door.hear.big.on::before{width:.3125rem;height:1rem;border:0;border-left:.3125rem solid currentColor;border-right:.3125rem solid currentColor}
+.watch button.door.hear.big.on{background:var(--band);color:var(--panel-gold);box-shadow:inset 0 0 0 1px var(--panel-gold)}
+.watch #card{margin-top:var(--gap)}
+.watch #card em.c{scroll-margin:calc(var(--hero-h) + 1.5rem) 0 5rem}
+.watch .next.pair{margin-top:1rem}
+.band.lifts .sub{margin:1.125rem 0 0;font:400 .9375rem/1.4 var(--sans);color:var(--band-mute);max-width:36ch}
+@media print{.watch .hero{background:none}.watch .hero::after{display:none}.watch .next.big{display:none}}
+/* === end WATCH === */
+/* === PLATE:what-next === */
+/* === PLATE what-next — THE CLIMB (fleet-1010, rival C) === */
+/* The plate sits INSIDE the band under the h1, --hero-h tall (.45 of the column: 126 px at 320, 154 at 390), its foot 6 px above the band's foot so the hill stands on the band's edge and the three steps follow on the paper. The drawing: the morning sun (E2's three flat steps) rising behind a hill whose ridge climbs from the left edge to a summit on the sun's face; THE WAY up the hill's dark face with four steps cut into it, one walker on the first stretch, THE CROSS on the summit. One line (--plate, cream by day, the lamp's pale by night; 7.5 at 1000 wide ≈ 2.9 px at 390); the cross alone in --draw (navy on the sun by day, pale on the dim pool by night) and heavier. THE ARRIVAL, once, inside 1.6 s: the ridge draws from the left (0 → .9 s) while the sun rises behind it (.2 → 1.1 s, transform/opacity on the disc group); the way climbs (.3 → 1.25 s, its steps cut as the line passes); the walker appears in four strokes (.8 → 1.25 s); the cross LAST (1.15 → 1.6 s). Then still. Night: the same drawing in the pale line, the sun the dim pool. Print: a line drawing in navy on white. Reduced motion: the finished plate — the rule is the LAST in the sheet. */
+.band .plate{position:relative;height:var(--hero-h);margin:1.25rem 0 calc(.375rem - var(--gap));pointer-events:none}
+.plate svg{display:block;width:100%;height:100%}
+.plate .d{fill:none;stroke:var(--plate);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100}
+.plate-next .dawn{animation:dawn .9s ease-out .2s both}
+@keyframes dawn{0%{transform:translateY(30px);opacity:0}100%{transform:none;opacity:1}}
+.plate-next .r1{animation:kpd .9s ease-out both}
+.plate-next .r2{animation:kpd .4s ease-out .5s both}
+.plate-next .way{animation:kpd .95s cubic-bezier(.3,.4,.2,1) .3s both}
+.plate-next .w1{animation:kpd .3s ease-out .8s both}.plate-next .w2{animation:kpd .25s ease-out .85s both}.plate-next .w3{animation:kpd .2s ease-out .9s both}.plate-next .w4{animation:kpd .3s ease-out .95s both}
+.plate-next .x{stroke:var(--draw);stroke-width:9;animation:kpd .45s ease-out 1.15s both}
+@media print{.band .plate{margin:1rem 0}.plate .d,.plate-next .x{stroke:#1b2440}.plate .mass{fill:#fff}.plate .halo{display:none}.plate .sun{fill:#fff;stroke:#1b2440;stroke-width:1.25}}
+@media (prefers-reduced-motion:reduce){.plate .d,.plate-next .dawn,.plate-next .r1,.plate-next .r2,.plate-next .way,.plate-next .w1,.plate-next .w2,.plate-next .w3,.plate-next .w4,.plate-next .x{animation:none;stroke-dashoffset:0;opacity:1;transform:none}}
+/* === end PLATE what-next === */
+/* === end PLATE:what-next === */
+/* === PLATE:contact === */
+/* === PLATE /contact/ — THE OPEN DOOR (fleet-1010, 2026-10-10, contact rival C; the drawing is SVG_CONTACT in build.mjs) === */
+/* The plate sits inside the band after the h1, --hero-h tall (.45 of the column: 126 px at 320, 154 at 390), its bottom edge ON the band's foot (the negative margin takes the band's own bottom pad: the floor the one who is down sits on is the paper's edge, the light runs to it). ONE LINE: the home's --plate cream (pale by night) at 7.5 units, round caps; the cross alone in --draw (navy on the sun's face by day, pale on the dim pool by night — dark is the same drawing in the pale line, the sun its pool). THE ARRIVAL, once, inside 1.6 s: every stroke a kpd draw-on (dashoffset 100 → 0 with pathLength 100), every fill a fadein; per-stroke --d (delay) and --u (duration) inline on the markup; the order is the story's: the figure in the dark, the door, the leaf, the light, the road, the cross last. Print: navy lines on white, the fills and the hill hidden. The reduced rule is the LAST in the sheet (the law). */
+.plate{position:relative;height:var(--hero-h);margin:1.25rem 0 calc(-1*var(--gap));pointer-events:none}
+.plate>svg{display:block;width:100%;height:100%;overflow:visible}
+.plate .d{fill:none;stroke:var(--plate);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;animation:kpd var(--u,.45s) cubic-bezier(.3,.4,.2,1) var(--d,0s) both}
+.plate .x{stroke:var(--draw);stroke-width:8}
+.plate .f{animation:fadein var(--u,.5s) ease-out var(--d,.8s) both}
+@media print{.plate .d{stroke:#1b2440}.plate .f,.plate .h{display:none}}
+@media (prefers-reduced-motion:reduce){.plate .d,.plate .f{animation:none}.plate .d{stroke-dashoffset:0}}
+/* === end PLATE /contact/ === */
+/* === end PLATE:contact === */
+/* === PLATE:story === */
+/* === STORY PLATE — THE SOWER (fleet-1010 rival B, 2026-10-10) === */
+/* The plate of /story/ sits INSIDE the band after the h1 (build.mjs SVG_STORY): .45 of the column tall (--plate-h: 122 px at 320, 154 at 390), a breath of 1.25 rem under the h1, its negative bottom margin eating the band's --gap so the drawing's foot IS the band's foot — the sower stands on the navy's edge and the page's paper begins under his feet. The family's one line (--plate: cream by day, the lamp's pale by night; the furrows and the cards at 5 units), the sun's three flat steps (--halo --halo2 --sun: cream by day, the dim pool by night), the hill the band's own navy (the horizon read as the cut into the disc, as on the home), the cross in --draw (navy on the cream face by day, pale on the dim pool by night) — the same drawing in both themes, never an inversion. THE ARRIVAL (once, ≤ 1.6 s, dashoffset + opacity on strokes that hold no words): the sun's steps fade in (0–.7 s) while the field draws — the ground line (.05 s), the four furrows (.12–.7 s), the horizon (.2–.7 s); the sower (.18–.74 s: back, chest, head, the stride, the strap, the bag arm, the satchel, the sowing arm, the open hand); the cards leave his hand one by one in the arc (.8–1.6 s); THE CROSS draws last on the sun's face (1.2–1.6 s). Then still. Print: the plate stays off the paper (the page prints as his words). Reduced motion (the LAST rule of the sheet, every animated class named): the finished drawing. */
+:root{--plate-h:calc((100vw - 2*var(--pad))*.45)}
+@media (min-width:640px){:root{--plate-h:calc(37rem*.45)}}
+.band .plate{position:relative;height:var(--plate-h);margin:1.25rem 0 calc(-1*var(--gap));pointer-events:none}
+.plate>svg{display:block;position:absolute;left:0;bottom:0;width:100%;height:100%}
+.plate .d{fill:none;stroke:var(--plate);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;opacity:0;animation:kpd var(--u,.45s) cubic-bezier(.3,.4,.2,1) var(--d,0s) both}
+.plate .t{stroke-width:5}
+.plate .f{opacity:0;animation:kpf .7s ease-out both}
+.plate .cross{fill:none;stroke:var(--draw);stroke-width:8;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;opacity:0;animation:kpd .4s ease-out 1.2s both}
+@keyframes kpf{to{opacity:1}}
+@media print{.plate{display:none}}
+@media (prefers-reduced-motion:reduce){.plate .d,.plate .t,.plate .cross{animation:none;stroke-dashoffset:0;opacity:1}.plate .f{animation:none;opacity:1}}
+/* === end STORY PLATE === */
+/* === end PLATE:story === */
 /* REDUCED MOTION, LAST IN THE SHEET (the law): the arrival's strokes stand drawn — the scene selectors named one by one, since `.sky .k1 .d` outweighs `.sky .d`. */
 @media (prefers-reduced-motion:reduce){.sky .road,.sky .cross,.sky .k1 .d,.sky .k2 .d,.sky .k3 .d,.sky .k4 .d,.sky .k5 .d,.sky .k6 .d{animation:none;stroke-dashoffset:0;opacity:1}}

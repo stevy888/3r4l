@@ -328,6 +328,32 @@
    "_note": "the name RULED (owner/3r4l-names-brother-daniel-2026-10-08); the voice named as synthesized"
   }
  },
+ "watch": {
+  "h1": {
+   "text": "The card, explained",
+   "status": "DRAFT",
+   "written": "2026-10-10T09:0xZ rival:watch-C fleet-1010",
+   "_note": "/watch/'s h1 (owner 2026-10-10 \"explain the card the same way … people given the card can watch it on the site\")"
+  },
+  "sub": {
+   "text": "Press play. The hill draws itself and the card lights up line by line as it is read.",
+   "status": "DRAFT",
+   "written": "2026-10-10T09:0xZ rival:watch-C fleet-1010",
+   "_note": "the one quiet line under /watch/'s h1 — what the page does, in one sentence"
+  },
+  "play": {
+   "text": "Watch the card · [m:ss]",
+   "status": "DRAFT",
+   "written": "2026-10-10T09:0xZ rival:watch-C fleet-1010",
+   "_note": "/watch/'s big gold door (button.hear — day.js's hand; the figure from film.json, never a guess); the build appends the ›"
+  },
+  "door": {
+   "text": "Watch the card explained",
+   "status": "DRAFT",
+   "written": "2026-10-10T09:0xZ rival:watch-C fleet-1010",
+   "_note": "the text door to /watch/ in the home's pair row and in every foot row"
+  }
+ },
  "story": {
   "placeholder": {
    "text": "[His words go here — the interview has not been held]",

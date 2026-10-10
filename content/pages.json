@@ -11,6 +11,8 @@
   { "path": "/en/contact/", "lang": "en", "pair": "contact", "page": "contact", "needs": { "card": "lines", "forty": false, "share": false }, "frame": "foot", "hiddenUntil": null, "count": true },
   { "path": "/privacy/", "lang": "tl", "pair": "privacy", "page": "privacy", "needs": { "card": "lines", "forty": false, "share": false }, "frame": "foot", "hiddenUntil": null, "count": true },
   { "path": "/en/privacy/", "lang": "en", "pair": "privacy", "page": "privacy", "needs": { "card": "lines", "forty": false, "share": false }, "frame": "foot", "hiddenUntil": null, "count": true },
+  { "path": "/watch/", "lang": "tl", "pair": "watch", "page": "watch", "needs": { "card": "whole", "forty": false, "share": false }, "frame": "foot", "hiddenUntil": null, "count": false },
+  { "path": "/en/watch/", "lang": "en", "pair": "watch", "page": "watch", "needs": { "card": "whole", "forty": false, "share": false }, "frame": "foot", "hiddenUntil": null, "count": false },
   { "path": "/story/", "lang": "tl", "pair": "story", "page": "story", "needs": { "card": "lines", "forty": false, "share": false }, "frame": "foot", "hiddenUntil": "hasFounder", "count": false },
   { "path": "/en/story/", "lang": "en", "pair": "story", "page": "story", "needs": { "card": "lines", "forty": false, "share": false }, "frame": "foot", "hiddenUntil": "hasFounder", "count": false }
  ]
