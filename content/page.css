@@ -239,9 +239,6 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 /* THE EXACT CARD (owner 2026-10-08 "exact layout I gave"): the printed faces as pictures, the card's own shape, on the yes */
 .real.exact img{display:block;width:100%;height:auto;aspect-ratio:252/144;background:#fff;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42)}
 /* THE RULES CARD on the home (owner 2026-10-08 "just the three rules 1. 2. 3. written out beautifully in that box"): the title line and the three rules at reading size on the cream paper, nothing else — the picture is still the card and the door to /card/. */
-.picture.rules-card .face{padding:2.125rem 1.25rem 1.5rem}
-#card.rules-card .title{font:500 1.1875rem/1.35 var(--serif);letter-spacing:.02em;margin:0 0 1rem;text-wrap:balance}
-#card.rules-card .rules{font:400 1.4375rem/1.5 var(--serif);white-space:pre-line;margin:0;text-wrap:pretty}
 /* THE PRINT SECTION at the foot of /card/ (owner 2026-10-08): "Print your card" — the exact cards shown as he gave them, the doors to the actual card files per language, the shop line, the steps, the close line. */
 .print{margin:var(--gap) 0 0}
 .print h2{font:600 1.25rem/1.4 var(--sans);color:var(--head);margin:0 0 1rem}
@@ -270,21 +267,19 @@ body.reading .sky .cross{animation:drawon 1.8s ease-out both}
 @media print{.read,button.play,audio{display:none!important}em.c.now{background:none;box-shadow:none;text-decoration:none}}
 @media (prefers-reduced-motion:reduce){body.reading .sky .cross{animation:none}em.c{transition:none}}
 /* === RULES BOX === */
-/* THE ENGRAVED CARD (rules-box fleet 2026-10-09, the cure of the winner C with the judges' returns folded): ONE cream card drawn once — no border, a soft inset light along the top edge (thick card stock) and one outer shadow. The small cross-on-the-hill mark (inline SVG, no text) centred above the title so the card belongs to the dawn above it; the title centred in the card's own capitals, tracked, one size down (two lines at 390 and at 320); brother Daniel's gold rule short and centred beneath it; the three rules centred in navy, each balanced to two lines, each numeral large and quiet in gold at the line's head (::first-letter — the typed "1." styled, never doubled). FOLDED: the two hairlines between the rules are gone (air alone separates them — one gold mark on the paper, the rule under the title); the rhythm tightened so all three numerals stand on the first screen at 320 (the box ≈ 310 tall there, 431 before). By night the same paper under the lamp: lamp-lit cream, navy ink and navy mark, the golds toned, the top edge lit, the shadow longer and straight down — never an inversion. */
-.rules-card{--rb-num:#a3781f;--rb-face:#f7efdc;--rb-ink:#1b2440;--rb-gold:#b9892e;--rb-edge:rgba(255,255,255,.65);--rb-shadow:0 12px 26px -12px rgba(80,56,16,.45)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rules-card{--rb-face:#f1e6ca;--rb-ink:#1b2440;--rb-gold:#a98328;--rb-edge:rgba(255,255,255,.85);--rb-shadow:0 22px 38px -14px rgba(0,0,0,.85);--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28)}}
-:root[data-theme="dark"] .rules-card{--rb-face:#f1e6ca;--rb-ink:#1b2440;--rb-gold:#a98328;--rb-edge:rgba(255,255,255,.85);--rb-shadow:0 22px 38px -14px rgba(0,0,0,.85);--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28)}
-.picture.rules-card .frame{border:0;border-radius:9px;background:var(--rb-face);box-shadow:inset 0 1px 0 var(--rb-edge),var(--rb-shadow)}
-.picture.rules-card .face{padding:1.25rem 1.25rem 1.375rem;background:var(--rb-face);color:var(--rb-ink);text-align:center}
+/* E — THE THREE NUMERALS (round rb-1010, owner 2026-10-09 "the three rules for living box … over 9.5 … keep testing"): the numerals ARE the drawing — three large gold numerals down one column at the paper's left, each rule's two lines beside its numeral in navy; the title one quiet tracked line at the head; the card's printed gold rule becomes the paper's TOP EDGE (a 3 px gold edge where the paper rises out of the band); one cream paper, one shadow, no border, no mark; by night the same paper under the lamp — cream, navy ink, the gold edge toned. */
+.rules-card{--rb-num:#a3781f;--rb-face:#f7efdc;--rb-ink:#1b2440;--rb-gold:#b9892e;--rb-shadow:0 12px 26px -12px rgba(80,56,16,.45)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .rules-card{--rb-face:#f1e6ca;--rb-ink:#1b2440;--rb-gold:#a98328;--rb-shadow:0 22px 38px -14px rgba(0,0,0,.85);--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28)}}
+:root[data-theme="dark"] .rules-card{--rb-face:#f1e6ca;--rb-ink:#1b2440;--rb-gold:#a98328;--rb-shadow:0 22px 38px -14px rgba(0,0,0,.85);--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28)}
+.picture.rules-card .frame{border:0;border-radius:9px;background:var(--rb-face);box-shadow:var(--rb-shadow)}
+.picture.rules-card .face{padding:1.75rem 1.25rem 1.5rem 1.375rem;background:var(--rb-face);color:var(--rb-ink);text-align:left;box-shadow:inset 0 3px 0 var(--rb-gold)}
 .picture.rules-card .face::before{display:none}
-#card.rules-card .mark{display:block;width:2rem;height:1.4375rem;margin:0 auto .5rem;overflow:visible}
-#card.rules-card .title{font:500 1.0625rem/1.35 var(--serif);letter-spacing:.06em;color:var(--rb-ink);margin:0 0 .875rem;text-wrap:balance}
-#card.rules-card .title::after{content:"";display:block;width:2.25rem;height:2px;background:var(--rb-gold);border-radius:1px;margin:.625rem auto 0}
-#card.rules-card .rule{font:400 1.3125rem/1.4 var(--serif);color:var(--rb-ink);margin:0;text-wrap:balance}
-#card.rules-card .rule+.rule{margin-top:.625rem}
-#card.rules-card .rule::first-letter{color:var(--rb-num);font-weight:500;font-size:1.5em;line-height:1}
-@media (max-width:359px){.picture.rules-card .face{padding:1.125rem 1rem 1.25rem}#card.rules-card .mark{margin-bottom:.375rem}#card.rules-card .title{font-size:.9375rem;letter-spacing:.04em;margin-bottom:.75rem}#card.rules-card .rule{font-size:1.1875rem;line-height:1.38}#card.rules-card .rule+.rule{margin-top:.4375rem}}
-@media print{.picture.rules-card .frame{box-shadow:none;border:1px solid #000;background:#fff}.picture.rules-card .face{background:#fff}#card.rules-card .title,#card.rules-card .rule,#card.rules-card .rule::first-letter{color:#000}#card.rules-card .title::after{background:#000}}
+#card.rules-card .title{font:500 .9375rem/1.35 var(--serif);letter-spacing:.1em;color:var(--rb-ink);margin:0 0 1.125rem;text-wrap:balance}
+#card.rules-card .rule{font:400 1.3125rem/1.38 var(--serif);color:var(--rb-ink);margin:0;clear:both;text-wrap:pretty}
+#card.rules-card .rule+.rule{margin-top:.875rem}
+#card.rules-card .rule::first-letter{float:left;width:1.2em;text-align:right;color:var(--rb-num);font-weight:400;font-size:2.6em;line-height:.9;margin:.03em .2em 0 0}
+@media (max-width:359px){.picture.rules-card .face{padding:1.5rem 1rem 1.25rem 1.125rem}#card.rules-card .title{font-size:.875rem;letter-spacing:.08em;margin-bottom:.875rem}#card.rules-card .rule{font-size:1.1875rem;line-height:1.36}#card.rules-card .rule+.rule{margin-top:.625rem}#card.rules-card .rule::first-letter{font-size:2.5em}}
+@media print{.picture.rules-card .frame{box-shadow:none;border:1px solid #000;background:#fff}.picture.rules-card .face{background:#fff}#card.rules-card .title,#card.rules-card .rule,#card.rules-card .rule::first-letter{color:#000}}
 @media (prefers-reduced-motion:reduce){.picture.rules-card{animation:none}}
 /* === end RULES BOX === */
 /* === PLATE === */
