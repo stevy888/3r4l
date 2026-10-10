@@ -12,7 +12,7 @@ const fi = process.argv.indexOf('--frames'), frames = fi > 0 ? process.argv[fi +
 const R = path.dirname(new URL(import.meta.url).pathname), card = fs.readFileSync(path.join(R, 'content', 'card.txt'), 'utf8');
 let browser, decoder = true; try { browser = await chromium.launch({ channel: 'chrome' }); } catch { browser = await chromium.launch(); decoder = false; }
 const rows = []; let red = 0; const bar = (page, name, ok, got) => { rows.push({ page, name, ok, got }); if (!ok) red++; console.log(`${ok ? 'ok ' : 'RED'} ${page} · ${name} · ${got}`); };
-for (const pg of ['', 'card/', 'watch/']) { // /watch/ (owner 2026-10-10): the one audio, the big door its one hand, the whole card lit line by line
+for (const pg of ['watch/', 'card/']) { // the home no longer reads (owner 2026-10-10) — /watch/ is the explainer with the one labelled hand // /watch/ (owner 2026-10-10): the one audio, the big door its one hand, the whole card lit line by line
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true }); const page = await ctx.newPage(); const reqs = []; page.on('request', r => reqs.push(r.url()));
   await page.goto(base + pg, { waitUntil: 'load' }); await page.waitForTimeout(1500);
   const name = pg || 'home';
@@ -23,8 +23,8 @@ for (const pg of ['', 'card/', 'watch/']) { // /watch/ (owner 2026-10-10): the o
   const playing = await page.evaluate(() => { const a = document.querySelector('audio.card'), lab = document.querySelector('button.hear') || document.querySelector('button.play'); return { paused: a.paused, t: a.currentTime, reading: document.body.classList.contains('reading'), label: lab.textContent.trim(), on: (document.querySelector('button.play') || document.querySelector('button.hear')).classList.contains('on') }; }); // the labelled hand: the hear door on the home, the round glyph on /card/
   if (decoder) { bar(name, 'the tap plays the audio (a real decoder)', !playing.paused && playing.t > 0.5, `paused ${playing.paused} t ${playing.t.toFixed(1)}`); bar(name, 'a request to film/card.m4a after the tap', reqs.some(u => /\/film\/card\.m4a/.test(u)), reqs.filter(u => /\/film\//.test(u)).length); }
   bar(name, 'body.reading + the door on', playing.reading && playing.on, `reading ${playing.reading} on ${playing.on} label "${playing.label}"`);
-  if (pg === '') bar(name, 'the door reads the pause label', playing.label === 'Pause', playing.label);
-  if (pg === '') bar(name, 'the cross on the hill is drawing (an animation on .sky .cross)', await page.evaluate(() => document.getAnimations().some(a => a.effect && a.effect.target && a.effect.target.classList.contains('cross') && a.playState !== 'idle')), 'see'); // the home's hero only (/card/ has the dawn, not the hill)
+  if (pg === 'watch/') bar(name, 'the door reads the pause label', playing.label === 'Pause', playing.label);
+  if (pg === 'watch/') bar(name, 'the cross on the hill is drawing (an animation on .sky .cross)', await page.evaluate(() => document.getAnimations().some(a => a.effect && a.effect.target && a.effect.target.classList.contains('cross') && a.playState !== 'idle')), 'see'); // the home's hero only (/card/ has the dawn, not the hill)
   if (decoder) await page.evaluate(() => document.querySelector('audio.card').pause());
   for (const [t, cue, extra] of [[5, 0, null], [31, 5, 'note'], [100, 13, 'prayer']]) { // the cue indexes are 0-based: 0 = the title (2.4–6.8 s), 5 = "When we can't do rule 2 or 3…" (30.6–37.7), 13 = "Dear Lord Jesus, I understand…" (90.2–)
     await page.evaluate(t => window.__at(t), t); await page.waitForTimeout(700);
@@ -32,12 +32,12 @@ for (const pg of ['', 'card/', 'watch/']) { // /watch/ (owner 2026-10-10): the o
     bar(name, `t ${t}: cue ${cue} lit`, lit.length >= 1 && lit.every(l => l.c === cue), JSON.stringify(lit.map(l => l.c)));
     bar(name, `t ${t}: the lit words are the card's words`, lit.every(l => card.includes(l.text)), lit.map(l => l.text.slice(0, 30)).join(' | '));
     bar(name, `t ${t}: the lit cue is shown and in view`, lit.every(l => l.shown && l.inView), JSON.stringify(lit.map(l => [l.shown, l.inView])));
-    if (pg === '' && extra) bar(name, `t ${t}: the home's hidden ${extra} line is shown (.read.on)`, await page.evaluate(k => { const r = document.querySelector('.hero .read'); const p = r && r.querySelector('p.' + k + '.on'); return !!(r && r.classList.contains('on') && p && p.offsetParent !== null); }, extra), 'see');
+    if (false && extra) bar(name, `t ${t}: the home's hidden ${extra} line is shown (.read.on)`, await page.evaluate(k => { const r = document.querySelector('.hero .read'); const p = r && r.querySelector('p.' + k + '.on'); return !!(r && r.classList.contains('on') && p && p.offsetParent !== null); }, extra), 'see');
     if (frames) await page.screenshot({ path: path.join(frames, `reading-${name.replace('/', '')}-t${t}.png`) });
   }
   await page.evaluate(() => { const a = document.querySelector('audio.card'); window.__at(999); a.dispatchEvent(new Event('ended')); }); await page.waitForTimeout(4600);
   const after = await page.evaluate(() => ({ lit: document.querySelectorAll('em.c.now').length, reading: document.body.classList.contains('reading'), readOn: document.querySelectorAll('.read.on, .read .on').length, label: (document.querySelector('button.hear') || document.querySelector('button.play')).textContent.trim() }));
-  if (pg === '') bar(name, 'the hear door under the box also plays (a second tap hand)', await page.evaluate(() => { const h = document.querySelector('button.hear'); if (!h) return false; h.click(); const p = !document.querySelector('audio.card').paused; document.querySelector('audio.card').pause(); return p; }), 'see');
+  if (false) bar(name, 'the hear door under the box also plays (a second tap hand)', await page.evaluate(() => { const h = document.querySelector('button.hear'); if (!h) return false; h.click(); const p = !document.querySelector('audio.card').paused; document.querySelector('audio.card').pause(); return p; }), 'see');
   bar(name, 'ended: nothing lit, not reading, the paper folded', after.lit === 0 && !after.reading && after.readOn === 0, JSON.stringify(after));
   if (frames) await page.screenshot({ path: path.join(frames, `reading-${name.replace('/', '')}-ended.png`) });
   await ctx.close();
