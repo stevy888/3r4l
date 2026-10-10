@@ -31,7 +31,9 @@ const DRAFT = {
 const ADDRESS = 'https://3r4l.org/', SITE = '3r4l.org'; // THE ADDRESS OF RECORD (the apex alone, as the card and the QR print it — a route can move, the apex outlives every deploy; seat 2026-10-09 on the refuter's catch)
 
 const R = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..'), C = p => path.join(R, 'content', p), J = p => JSON.parse(fs.readFileSync(p, 'utf8'));
-const sheet = J(C('sheet.json')), S2 = J(C('sheet2.json')), verses = J(C('verses.json')), card = fs.readFileSync(C('card.txt'), 'utf8');
+const arg = k => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : null; }, LANG = arg('--lang') || 'en', OUTPDF = arg('--out'); // --lang tl (rung 2): the sheet's labels from the Tagalog sheets of record (content/sheet-tl.json + sheet2-tl.json — the pastor's check); the verses stay the KJV with their references and the card's words stay brother Daniel's — no Tagalog Bible text is written here and nothing is machine-translated (the DRAFT writing rules above stay English until a pastor's line); --out <file.pdf>: the PDF (its HTML beside it) there instead of docs/forty.pdf
+if (LANG !== 'en' && LANG !== 'tl') throw new Error('--lang en|tl'); if (LANG === 'tl' && !(fs.existsSync(C('sheet-tl.json')) && fs.existsSync(C('sheet2-tl.json')))) throw new Error("--lang tl needs content/sheet-tl.json and content/sheet2-tl.json (the pastor's check)");
+const sheet = J(C(LANG === 'tl' ? 'sheet-tl.json' : 'sheet.json')), S2 = J(C(LANG === 'tl' ? 'sheet2-tl.json' : 'sheet2.json')), verses = J(C('verses.json')), card = fs.readFileSync(C('card.txt'), 'utf8');
 const block = k => (new RegExp(`^== ${k} ==\\n([\\s\\S]*?)(?=\\n== \\w+ ==\\n|(?![\\s\\S]))`, 'm').exec(card) || [, ''])[1].replace(/\n$/, '');
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const F = w => `file://${R}/content/fonts/source-serif-4-${w}.woff2`;
@@ -77,7 +79,7 @@ const closeEl = `<div class="close"><p class="day40">${esc(day40)}</p></div>`; /
 const readingSide = (vs, last) => `<section class="side read">${head(esc(translation))}<div class="cols">${vs.map(verse).join('\n')}</div>${last ? closeEl : ''}
 <div class="foot2">${footRow(esc(DRAFT.again))}</div></section>`; // the little prayer once a leaf (p1's head, p2's words) — not at every foot (restraint, round 2)
 
-const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${esc(title)} — ${SITE}</title><style>
+const html = `<!doctype html><html lang="${LANG}"><head><meta charset="utf-8"><title>${esc(title)} — ${SITE}</title><style>
 @font-face{font-family:"Source Serif 4";font-weight:400;font-style:normal;src:url(${F('400')}) format("woff2")}
 @font-face{font-family:"Source Serif 4";font-weight:500;font-style:normal;src:url(${F('500')}) format("woff2")}
 @font-face{font-family:"Source Serif 4";font-weight:400;font-style:italic;src:url(${F('400i')}) format("woff2")}
@@ -159,7 +161,7 @@ ${writeRule(DRAFT.person)}
 ${readingSide(verses.slice(0, 20), false)}
 ${readingSide(verses.slice(20), true)}
 </body></html>`;
-const out = path.join(R, 'kit', 'forty-sheet.html'); fs.writeFileSync(out, html);
+const out = OUTPDF ? OUTPDF.replace(/\.pdf$/i, '') + '.html' : path.join(R, 'kit', 'forty-sheet.html'); fs.writeFileSync(out, html);
 const { chromium } = await import('@playwright/test'); const b = await chromium.launch(); const p = await b.newPage(); await p.goto('file://' + out, { waitUntil: 'load' }); await p.evaluate(() => document.fonts.ready);
 // SELF-CHECK: every block inside its side; no column overflow (an overflow column would run off the page); where each page's content ends
 const check = await p.evaluate(() => { const px = mm => mm * 96 / 25.4, out = [];
@@ -169,5 +171,5 @@ const check = await p.evaluate(() => { const px = mm => mm * 96 / 25.4, out = []
     out.push(`p${i + 1} content ends ${((maxB - S.top) / px(1)).toFixed(1)}mm of 244 (foot begins ${footTop.toFixed(1)}mm)${maxB - S.top > footTop * px(1) ? ' OVERLAP' : ''}`); });
   return out; });
 console.log(check.join('\n'));
-await p.pdf({ path: path.join(R, 'docs', 'forty.pdf'), format: 'A4', printBackground: true, preferCSSPageSize: true }); await b.close();
-console.log('docs/forty.pdf written —', verses.length, 'days;', fs.statSync(path.join(R, 'docs', 'forty.pdf')).size, 'B');
+const pdf = OUTPDF || path.join(R, 'docs', 'forty.pdf'); await p.pdf({ path: pdf, format: 'A4', printBackground: true, preferCSSPageSize: true }); await b.close();
+console.log((OUTPDF ? pdf : 'docs/forty.pdf') + ' written —', verses.length, 'days;', fs.statSync(pdf).size, 'B', LANG === 'tl' ? '· --lang tl: the labels from the Tagalog sheets, the verses the KJV' : '');
