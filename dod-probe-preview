@@ -1,0 +1,20 @@
+#!/bin/bash
+# dod-probe-preview — THE DoD PROBE of the phase-2b ladder (handoffs/2026-10-09-3r4l-design-features-100-FINISH-HANDOFF.md §3): counts the ten
+# units of the preview DoD from the markers and the proofs on disk — read-only, < 20 s, prints "<done>\t10". The apex probe (dod-probe) stays
+# beside it for the ship. Units: 1 the number (panel r2 banked) · 2 his eye (p2-eye-pages.marker) · 3 the home (the rules card, the audio, the
+# foot) · 4 /what-next/ (forty.pdf, the sign-up proven on the fixture, the loader's dry run) · 5 /card/ (card.pdf, the hear door, the print proof)
+# · 6 /contact/ + /privacy/ proven on fixtures · 7 /story/ proven · 8 Tagalog proven · 9 the small features (favicon, manifest, worker, the
+# offline proof) · 10 the instrument green (the fence rc 0, the record rig 0 red).
+R="$(cd "$(dirname "$0")" && pwd)"; SEAT=/Users/aibrain/.conductor-runs/Prog-ThreeRulesSite2/seat-r0; FX=$SEAT/rb-1010/rung2/FIXTURE-PROOFS.md; n=0
+u() { if eval "$2"; then n=$((n+1)); echo "ok  $1"; else echo "--  $1"; fi; }
+u "1 the number (panel r2 banked)" "test -s $SEAT/panel/r2/panel.json"
+u "2 his eye (p2-eye-pages.marker)" "test -f $R/markers/p2-eye-pages.marker"
+u "3 the home: the rules card, the one audio, the sand foot" "grep -q 'id=\"card\" class=\"picture rules-card\"' $R/docs/index.html && grep -q '<audio class=\"card\"' $R/docs/index.html && grep -q '<footer class=\"sand\"' $R/docs/index.html"
+u "4 /what-next/: forty.pdf, the sign-up proven, the loader's dry run" "test -s $R/docs/forty.pdf && test -s $FX && grep -qi 'sign-up' $FX && test -s $SEAT/rb-1010/rung2/dry-run.txt"
+u "5 /card/: card.pdf, the hear door, the print proof" "test -s $R/docs/card.pdf && grep -q 'button class=\"door hear\"' $R/docs/card/index.html && test -s $SEAT/rb-1010/rung3/print-card.pdf"
+u "6 /contact/ and /privacy/ proven on fixtures" "test -s $FX && grep -qi 'contact' $FX && grep -qi 'privacy\|controller' $FX"
+u "7 /story/ proven on the fixture" "test -s $FX && grep -qi 'story' $FX"
+u "8 Tagalog proven on the fixture twins" "test -s $FX && grep -qi 'tagalog' $FX"
+u "9 favicon, manifest, worker, the offline proof" "test -s $R/docs/favicon.svg && test -s $R/docs/manifest.webmanifest && test -s $R/docs/sw.js && grep -q '^OK offline proof' $SEAT/rb-1010/rung3/offline-proof.txt"
+u "10 the instrument green (fence rc 0, the record rig 0 red)" "bash $R/check-wording $R/docs/ >/dev/null 2>&1 && python3 -c \"import json,sys; sys.exit(0 if json.load(open('$R/markers/measures.json'))['red']==0 else 1)\""
+printf '%s\t10\n' "$n"

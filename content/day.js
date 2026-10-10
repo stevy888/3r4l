@@ -38,6 +38,9 @@
     pl.addEventListener('click',toggle);if(hr&&hr!==pl){hr.addEventListener('click',toggle);}
     window.__at=tick; /* the proof's hand (prove-reading.mjs): lights the cue at a time without a decoder */
   }
+  if('serviceWorker' in navigator&&document.referrer.indexOf(location.origin)===0){ /* THE OFFLINE WORKER (rung 3): registered from the second page on — a first load asks for nothing but the fonts */
+    navigator.serviceWorker.register(document.querySelector('link[rel=manifest]').href.replace(/manifest\.webmanifest$/,'sw.js')).catch(function(){});
+  }
   var b=document.getElementById('share');
   if(b&&navigator.share){
     var f=document.getElementById('share-links');

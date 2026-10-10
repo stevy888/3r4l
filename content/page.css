@@ -285,7 +285,7 @@ body.reading .sky .cross{animation:drawon 1.8s ease-out both}
 :root[data-theme="dark"]{--plate:#cfc6b3}
 .sky .d{fill:none;stroke:var(--plate);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round}
 .sky .t{stroke-width:5.5}
-.hero.on .sky .d{stroke-dasharray:100;stroke-dashoffset:100;opacity:0}
+.hero.on .sky .d{stroke-dasharray:100;stroke-dashoffset:100;opacity:0;animation:none}
 .hero.on .sky .road{animation:kpd 1.8s cubic-bezier(.3,.4,.2,1) var(--d,.1s) both}
 .hero.on.s1 .k1 .d,.hero.on.s2 .k2 .d,.hero.on.s3 .k3 .d,.hero.on.s4 .k4 .d,.hero.on.s5 .k5 .d,.hero.on.s6 .k6 .d{animation:kpd var(--u,.5s) cubic-bezier(.3,.4,.2,1) var(--d,0s) both}
 @keyframes kpd{0%{stroke-dashoffset:100;opacity:0}6%{opacity:1}100%{stroke-dashoffset:0;opacity:1}}
@@ -306,3 +306,27 @@ body.reading .sky .cross{animation:drawon 1.8s ease-out both}
 .band.lifts .byline{margin:1.125rem 0 0;font:400 .875rem/1.35 var(--sans);color:var(--band-mute);max-width:36ch}
 body.reading .band.lifts .byline{visibility:hidden}
 /* === end PLATE === */
+/* === DESIGN RETURNS (plan 2b rung 4, 2026-10-10) === */
+/* THE PAPER IS PAPER BY NIGHT (the panel's dark lens on /what-next/ 6.4 and /card/ 7.2, both judges: "keep the card a true cream paper with navy text"; the owner's own word on the card, "cream in both themes (a card is paper)"; the home's rules card already does this): the three step papers and the whole card on /card/ take the night cream, navy ink, the gold a step darker on cream — one grammar for every paper on the night page. The hear door never prints (the print proof of rung 3 found it on the paper). */
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .step,:root:not([data-theme="light"]) .whole .face{--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28);--card-shadow:0 22px 38px -14px rgba(0,0,0,.85)}}
+:root[data-theme="dark"] .step,:root[data-theme="dark"] .whole .face{--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28);--card-shadow:0 22px 38px -14px rgba(0,0,0,.85)}
+@media print{button.hear,.next.pair,a.tab,.whole button.play,.doors,.shop,.duplex,.how,.verse .door{display:none!important}}
+/* THE ARRIVAL (owner 2026-10-10 "What about animation at top of homepage? Simple animation?"): the plate draws itself ONCE as the page opens — the road (.2 → 1.5 s), then the figures left to right, the path up the hill and the rays, the cross last — all inside 1.6 s, transform-free strokes (dashoffset + opacity on drawings that hold no words); then still. The press (.hero.on) drops the arrival's fill (animation:none) and draws the scenes again to the voice. Reduced motion = the finished plate. */
+.sky .d{stroke-dasharray:100}
+.sky .road{stroke-dasharray:100;stroke-dashoffset:100;animation:kpd 1.3s cubic-bezier(.3,.4,.2,1) .2s both}
+.sky .k1 .d{animation:kpd .45s ease-out .55s both}.sky .k2 .d{animation:kpd .45s ease-out .7s both}.sky .k3 .d{animation:kpd .45s ease-out .85s both}.sky .k5 .d{animation:kpd .45s ease-out 1s both}.sky .k6 .d{animation:kpd .5s ease-out 1.05s both}.sky .k4 .d{animation:kpd .4s ease-out 1.15s both}
+.sky .cross{animation:drawon .7s ease-out .9s both}
+/* === end DESIGN RETURNS === */
+/* === THE SAND FOOT (owner 2026-10-10 "Footer should be sand on all pages, make it over 9.5 rating") === */
+/* every page ends on the card's own paper: a full-bleed sand band from the foot row to the page's end, the hill-and-cross mark small at its head, the doors in two tidy columns in navy, the light/dark switch and the legal line inside it; the same sand by night (paper is paper), the ink navy in both themes. */
+footer.sand{margin:var(--gap) calc(-1*var(--pad)) -3rem;padding:1.5rem var(--pad) 1.5rem;background:#f7efdc;color:#1b2440;--door:#1b2440;--door-rule:#a3781f;--mute:#5d5d5d;--gold:#b9892e;border-top:1px solid #e6dabb}
+footer.sand .mark{display:block;width:2rem;height:1.4375rem;margin:0 auto 1rem;overflow:visible}
+footer.sand .mark path{stroke:#1b2440}
+footer.sand .next.foot{display:block;margin:0;border-top:0}
+footer.sand .next.foot .door{width:auto;margin:0 0 .5rem;font-size:1.125rem}
+footer.sand .theme{margin:1rem 0 0}
+footer.sand .notice{margin:1rem auto 0;text-align:center}
+@media print{footer.sand{display:none}}
+/* === end THE SAND FOOT === */
+/* REDUCED MOTION, LAST IN THE SHEET (the law): the arrival's strokes stand drawn — the scene selectors named one by one, since `.sky .k1 .d` outweighs `.sky .d`. */
+@media (prefers-reduced-motion:reduce){.sky .road,.sky .cross,.sky .k1 .d,.sky .k2 .d,.sky .k3 .d,.sky .k4 .d,.sky .k5 .d,.sky .k6 .d{animation:none;stroke-dashoffset:0;opacity:1}}

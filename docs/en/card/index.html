@@ -8,6 +8,9 @@
 <meta property="og:title" content="Print the card and give it.">
 <meta property="og:description" content="Print the card and give it.">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1b2440">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../../manifest.webmanifest">
 <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t)}}catch(e){}</script>
 <style>
 @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:500;font-display:swap;src:url(../../fonts/source-serif-4-500.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201D,U+2026}
@@ -262,7 +265,7 @@ body.reading .sky .cross{animation:drawon 1.8s ease-out both}
 :root[data-theme="dark"]{--plate:#cfc6b3}
 .sky .d{fill:none;stroke:var(--plate);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round}
 .sky .t{stroke-width:5.5}
-.hero.on .sky .d{stroke-dasharray:100;stroke-dashoffset:100;opacity:0}
+.hero.on .sky .d{stroke-dasharray:100;stroke-dashoffset:100;opacity:0;animation:none}
 .hero.on .sky .road{animation:kpd 1.8s cubic-bezier(.3,.4,.2,1) var(--d,.1s) both}
 .hero.on.s1 .k1 .d,.hero.on.s2 .k2 .d,.hero.on.s3 .k3 .d,.hero.on.s4 .k4 .d,.hero.on.s5 .k5 .d,.hero.on.s6 .k6 .d{animation:kpd var(--u,.5s) cubic-bezier(.3,.4,.2,1) var(--d,0s) both}
 @keyframes kpd{0%{stroke-dashoffset:100;opacity:0}6%{opacity:1}100%{stroke-dashoffset:0;opacity:1}}
@@ -280,6 +283,22 @@ body.reading .sky .cross{animation:drawon 1.8s ease-out both}
 .sky .k4 .d{stroke:var(--ray)}
 .band.lifts .byline{margin:1.125rem 0 0;font:400 .875rem/1.35 var(--sans);color:var(--band-mute);max-width:36ch}
 body.reading .band.lifts .byline{visibility:hidden}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .step,:root:not([data-theme="light"]) .whole .face{--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28);--card-shadow:0 22px 38px -14px rgba(0,0,0,.85)}}
+:root[data-theme="dark"] .step,:root[data-theme="dark"] .whole .face{--card-face:#f1e6ca;--card-ink:#1b2440;--card-body:#1b2440;--card-edge:#1b2440;--gold-text:#6e4e14;--hl:rgba(185,137,46,.28);--card-shadow:0 22px 38px -14px rgba(0,0,0,.85)}
+@media print{button.hear,.next.pair,a.tab,.whole button.play,.doors,.shop,.duplex,.how,.verse .door{display:none!important}}
+.sky .d{stroke-dasharray:100}
+.sky .road{stroke-dasharray:100;stroke-dashoffset:100;animation:kpd 1.3s cubic-bezier(.3,.4,.2,1) .2s both}
+.sky .k1 .d{animation:kpd .45s ease-out .55s both}.sky .k2 .d{animation:kpd .45s ease-out .7s both}.sky .k3 .d{animation:kpd .45s ease-out .85s both}.sky .k5 .d{animation:kpd .45s ease-out 1s both}.sky .k6 .d{animation:kpd .5s ease-out 1.05s both}.sky .k4 .d{animation:kpd .4s ease-out 1.15s both}
+.sky .cross{animation:drawon .7s ease-out .9s both}
+footer.sand{margin:var(--gap) calc(-1*var(--pad)) -3rem;padding:1.5rem var(--pad) 1.5rem;background:#f7efdc;color:#1b2440;--door:#1b2440;--door-rule:#a3781f;--mute:#5d5d5d;--gold:#b9892e;border-top:1px solid #e6dabb}
+footer.sand .mark{display:block;width:2rem;height:1.4375rem;margin:0 auto 1rem;overflow:visible}
+footer.sand .mark path{stroke:#1b2440}
+footer.sand .next.foot{display:block;margin:0;border-top:0}
+footer.sand .next.foot .door{width:auto;margin:0 0 .5rem;font-size:1.125rem}
+footer.sand .theme{margin:1rem 0 0}
+footer.sand .notice{margin:1rem auto 0;text-align:center}
+@media print{footer.sand{display:none}}
+@media (prefers-reduced-motion:reduce){.sky .road,.sky .cross,.sky .k1 .d,.sky .k2 .d,.sky .k3 .d,.sky .k4 .d,.sky .k5 .d,.sky .k6 .d{animation:none;stroke-dashoffset:0;opacity:1}}
 </style>
 </head>
 <body>
@@ -289,6 +308,7 @@ body.reading .band.lifts .byline{visibility:hidden}
 <div class="held whole"><a class="tab" href="#doors">Print ›</a><audio class="card" preload="none"><source src="../../film/card.m4a" type="audio/mp4"></audio><button class="play round" type="button" data-pause="Pause" aria-label="Hear the card read · 2:27 · 2.4 MB"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="tri" d="M8 5L19 12L8 19Z" fill="currentColor"/><path class="bars" d="M7 5H10V19H7ZM14 5H17V19H14Z" fill="currentColor"/></svg></button><section id="card"><div class="face front"><p class="title"><em class="c" data-c="0">THREE RULES FOR LIVING FROM THE LORD'S PRAYER:</em></p><p class="rules"><em class="c" data-c="1">1. Confess all sins to God (Tell it) daily.</em>
 <em class="c" data-c="2">2. Surrender your will to God daily.</em>
 <em class="c" data-c="3">3. Forgive others and yourself daily.</em></p><p class="note"><em class="c" data-c="4">Dear friend, rule 1 is the key to our success.</em> <em class="c" data-c="5">When we can't do rule 2 or 3, we must always go to rule 1 and confess it; God will forgive...</em> <em class="c" data-c="6">We must never stop confessing, even if they are the same old sins we can't seem to stop doing.</em> <em class="c" data-c="7">As we practice these rules everyday...</em> <em class="c" data-c="8">God will change our lives.</em></p><p class="note"><em class="c" data-c="9">Also, practice the following little prayer all day:</em></p><p class="daily_prayer"><em class="c" data-c="10">Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.</em></p><p class="turn"><em class="c" data-c="11">See The Other Side Of This Card For More Help.</em></p></div><div class="face back"><p class="invite"><em class="c" data-c="12">Dear friend, if you're not sure where you'll spend eternity, and you want to know now, please pray this simple prayer from the bottom of your heart; as he heard my prayer, He will hear yours also.</em></p><p class="prayer"><em class="c" data-c="13">Dear Lord Jesus, I understand I am a sinner; I also believe You died for my sins and Your Father in Heaven raised you from the dead.</em> <em class="c" data-c="14">I simply ask You to have mercy on my life and save my soul.</em> <em class="c" data-c="15">Come into my heart and my life and take me to Your home someday.</em> <em class="c" data-c="16">In Your Name Lord Jesus I pray and thank You.</em> <em class="c" data-c="17">Amen.</em></p><p class="turn_back"><em class="c" data-c="18">For continuous help from God, see other side...</em></p></div></section><svg class="dawn" viewBox="0 0 1000 100" preserveAspectRatio="xMaxYMax slice" aria-hidden="true" focusable="false"><circle class="glow" cx="839" cy="100" r="88" fill="var(--glow)"/><circle class="glow" cx="839" cy="100" r="78" fill="var(--glow2)"/><circle class="glow" cx="839" cy="100" r="68" fill="var(--glow3)"/><path class="ray" d="M910.5 91.2L996 77.9L910.1 88.7ZM908.2 80.1L996 52L907.5 77.8ZM904.3 69.6L980.6 30.9L903.2 67.3ZM898.7 59.7L943 27.2L897.3 57.7ZM891.7 50.9L916.4 25.3L889.9 49.1ZM788.1 49.1L761.6 25.3L786.3 50.9ZM780.7 57.7L735 27.2L779.3 59.7ZM774.8 67.3L697.4 30.9L773.7 69.6ZM770.5 77.8L641.1 39.5L769.8 80.1ZM767.9 88.7L562.7 61.2L767.5 91.2Z" fill="var(--ray)"/><circle class="sun" cx="839" cy="100" r="60" fill="var(--sun)"/></svg><svg class="lamp night" viewBox="0 0 60 68" aria-hidden="true" focusable="false"><path d="M30 0V26" fill="none" stroke="var(--draw)" stroke-width="1.25" vector-effect="non-scaling-stroke"/><path d="M22 26H38L46 42H14Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.25" stroke-linejoin="round" vector-effect="non-scaling-stroke"/><circle cx="30" cy="47" r="4" fill="var(--bulb)"/><path d="M19 54L15 60M30 55V62M41 54L45 60" fill="none" stroke="var(--lamp-ray)" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></div>
+<p class="next pair"><button class="door hear" type="button" data-pause="Pause">Hear the card read · 2:27 · 2.4 MB ›</button></p>
 <section class="verse">
 <p class="label">Today's verse</p>
 <ol class="forty">
@@ -362,9 +382,9 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
 </ol>
 <p class="close prose">A card weighs nothing. In a hand it can carry a whole life home.</p>
 </section>
-<p class="next foot"><a class="door" href="../../contact/">How are you doing? ›</a><a class="door" href="../../what-next/">Forty day challenge ›</a><a class="door" href="../../">Home ›</a></p>
+<footer class="sand"><svg class="mark" viewBox="0 0 56 40" aria-hidden="true" focusable="false"><path d="M2 38C14 34 22 22 30 22C38 22 46 30 54 36" fill="none" stroke="var(--rb-ink)" stroke-width="1.4" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path d="M30 22V4M23.5 9.5H36.5" fill="none" stroke="var(--rb-ink)" stroke-width="1.4" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><p class="next foot"><a class="door" href="../../contact/">How are you doing? ›</a><a class="door" href="../../what-next/">Forty day challenge ›</a><a class="door" href="../../">Home ›</a></p>
 <p class="theme"><button type="button" id="theme" aria-label="Dark" data-label-light="Light" data-label-dark="Dark"><svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linejoin="round"/></svg><svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="var(--gold)" stroke-width="1.4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round"/></svg></button></p>
-</main>
+</footer></main>
 <script>
 (function(){
   var S={"y":2026,"m":10,"d":7};
@@ -402,6 +422,9 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
     var toggle=function(ev){ev.preventDefault();ev.stopPropagation();if(au.paused){au.play();}else{au.pause();}};
     pl.addEventListener('click',toggle);if(hr&&hr!==pl){hr.addEventListener('click',toggle);}
     window.__at=tick;
+  }
+  if('serviceWorker' in navigator&&document.referrer.indexOf(location.origin)===0){
+    navigator.serviceWorker.register(document.querySelector('link[rel=manifest]').href.replace(/manifest\.webmanifest$/,'sw.js')).catch(function(){});
   }
   var b=document.getElementById('share');
   if(b&&navigator.share){
