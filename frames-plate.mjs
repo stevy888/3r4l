@@ -24,7 +24,7 @@ for (const [w, h, scheme] of [[390, 844, 'light'], [390, 844, 'dark'], [320, 568
   const page = await ctx.newPage(); await page.goto(base, { waitUntil: 'load' }); await page.waitForTimeout(2200);
   const n = `home-${w}x${h}-${scheme}`;
   await page.screenshot({ path: path.join(out, `${n}-rest.png`) });
-  const ok = await page.evaluate(() => !!(document.querySelector('audio.card') && document.querySelector('button.play') && window.__at));
+  const ok = await page.evaluate(() => !!(document.querySelector('audio.card') && (document.querySelector('button.play') || document.querySelector('button.hear')) && window.__at));
   if (!ok) { console.log(`${n}: no audio/play door/cue hand — rest only`); await ctx.close(); continue; }
   await page.evaluate(() => { const a = document.querySelector('audio.card'); a.dispatchEvent(new Event('play')); }); await page.waitForTimeout(300);
   for (const [t, k] of MOMENTS) { await page.evaluate(t => window.__at(t), t); await page.waitForTimeout(2600); await page.screenshot({ path: path.join(out, `${n}-t${String(t).padStart(3, '0')}-${k}.png`) }); }

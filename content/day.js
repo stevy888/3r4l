@@ -8,7 +8,7 @@
   /* THE LIVING CARD (owner 2026-10-09): the one audio (0 bytes before the tap), the play door, the cues the card was read to ([start, end] per cue, baked from content/card.vtt);
      the cue being read wears .now on every <em class="c"> that carries it (the home's paper and /card/'s whole card share the numbering); on the home the hidden lines of the paper
      arrive as the voice reaches them (.read.on, p.on) and fold away four seconds after the reading; the page follows the line when it leaves the screen. */
-  var CU=__CUES__,au=document.querySelector('audio.card'),pl=document.querySelector('button.play'),hr=document.querySelector('button.hear');
+  var CU=__CUES__,au=document.querySelector('audio.card'),hr=document.querySelector('button.hear'),pl=document.querySelector('button.play')||hr; /* the home has no door on the drawing (rb-2): the hear door is the one hand */
   var H=document.getElementById('hero'),SC=[1,2,3,7,10,11];
   if(au&&pl&&CU.length){
     var lab=hr||pl,label=lab.textContent,pause=lab.getAttribute('data-pause'),round=!hr,cur=-1,fold=null; /* the labelled hand: the pair row's hear door on the home (the glyph on the sun has only an aria-label); on /card/ the round glyph itself */
@@ -35,7 +35,7 @@
     au.addEventListener('pause',off);
     au.addEventListener('ended',function(){set(-1);off();fold=setTimeout(function(){var on=document.querySelectorAll('.read.on, .read .on');for(var k=0;k<on.length;k++){on[k].classList.remove('on');}if(H){H.classList.remove('on');for(var s=1;s<=SC.length;s++){H.classList.remove('s'+s);}}},4000);});
     var toggle=function(ev){ev.preventDefault();ev.stopPropagation();if(au.paused){au.play();}else{au.pause();}};
-    pl.addEventListener('click',toggle);if(hr){hr.addEventListener('click',toggle);}
+    pl.addEventListener('click',toggle);if(hr&&hr!==pl){hr.addEventListener('click',toggle);}
     window.__at=tick; /* the proof's hand (prove-reading.mjs): lights the cue at a time without a decoder */
   }
   var b=document.getElementById('share');
