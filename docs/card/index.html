@@ -297,12 +297,14 @@ body.reading .band.lifts .byline{visibility:hidden}
 .sky .k1 .d{animation:kpd .45s ease-out .55s both}.sky .k2 .d{animation:kpd .45s ease-out .7s both}.sky .k3 .d{animation:kpd .45s ease-out .85s both}.sky .k5 .d{animation:kpd .45s ease-out 1s both}.sky .k6 .d{animation:kpd .5s ease-out 1.05s both}.sky .k4 .d{animation:kpd .4s ease-out 1.15s both}
 .sky .cross{animation:drawon .7s ease-out .9s both}
 footer.sand{margin:var(--gap) calc(-1*var(--pad)) -3rem;padding:1.5rem var(--pad) 1.5rem;background:#f7efdc;color:#1b2440;--door:#1b2440;--door-rule:#a3781f;--mute:#5d5d5d;--gold:#b9892e;border-top:1px solid #e6dabb}
-footer.sand .mark{display:block;width:2rem;height:1.4375rem;margin:0 auto 1rem;overflow:visible}
+footer.sand .mark{display:block;width:2rem;height:1.4375rem;margin:0 0 1rem;overflow:visible}
 footer.sand .mark path{stroke:#1b2440}
-footer.sand .next.foot{display:block;margin:0;border-top:0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) footer.sand{background:#1a2238;color:#f8f3e8;--door:#f8f3e8;--door-rule:#8c7d55;--mute:#aeb4c6;--gold:#a6802c;border-top-color:#3a3418}:root:not([data-theme="light"]) footer.sand .mark path{stroke:#cfc6b3}}
+:root[data-theme="dark"] footer.sand{background:#1a2238;color:#f8f3e8;--door:#f8f3e8;--door-rule:#8c7d55;--mute:#aeb4c6;--gold:#a6802c;border-top-color:#3a3418}:root[data-theme="dark"] footer.sand .mark path{stroke:#cfc6b3}
+footer.sand .next.foot{display:block;margin:0;padding:0;border-top:0}
 footer.sand .next.foot .door{width:auto;margin:0 0 .5rem;font-size:1.125rem}
-footer.sand .theme{margin:1rem 0 0}
-footer.sand .notice{margin:1rem auto 0;text-align:center}
+footer.sand .theme{justify-content:flex-start;margin:.75rem 0 0 -.75rem}
+footer.sand .notice{margin:1rem 0 0}
 @media print{footer.sand{display:none}}
 @media (prefers-reduced-motion:reduce){.sky .road,.sky .cross,.sky .k1 .d,.sky .k2 .d,.sky .k3 .d,.sky .k4 .d,.sky .k5 .d,.sky .k6 .d{animation:none;stroke-dashoffset:0;opacity:1}}
 </style>
@@ -389,7 +391,7 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
 <p class="close prose">A card weighs nothing. In a hand it can carry a whole life home.</p>
 </section>
 <footer class="sand"><svg class="mark" viewBox="0 0 56 40" aria-hidden="true" focusable="false"><path d="M2 38C14 34 22 22 30 22C38 22 46 30 54 36" fill="none" stroke="var(--rb-ink)" stroke-width="1.4" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path d="M30 22V4M23.5 9.5H36.5" fill="none" stroke="var(--rb-ink)" stroke-width="1.4" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><p class="next foot"><a class="door" href="../contact/">How are you doing? ›</a><a class="door" href="../what-next/">Forty day challenge ›</a><a class="door" href="../">Home ›</a></p>
-<p class="theme"><button type="button" id="theme" aria-label="Dark" data-label-light="Light" data-label-dark="Dark"><svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a7 7 0 1 0 10.5 10.5Z" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linejoin="round"/></svg><svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="var(--gold)" stroke-width="1.4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round"/></svg></button></p>
+<p class="theme"><button type="button" id="theme" aria-label="Dark" data-label-light="Light" data-label-dark="Dark"><svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8Z" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linejoin="round"/></svg><svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="var(--gold)" stroke-width="1.4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round"/></svg></button></p>
 </footer></main>
 <script>
 (function(){

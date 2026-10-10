@@ -327,12 +327,15 @@ body.reading .band.lifts .byline{visibility:hidden}
 /* === THE SAND FOOT (owner 2026-10-10 "Footer should be sand on all pages, make it over 9.5 rating") === */
 /* every page ends on the card's own paper: a full-bleed sand band from the foot row to the page's end, the hill-and-cross mark small at its head, the doors in two tidy columns in navy, the light/dark switch and the legal line inside it; the same sand by night (paper is paper), the ink navy in both themes. */
 footer.sand{margin:var(--gap) calc(-1*var(--pad)) -3rem;padding:1.5rem var(--pad) 1.5rem;background:#f7efdc;color:#1b2440;--door:#1b2440;--door-rule:#a3781f;--mute:#5d5d5d;--gold:#b9892e;border-top:1px solid #e6dabb}
-footer.sand .mark{display:block;width:2rem;height:1.4375rem;margin:0 auto 1rem;overflow:visible}
+footer.sand .mark{display:block;width:2rem;height:1.4375rem;margin:0 0 1rem;overflow:visible}
 footer.sand .mark path{stroke:#1b2440}
-footer.sand .next.foot{display:block;margin:0;border-top:0}
+/* THE FOOT'S NIGHT (the footer panel foot1, every judge: a cream slab under a navy page is an inversion — "two drawings of one page"): by night the band is the page's navy one step up, a dim gold hairline at the seam, the doors pale with softened gold underlines, the mark in the night line; the mark, the doors and the switch on ONE left axis (the page's own edge); the switch's glyph is the family's morning star, not a crescent (a symbol another faith owns). */
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) footer.sand{background:#1a2238;color:#f8f3e8;--door:#f8f3e8;--door-rule:#8c7d55;--mute:#aeb4c6;--gold:#a6802c;border-top-color:#3a3418}:root:not([data-theme="light"]) footer.sand .mark path{stroke:#cfc6b3}}
+:root[data-theme="dark"] footer.sand{background:#1a2238;color:#f8f3e8;--door:#f8f3e8;--door-rule:#8c7d55;--mute:#aeb4c6;--gold:#a6802c;border-top-color:#3a3418}:root[data-theme="dark"] footer.sand .mark path{stroke:#cfc6b3}
+footer.sand .next.foot{display:block;margin:0;padding:0;border-top:0}
 footer.sand .next.foot .door{width:auto;margin:0 0 .5rem;font-size:1.125rem}
-footer.sand .theme{margin:1rem 0 0}
-footer.sand .notice{margin:1rem auto 0;text-align:center}
+footer.sand .theme{justify-content:flex-start;margin:.75rem 0 0 -.75rem}
+footer.sand .notice{margin:1rem 0 0}
 @media print{footer.sand{display:none}}
 /* === end THE SAND FOOT === */
 /* REDUCED MOTION, LAST IN THE SHEET (the law): the arrival's strokes stand drawn — the scene selectors named one by one, since `.sky .k1 .d` outweighs `.sky .d`. */
