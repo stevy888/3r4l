@@ -9,7 +9,7 @@ R="$(cd "$(dirname "$0")" && pwd)"; SEAT=/Users/aibrain/.conductor-runs/Prog-Thr
 u() { if eval "$2"; then n=$((n+1)); echo "ok  $1"; else echo "--  $1"; fi; }
 u "1 the number (panel r2 banked)" "test -s $SEAT/panel/r2/panel.json"
 u "2 his eye (p2-eye-pages.marker)" "test -f $R/markers/p2-eye-pages.marker"
-u "3 the home: the rules card, the one audio, the sand foot" "grep -q 'id=\"card\" class=\"picture rules-card\"' $R/docs/index.html && grep -q '<audio class=\"card\"' $R/docs/index.html && grep -q '<footer class=\"sand\"' $R/docs/index.html"
+u "3 the home: the rules card, the sand foot; the one audio on /watch/ (the owner 2026-10-10: hear and watch live on /watch/)" "grep -q 'id=\"card\" class=\"picture rules-card\"' $R/docs/index.html && grep -q '<audio class=\"card\"' $R/docs/watch/index.html && grep -q '<footer class=\"sand\"' $R/docs/index.html"
 u "4 /what-next/: forty.pdf, the sign-up proven, the loader's dry run" "test -s $R/docs/forty.pdf && test -s $FX && grep -qi 'sign-up' $FX && test -s $SEAT/rb-1010/rung2/dry-run.txt"
 u "5 /card/: card.pdf, the hear door, the print proof" "test -s $R/docs/card.pdf && grep -q 'button class=\"door hear\"' $R/docs/card/index.html && test -s $SEAT/rb-1010/rung3/print-card.pdf"
 u "6 /contact/ and /privacy/ proven on fixtures" "test -s $FX && grep -qi 'contact' $FX && grep -qi 'privacy\|controller' $FX"
