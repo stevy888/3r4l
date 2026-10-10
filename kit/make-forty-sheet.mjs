@@ -38,7 +38,7 @@ const block = k => (new RegExp(`^== ${k} ==\\n([\\s\\S]*?)(?=\\n== \\w+ ==\\n|(?
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const F = w => `file://${R}/content/fonts/source-serif-4-${w}.woff2`;
 const FACE = f => `file://${R}/docs/card-${f}.webp`; // the exact faces of the card of record (1050 x 600 = 300 dpi at 89 x 51 mm)
-const translation = verses[0].translation_name, title = S2.challenge.h1.text, day40 = S2.mails.day40.text;
+const translation = LANG === 'tl' && verses[0].translation_tl ? verses[0].translation_tl : verses[0].translation_name, // --lang tl takes the Tagalog Bible on disk (verses.json text_tl / ref_tl / translation_tl, ADB 1905 — owner 'do all six' 2026-10-10: the sheet on the day the pastor's check lands) title = S2.challenge.h1.text, day40 = S2.mails.day40.text;
 
 // ---- THE DRAWING (mm; the safe box is 182 x 250) ----------------------------------------------------------------------------------------------
 const W = 182, H = 250; // the safe box: 182 × 244 so a top-left-anchored 100 % print on 8.5 × 11 short bond keeps the foot inside 12 mm (the refuter's Letter caveat, 2026-10-09)
@@ -72,7 +72,7 @@ const wordsEl = `<div class="words">${KEYS.filter(k => block(k) && k !== 'turn' 
 const writeRule = (label, cls = 'wr') => `<div class="${cls}"><span>${esc(label)}</span><span class="line"></span></div>`;
 
 // ---- THE READING SHEET -----------------------------------------------------------------------------------------------------------------------
-const verse = v => `<p class="verse"><b class="d">${v.day}</b><b class="ref">${esc(v.ref)}</b> <span class="t">${esc((v.parts ? v.parts.join(' ') : v.text).replace(/\n/g, ' '))}</span></p>`;
+const verse = v => { const tl = LANG === 'tl' && v.text_tl; return `<p class="verse"><b class="d">${v.day}</b><b class="ref">${esc(tl ? (v.ref_tl || v.ref) : v.ref)}</b> <span class="t">${esc((tl ? v.text_tl : (v.parts ? v.parts.join(' ') : v.text)).replace(/\n/g, ' '))}</span></p>`; };
 const head = right => `<div class="head2"><p class="kicker">${esc(title)}</p><p class="tr">${right}</p></div>`;
 const footRow = (left, right = SITE) => `<p class="row"><span>${left}</span><span>${right}</span></p>`;
 const closeEl = `<div class="close"><p class="day40">${esc(day40)}</p></div>`; // the coda one line (his clause stands on p1's foot) // after the fortieth row, before his clause (§6 item 10)
