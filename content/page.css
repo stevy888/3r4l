@@ -400,5 +400,20 @@ footer.sand .notice{margin:1rem 0 0}
 @media (prefers-reduced-motion:reduce){.plate .d,.plate .t,.plate .cross{animation:none;stroke-dashoffset:0;opacity:1}.plate .f{animation:none;opacity:1}}
 /* === end STORY PLATE === */
 /* === end PLATE:story === */
+/* === PLATE:watch === */
+/* === PLATE /watch/ — THE LANTERN NIGHT, cure 2 (fleet-1010b, rival C + two cures, 2026-10-10; the drawing is SVG_WATCH in build.mjs) === */
+/* The explainer's plate is a night lit from the cross: ONE GROUND LINE in the plate's own cream — the road, then the hill rising from the road's end to the crest beneath the cross's foot and falling to the frame; the cross on the crest in the same cream, the heaviest mark; the .disc's three flat steps are the light about the cross in the halo tones (--pool the innermost, a step lighter than --halo2 in both themes — never a cream sun, so the cream cross never lies on cream), the two outer steps cut by the hill's mass; nine rays fan from the cross in --lantern, the ONE gold of the plate (by day the dawn's gold, by night a lamp's muted gold on the night navy); the figures walk the road toward the light as closed silhouettes in the one ink. THE ARRIVAL is the home's (the DESIGN RETURNS block): the light fades in (0 → 1.4 s) while the road draws, the sack set down (.35), the open arms (.5), the reach (.65), the walkers (.8), the hill (.95), the rays (1.2) and the cross last (1.1 → 1.6 s); the light never rises (the home's rise is the sun's). THE READING: at the press the light's two inner steps dim (the night) and the cross redraws; at "everyday" (s4) the light grows back over 2.2 s from the inside out (the innermost step first, the next .6 s after) as the nine rays draw from the cross — the light of the cross is the morning, every day; it never rises (the rise is the home's sun's — each animation once). The hill's far face is part of the stage (a second .road path, --d 1s at the press); at "See the other side" (s6) the near face — the climb — draws from the road's end up to the cross's foot, and the ground is one line. Night: the same drawing in the pale line, the rays the lamp's gold. Print: the lines navy on white, the light white. The reduced rule last in this block, every animated selector named. */
+:root{--lantern:#d6bd86;--pool:#3e4463}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--lantern:#a68f5a;--pool:#4a4e5e}}
+:root[data-theme="dark"]{--lantern:#a68f5a;--pool:#4a4e5e}
+.watch .sky .k4 .d{stroke:var(--lantern)}
+.watch .sky .disc{animation:none}
+.watch .sky .disc>circle{animation:fadein 1.4s ease-out both}
+.watch .hero.on .sky .disc>circle{transform:none;animation:none;transition:opacity .8s ease-out}
+.watch .hero.on .sky .disc>circle:not(:first-child){opacity:0}
+.watch .hero.on.s4 .sky .disc>circle{opacity:1;transition:opacity 2.2s cubic-bezier(.2,.7,.2,1)}
+.watch .hero.on.s4 .sky .disc>circle:nth-child(2){transition-delay:.6s}
+@media (prefers-reduced-motion:reduce){.watch .sky .disc>circle{animation:none;opacity:1}.watch .hero.on .sky .disc>circle{transition:none}.watch .hero.on .sky .disc>circle:not(:first-child){opacity:0}.watch .hero.on.s4 .sky .disc>circle{opacity:1}}
+/* === end PLATE:watch === */
 /* REDUCED MOTION, LAST IN THE SHEET (the law): the arrival's strokes stand drawn — the scene selectors named one by one, since `.sky .k1 .d` outweighs `.sky .d`. */
 @media (prefers-reduced-motion:reduce){.sky .road,.sky .cross,.sky .k1 .d,.sky .k2 .d,.sky .k3 .d,.sky .k4 .d,.sky .k5 .d,.sky .k6 .d{animation:none;stroke-dashoffset:0;opacity:1}}
