@@ -88,14 +88,13 @@ main>#card{margin-top:var(--gap)}
 #card.placeholder::before{content:"";position:absolute;left:1.25rem;top:1.125rem;width:3rem;height:3px;background:var(--gold);border-radius:1.5px}
 #card.placeholder p{margin:0;color:var(--card-ink);font:400 1.3125rem/1.5 var(--serif);max-width:30ch;text-wrap:pretty}
 .taking{margin:var(--gap) 0 0}
-.taking .promise{font:400 1.25rem/1.45 var(--serif);color:var(--head);margin:0 0 1.25rem}
-.taking .lead{margin:0 0 1.25rem}
+.taking .promise{font:400 1.375rem/1.4 var(--serif);color:var(--head);margin:0 0 1.25rem}
+.taking .lead{margin:0 0 1.5rem}
 .taking .saying{display:block;font:italic 400 1.25rem/1.4 var(--serif);color:var(--head);margin:.5rem 0 0}
 .litany{list-style:none;margin:0;padding:0}
-.litany li{position:relative;padding-left:3.25rem;margin:0 0 1rem;min-height:1.6875rem}
+.litany li{position:relative;padding-left:3.25rem;margin:0 0 1.125rem;min-height:2.25rem;font:400 1.1875rem/1.45 var(--serif);color:var(--head);text-wrap:balance}
 .litany li:last-child{margin-bottom:0}
-.litany li::before{content:"";position:absolute;left:0;top:.75rem;width:4px;height:4px;background:var(--gold)}
-.litany .pic{position:absolute;left:.75rem;top:.09375rem;width:1.5rem;height:1.5rem}
+.litany .pic{position:absolute;left:0;top:-.1875rem;width:2.25rem;height:2.25rem}
 .testimonials{margin:var(--gap) 0 0}
 .testimonial{margin:0 0 1.25rem}
 .testimonial:last-child{margin-bottom:0}
@@ -119,6 +118,7 @@ main>#card{margin-top:var(--gap)}
 .forty>li.is-today{display:contents}
 .door{display:flex;align-items:center;width:100%;min-height:3rem;padding:.375rem 0;font:400 1.125rem/1.3 var(--sans);color:var(--door);text-decoration:underline;text-decoration-color:var(--door-rule);text-decoration-thickness:1px;text-underline-offset:.26em;margin:0;transition:text-decoration-color .15s}
 .door:hover{text-decoration-color:var(--door)}
+.door{text-wrap:pretty}
 .door>svg{flex:none;width:1.5rem;height:1.5rem;margin-right:.625rem}
 .door .leaf{transform-origin:4px 13px;transition:transform .15s}
 .door .lite{transform-origin:20px 12.5px;transition:transform .15s}

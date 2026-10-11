@@ -84,15 +84,34 @@ main>#card{margin-top:var(--gap)}
 #card.placeholder::before{content:"";position:absolute;left:1.25rem;top:1.125rem;width:3rem;height:3px;background:var(--gold);border-radius:1.5px}
 #card.placeholder p{margin:0;color:var(--card-ink);font:400 1.3125rem/1.5 var(--serif);max-width:30ch;text-wrap:pretty}
 /* THE LITANY — the owner's six lines set to be read, not scanned past (his word on r5: "broken up or illustrated better … bullet points"): his question as before; the promise one size up in the serif with air under it; the lead line in the body face, its saying pulled out on its own line in italic serif (the quotes as typed); the four "He will help you…" lines as a list, each on its own line with a hanging indent, a 4 px gold square at the margin and a small gold line drawing beside it (book · ball · hammer · cross) at the door glyph's stroke, 24 px, toned gold by night. */
+/* THE LITANY, DESIGNED (schoolhouse-1011, 2026-10-11; the owner on the served section: "On homepage design this better"): the question as before; the promise one size up in the serif; the lead line in the body face with its saying pulled out in italic serif; the five "He will help you…" lines in the SERIF and the head's navy (the promise and the helps are one voice — "He will"; the question and the lead are the narrator's), each help balanced over two lines so the word that changes never hangs alone, a 1.125 rem breath between them; the mark one gold line drawing at 2.25 rem on the margin (the 4 px square is gone — one mark, not two); the pics' stroke attributes in one rule (≈ 400 B back on the wire). */
 .taking{margin:var(--gap) 0 0}
-.taking .promise{font:400 1.25rem/1.45 var(--serif);color:var(--head);margin:0 0 1.25rem}
-.taking .lead{margin:0 0 1.25rem}
+.taking .promise{font:400 1.375rem/1.4 var(--serif);color:var(--head);margin:0 0 1.25rem}
+.taking .lead{margin:0 0 1.5rem}
 .taking .saying{display:block;font:italic 400 1.25rem/1.4 var(--serif);color:var(--head);margin:.5rem 0 0}
 .litany{list-style:none;margin:0;padding:0}
-.litany li{position:relative;padding-left:3.25rem;margin:0 0 1rem;min-height:1.6875rem}
+.litany li{position:relative;padding-left:3.25rem;margin:0 0 1.125rem;min-height:2.25rem;font:400 1.1875rem/1.45 var(--serif);color:var(--head);text-wrap:balance}
 .litany li:last-child{margin-bottom:0}
-.litany li::before{content:"";position:absolute;left:0;top:.75rem;width:4px;height:4px;background:var(--gold)}
-.litany .pic{position:absolute;left:.75rem;top:.09375rem;width:1.5rem;height:1.5rem}
+.litany .pic{position:absolute;left:0;top:-.1875rem;width:2.25rem;height:2.25rem}
+/* === PLATE:home === */
+.pic path{fill:none;stroke:var(--gold);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+/* THE WALK TO SCHOOL — the still plate under the question (the drawing is SVG_WALK in build.mjs): the whole column wide at 1000:420, the one ink (--draw: navy by day, the pale line by night), the ground and the schoolhouse at the door glyph's weight, the cross heavier, the light from the cross a wedge of the dawn's own cream at half strength; print as drawn. */
+.taking .walk{display:block;width:100%;height:auto;aspect-ratio:1000/290;margin:.25rem 0 1.5rem}
+.walk .d{fill:none;stroke:var(--draw);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round}
+.walk .x{stroke-width:14}
+.walk .s{fill:var(--draw)}
+.walk .l{fill:var(--sun);opacity:.5}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .walk .l{fill:var(--draw);opacity:.12}}
+:root[data-theme="dark"] .walk .l{fill:var(--draw);opacity:.12}
+/* THE CURE (round 2 on the shared returns): the walk-to-school line in the serif at the helps' size and ink — all nine lines one voice, the question alone the narrator's sans; the saying the hinge, a breath above and below; the helps at body size so the heaven promise alone leads, each broken after "He will help you" (em.of), the varying half one even column; the beam by night the lamp's warm token. */
+.taking .lead{font:400 1.125rem/1.5 var(--serif);color:var(--head);margin:0 0 1.75rem}
+.taking .saying{margin:.875rem 0 0;font-size:1.3125rem}
+.litany li{font-size:1.125rem;line-height:1.5;text-wrap:initial}
+.litany .of{display:block;font-style:normal}
+.litany .pic{top:-.125rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .walk .l{fill:var(--bulb);opacity:.16}}
+:root[data-theme="dark"] .walk .l{fill:var(--bulb);opacity:.16}
+/* === end PLATE:home === */
 /* THE TESTIMONIALS (TR2-frame A; the sheet's "Followed by a few testimonials"; plan 2b rung 2, proven on the fixture 2026-10-10): the consented rows where his clause stood — the reader's words in the italic serif, the name he gave in the quiet sans under them; no box, no picture, no date on the page; no rows, nothing. */
 .testimonials{margin:var(--gap) 0 0}
 .testimonial{margin:0 0 1.25rem}
@@ -119,6 +138,7 @@ main>#card{margin-top:var(--gap)}
 /* THE DOORS — the one link a 48 px row under a hairline (on the home that hairline is the horizon the card stands on); the door-ajar glyph inside the <a>; the label at body size, stepping down by width so it never wraps at 320; the underline the threshold. */
 .door{display:flex;align-items:center;width:100%;min-height:3rem;padding:.375rem 0;font:400 1.125rem/1.3 var(--sans);color:var(--door);text-decoration:underline;text-decoration-color:var(--door-rule);text-decoration-thickness:1px;text-underline-offset:.26em;margin:0;transition:text-decoration-color .15s}
 .door:hover{text-decoration-color:var(--door)}
+.door{text-wrap:pretty} /* schoolhouse-1011 cure's one detour: a wrapping door keeps its last word with its › (24 of the round's reads named the lone › at 320) */
 .door>svg{flex:none;width:1.5rem;height:1.5rem;margin-right:.625rem}
 .door .leaf{transform-origin:4px 13px;transition:transform .15s}
 .door .lite{transform-origin:20px 12.5px;transition:transform .15s}
