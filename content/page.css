@@ -444,7 +444,9 @@ footer.sand .notice{margin:1rem 0 0}
 .film .sk .d{stroke-width:9}
 .film .hd{fill:var(--plate)}
 .rp .d{stroke-width:5;stroke:var(--lantern)}
-.ar,.fa,.th,.sh{transform-box:fill-box;transform-origin:0 0;transition:transform .8s cubic-bezier(.3,.5,.3,1)}
+.fa,.sh{transform-box:fill-box;transform-origin:0 0;transition:transform .8s cubic-bezier(.3,.5,.3,1)}
+.ar,.th{transform-box:fill-box;transform-origin:50% 50%;transition:transform .8s cubic-bezier(.3,.5,.3,1)} /* the upper limbs carry a fixed invisible box (.bx) so their fill-box — and the joint at its centre — never moves when the forearm or shin swings (round 4: the floating Surrender arm, seven reads) */
+.film .bx{fill:none;stroke:none}
 .up{transform-box:fill-box;transform-origin:50% 100%;transition:transform .8s cubic-bezier(.3,.5,.3,1)}
 .bd{transform-box:fill-box;transform-origin:50% 100%}
 .kn{transition:transform .7s ease-out}
@@ -502,7 +504,7 @@ body.reading .watch .sky .cross{animation:drawon 0s linear both;stroke-dashoffse
 .watch .hero.on.c11 .sky .k5{transform:translate(126px,-120px);transition:transform 5.2s linear 1.4s}.watch .hero.on.c11 .sky .k5 .d{stroke-dashoffset:0;opacity:1;animation:fadeout .8s linear 6s both}
 .c11 .up{transform:rotate(-4deg)}.c11 .ar.rt{transform:rotate(-120deg)}.c11 .fa.rt{transform:none}
 .c12 .up{transform:rotate(-8deg)}.hero.on.c12 .rm{animation:kpd .9s cubic-bezier(.3,.4,.2,1) 11.6s both}
-.c13 .up{transform:rotate(22deg);animation:lookup 1s ease-out 9s both}
+.c13 .up{transform:rotate(22deg);animation:lookup 1s ease-out 9s both}.hero.on.c13 .rk{animation:kpd .9s cubic-bezier(.3,.4,.2,1) 8.9s both}
 @keyframes lookup{to{transform:rotate(-10deg)}}
 .watch .hero.on.s7 .sky .cross{animation:glow 1.6s ease-in-out 8.9s both}
 @keyframes glow{0%,100%{stroke:var(--plate)}45%{stroke:var(--lantern)}}
@@ -531,24 +533,27 @@ body.reading .watch .sky .cross{animation:drawon 0s linear both;stroke-dashoffse
 .hero.on.c10 .rw{animation:kpd .7s cubic-bezier(.3,.4,.2,1) var(--d) both}
 body.reading .band>.stars{animation:none}
 @media (prefers-reduced-motion:reduce){.watch .hero>.sky,.watch .hero.on>.sky{transition:none;transform:none}.watch .hero.on .sky .disc>circle:not(:last-child){opacity:0}.watch .hero.on .sky .disc>circle:last-child{opacity:1}.watch .hero.on.s4 .sky .disc>circle{opacity:1}}
+/* ROUND 3 — THE RESIDUE (owner 2026-10-12 "Improve it"; the cure's read: nine returns on the ground line, six on the end, three on the light): the hill's near face STANDS through the reading (the ground one line from the first frame) and at "the other side" LIGHT runs down it from the cross — a gold line drawn from the crest to the road (.wy); the light dimmed, never gone (the two outer steps at .3 through the night, full at "everyday"); the figure a step larger (×1.12 about the feet; the shoulders a hair closer); the end held (day.js); each word's first letter up — a title card's case, the strings untouched. */
+.watch .hero.on .sky .k6 .d{animation:none;opacity:1;stroke-dashoffset:0}
+.watch .hero.on.s6 .sky .k6 .d{animation:none}
+.rp .wy{stroke-width:6}
+.hero.on.s6 .rp .wy{animation:kpd 1.6s cubic-bezier(.3,.4,.2,1) .3s both}
+.watch .hero.on .sky .disc>circle:not(:last-child){opacity:.3}
+.bd{transform:scale(1.12)}
+@keyframes far{to{transform:scale(.68)}}
+.c16 .bd{transform:scale(.68)}
+.words span::first-letter{text-transform:uppercase}
+.watch .hero.done .sky .d,.watch .hero.done .sky .k4 .d{animation:none;opacity:1;stroke-dashoffset:0}.watch .hero.done .sky .cross{animation:none;stroke-dashoffset:0}.watch .hero.done .sky .disc>circle{animation:none;opacity:1}
+@media (prefers-reduced-motion:reduce){.watch .hero.on .sky .k6.k6 .d{animation:none;opacity:1;stroke-dashoffset:0}.hero.on.s6 .rp .wy{animation:none;opacity:1;stroke-dashoffset:0}.watch .hero.on .sky .disc>circle:not(:last-child){opacity:.3}}
+/* THE FOOT'S BUTTONS (owner 2026-10-12 on the doors under the card — "Print the card › / How are you doing? › / Download the video to share (phone) › / … / There should be real buttons and ability to share / Make it look better"): under the card ONE gold door, Share the video (the big door's own shape; shown only where the phone has a share sheet), then the four doors as QUIET buttons — the big door's shape with no fill, a gold ring, the navy serif — two to a row (one at 320); the close line under them as before. */
+.next.pair.quiet{display:flex;gap:.625rem;margin-top:.625rem;padding:0 var(--pad);border-top:0}
+.door.big.quiet{flex:1;min-height:3.25rem;padding:.625rem .625rem;background:none;color:var(--door);box-shadow:inset 0 0 0 1.5px var(--gold);font-size:1.0625rem;line-height:1.2;text-align:center}
+.door.big.quiet:hover{box-shadow:inset 0 0 0 2px var(--gold)}
+button.door.big.share{display:flex;width:100%;justify-content:center;appearance:none;-webkit-appearance:none;border:0;cursor:pointer}
+button.door.big.share[hidden]{display:none}
+@media (max-width:359px){.next.pair.quiet{flex-direction:column;gap:.5rem}}
+@media print{.next.pair.quiet,.next.big.share{display:none}}
 /* === end THE WATCH FILM === */
 /* === end PLATE:watch === */
-/* === PLATE:card === */
-/* === PLATE /card/ — THE GIVING (card-1010, 2026-10-10; the drawing is SVG_GIVE in build.mjs) === */
-/* The page says "Print the card and give it", so the plate is the giving: inside the band after the h1, .45 of the column tall (--plate-h: 122 px at 320, 154 at 390), a breath of 1.25 rem under the h1, its negative bottom margin eating the band's --gap so the drawing's foot IS the band's foot — the two figures stand on the navy's edge and the card's own dawn rises under their feet. One ground line that climbs at the right to the hill's crest; the giver with the card held out, the one who receives with a hand come to it; THE CROSS on the crest, the heaviest mark — all in the plate's one cream line (--plate; the lamp's pale by night: the same drawing, never an inversion). No sun in this plate (the card's dawn under the band is the page's sun — each animation once). THE ARRIVAL, once, ≤ 1.6 s: every stroke a kpd draw-on (dashoffset 100 → 0 with pathLength 100), per-stroke --d / --u inline — the ground, the giver, the card, the receiver, the cross last. Print: hidden (the card is the print). The reduced rule is the LAST in this block (the law). */
-:root{--plate-h:calc((100vw - 2*var(--pad))*.45)}
-@media (min-width:640px){:root{--plate-h:calc(37rem*.45)}}
-.band .plate{position:relative;height:var(--plate-h);margin:1.25rem 0 calc(-1*var(--gap));pointer-events:none}
-.plate>svg{display:block;position:absolute;left:0;bottom:0;width:100%;height:100%}
-.plate .d{fill:none;stroke:var(--plate);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;opacity:0;animation:kpd var(--u,.45s) cubic-bezier(.3,.4,.2,1) var(--d,0s) both}
-.plate .t{stroke-width:5}
-.plate .x{stroke:var(--draw);stroke-width:16}
-.plate .f{opacity:0;animation:gf .7s ease-out .15s both}
-@keyframes gf{to{opacity:1}}
-.held.whole.plated{--dawn-h:1.25rem}
-.plate .lamp{display:none}
-@media print{.plate{display:none}}
-@media (prefers-reduced-motion:reduce){.plate .d{animation:none;stroke-dashoffset:0;opacity:1}.plate .f{animation:none;opacity:1}}
-/* === end PLATE:card === */
 /* REDUCED MOTION, LAST IN THE SHEET (the law): the arrival's strokes stand drawn — the scene selectors named one by one, since `.sky .k1 .d` outweighs `.sky .d`. */
 @media (prefers-reduced-motion:reduce){.sky .road,.sky .cross,.sky .k1 .d,.sky .k2 .d,.sky .k3 .d,.sky .k4 .d,.sky .k5 .d,.sky .k6 .d{animation:none;stroke-dashoffset:0;opacity:1}}

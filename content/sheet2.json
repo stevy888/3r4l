@@ -69,6 +69,12 @@
    "status": "DRAFT",
    "written": "2026-10-10T17:xxZ seat:rules-box-1010 (the forty sheet round, fleet-1010b)",
    "_note": "the one-leaf forty sheet (blind 8.84)"
+  },
+  "grace": {
+   "text": "Jesus with you every step of the way",
+   "status": "owner",
+   "written": "2026-10-12 chat, verbatim (seat go-3r4l-2c)",
+   "_note": "THE FORTY SHEET'S LEAD LINE, his words: \"Jesus with you every step of the way / Above from / That's important otherwise it looks like attaining something\" — above the card's title on the leaf"
   }
  },
  "signup": {
@@ -384,16 +390,28 @@
    "_note": "the text door to /watch/ in the home's pair row and in every foot row"
   },
   "download_9x16": {
-   "text": "Download the video to share (phone)",
+   "text": "Download the video (phone)",
    "status": "DRAFT",
-   "written": "2026-10-10T10:xxZ seat:rules-box-1010",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
    "_note": "the 9:16 file for WhatsApp / Facebook / YouTube Shorts — the /watch/ page recorded with the master's own track"
   },
   "download_16x9": {
-   "text": "Download the video to share (wide)",
+   "text": "Download the video (wide)",
    "status": "DRAFT",
-   "written": "2026-10-10T10:xxZ seat:rules-box-1010",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
    "_note": "the 16:9 file for YouTube / a screen"
+  },
+  "share": {
+   "text": "Share the video",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE FOOT'S BUTTONS (owner 2026-10-12 \"real buttons and ability to share\"): the one gold door under the card — the phone's share sheet with this page's link; hidden where there is no share sheet"
+  },
+  "share_text": {
+   "text": "Watch the card explained — the three rules for living, read aloud with the picture.",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "the one line the share sheet carries beside the card's title and the page's link"
   },
   "film_0": {
    "text": "Three rules",

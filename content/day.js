@@ -32,9 +32,9 @@
     var tick=function(t){var i,at=-1;for(i=0;i<CU.length;i++){if(t>=CU[i][0]-0.1&&t<CU[i][1]+0.3){at=i;}}set(at);};
     var off=function(){document.body.classList.remove('reading');pl.classList.remove('on');if(hr){hr.classList.remove('on');}if(!round){lab.textContent=label;}};
     au.addEventListener('timeupdate',function(){tick(au.currentTime);});
-    au.addEventListener('play',function(){clearTimeout(fold);document.body.classList.add('reading');pl.classList.add('on');if(hr){hr.classList.add('on');}if(!round){lab.textContent=pause;}if(H){if(au.currentTime<0.5){for(var s=1;s<=SC.length;s++){H.classList.remove('s'+s);}}H.classList.add('on');}});
+    au.addEventListener('play',function(){clearTimeout(fold);if(H){H.classList.remove('done');}document.body.classList.add('reading');pl.classList.add('on');if(hr){hr.classList.add('on');}if(!round){lab.textContent=pause;}if(H){if(au.currentTime<0.5){for(var s=1;s<=SC.length;s++){H.classList.remove('s'+s);}}H.classList.add('on');}});
     au.addEventListener('pause',off);
-    au.addEventListener('ended',function(){set(-1);off();fold=setTimeout(function(){var on=document.querySelectorAll('.read.on, .read .on');for(var k=0;k<on.length;k++){on[k].classList.remove('on');}if(H){H.classList.remove('on');for(var s=1;s<=SC.length;s++){H.classList.remove('s'+s);}}},4000);});
+    au.addEventListener('ended',function(){off();fold=setTimeout(function(){set(-1);var on=document.querySelectorAll('.read.on, .read .on');for(var k=0;k<on.length;k++){on[k].classList.remove('on');}if(H){H.classList.remove('on');for(var s=1;s<=SC.length;s++){H.classList.remove('s'+s);}H.classList.add('done');scrollTo({top:0,behavior:'smooth'});}},4000);}); /* THE END HELD (watch-film-1012 round 3, the judges ×6): the last scene stands four seconds after the voice, then the plate folds to rest and the page returns to the top — the ended frame is the rest frame */
     var toggle=function(ev){ev.preventDefault();ev.stopPropagation();if(au.paused){au.play();}else{au.pause();}};
     pl.addEventListener('click',toggle);if(hr&&hr!==pl){hr.addEventListener('click',toggle);}
     window.__at=tick; /* the proof's hand (prove-reading.mjs): lights the cue at a time without a decoder */
@@ -42,6 +42,8 @@
   if('serviceWorker' in navigator&&document.referrer.indexOf(location.origin)===0){ /* THE OFFLINE WORKER (rung 3): registered from the second page on — a first load asks for nothing but the fonts */
     navigator.serviceWorker.register(document.querySelector('link[rel=manifest]').href.replace(/manifest\.webmanifest$/,'sw.js')).catch(function(){});
   }
+  var sv=document.querySelector('button.door.share'); /* THE SHARE DOOR of /watch/ (owner 2026-10-12 "ability to share"): the phone's own share sheet with the page's link — the card's title, one line, the address this page is served at (the preview today, the domain the day it lands); no request, no file */
+  if(sv&&navigator.share){sv.hidden=false;sv.addEventListener('click',function(){navigator.share({title:sv.getAttribute('data-title'),text:sv.getAttribute('data-text'),url:location.href}).catch(function(){});});}
   var b=document.getElementById('share');
   if(b&&navigator.share){
     var f=document.getElementById('share-links');

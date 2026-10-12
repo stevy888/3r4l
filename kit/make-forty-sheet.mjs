@@ -126,6 +126,7 @@ p{margin:0}
 /* p1 the leaf */
 .draw{position:absolute;left:0;top:0;width:${W}mm;height:${H}mm}
 .head{position:absolute;left:0;right:0;top:0;text-align:center}
+.grace{font:italic 500 12.5pt/1.3 "Source Serif 4";color:${NAVY};margin:0 0 2mm} /* THE LEAD LINE (owner 2026-10-12): "Jesus with you every step of the way" above the card's title — grace before the rules, so the climb never reads as attaining */
 .ttl{font:500 9.5pt/1.3 "Source Serif 4";letter-spacing:.06em;margin:0 0 2.2mm}
 .rules{white-space:pre-line;font:500 14.5pt/1.36 "Source Serif 4"}
 .rules .num{font-style:normal;font-weight:600;color:${GOLD}}
@@ -155,7 +156,7 @@ p{margin:0}
 <div class="head">
 <p class="kicker">${esc(title)}</p>
 <div class="gold"></div>
-<p class="ttl">${esc(block('title'))}</p>
+${L('grace') ? `<p class="grace">${esc(L('grace'))}</p>` : ''}<p class="ttl">${esc(block('title'))}</p>
 <p class="rules">${esc(block('rules')).replace(/^(\d\.)/gm, '<em class="num">$1</em>')}</p>
 <p class="prayer">${esc(block('daily_prayer'))}</p>
 ${writeRule(L('began'), 'began')}
