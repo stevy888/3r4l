@@ -366,10 +366,10 @@
    "_note": "/watch/'s h1 (owner 2026-10-10 \"explain the card the same way … people given the card can watch it on the site\")"
   },
   "sub": {
-   "text": "Press play. The hill draws itself and the card lights up line by line as it is read.",
+   "text": "Press play. The card is read aloud, and the picture plays it out scene by scene.",
    "status": "DRAFT",
-   "written": "2026-10-10T09:0xZ rival:watch-C fleet-1010",
-   "_note": "the one quiet line under /watch/'s h1 — what the page does, in one sentence"
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "the one quiet line under /watch/'s h1 — what the page does, in one sentence (rewritten for the film, 2026-10-12: the press no longer redraws the hill)"
   },
   "play": {
    "text": "Watch the card · [m:ss]",
@@ -394,6 +394,132 @@
    "status": "DRAFT",
    "written": "2026-10-10T10:xxZ seat:rules-box-1010",
    "_note": "the 16:9 file for YouTube / a screen"
+  },
+  "film_0": {
+   "text": "Three rules",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): the opening — the title card as the figure walks in (the cure, glance); a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_1": {
+   "text": "Confess",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): rule 1 — he sets the sack down; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_2": {
+   "text": "Surrender",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): rule 2 — the open hands at the waist; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_3": {
+   "text": "Forgive",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): rule 3 — the reach, then the hand to his own heart; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_4": {
+   "text": "the key",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"rule 1 is the key\" — he points at what he set down; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_5": {
+   "text": "God will forgive",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"we must always go to rule 1 and confess it; God will forgive\" — on his knees, a ray finds him; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_6": {
+   "text": "never stop",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"We must never stop confessing\" — the sack set down again, twice; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_7": {
+   "text": "everyday",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"As we practice these rules everyday\" — the light of the cross returns; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_8": {
+   "text": "change",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"God will change our lives\" — his arms up; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_9": {
+   "text": "all day",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"practice the following little prayer all day\" — the walkers come; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_10": {
+   "text": "pour out",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): the little prayer — rays from the cross to every head; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_10b": {
+   "text": "everyone I see",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): the little prayer's end — his arm sweeps to them; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_11": {
+   "text": "the other side",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"See The Other Side\" — the way draws from the cross and the company walks up into the light; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_12": {
+   "text": "eternity",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): the invitation — he stands alone, looking up; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_12b": {
+   "text": "He will hear",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"He will hear yours also\" — a ray finds him; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_13": {
+   "text": "a sinner",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): the prayer — on his knees, bowed, hands clasped; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_13b": {
+   "text": "raised",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"raised you from the dead\" — he looks up; the cross blazes gold for a breath; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_14": {
+   "text": "mercy",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"have mercy on my life\" — kneeling, hands open to the light; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_15": {
+   "text": "home",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"take me to Your home\" — he walks the way up to the cross; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_16": {
+   "text": "thank You",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): \"I pray and thank You\" — his arms up at the cross; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "film_17": {
+   "text": "Amen",
+   "status": "DRAFT",
+   "written": "2026-10-12T08:xxZ seat:watch-film-1012",
+   "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): the panorama returns; the film ends where the arrival stands; a word of the card's own line, written in the sky as the voice says it"
   }
  },
  "story": {

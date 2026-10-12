@@ -437,6 +437,101 @@ footer.sand .notice{margin:1rem 0 0}
 .watch .hero.on.s4 .sky .disc>circle{opacity:1;transition:opacity 2.2s cubic-bezier(.2,.7,.2,1)}
 .watch .hero.on.s4 .sky .disc>circle:nth-child(2){transition-delay:.6s}
 @media (prefers-reduced-motion:reduce){.watch .sky .disc>circle{animation:none;opacity:1}.watch .hero.on .sky .disc>circle{transition:none}.watch .hero.on .sky .disc>circle:not(:first-child){opacity:0}.watch .hero.on.s4 .sky .disc>circle{opacity:1}}
+/* === THE WATCH FILM (watch-film-1012, 2026-10-12; owner: "proper animation for each phrase of the card, key words can be written") === */
+/* The arrival stands as it was. THE PRESS: the night falls (the panorama's figures fade in .6 s, the light's inner steps go out — the devices of record), the road, the far face and the cross STAY (no redraw), and one jointed figure (.film .man: head, body, arms and legs on CSS pivots — transform-box fill-box, each limb's joint at its own origin; a limb's joint translate sits on a wrapper so the CSS transform never replaces it) walks in from the dark. THE SCENES: the hero wears the cue being read (c0…c18, day.js); each scene is a pose and an act — the limbs glide between poses (.8 s), the acts are keyframes timed inside the cue; the key word of the phrase (.words, DRAFT strings, the plate's one gold, the card's serif) rises in the sky at --wd. The light and the way are the stage marks of record (s4 "everyday", s6 "the other side" — drawn from the cross DOWN, grace; s7 the cross blazes gold at "raised"; s8 Amen — the panorama returns and the film ends where the arrival stands). Reduced motion (last in the fence): the words and a still pose a scene. */
+.film{opacity:0}
+.film .d{stroke-width:13}
+.film .sk .d{stroke-width:9}
+.film .hd{fill:var(--plate)}
+.rp .d{stroke-width:5;stroke:var(--lantern)}
+.ar,.fa,.th,.sh{transform-box:fill-box;transform-origin:0 0;transition:transform .8s cubic-bezier(.3,.5,.3,1)}
+.up{transform-box:fill-box;transform-origin:50% 100%;transition:transform .8s cubic-bezier(.3,.5,.3,1)}
+.bd{transform-box:fill-box;transform-origin:50% 100%}
+.kn{transition:transform .7s ease-out}
+.ar.lf{transform:rotate(4deg)}.ar.rt{transform:rotate(-4deg)}.sh.lf{transform:rotate(-5deg)}.sh.rt{transform:rotate(5deg)}
+.sk,.oth,.mv{transition:opacity .5s}
+.sk.gd,.oth{opacity:0}
+.on .film{opacity:1}
+.watch .hero.on .sky .road{animation:none;stroke-dashoffset:0;opacity:1}
+body.reading .watch .sky .cross{animation:drawon 0s linear both;stroke-dashoffset:0}
+.watch .hero.on .sky .k1 .d,.watch .hero.on .sky .k2 .d,.watch .hero.on .sky .k3 .d,.watch .hero.on .sky .k4 .d,.watch .hero.on .sky .k5 .d,.watch .hero.on .sky .k6 .d{animation:fadeout .6s ease-out both}
+@keyframes fadeout{from{opacity:1;stroke-dashoffset:0}to{opacity:0;stroke-dashoffset:0}}
+.watch .hero.on.s4 .sky .k4 .d{animation:kpd .5s cubic-bezier(.3,.4,.2,1) var(--d,0s) both}
+.hero.on .film .d{stroke-dasharray:none;stroke-dashoffset:0;opacity:1;animation:none}
+.hero.on .rp .d{stroke-dasharray:100;stroke-dashoffset:100;opacity:0}
+.lit .sk.bk{opacity:0}
+.c0 .sk.bk,.c6 .sk.bk{opacity:1}
+.on .mv{animation:walkin 2.1s cubic-bezier(.3,.6,.35,1) .8s both}
+@keyframes walkin{from{transform:translateX(-320px)}to{transform:none}}
+.on .th.lf{animation:stepa .7s ease-in-out .8s 3}.on .th.rt{animation:stepa .7s ease-in-out 1.15s 3}
+.on .ar.lf{animation:swinga .7s ease-in-out .8s 3}.on .ar.rt{animation:swingb .7s ease-in-out 1.15s 3}
+@keyframes stepa{0%,100%{transform:none}25%{transform:rotate(26deg)}75%{transform:rotate(-26deg)}}
+@keyframes swinga{0%,100%{transform:rotate(4deg)}25%{transform:rotate(-10deg)}75%{transform:rotate(16deg)}}
+@keyframes swingb{0%,100%{transform:rotate(-4deg)}25%{transform:rotate(12deg)}75%{transform:rotate(-14deg)}}
+.c1 .up{animation:hinge 2.8s cubic-bezier(.4,0,.3,1) .2s both}.c1 .ar{animation:reach 2.8s cubic-bezier(.4,0,.3,1) .2s both}
+@keyframes hinge{0%{transform:none}32%,68%{transform:rotate(50deg)}100%{transform:none}}
+@keyframes reach{0%{transform:none}32%,68%{transform:rotate(-30deg)}100%{transform:none}}
+.c1 .sk.bk{animation:skb 2.8s .2s both}.c1 .sk.gd{animation:skg 2.8s .2s both}
+@keyframes skb{0%,34%{opacity:1}48%,100%{opacity:0}}
+@keyframes skg{0%,42%{opacity:0}56%,100%{opacity:1}}
+.c1 .sk.gd,.c2 .sk.gd,.c3 .sk.gd,.c4 .sk.gd,.c6 .sk.gd,.c7 .sk.gd{opacity:1}
+.c2 .ar.lf,.c7 .ar.lf{transform:rotate(-10deg)}.c2 .fa.lf,.c7 .fa.lf{transform:rotate(-98deg)}.c2 .ar.rt,.c7 .ar.rt{transform:rotate(-22deg)}.c2 .fa.rt,.c7 .fa.rt{transform:rotate(-104deg)}.c2 .up,.c7 .up{transform:rotate(-5deg)}
+.c3 .oth{opacity:1;animation:othin .9s ease-out .1s both}
+@keyframes othin{from{opacity:0;transform:translateX(80px)}}
+.c3 .up{transform:rotate(9deg)}.c3 .ar.rt{transform:rotate(-86deg)}.c3 .fa.rt{transform:rotate(-6deg)}.c3 .fa.lf{animation:chest 1s ease-out 2.5s both}
+@keyframes chest{to{transform:rotate(-128deg)}}
+.c4 .up{transform:rotate(6deg)}.c4 .ar.rt{transform:rotate(-48deg)}.c4 .fa.rt{transform:rotate(-12deg)}
+.c5 .kn,.c13 .kn,.c14 .kn{transform:translateY(50px)}.c5 .sh,.c13 .sh,.c14 .sh{transform:rotate(90deg)}
+.c5 .up{animation:bow 7s cubic-bezier(.4,0,.3,1) both}.c5 .ar{animation:hang 7s cubic-bezier(.4,0,.3,1) both}.c5 .fa{animation:openf 7s cubic-bezier(.4,0,.3,1) both}
+@keyframes bow{0%{transform:none}12%,60%{transform:rotate(24deg)}78%,100%{transform:rotate(-4deg)}}
+@keyframes hang{0%,60%{transform:rotate(-22deg)}78%,100%{transform:rotate(-34deg)}}
+@keyframes openf{0%,62%{transform:none}80%,100%{transform:rotate(-96deg)}}
+.hero.on.c5 .rk{animation:kpd .9s cubic-bezier(.3,.4,.2,1) 5s both}
+.c6 .sk.bk{animation:skb2 5.6s .3s both}.c6 .sk.gd{animation:skg2 5.6s .3s both}.c6 .up{animation:hinge 2.8s cubic-bezier(.4,0,.3,1) .3s 2}.c6 .ar{animation:reach 2.8s cubic-bezier(.4,0,.3,1) .3s 2}
+@keyframes skb2{0%,16%{opacity:1}24%,50%{opacity:0}50.1%,66%{opacity:1}74%,100%{opacity:0}}
+@keyframes skg2{0%,22%{opacity:0}30%,100%{opacity:1}}
+.c8 .ar.lf,.c16 .ar.lf{transform:rotate(148deg)}.c8 .ar.rt,.c16 .ar.rt{transform:rotate(-148deg)}.c8 .fa,.c16 .fa{transform:none}.c8 .up,.c16 .up{transform:rotate(-6deg)}
+.c9 .ar.lf,.c10 .ar.lf,.c13 .ar.lf{transform:rotate(-14deg)}.c9 .fa.lf,.c10 .fa.lf,.c13 .fa.lf{transform:rotate(-120deg)}.c9 .ar.rt,.c10 .ar.rt,.c13 .ar.rt{transform:rotate(-18deg)}.c9 .fa.rt,.c10 .fa.rt,.c13 .fa.rt{transform:rotate(-116deg)}.c9 .up,.c10 .up{transform:rotate(8deg)}
+.watch .hero.on.c9 .sky .k5 .d{stroke-dashoffset:0;opacity:1;animation:fadein 1s ease-out .6s both}.watch .hero.on.c10 .sky .k5 .d{stroke-dashoffset:0;opacity:1;animation:none}
+.hero.on.c10 .rw{animation:kpd .9s cubic-bezier(.3,.4,.2,1) var(--d) both}.hero.on.c10 .rm{animation:kpd .9s cubic-bezier(.3,.4,.2,1) 1.4s both}
+.c10 .ar.rt{animation:sweep 1.2s ease-out 6.4s both}.c10 .fa.rt{animation:sweepf 1.2s ease-out 6.4s both}
+@keyframes sweep{to{transform:rotate(-76deg)}}
+@keyframes sweepf{to{transform:rotate(-8deg)}}
+.watch .hero.on.s6 .sky .k6 .d{opacity:1;stroke-dashoffset:0;animation:kpdr 1.6s cubic-bezier(.3,.4,.2,1) .3s both}
+@keyframes kpdr{0%{stroke-dashoffset:-100;opacity:0}6%{opacity:1}100%{stroke-dashoffset:0;opacity:1}}
+.watch .hero.on.c11 .sky .k5{transform:translate(126px,-120px);transition:transform 5.2s linear 1.4s}.watch .hero.on.c11 .sky .k5 .d{stroke-dashoffset:0;opacity:1;animation:fadeout .8s linear 6s both}
+.c11 .up{transform:rotate(-4deg)}.c11 .ar.rt{transform:rotate(-120deg)}.c11 .fa.rt{transform:none}
+.c12 .up{transform:rotate(-8deg)}.hero.on.c12 .rm{animation:kpd .9s cubic-bezier(.3,.4,.2,1) 11.6s both}
+.c13 .up{transform:rotate(22deg);animation:lookup 1s ease-out 9s both}
+@keyframes lookup{to{transform:rotate(-10deg)}}
+.watch .hero.on.s7 .sky .cross{animation:glow 1.6s ease-in-out 8.9s both}
+@keyframes glow{0%,100%{stroke:var(--plate)}45%{stroke:var(--lantern)}}
+.c14 .up{transform:rotate(-6deg)}.c14 .ar.lf{transform:rotate(-40deg)}.c14 .fa.lf{transform:rotate(-62deg)}.c14 .ar.rt{transform:rotate(-56deg)}.c14 .fa.rt{transform:rotate(-70deg)}.hero.on.c14 .rk{animation:kpd .9s cubic-bezier(.3,.4,.2,1) 2.4s both}
+.c15 .kn{animation:home 6.3s cubic-bezier(.4,.1,.6,.9) .2s both}.c15 .bd{animation:far 6.3s linear .2s both}
+@keyframes home{0%{transform:translateY(50px)}8%{transform:none}46%{transform:translate(280px,-52px)}100%{transform:translate(380px,-150px)}}
+@keyframes far{to{transform:scale(.62)}}
+.c15 .th.lf{animation:stepa .7s ease-in-out .7s 8}.c15 .th.rt{animation:stepa .7s ease-in-out 1.05s 8}.c15 .ar.lf{animation:swinga .7s ease-in-out .7s 8}.c15 .ar.rt{animation:swingb .7s ease-in-out 1.05s 8}
+.c16 .kn{transform:translate(380px,-150px)}.c16 .bd{transform:scale(.62)}
+.c17 .mv,.c18 .mv{opacity:0}
+.watch .hero.on.s8 .sky .k1 .d,.watch .hero.on.s8 .sky .k2 .d,.watch .hero.on.s8 .sky .k3 .d,.watch .hero.on.s8 .sky .k5 .d{stroke-dashoffset:0;opacity:1;animation:fadein 1.4s ease-out .3s both}
+.words{position:absolute;left:0;top:.5rem;width:58%;margin:0;font:500 min(1.625rem,6.7vw)/1.1 var(--serif);color:var(--lantern);text-wrap:balance;pointer-events:none;z-index:1}
+.words span{display:none;position:absolute;left:0;top:0}
+.words .now{display:block;animation:wordin .8s cubic-bezier(.2,.7,.2,1) var(--wd,0s) both}
+.words .now.wo{animation:wordin .8s cubic-bezier(.2,.7,.2,1) var(--wd,0s) both,wordout .5s linear var(--wo,9s) forwards}
+@keyframes wordin{from{opacity:0;transform:translateY(10px);letter-spacing:.08em}}
+@keyframes wordout{to{opacity:0}}
+@media (prefers-reduced-motion:reduce){.on .mv,.on .kn,.on .bd,.on .up,.on .ar,.on .fa,.on .th,.on .sh,.on .sk,.on .oth,.hero.on .rp .d{animation:none;transition:none}.watch .hero.on .sky .k5.k5{transform:none;transition:none}.watch .hero.on .sky .k5.k5 .d,.watch .hero.on .sky .k6.k6 .d{animation:none}.watch .hero.on.s6 .sky .k6.k6 .d,.watch .hero.on.s8 .sky .k5.k5 .d,.watch .hero.on.c9 .sky .k5.k5 .d,.watch .hero.on.c10 .sky .k5.k5 .d,.watch .hero.on.c11 .sky .k5.k5 .d{opacity:1;stroke-dashoffset:0}.watch .hero.on.s7 .sky .cross{animation:none}.words .now,.words .now.wo{animation:none}.words .now.wo{display:none}}
+/* THE CURE (round 2, on round 1's shared returns): ONE HAND — the figure in the panorama's hollow outlined stroke (a ring for a head, the limbs at the walkers' weight); THE STAGE IN FRAME — at the press the sky scales to .88 about its foot so the cross, its halo and every ray sit inside the stuck plate, and a navy fade under the plate's foot so the card slides under it; THE NIGHT keeps the cross's own pool (the two outer steps go out), so the halo is never bitten by the hill; SURRENDER = both hands raised; the rays to every head by the frame's moment; the morning star still while the voice reads; a title word at the opening. */
+.film .d{stroke-width:9}.film .sk .d{stroke-width:7}.film .hd{fill:none;stroke:var(--plate);stroke-width:9}
+.watch .hero>.sky{transition:transform .7s cubic-bezier(.3,.5,.3,1);transform-origin:50% 100%}
+.watch .hero.on>.sky{transform:scale(.88)}
+.watch .hero.on::after{height:14px;bottom:-13px;left:calc(-1*var(--pad));right:calc(-1*var(--pad));background:linear-gradient(var(--band),transparent)}
+.watch .hero.on .sky .disc>circle:not(:last-child){opacity:0}.watch .hero.on .sky .disc>circle:last-child{opacity:1}
+.c2 .ar.lf{transform:rotate(90deg)}.c2 .fa.lf{transform:rotate(90deg)}.c2 .ar.rt{transform:rotate(-90deg)}.c2 .fa.rt{transform:rotate(-90deg)}
+.hero.on.c10 .rw{animation:kpd .7s cubic-bezier(.3,.4,.2,1) var(--d) both}
+body.reading .band>.stars{animation:none}
+@media (prefers-reduced-motion:reduce){.watch .hero>.sky,.watch .hero.on>.sky{transition:none;transform:none}.watch .hero.on .sky .disc>circle:not(:last-child){opacity:0}.watch .hero.on .sky .disc>circle:last-child{opacity:1}.watch .hero.on.s4 .sky .disc>circle{opacity:1}}
+/* === end THE WATCH FILM === */
 /* === end PLATE:watch === */
 /* === PLATE:card === */
 /* === PLATE /card/ — THE GIVING (card-1010, 2026-10-10; the drawing is SVG_GIVE in build.mjs) === */

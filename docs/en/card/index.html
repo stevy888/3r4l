@@ -429,7 +429,7 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
   var lis=document.querySelectorAll('li[data-day="'+N+'"]');
   for(var i=0;i<lis.length;i++){lis[i].classList.add('is-today');}
   var CU=[[2.4,6.758],[7.008,13.909],[14.159,18.834],[19.084,25.096],[25.346,30.31],[30.56,37.675],[37.925,44.781],[45.031,48.899],[49.149,52.019],[52.269,57.098],[57.348,67.97],[68.22,75.943],[76.193,89.963],[90.213,101.941],[102.191,108.19800000000001],[108.44800000000001,115.001],[115.251,119.747],[119.997,122.484],[122.734,126.06]],au=document.querySelector('audio.card'),hr=document.querySelector('button.hear'),pl=document.querySelector('button.play')||hr;
-  var H=document.getElementById('hero'),SC=[1,2,3,7,10,11];
+  var H=document.getElementById('hero'),SC=[1,2,3,7,10,11,13,17];
   if(au&&pl&&CU.length){
     var lab=hr||pl,label=lab.textContent,pause=lab.getAttribute('data-pause'),round=!hr,cur=-1,fold=null;
     var ems=function(i){return document.querySelectorAll('em.c[data-c="'+i+'"]');};
@@ -437,6 +437,7 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
       if(i===cur){return;}
       var k,e,p;
       if(cur>=0){e=ems(cur);for(k=0;k<e.length;k++){e[k].classList.remove('now');}}
+      if(H){if(cur>=0){H.classList.remove('c'+cur);}if(i>=0){H.classList.add('c'+i,'lit');}else{H.classList.remove('lit');}var fw=H.querySelectorAll('.words .now');for(k=0;k<fw.length;k++){fw[k].classList.remove('now');}if(i>=0){fw=H.querySelectorAll('.words [data-s="'+i+'"]');for(k=0;k<fw.length;k++){fw[k].classList.add('now');}}}
       cur=i;
       if(H&&i>=0){for(var s=0;s<SC.length;s++){if(i>=SC[s]){H.classList.add('s'+(s+1));}}}
       if(i<0){return;}

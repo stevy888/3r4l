@@ -9,7 +9,7 @@
      the cue being read wears .now on every <em class="c"> that carries it (the home's paper and /card/'s whole card share the numbering); on the home the hidden lines of the paper
      arrive as the voice reaches them (.read.on, p.on) and fold away four seconds after the reading; the page follows the line when it leaves the screen. */
   var CU=__CUES__,au=document.querySelector('audio.card'),hr=document.querySelector('button.hear'),pl=document.querySelector('button.play')||hr; /* the home has no door on the drawing (rb-2): the hear door is the one hand */
-  var H=document.getElementById('hero'),SC=[1,2,3,7,10,11];
+  var H=document.getElementById('hero'),SC=[1,2,3,7,10,11,13,17]; /* the stage marks: s4 the light returns at "everyday", s6 the way at "the other side", s7 the prayer (the cross blazes at "raised"), s8 Amen (the panorama returns) */
   if(au&&pl&&CU.length){
     var lab=hr||pl,label=lab.textContent,pause=lab.getAttribute('data-pause'),round=!hr,cur=-1,fold=null; /* the labelled hand: the pair row's hear door on the home (the glyph on the sun has only an aria-label); on /card/ the round glyph itself */
     var ems=function(i){return document.querySelectorAll('em.c[data-c="'+i+'"]');};
@@ -17,6 +17,7 @@
       if(i===cur){return;}
       var k,e,p;
       if(cur>=0){e=ems(cur);for(k=0;k<e.length;k++){e[k].classList.remove('now');}}
+      if(H){if(cur>=0){H.classList.remove('c'+cur);}if(i>=0){H.classList.add('c'+i,'lit');}else{H.classList.remove('lit');}var fw=H.querySelectorAll('.words .now');for(k=0;k<fw.length;k++){fw[k].classList.remove('now');}if(i>=0){fw=H.querySelectorAll('.words [data-s="'+i+'"]');for(k=0;k<fw.length;k++){fw[k].classList.add('now');}}} /* THE WATCH FILM (2026-10-12): the hero carries the cue being read (c<i>, lit) — the stage plays its scene by CSS — and the cue's written word lights (.now) */
       cur=i;
       if(H&&i>=0){for(var s=0;s<SC.length;s++){if(i>=SC[s]){H.classList.add('s'+(s+1));}}}
       if(i<0){return;}
