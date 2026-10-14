@@ -232,6 +232,12 @@
    "status": "DRAFT",
    "written": "2026-10-09T06:1xZ seat:build-3r4l-p2b-1009",
    "_note": "the print door for the Urdu card, on card-ur.pdf"
+  },
+  "byline": {
+   "text": "Free to print and give — from brother Daniel.",
+   "status": "DRAFT",
+   "written": "2026-10-14T18:5xZ seat:go-3r4l-2-pickup-1014 (owner 'Do all recommendations … Fix all'; DRAFT until his line)",
+   "_note": "the trust lens ×12: who gives the cards, and that they are free; under the h1 on the print page as the home's byline sits under its headline"
   }
  },
  "home": {
@@ -284,10 +290,10 @@
    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
   },
   "who_reads_named": {
-   "text": "Write to [name]. He reads every message himself.",
+   "text": "Write to brother Daniel, who gives these cards. He reads every message himself.",
    "status": "DRAFT",
-   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
-   "_note": "when doors.txt names the answerer"
+   "written": "2026-10-14T18:5xZ seat:go-3r4l-2-pickup-1014 (owner 'Do all recommendations … Fix all'; DRAFT until his line)",
+   "_note": "retyped DRAFT (the trust lens: say who he is); the 10-08 line was 'Write to [name]. He reads every message himself.' — [name] filled from doors.txt's answerer; this line names him plainly and keeps the fill out"
   },
   "who_reads": {
    "text": "Write to us.",
@@ -606,6 +612,12 @@
    "status": "DRAFT",
    "written": "2026-10-12T08:xxZ seat:watch-film-1012",
    "_note": "THE WATCH FILM's written key word (owner 2026-10-12 \"key words can be written / confess / forgive etc\"): the panorama returns; the film ends where the arrival stands; a word of the card's own line, written in the sky as the voice says it"
+  },
+  "door_home": {
+   "text": "Watch the card · [m:ss]",
+   "status": "DRAFT",
+   "written": "2026-10-14T18:5xZ seat:go-3r4l-2-pickup-1014 (owner 'Do all recommendations … Fix all'; DRAFT until his line)",
+   "_note": "the home's gold door (owner 2026-10-14 'could the button called watch card explained be better'): the play mark before the words and the film's length after them, one line at 390 and 320 (measured: 'Watch the card explained · 2:27' wrapped at 390); the foot's door keeps 'Watch the card explained'"
   }
  },
  "story": {

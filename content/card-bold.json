@@ -1,0 +1,10 @@
+{
+ "_note": "THE PRINTED CARD'S OWN BOLD PHRASES (2026-10-14, read from docs/card.pdf: the Copperplate-Bold spans, each drawn twice in the file, deduplicated). build.mjs wraps each run inside its card.txt line in <strong class=\"b\"> — the characters never change; the fence unwraps <strong> as it unwraps <em>. The prayers and the title were already the medium face; the note's three phrases are the ones the reader missed.",
+ "runs": [
+  "rule 1 is the key to our success",
+  "God will forgive",
+  "God will change our lives",
+  "Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.",
+  "THREE RULES FOR LIVING FROM THE LORD'S PRAYER:"
+ ]
+}

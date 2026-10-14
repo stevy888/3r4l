@@ -17,4 +17,12 @@ export function fill(s, v = {}) {
   return String(s).replace(/\[controller\]/g, m => v.controller || m).replace(/\[the (?:list )?vendor\]/g, m => v.vendor || m).replace(/\[name\]/g, m => v.name || m)
     .replace(/\[m:ss\]/g, m => v.length || m).replace(/\[N\] MB/g, m => (v.size_mb ? `${v.size_mb} MB` : m));
 }
+export function destLine(contact, labels) { // THE DESTINATION UNDER THE DOORS (owner 2026-10-14 'Do all recommendations'; the trust lens ×14): where each door goes, from his doors.txt — the handle, the number as E.164 spaced, the address; one quiet line; built here so the fence allowlists the very same text
+  if (!contact || !contact.doors) return ''; const d = contact.doors, parts = [];
+  const num = h => { const m = /(\+\d+)/.exec(decodeURIComponent(h)); if (!m) return ''; const n = m[1]; return n.length === 13 && n.startsWith('+63') ? `${n.slice(0, 3)} ${n.slice(3, 6)} ${n.slice(6, 9)} ${n.slice(9)}` : n; };
+  if (d.messenger && d.messenger.href) parts.push(`${labels.messenger} @${d.messenger.href.replace(/^https:\/\/m\.me\//, '')}`);
+  const nums = [['viber', labels.viber], ['text', labels.text], ['whatsapp', labels.whatsapp]].filter(([k]) => d[k] && d[k].href).map(([k, l]) => [l, num(d[k].href)]);
+  const byNum = new Map(); for (const [l, n] of nums) { if (!n) continue; byNum.set(n, [...(byNum.get(n) || []), l]); } for (const [n, ls] of byNum) parts.push(`${ls.join(', ')} ${n}`);
+  if (d.email && d.email.address) parts.push(`${labels.email} ${d.email.address}`);
+  return parts.join(' · '); }
 export default normalise;
