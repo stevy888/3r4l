@@ -11,6 +11,8 @@
   var CU=__CUES__,au=document.querySelector('audio.card'),hr=document.querySelector('button.hear'),pl=document.querySelector('button.play')||hr; /* the home has no door on the drawing (rb-2): the hear door is the one hand */
   var H=document.getElementById('hero'),SC=[1,2,3,7,10,11,13,17]; /* the stage marks: s4 the light returns at "everyday", s6 the way at "the other side", s7 the prayer (the cross blazes at "raised"), s8 Amen (the panorama returns) */
   if(au&&pl&&CU.length){
+    var warm=function(){if(au.preload!=='auto'){au.preload='auto';try{au.load();}catch(e){}}}; /* THE VOICE AT ONCE (owner 2026-10-14 'When press play voice should come immediately'): the audio is preload=none by design (0 bytes before the tap), so the first gesture anywhere on the page warms it — by the press the buffer is full; the rig never gestures, so the load request-log stays clean */
+    ['touchstart','pointerdown','keydown'].forEach(function(ev){document.addEventListener(ev,warm,{once:true,passive:true});});
     var lab=hr||pl,label=lab.textContent,pause=lab.getAttribute('data-pause'),round=!hr,cur=-1,fold=null; /* the labelled hand: the pair row's hear door on the home (the glyph on the sun has only an aria-label); on /card/ the round glyph itself */
     var ems=function(i){return document.querySelectorAll('em.c[data-c="'+i+'"]');};
     var set=function(i){
@@ -42,7 +44,7 @@
   if('serviceWorker' in navigator&&document.referrer.indexOf(location.origin)===0){ /* THE OFFLINE WORKER (rung 3): registered from the second page on — a first load asks for nothing but the fonts */
     navigator.serviceWorker.register(document.querySelector('link[rel=manifest]').href.replace(/manifest\.webmanifest$/,'sw.js')).catch(function(){});
   }
-  var sv=document.querySelector('button.door.share'); /* THE SHARE DOOR of /watch/ (owner 2026-10-12 "ability to share"): the phone's own share sheet with the page's link — the card's title, one line, the address this page is served at (the preview today, the domain the day it lands); no request, no file */
+  var sv=document.querySelector('button.door[data-share]'); /* the hook is an attribute now (2026-10-14): a class another page's row rule targeted gave the button a 40 px margin */ /* THE SHARE DOOR of /watch/ (owner 2026-10-12 "ability to share"): the phone's own share sheet with the page's link — the card's title, one line, the address this page is served at (the preview today, the domain the day it lands); no request, no file */
   if(sv&&navigator.share){sv.hidden=false;sv.addEventListener('click',function(){navigator.share({title:sv.getAttribute('data-title'),text:sv.getAttribute('data-text'),url:location.href}).catch(function(){});});}
   var gv=document.querySelector('.plate.below'); /* THE GIVING below the print section (owner 2026-10-14): the strokes draw once when the plate enters the view */
   if(gv){if('IntersectionObserver' in window){new IntersectionObserver(function(es,o){if(es[0].isIntersecting){gv.classList.add('on');o.disconnect();}},{threshold:.5}).observe(gv);}else{gv.classList.add('on');}}
