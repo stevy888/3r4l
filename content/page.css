@@ -232,8 +232,7 @@ h2.challenge{margin:var(--gap) 0 0;font:600 1.25rem/1.4 var(--sans);color:var(--
 @keyframes pulse{0%{transform:scale(.6)}60%{transform:scale(1.15)}}
 @supports (animation-timeline:view()){.cross-end path{stroke-dasharray:1;stroke-dashoffset:1;animation:walk linear both;animation-timeline:view();animation-range:entry 10% entry 80%}}
 @keyframes walk{to{stroke-dashoffset:0}}
-/* /CONTACT/ · /PRIVACY/ · /STORY/ (rung 4): the band with the h1, a message line, the doors (48 px, the Philippines' order), the prose lines, the front face as the signature, the foot frame. No form, no figure. */
-.doors.contact .door{min-height:3rem}
+/* /CONTACT/ · /PRIVACY/ · /STORY/ (rung 4; /contact/ re-shaped 2026-10-14): the band with the h1; on /contact/ the who-reads line, THE DOORS IN THE 8.71 BUTTON GRAMMAR in his file's order (the shared .next.big / .next.pair.quiet rules; no .doors wrapper), his reply figure, the prose lines — no card face there by his word; /privacy/ and /story/ keep the front face as the signature; the foot frame. No form, no figure. */
 .testimony,.low{margin:var(--gap) 0 0;font:400 1.125rem/1.55 var(--sans);text-wrap:pretty;max-width:36ch}
 .low{margin-top:1rem}
 p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
@@ -243,7 +242,8 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .story h2{font:600 1.125rem/1.4 var(--sans);color:var(--head);margin:0 0 .5rem}
 .story p{margin:0 0 .75rem;font:400 1.1875rem/1.5 var(--serif);color:var(--ink);text-wrap:pretty}
 .story-placeholder{margin:var(--gap) 0 0;color:var(--mute);font-style:italic}
-.message+.doors{margin-top:1.25rem}
+.message+.next.big{margin:1.25rem 0 0} /* the gold door 1.25 rem under the who-reads line, INSET to the column like the quiet buttons — the 8.71 grammar of record (fleet-1010: edge to edge a gold row reads as a band, not a button; the home's .held+.next.big does the same) (R2, 2026-10-14) */
+p.reply{margin:.75rem 0 0;font:400 1.125rem/1.5 var(--sans)} /* his reply figure at READING size under the doors — the page's credibility, not fine print (R2) */
 .low+.clause,.testimony+.clause,.reply+.clause{margin-top:var(--gap)} /* the card face left /contact/ (owner 2026-10-14): his clause takes the section gap under the page's last line */
 /* REDUCED MOTION, the challenge's view-driven rows: this rule stands AFTER the @supports block so it wins the cascade — the static page is the final page; the small cross is drawn whole. */
 @media (prefers-reduced-motion:reduce){svg.cross-end path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}}
@@ -266,7 +266,8 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .print{margin:var(--gap) 0 0}
 .print h2{font:600 1.25rem/1.4 var(--sans);color:var(--head);margin:0 0 1rem}
 .print .real{margin:0 auto}
-.print .next.big{margin:1.25rem 0 0} /* THE PRINT DOORS AS BUTTONS (owner 2026-10-12 "Should these be buttons too like other page ?"): the English card's gold door 1.25 rem under the exact cards, inset to the column; the sheet and the print shop quiet under it; the .doors wrapper left /card/ (its 3 rem floor would have shortened the gold door) */
+.print .next.big{margin:1.25rem 0 0}
+.print .next.pair.quiet{flex-wrap:wrap}.print .door.big.quiet{flex:1 1 calc(50% - .3125rem);border:0;margin:0} /* margin:0 — the share BUTTON carries class share, so /what-next/'s share-row rule .share{margin:var(--gap) 0 0} (later than .door{margin:0}, equal specificity) gave it a 40 px top margin and stretched its row to 101 px on a phone with a share sheet (measured 2026-10-14 with navigator.share stubbed; invisible in the rig's Chromium, where the button is hidden) */ /* THE ROW RULE (the print page plan Rung 3, 2026-10-14): the day the quiet row holds three (ship day: the sheet · Viber · the share button) it wraps two-up with a 50 % basis instead of a 3-up row at 390; border:0 against button.door's border-bottom under the share BUTTON; (0,4,0) beats .door.big.quiet's flex:1; pruned from every other page by CARD_ONLY */ /* THE PRINT DOORS AS BUTTONS (owner 2026-10-12 "Should these be buttons too like other page ?"): the English card's gold door 1.25 rem under the exact cards, inset to the column; the sheet and the print shop quiet under it; the .doors wrapper left /card/ (its 3 rem floor would have shortened the gold door) */
 /* THE FOOT ROW (owner 2026-10-09 "links to other parts of site"): one quiet wrapping row of text doors under the last hairline — the site's doors less the page itself; under it, when the card exists in another language, the language row (the card's own file per tongue). Each door a 48 px tap box. */
 .next.foot,.next.langs{display:flex;flex-wrap:wrap;column-gap:1.25rem}
 .next.foot .door,.next.langs .door{width:auto}

@@ -196,7 +196,6 @@ h2.challenge{margin:var(--gap) 0 0;font:600 1.25rem/1.4 var(--sans);color:var(--
 @keyframes pulse{0%{transform:scale(.6)}60%{transform:scale(1.15)}}
 @supports (animation-timeline:view()){.cross-end path{stroke-dasharray:1;stroke-dashoffset:1;animation:walk linear both;animation-timeline:view();animation-range:entry 10% entry 80%}}
 @keyframes walk{to{stroke-dashoffset:0}}
-.doors.contact .door{min-height:3rem}
 .testimony,.low{margin:var(--gap) 0 0;font:400 1.125rem/1.55 var(--sans);text-wrap:pretty;max-width:36ch}
 .low{margin-top:1rem}
 p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
@@ -206,7 +205,8 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .story h2{font:600 1.125rem/1.4 var(--sans);color:var(--head);margin:0 0 .5rem}
 .story p{margin:0 0 .75rem;font:400 1.1875rem/1.5 var(--serif);color:var(--ink);text-wrap:pretty}
 .story-placeholder{margin:var(--gap) 0 0;color:var(--mute);font-style:italic}
-.message+.doors{margin-top:1.25rem}
+.message+.next.big{margin:1.25rem 0 0}
+p.reply{margin:.75rem 0 0;font:400 1.125rem/1.5 var(--sans)}
 .low+.clause,.testimony+.clause,.reply+.clause{margin-top:var(--gap)}
 @media (prefers-reduced-motion:reduce){svg.cross-end path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}}
 .real{display:grid;gap:.75rem;max-width:21rem;margin:0 auto;position:relative;z-index:1;container-type:inline-size}
@@ -225,6 +225,7 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .print h2{font:600 1.25rem/1.4 var(--sans);color:var(--head);margin:0 0 1rem}
 .print .real{margin:0 auto}
 .print .next.big{margin:1.25rem 0 0}
+.print .next.pair.quiet{flex-wrap:wrap}.print .door.big.quiet{flex:1 1 calc(50% - .3125rem);border:0;margin:0}
 .next.foot,.next.langs{display:flex;flex-wrap:wrap;column-gap:1.25rem}
 .next.foot .door,.next.langs .door{width:auto}
 .next.langs{margin-top:.5rem;border-top:0;padding-top:0}
@@ -294,67 +295,11 @@ footer.sand .notice{margin:1rem 0 0}
 <div class="held whole"><a class="tab" href="#doors">Print ›</a><section id="card"><div class="face front"><p class="title">THREE RULES FOR LIVING FROM THE LORD'S PRAYER:</p><p class="rules">1. Confess all sins to God (Tell it) daily.
 2. Surrender your will to God daily.
 3. Forgive others and yourself daily.</p><p class="note">Dear friend, rule 1 is the key to our success. When we can't do rule 2 or 3, we must always go to rule 1 and confess it; God will forgive... We must never stop confessing, even if they are the same old sins we can't seem to stop doing. As we practice these rules everyday... God will change our lives.</p><p class="note">Also, practice the following little prayer all day:</p><p class="daily_prayer">Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.</p><p class="turn">See The Other Side Of This Card For More Help.</p></div><div class="face back"><p class="invite">Dear friend, if you're not sure where you'll spend eternity, and you want to know now, please pray this simple prayer from the bottom of your heart; as he heard my prayer, He will hear yours also.</p><p class="prayer">Dear Lord Jesus, I understand I am a sinner; I also believe You died for my sins and Your Father in Heaven raised you from the dead. I simply ask You to have mercy on my life and save my soul. Come into my heart and my life and take me to Your home someday. In Your Name Lord Jesus I pray and thank You. Amen.</p><p class="turn_back">For continuous help from God, see other side...</p></div></section></div>
-<section class="verse">
-<p class="label">Today's verse</p>
-<ol class="forty">
-<li data-day="1"><p class="ref">1 John 1:9</p><p class="text">If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/1-john-1-9">Read it on Knowing Jesus ›</a></li>
-<li data-day="2"><p class="ref">Luke 18:13</p><p class="text">And the publican, standing afar off, would not lift up so much as his eyes unto heaven, but smote upon his breast, saying, God be merciful to me a sinner.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/Luke/18/13">Read it on Knowing Jesus ›</a></li>
-<li data-day="3"><p class="ref">Psalm 51:1</p><p class="text">Have mercy upon me, O God, according to thy lovingkindness: according unto the multitude of thy tender mercies blot out my transgressions.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/Psalm/51/1">Read it on Knowing Jesus ›</a></li>
-<li data-day="4"><p class="ref">Psalm 32:5</p><p class="text">I acknowledge my sin unto thee, and mine iniquity have I not hid. I said, I will confess my transgressions unto the LORD; and thou forgavest the iniquity of my sin. Selah.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/Psalm/32/5">Read it on Knowing Jesus ›</a></li>
-<li data-day="5"><p class="ref">Proverbs 28:13</p><p class="text">He that covereth his sins shall not prosper: but whoso confesseth and forsaketh them shall have mercy.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/Proverbs/28/13">Read it on Knowing Jesus ›</a></li>
-<li data-day="6"><p class="ref">Hebrews 4:16</p><p class="text">Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/hebrews-4-16">Read it on Knowing Jesus ›</a></li>
-<li data-day="7"><p class="ref">Lamentations 3:22-23</p><p class="text">It is of the LORD's mercies that we are not consumed, because his compassions fail not.
-They are new every morning: great is thy faithfulness.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/lamentations-3-22">Read it on Knowing Jesus ›</a></li>
-<li data-day="8"><p class="ref">Matthew 28:20</p><p class="text">Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you always, even unto the end of the world. Amen.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/matthew-28-20">Read it on Knowing Jesus ›</a></li>
-<li data-day="9"><p class="ref">John 14:3</p><p class="text">And if I go and prepare a place for you, I will come again, and receive you unto myself; that where I am, there ye may be also.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/john-14-3">Read it on Knowing Jesus ›</a></li>
-<li data-day="10"><p class="ref">1 Timothy 2:1</p><p class="text">I exhort therefore, that, first of all, supplications, prayers, intercessions, and giving of thanks, be made for all men;</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/1-timothy-2-1">Read it on Knowing Jesus ›</a></li>
-<li data-day="11"><p class="ref">Psalm 103:12</p><p class="text">As far as the east is from the west, so far hath he removed our transgressions from us.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/psalm-103-12">Read it on Knowing Jesus ›</a></li>
-<li data-day="12"><p class="ref">Micah 7:18-19</p><p class="text">Who is a God like unto thee, that pardoneth iniquity, and passeth by the transgression of the remnant of his heritage? he retaineth not his anger for ever, because he delighteth in mercy.
-He will turn again, he will have compassion upon us; he will subdue our iniquities; and thou wilt cast all their sins into the depths of the sea.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/micah-7-18">Read it on Knowing Jesus ›</a></li>
-<li data-day="13"><p class="ref">Isaiah 1:18</p><p class="text">Come now, and let us reason together, saith the LORD: though your sins be as scarlet, they shall be as white as snow; though they be red like crimson, they shall be as wool.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/isaiah-1-18">Read it on Knowing Jesus ›</a></li>
-<li data-day="14"><p class="ref">1 John 2:1</p><p class="text">My little children, these things write I unto you, that ye sin not. And if any man sin, we have an advocate with the Father, Jesus Christ the righteous:</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/1-john-2-1">Read it on Knowing Jesus ›</a></li>
-<li data-day="15"><p class="ref">Psalm 130:3-4</p><p class="text">If thou, LORD, shouldest mark iniquities, O Lord, who shall stand?
-But there is forgiveness with thee, that thou mayest be feared.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/psalm-130-3">Read it on Knowing Jesus ›</a></li>
-<li data-day="16"><p class="ref">Psalm 139:23-24</p><p class="text">Search me, O God, and know my heart: try me, and know my thoughts:
-And see if there be any wicked way in me, and lead me in the way everlasting.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/Psalm/139/23">Read it on Knowing Jesus ›</a></li>
-<li data-day="17"><p class="ref">James 5:16</p><p class="text">Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/james-5-16">Read it on Knowing Jesus ›</a></li>
-<li data-day="18"><p class="ref">Ephesians 4:32</p><p class="text">And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/ephesians-4-32">Read it on Knowing Jesus ›</a></li>
-<li data-day="19"><p class="ref">Matthew 5:7</p><p class="text">Blessed are the merciful: for they shall obtain mercy.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/matthew-5-7">Read it on Knowing Jesus ›</a></li>
-<li data-day="20"><p class="ref">Luke 6:36</p><p class="text">Be ye therefore merciful, as your Father also is merciful.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/luke-6-36">Read it on Knowing Jesus ›</a></li>
-<li data-day="21"><p class="ref">Titus 3:5</p><p class="text">Not by works of righteousness which we have done, but according to his mercy he saved us, by the washing of regeneration, and renewing of the Holy Ghost;</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/titus-3-5">Read it on Knowing Jesus ›</a></li>
-<li data-day="22"><p class="ref">Ephesians 2:4-5</p><p class="text">But God, who is rich in mercy, for his great love wherewith he loved us,
-Even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;)</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/ephesians-2-4">Read it on Knowing Jesus ›</a></li>
-<li data-day="23"><p class="ref">Psalm 86:5</p><p class="text">For thou, Lord, art good, and ready to forgive; and plenteous in mercy unto all them that call upon thee.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/Psalm/86/5">Read it on Knowing Jesus ›</a></li>
-<li data-day="24"><p class="ref">Micah 6:8</p><p class="text">He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/micah-6-8">Read it on Knowing Jesus ›</a></li>
-<li data-day="25"><p class="ref">Matthew 5:44</p><p class="text">But I say unto you, Love your enemies, bless them that curse you, do good to them that hate you, and pray for them which despitefully use you, and persecute you;</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/Matthew/5/44">Read it on Knowing Jesus ›</a></li>
-<li data-day="26"><p class="ref">Philippians 4:6-7</p><p class="text">Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.
-And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/philippians-4-6">Read it on Knowing Jesus ›</a></li>
-<li data-day="27"><p class="ref">Colossians 4:2</p><p class="text">Continue in prayer, and watch in the same with thanksgiving;</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/colossians-4-2">Read it on Knowing Jesus ›</a></li>
-<li data-day="28"><p class="ref">1 Thessalonians 5:17</p><p class="text">Pray without ceasing.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/1-thessalonians-5-17">Read it on Knowing Jesus ›</a></li>
-<li data-day="29"><p class="ref">Galatians 6:9</p><p class="text">And let us not be weary in well doing: for in due season we shall reap, if we faint not.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/galatians-6-9">Read it on Knowing Jesus ›</a></li>
-<li data-day="30"><p class="ref">Luke 9:23</p><p class="text">And he said to them all, If any man will come after me, let him deny himself, and take up his cross daily, and follow me.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/luke-9-23">Read it on Knowing Jesus ›</a></li>
-<li data-day="31"><p class="ref">Psalm 32:8</p><p class="text">I will instruct thee and teach thee in the way which thou shalt go: I will guide thee with mine eye.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/Psalm/32/8">Read it on Knowing Jesus ›</a></li>
-<li data-day="32"><p class="ref">Proverbs 3:5-6</p><p class="text">Trust in the LORD with all thine heart; and lean not unto thine own understanding.
-In all thy ways acknowledge him, and he shall direct thy paths.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/proverbs-3-5">Read it on Knowing Jesus ›</a></li>
-<li data-day="33"><p class="ref">Joshua 1:9</p><p class="text">Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/joshua-1-9">Read it on Knowing Jesus ›</a></li>
-<li data-day="34"><p class="ref">Hebrews 13:5</p><p class="text">Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/hebrews-13-5">Read it on Knowing Jesus ›</a></li>
-<li data-day="35"><p class="ref">Matthew 11:28-29</p><p class="text">Come unto me, all ye that labour and are heavy laden, and I will give you rest.
-Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/matthew-11-28">Read it on Knowing Jesus ›</a></li>
-<li data-day="36"><p class="ref">Colossians 3:23</p><p class="text">And whatsoever ye do, do it heartily, as to the Lord, and not unto men;</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/colossians-3-23">Read it on Knowing Jesus ›</a></li>
-<li data-day="37"><p class="ref">Philippians 1:6</p><p class="text">Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/philippians-1-6">Read it on Knowing Jesus ›</a></li>
-<li data-day="38"><p class="ref">1 John 5:13</p><p class="text">These things have I written unto you that believe on the name of the Son of God; that ye may know that ye have eternal life, and that ye may believe on the name of the Son of God.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/1-john-5-13">Read it on Knowing Jesus ›</a></li>
-<li data-day="39"><p class="ref">Romans 8:38-39</p><p class="text">For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,
-Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/romans-8-38">Read it on Knowing Jesus ›</a></li>
-<li data-day="40"><p class="ref">John 10:28</p><p class="text">And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand.</p><p class="tr">King James Version</p><a class="door" href="https://www.knowing-jesus.com/john-10-28">Read it on Knowing Jesus ›</a></li>
-</ol>
-</section>
-<p class="clause prose">Keep using the rules daily and especially confession. Never stop.</p>
-<p class="next big"><a class="door big" href="../what-next/"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="lite" d="M15.5 5.5L20 3V22L15.5 21.5Z" fill="var(--gold)"/><path d="M4 23V3H20V23" fill="none" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><path class="leaf" d="M4 3L15.5 5.5V21.5L4 23Z" fill="var(--paper)" stroke="var(--draw)" stroke-width="1.4" stroke-linejoin="round"/><circle cx="13" cy="13.5" r="1" fill="var(--draw)"/></svg>What next ›</a></p>
 <section id="doors" class="print">
 <h2>Print your card</h2>
 <div class="real exact" aria-hidden="true"><img src="../card-front.webp" width="1050" height="600" alt="" decoding="async"><img src="../card-back.webp" width="1050" height="600" alt="" loading="lazy" decoding="async"></div>
 <p class="next big"><a class="door big" href="../card.pdf">Print the card (English) ›</a></p>
-<p class="next pair quiet"><a class="door big quiet" href="../kit.pdf">Print a sheet of cards</a><a class="door big quiet" href="viber://forward?text=https%3A%2F%2F3r4l.org%2Fkit.pdf">Send the sheet to a print shop</a></p>
+<p class="next pair quiet"><a class="door big quiet" href="../kit.pdf">Print a sheet of cards</a><button class="door big quiet share" type="button" hidden data-title="THREE RULES FOR LIVING FROM THE LORD'S PRAYER:" data-text="The card to print: the file, a sheet of ten with cut marks, and the printer's notes.">Send this page to a print shop</button></p>
 <p class="shop">Both sides · flip on the long edge · 100 %, no scaling · short bond, long bond or A4 · board paper if the shop has it</p>
 <p class="duplex">Finished card 3.5 × 2 in (89 × 51 mm) · no bleed · the sheet: cut on the marks · the card file: one card a page, the page is the card</p>
 <p class="duplex">The sheet is one file on three papers — A4: pages 1 and 2 · Letter or short bond: pages 3 and 4 · long bond: pages 5 and 6. Print your paper's two pages only, front then back.</p>
@@ -432,6 +377,5 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
   mark();
 })();
 </script>
-<noscript><style>.forty>li[data-day="1"]{display:contents}</style></noscript>
 </body>
 </html>

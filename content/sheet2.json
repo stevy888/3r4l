@@ -178,6 +178,18 @@
    "status": "DRAFT",
    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
   },
+  "share_shop": {
+   "text": "Send this page to a print shop",
+   "status": "DRAFT",
+   "written": "2026-10-14T10:4xZ seat:go-3r4l-2-pickup-1014 (the print page plan Rung 3, TPP-shop-send D ruled at the recommendation on the owner's \"Pick up and complete\")",
+   "_note": "the quiet share BUTTON beside the sheet button (hidden until the phone has a share sheet; day.js's existing button.door.share hand) — it sends THIS page's live address, so it works before the domain; the Viber door (send_shop) returns the day docs/CNAME exists"
+  },
+  "share_shop_text": {
+   "text": "The card to print: the file, a sheet of ten with cut marks, and the printer's notes.",
+   "status": "DRAFT",
+   "written": "2026-10-14T10:4xZ seat:go-3r4l-2-pickup-1014 (the print page plan Rung 3, TPP-shop-send D ruled at the recommendation on the owner's \"Pick up and complete\")",
+   "_note": "the share sheet's text line (data-text, an attribute — the fence reads text nodes; a leaf all the same); the title is the card's title; the url is location.href"
+  },
   "close": {
    "text": "A card weighs nothing. In a hand it can carry a whole life home.",
    "status": "DRAFT",
