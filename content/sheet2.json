@@ -309,6 +309,43 @@
    "status": "DRAFT",
    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
    "_note": "the mailto body: the consent is a QUESTION the sender answers in their own hand (RA 10173 §3(b)); never a pre-written yes"
+  },
+  "form_lead": {
+   "text": "Or write here.",
+   "status": "DRAFT",
+   "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)"
+  },
+  "form_message": {
+   "text": "Your message",
+   "status": "DRAFT",
+   "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)"
+  },
+  "form_reply": {
+   "text": "How can he reply? An email or a number — or leave it blank.",
+   "status": "DRAFT",
+   "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)",
+   "_note": "optional by design: the one who is down may not want to be reached; the vendor uses the value as the reply-to when it is an email"
+  },
+  "form_button": {
+   "text": "Send",
+   "status": "DRAFT",
+   "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)"
+  },
+  "form_privacy": {
+   "text": "Your message goes to brother Daniel and is deleted once he has replied.",
+   "status": "DRAFT",
+   "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)",
+   "_note": "RA 10173 at the point of consent — one line, then the Full notice › door; privacy.what already names 'if you write to us, your message and the name you give'"
+  },
+  "sent_h1": {
+   "text": "Sent.",
+   "status": "DRAFT",
+   "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)"
+  },
+  "sent_line": {
+   "text": "Brother Daniel reads every message himself. He will reply as he can.",
+   "status": "DRAFT",
+   "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)"
   }
  },
  "privacy": {

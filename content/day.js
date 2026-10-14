@@ -44,6 +44,8 @@
   }
   var sv=document.querySelector('button.door.share'); /* THE SHARE DOOR of /watch/ (owner 2026-10-12 "ability to share"): the phone's own share sheet with the page's link — the card's title, one line, the address this page is served at (the preview today, the domain the day it lands); no request, no file */
   if(sv&&navigator.share){sv.hidden=false;sv.addEventListener('click',function(){navigator.share({title:sv.getAttribute('data-title'),text:sv.getAttribute('data-text'),url:location.href}).catch(function(){});});}
+  var gv=document.querySelector('.plate.below'); /* THE GIVING below the print section (owner 2026-10-14): the strokes draw once when the plate enters the view */
+  if(gv){if('IntersectionObserver' in window){new IntersectionObserver(function(es,o){if(es[0].isIntersecting){gv.classList.add('on');o.disconnect();}},{threshold:.5}).observe(gv);}else{gv.classList.add('on');}}
   var b=document.getElementById('share');
   if(b&&navigator.share){
     var f=document.getElementById('share-links');

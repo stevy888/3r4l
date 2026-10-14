@@ -218,6 +218,13 @@ h2.challenge{margin:var(--gap) 0 0;font:600 1.25rem/1.4 var(--sans);color:var(--
 .signup button.door.big{display:flex;width:100%;margin:.75rem 0 0;border:0;cursor:pointer}
 .signup .fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .signup .fine a{color:var(--door);text-decoration-color:var(--door-rule)}
+/* THE CONTACT FORM (owner 2026-10-14 "Beautiful contact form here"): the sign-up block's paper and grammar; one message field at reading size, the optional reply field, the gold Send › door; the lead line in the serif */
+.cform .lead{margin:0 0 .875rem;font:400 1.1875rem/1.45 var(--serif);color:var(--card-ink)}
+.cform textarea,.cform input[type=text]{display:block;width:100%;min-height:3rem;padding:.625rem .75rem;font:1.125rem/1.45 var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--card-edge);border-radius:8px;resize:vertical}
+.cform textarea{min-height:8.5rem}
+.cform label+textarea,.cform label+input{margin-bottom:.875rem}
+.low+.cform{margin-top:1.25rem}
+.cform+.testimony{margin-top:var(--gap)}
 .list::before{bottom:-1.75rem}
 .list li{scroll-margin-top:1rem}
 .cross-end{display:block;width:1.5rem;height:2.5rem;margin:.75rem 0 0 1.5rem}
@@ -361,6 +368,28 @@ footer.sand .notice{margin:1rem 0 0}
 @media (prefers-reduced-motion:reduce){.plate .d,.plate-next .dawn,.plate-next .r1,.plate-next .r2,.plate-next .way,.plate-next .w1,.plate-next .x{animation:none;stroke-dashoffset:0;opacity:1;transform:none}.plate-next .lt{animation:none;opacity:.18}}
 /* === end PLATE what-next === */
 /* === end PLATE:what-next === */
+/* === PLATE:card === */
+/* === PLATE /card/ — THE GIVING (card-1010, 2026-10-10; the drawing is SVG_GIVE in build.mjs; back on the page by the owner's word of 2026-10-14 "Print the card should have unique animation too") === */
+/* The page says "Print the card and give it", so the plate is the giving: one ground line climbing to the hill's crest, THE GIVER with the card held out, THE ONE WHO RECEIVES with a hand come to it, THE CROSS on the crest the heaviest mark — the plate's one cream line (pale by night), the card's own dawn behind the hill; the arrival once, ≤ 1.6 s: the ground, the giver, the card, the receiver, the cross last. */
+.plate{position:relative;height:var(--hero-h);margin:1.25rem 0 calc(-1*var(--gap));pointer-events:none}
+.plate>svg{display:block;width:100%;height:100%;overflow:visible}
+.plate .d{fill:none;stroke:var(--plate);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;opacity:0;animation:kpd var(--u,.45s) cubic-bezier(.3,.4,.2,1) var(--d,0s) both}
+.plate .t{stroke-width:5}
+.plate .x{stroke:var(--draw);stroke-width:16}
+.plate .f{opacity:0;animation:gf .7s ease-out .15s both}
+@keyframes gf{to{opacity:1}}
+.plate .lamp{display:none}
+@media print{.plate{display:none}}
+@media (prefers-reduced-motion:reduce){.plate .d{animation:none;stroke-dashoffset:0;opacity:1}.plate .f{animation:none;opacity:1}}
+/* P4 — THE SECOND NAVY MOMENT: the giving on a navy panel between the print section and the paper, at the column's width and the plate's height plus its pad; the strokes wait for the view (.on by day.js's observer), the finished picture without JS (noscript) or under reduced motion */
+.plate.below{height:auto;margin:var(--gap) 0 0;padding:1rem 1rem 0;background:var(--band);border-radius:clamp(10px,3.7vw,16px);overflow:hidden}
+.plate.below>svg{position:static;height:var(--hero-h)}
+.plate.below .d{animation:none}
+.plate.below .f{animation:none}
+.plate.below.on .d{animation:kpd var(--u,.45s) cubic-bezier(.3,.4,.2,1) var(--d,0s) both}
+.plate.below.on .f{animation:gf .7s ease-out .15s both}
+@media (prefers-reduced-motion:reduce){.plate.below .d{animation:none;stroke-dashoffset:0;opacity:1}.plate.below .f{animation:none;opacity:1}}
+/* === end PLATE:card === */
 /* === PLATE:contact === */
 /* === PLATE /contact/ — THE OPEN DOOR (fleet-1010, 2026-10-10, contact rival C; the drawing is SVG_CONTACT in build.mjs) === */
 /* The plate sits inside the band after the h1, --hero-h tall (.45 of the column: 126 px at 320, 154 at 390), its bottom edge ON the band's foot (the negative margin takes the band's own bottom pad: the floor the one who is down sits on is the paper's edge, the light runs to it). ONE LINE: the home's --plate cream (pale by night) at 7.5 units, round caps; the cross alone in --draw (navy on the sun's face by day, pale on the dim pool by night — dark is the same drawing in the pale line, the sun its pool). THE ARRIVAL, once, inside 1.6 s: every stroke a kpd draw-on (dashoffset 100 → 0 with pathLength 100), every fill a fadein; per-stroke --d (delay) and --u (duration) inline on the markup; the order is the story's: the figure in the dark, the door, the leaf, the light, the road, the cross last. Print: navy lines on white, the fills and the hill hidden. The reduced rule is the LAST in the sheet (the law). */
