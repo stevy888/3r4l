@@ -7,7 +7,7 @@ const browser = await chromium.launch(); const ctx = await browser.newContext({ 
 const reqs = []; page.on('request', r => reqs.push(r.url()));
 await page.goto(base, { waitUntil: 'load' }); const firstLoad = reqs.filter(u => /sw\.js|manifest\.webmanifest|favicon\.svg/.test(u)).length;
 console.log(`${firstLoad === 0 ? 'ok ' : 'RED'} the first load asks for no worker, manifest or icon (${firstLoad})`); if (firstLoad) bad++;
-await page.click('a.door[href="card/"]'); await page.waitForURL(/card\/$/); // the second page: the worker registers (document.referrer is the site)
+await page.click('a.door[href="card/#doors"]'); await page.waitForURL(/card\/#doors$/); // the second page: the worker registers (document.referrer is the site) — the click is the foot's Print door (TPP-home-pair C, delegate-row 2026-10-14: the home's quiet whole-card button left; the foot's door is on every page)
 const ready = await page.evaluate(async () => { const r = await navigator.serviceWorker.ready; for (let i = 0; i < 60; i++) { const ks = await caches.keys(); if (ks.length) { const c = await caches.open(ks[0]); const n = (await c.keys()).length; if (n >= 8) return { scope: r.scope, cache: ks[0], n }; } await new Promise(f => setTimeout(f, 250)); } return null; });
 console.log(`${ready ? 'ok ' : 'RED'} the worker installed and cached the site's own files · ${JSON.stringify(ready)}`); if (!ready) bad++;
 await ctx.setOffline(true);

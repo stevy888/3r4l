@@ -150,6 +150,24 @@
    "status": "DRAFT",
    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
   },
+  "spec": {
+   "text": "Finished card 3.5 × 2 in (89 × 51 mm) · no bleed · the sheet: cut on the marks · the card file: one card a page, the page is the card",
+   "status": "DRAFT",
+   "written": "2026-10-14T10:1xZ seat:go-3r4l-2-pickup-1014 (the print page plan Rung 2; every fact VERIFIED on the files this hour: pdfinfo docs/card.pdf = 2 pages 252 × 144 pt, sha256 961e9a83… == card-of-record.pdf; docs/kit.pdf p1–2 595.276×841.89 A4 · p3–4 612×792 Letter · p5–6 612×936 long bond, kit/make_kit.py SIZES; pdftoppm of card.pdf p1 samples rgb(37,74,165) — blue on white; the stock's weight and colour are nowhere on disk and are his or brother Daniel's bytes)",
+   "_note": "the finished size and the cut — the card file (card.pdf) has no marks: its page IS the trim; the sheet (kit.pdf) carries 3 mm cut marks outside each cell"
+  },
+  "papers": {
+   "text": "The sheet is one file on three papers — A4: pages 1 and 2 · Letter or short bond: pages 3 and 4 · long bond: pages 5 and 6. Print your paper's two pages only, front then back.",
+   "status": "DRAFT",
+   "written": "2026-10-14T10:1xZ seat:go-3r4l-2-pickup-1014 (the print page plan Rung 2; every fact VERIFIED on the files this hour: pdfinfo docs/card.pdf = 2 pages 252 × 144 pt, sha256 961e9a83… == card-of-record.pdf; docs/kit.pdf p1–2 595.276×841.89 A4 · p3–4 612×792 Letter · p5–6 612×936 long bond, kit/make_kit.py SIZES; pdftoppm of card.pdf p1 samples rgb(37,74,165) — blue on white; the stock's weight and colour are nowhere on disk and are his or brother Daniel's bytes)",
+   "_note": "the page map of kit.pdf (six pages, front then back per paper, make_kit.py SIZES order A4 · Letter · Long); the kept no_duplex line ('page 1 … page 2') is true for A4 alone — this leaf names every paper's pair"
+  },
+  "paper_colour": {
+   "text": "The file prints in its own blue on the paper you load. The picture above shows the card on sand.",
+   "status": "DRAFT",
+   "written": "2026-10-14T10:1xZ seat:go-3r4l-2-pickup-1014 (the print page plan Rung 2; every fact VERIFIED on the files this hour: pdfinfo docs/card.pdf = 2 pages 252 × 144 pt, sha256 961e9a83… == card-of-record.pdf; docs/kit.pdf p1–2 595.276×841.89 A4 · p3–4 612×792 Letter · p5–6 612×936 long bond, kit/make_kit.py SIZES; pdftoppm of card.pdf p1 samples rgb(37,74,165) — blue on white; the stock's weight and colour are nowhere on disk and are his or brother Daniel's bytes)",
+   "_note": "the ink in the file is blue (rgb ≈ 37,74,165) on white; the exact faces above are rendered navy on sand by the owner's word (8976) — the printer should expect blue on their own stock; the stock itself (weight, colour) is his or Daniel's line, never drafted"
+  },
   "no_duplex": {
    "text": "No two-sided printer? Print page 1, put the sheet back, print page 2.",
    "status": "DRAFT",

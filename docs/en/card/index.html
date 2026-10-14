@@ -207,6 +207,7 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .story p{margin:0 0 .75rem;font:400 1.1875rem/1.5 var(--serif);color:var(--ink);text-wrap:pretty}
 .story-placeholder{margin:var(--gap) 0 0;color:var(--mute);font-style:italic}
 .message+.doors{margin-top:1.25rem}
+.low+.clause,.testimony+.clause,.reply+.clause{margin-top:var(--gap)}
 @media (prefers-reduced-motion:reduce){svg.cross-end path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}}
 .real{display:grid;gap:.75rem;max-width:21rem;margin:0 auto;position:relative;z-index:1;container-type:inline-size}
 .real .face{aspect-ratio:252/144;overflow:hidden;box-sizing:border-box;padding:1.6cqw 2cqw;background:#f7efdc;color:#1b2440;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42);font-family:var(--serif);font-size:10.4px;font-size:3.1cqw;line-height:1.08}
@@ -219,7 +220,7 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .real .face p:last-child{margin-bottom:0}
 .whole>.real+svg.dawn{z-index:0}
 @media print{.real{display:none}}
-.real.exact img{display:block;width:100%;height:auto;aspect-ratio:252/144;background:#fff;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42)}
+.real.exact img{display:block;width:100%;height:auto;aspect-ratio:252/144;background:#f7efdc;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42)}
 .print{margin:var(--gap) 0 0}
 .print h2{font:600 1.25rem/1.4 var(--sans);color:var(--head);margin:0 0 1rem}
 .print .real{margin:0 auto}
@@ -355,6 +356,9 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
 <p class="next big"><a class="door big" href="../../card.pdf">Print the card (English) ›</a></p>
 <p class="next pair quiet"><a class="door big quiet" href="../../kit.pdf">Print a sheet of cards</a><a class="door big quiet" href="viber://forward?text=https%3A%2F%2F3r4l.org%2Fkit.pdf">Send the sheet to a print shop</a></p>
 <p class="shop">Both sides · flip on the long edge · 100 %, no scaling · short bond, long bond or A4 · board paper if the shop has it</p>
+<p class="duplex">Finished card 3.5 × 2 in (89 × 51 mm) · no bleed · the sheet: cut on the marks · the card file: one card a page, the page is the card</p>
+<p class="duplex">The sheet is one file on three papers — A4: pages 1 and 2 · Letter or short bond: pages 3 and 4 · long bond: pages 5 and 6. Print your paper's two pages only, front then back.</p>
+<p class="duplex">The file prints in its own blue on the paper you load. The picture above shows the card on sand.</p>
 <p class="duplex">No two-sided printer? Print page 1, put the sheet back, print page 2.</p>
 <ol class="how">
 <li>Tap the file.</li>
@@ -363,7 +367,7 @@ Nor height, nor depth, nor any other creature, shall be able to separate us from
 </ol>
 <p class="close prose">A card weighs nothing. In a hand it can carry a whole life home.</p>
 </section>
-<footer class="sand"><svg class="mark" viewBox="0 0 56 40" aria-hidden="true" focusable="false"><path d="M2 38C14 34 22 22 30 22C38 22 46 30 54 36" fill="none" stroke="var(--rb-ink)" stroke-width="1.4" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path d="M30 22V4M23.5 9.5H36.5" fill="none" stroke="var(--rb-ink)" stroke-width="1.4" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><p class="next foot"><a class="door" href="../../contact/">How are you doing? ›</a><a class="door" href="../../card/">Read the whole card ›</a><a class="door" href="../../card/#doors">Print the card ›</a><a class="door" href="../../watch/">Watch the card explained ›</a><a class="door" href="../../what-next/">Forty day challenge ›</a><a class="door" href="../../">Home ›</a></p>
+<footer class="sand"><svg class="mark" viewBox="0 0 56 40" aria-hidden="true" focusable="false"><path d="M2 38C14 34 22 22 30 22C38 22 46 30 54 36" fill="none" stroke="var(--rb-ink)" stroke-width="1.4" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path d="M30 22V4M23.5 9.5H36.5" fill="none" stroke="var(--rb-ink)" stroke-width="1.4" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><p class="next foot"><a class="door" href="../../contact/">How are you doing? ›</a><a class="door" href="../../card/#doors">Print the card ›</a><a class="door" href="../../watch/">Watch the card explained ›</a><a class="door" href="../../what-next/">Forty day challenge ›</a><a class="door" href="../../">Home ›</a></p>
 <p class="theme"><button type="button" id="theme" aria-label="Dark" data-label-light="Light" data-label-dark="Dark"><svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8Z" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-linejoin="round"/></svg><svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="var(--gold)" stroke-width="1.4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round"/></svg></button></p>
 </footer></main>
 <script>

@@ -244,6 +244,7 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .story p{margin:0 0 .75rem;font:400 1.1875rem/1.5 var(--serif);color:var(--ink);text-wrap:pretty}
 .story-placeholder{margin:var(--gap) 0 0;color:var(--mute);font-style:italic}
 .message+.doors{margin-top:1.25rem}
+.low+.clause,.testimony+.clause,.reply+.clause{margin-top:var(--gap)} /* the card face left /contact/ (owner 2026-10-14): his clause takes the section gap under the page's last line */
 /* REDUCED MOTION, the challenge's view-driven rows: this rule stands AFTER the @supports block so it wins the cascade — the static page is the final page; the small cross is drawn whole. */
 @media (prefers-reduced-motion:reduce){svg.cross-end path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}}
 /* THE CARD AT ITS PRINTED SHAPE AND SIZE (/card/; owner 2026-10-08 "shaped like the card photo and same size so clear"): two landscape faces of 252 × 144 pt (3.5 × 2 in = 336 × 192 px; the column's width on a 390 phone IS the card's width), the words from card.txt in the serif at ≈ the card's own 9.5–10 pt, cream in both themes (a card is paper), the gold rule printed inside; the large readable faces follow below. The rig exempts .real from the 13 px floor by this word and asserts the faces unclipped and 1.75 : 1. */
@@ -258,8 +259,8 @@ p.fine{margin:.75rem 0 0;font:400 .9375rem/1.45 var(--sans);color:var(--mute)}
 .real .face p:last-child{margin-bottom:0}
 .whole>.real+svg.dawn{z-index:0}
 @media print{.real{display:none}}
-/* THE EXACT CARD (owner 2026-10-08 "exact layout I gave"): the printed faces as pictures, the card's own shape, on the yes */
-.real.exact img{display:block;width:100%;height:auto;aspect-ratio:252/144;background:#fff;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42)}
+/* THE EXACT CARD (owner 2026-10-08 "exact layout I gave"): the printed faces as pictures, the card's own shape, on the yes. The box under each face is the faces' own sand (#f7efdc, his "sand color and all"), never white — the 209d27d 390 full frame shot the faces before decode as two white slabs (the print page plan Rung 1, 2026-10-14); the opaque webp fills the box, so every settled frame is pixel-equal */
+.real.exact img{display:block;width:100%;height:auto;aspect-ratio:252/144;background:#f7efdc;border:1px solid #1b2440;border-radius:4px;box-shadow:8px 10px 22px -8px rgba(80,56,16,.42)}
 /* THE RULES CARD on the home (owner 2026-10-08 "just the three rules 1. 2. 3. written out beautifully in that box"): the title line and the three rules at reading size on the cream paper, nothing else — the picture is still the card and the door to /card/. */
 /* THE PRINT SECTION at the foot of /card/ (owner 2026-10-08): "Print your card" — the exact cards shown as he gave them, the doors to the actual card files per language, the shop line, the steps, the close line. */
 .print{margin:var(--gap) 0 0}
