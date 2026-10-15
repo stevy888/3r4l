@@ -342,10 +342,10 @@
    "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)"
   },
   "form_reply": {
-   "text": "How can he reply? An email or a number — or leave it blank.",
+   "text": "How can he reply?",
    "status": "DRAFT",
-   "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)",
-   "_note": "optional by design: the one who is down may not want to be reached; the vendor uses the value as the reply-to when it is an email"
+   "written": "2026-10-15T10:xxZ seat:go-3r4l-2-1015c (fleet wf_6c6c3ac6-94d r1)",
+   "_note": "the label alone; its permission moved to form_reply_hint"
   },
   "form_button": {
    "text": "Send",
@@ -353,10 +353,10 @@
    "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)"
   },
   "form_privacy": {
-   "text": "Your message goes to brother Daniel and is deleted once he has replied.",
+   "text": "It goes to brother Daniel through a form service and is deleted once he has read it and replied where he can.",
    "status": "DRAFT",
-   "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)",
-   "_note": "RA 10173 at the point of consent — one line, then the Full notice › door; privacy.what already names 'if you write to us, your message and the name you give'"
+   "written": "2026-10-15T10:xxZ seat:go-3r4l-2-1015c (fleet wf_6c6c3ac6-94d r1)",
+   "_note": "the service is named on /privacy/ (processors); the deletion promise is HIS to keep or strike"
   },
   "sent_h1": {
    "text": "Sent.",
@@ -364,15 +364,59 @@
    "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)"
   },
   "sent_line": {
-   "text": "Brother Daniel reads every message himself. He will reply as he can.",
+   "text": "Brother Daniel reads every message himself. If you left a way to reach you, he will reply as he can. While you wait, Rule 1 still works today:",
    "status": "DRAFT",
-   "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)"
+   "written": "2026-10-15T10:xxZ seat:go-3r4l-2-1015c (fleet wf_6c6c3ac6-94d r1)",
+   "_note": "no promise to the reader who left no way back; the contact page's breath carried on"
   },
   "text_first_line": {
    "text": "Hello. This is about how I am doing.",
    "status": "DRAFT",
    "written": "2026-10-15T01:3xZ seat:go-3r4l-2-do-all-1015 (owner 2026-10-15 \"Do all\" on the site-wide list; DRAFT until his line)",
    "_note": "the line already typed when the Text or WhatsApp door opens (D8): the reader never faces a blank message; the page's own question answered in the first words"
+  },
+  "form_lead_alone": {
+   "text": "Write to brother Daniel, who gives these cards.",
+   "status": "DRAFT",
+   "written": "2026-10-15T10:xxZ seat:go-3r4l-2-1015c (fleet wf_6c6c3ac6-94d r1)",
+   "_note": "the paper's head when no doors stand on the page (his doors.txt absent); his existing DRAFT words (who_reads_named), no new claim"
+  },
+  "form_lead_alone_keeper": {
+   "text": "Write to the people behind the card.",
+   "status": "DRAFT",
+   "written": "2026-10-15T10:xxZ seat:go-3r4l-2-1015c (fleet wf_6c6c3ac6-94d r1)",
+   "_note": "the DEFAULT while the form's key is not brother Daniel's own (contact-form.json reaches absent or 'keeper'); his existing DRAFT words (who_reads)"
+  },
+  "form_reply_keeper": {
+   "text": "How can we reply?",
+   "status": "DRAFT",
+   "written": "2026-10-15T10:xxZ seat:go-3r4l-2-1015c (fleet wf_6c6c3ac6-94d r1)"
+  },
+  "form_reply_hint": {
+   "text": "An email or a number — or leave it blank.",
+   "status": "DRAFT",
+   "written": "2026-10-15T10:xxZ seat:go-3r4l-2-1015c (fleet wf_6c6c3ac6-94d r1)"
+  },
+  "form_privacy_keeper": {
+   "text": "It comes to us through a form service and is deleted once we have read it and replied where we can.",
+   "status": "DRAFT",
+   "written": "2026-10-15T10:xxZ seat:go-3r4l-2-1015c (fleet wf_6c6c3ac6-94d r1)",
+   "_note": "the interim default; the deletion promise is HIS to keep or strike"
+  },
+  "form_failed": {
+   "text": "It didn't go. Your words are still here — try once more.",
+   "status": "DRAFT",
+   "written": "2026-10-15T10:xxZ seat:go-3r4l-2-1015c (fleet wf_6c6c3ac6-94d r1)"
+  },
+  "sent_line_keeper": {
+   "text": "Thank you for writing. If you left a way to reach you, we will reply as we can. While you wait, Rule 1 still works today:",
+   "status": "DRAFT",
+   "written": "2026-10-15T10:xxZ seat:go-3r4l-2-1015c (fleet wf_6c6c3ac6-94d r1)"
+  },
+  "form_sending": {
+   "text": "Sending…",
+   "status": "DRAFT",
+   "written": "2026-10-15T12:xxZ seat:go-3r4l-2-1015c (R2 read)"
   }
  },
  "privacy": {
@@ -402,7 +446,7 @@
    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
   },
   "processors": {
-   "text": "Who processes it for us: [the list vendor] sends the mails; Cloudflare routes our email.",
+   "text": "Who processes it for us: [the list vendor] sends the mails; Cloudflare routes our email; Web3Forms carries the contact form's messages.",
    "status": "DRAFT",
    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
   },
