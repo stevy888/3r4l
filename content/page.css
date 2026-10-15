@@ -74,7 +74,7 @@ main>#card{margin-top:var(--gap)}
 .face+.face{margin-top:1rem}
 .face::before{content:"";position:absolute;left:1.25rem;top:1.125rem;width:3rem;height:3px;background:var(--gold);border-radius:1.5px}
 #card .title{font:500 1.125rem/1.35 var(--serif);letter-spacing:.02em;color:var(--card-ink);margin:0 0 .875rem;text-wrap:balance}
-#card .rules{font:400 1.1875rem/1.45 var(--serif);margin:0 0 1rem;white-space:pre-line;padding-left:1.45em;text-indent:-1.45em} /* the numerals hang (the judges' residue since 10-10; 2026-10-14) */
+#card .rules{font:400 1.1875rem/1.45 var(--serif);margin:0 0 1rem;padding-left:1.45em;text-indent:-1.45em}#card .rules .r{display:block} /* EVERY numeral hangs (2026-10-15, the pages read's shared return): each rule its own block — a text-indent reaches only a block's first line, so the 2026-10-14 pre-line paragraph hung rule 1's number and indented rules 2 and 3 under it */
 #card strong.b,.real strong.b{font-weight:500;color:var(--card-ink)} /* the printed card's own bold phrases, the serif's medium face (card-bold.json) */
 #card .note,#card .invite{font:400 1.0625rem/1.45 var(--serif);margin:0 0 .75rem;text-wrap:pretty}
 #card .daily_prayer,#card .prayer{font:500 1.125rem/1.45 var(--serif);color:var(--card-ink);margin:0 0 1rem;text-wrap:pretty}
