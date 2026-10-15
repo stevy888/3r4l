@@ -264,12 +264,6 @@
    "status": "DRAFT",
    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008"
   },
-  "foot_who": {
-   "text": "Who gives these cards?",
-   "status": "DRAFT",
-   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
-   "_note": "shown only when hasFounder (/story/ served)"
-  },
   "pause": {
    "text": "Pause",
    "status": "DRAFT",
@@ -293,6 +287,15 @@
    "status": "DRAFT",
    "written": "2026-10-10T04:3xZ seat:rules-box-1010",
    "_note": "the trust lens of rb-1 (three judges): one quiet line under the headline naming the page; the giver's name waits on the founder's own words (/story/)"
+  },
+  "_struck": {
+   "foot_who": {
+    "text": "Who gives these cards?",
+    "status": "DRAFT",
+    "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
+    "_note": "shown only when hasFounder (/story/ served)"
+   },
+   "foot_who_why": "seat 2026-10-15 (owner 'Do u recommendations'): unused since 7589472 — the foot's story door carries story.h1 \"How this started\"; no served page carried this line (grep docs/ 0)"
   }
  },
  "contact": {
