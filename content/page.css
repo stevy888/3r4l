@@ -421,6 +421,22 @@ footer.sand .notice{margin:1rem 0 0}
 @media (prefers-reduced-motion:reduce){.plate .d,.plate .t,.plate .cross{animation:none;stroke-dashoffset:0;opacity:1}.plate .f{animation:none;opacity:1}}
 /* === end STORY PLATE === */
 /* === end PLATE:story === */
+/* === PLATE:testimony === */
+/* === TESTIMONY PLATE — THE WAY HOME (seat go-3r4l-2-do-all-1015, 2026-10-15; the owner's "skitter animation for the testimony page", read as the family's drawn arrival for this page; the drawing is SVG_TESTIMONY in build.mjs): the sower's field once more, and on the way to the cross four who found a card walk home holding it up — near to far, left to right, the cross last. The same rules as the story plate, fenced for this page's wire: .45 of the column tall inside the band after the h1, the family's one line (the far walkers and the cards at 5 units), the sun's three flat steps, the hill the band's own navy; every stroke a kpd draw-on inside 1.6 s; reduced motion = the finished picture. === */
+:root{--plate-h:calc((100vw - 2*var(--pad))*.45)}
+@media (min-width:640px){:root{--plate-h:calc(37rem*.45)}}
+.band .plate{position:relative;height:var(--plate-h);margin:1.25rem 0 calc(-1*var(--gap));pointer-events:none}
+.plate>svg{display:block;position:absolute;left:0;bottom:0;width:100%;height:100%}
+.plate .d{fill:none;stroke:var(--plate);stroke-width:7.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;opacity:0;animation:kpd var(--u,.45s) cubic-bezier(.3,.4,.2,1) var(--d,0s) both}
+.plate .t{stroke-width:5}
+.plate .f{opacity:0;animation:kpf .7s ease-out both}
+.plate .cross{fill:none;stroke:var(--draw);stroke-width:8;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;opacity:0;animation:kpd .4s ease-out 1.2s both}
+@keyframes kpf{to{opacity:1}}
+.invite{margin:var(--gap) 0 0}
+@media print{.plate{display:none}}
+@media (prefers-reduced-motion:reduce){.plate .d,.plate .t,.plate .cross{animation:none;stroke-dashoffset:0;opacity:1}.plate .f{animation:none;opacity:1}}
+/* === end TESTIMONY PLATE === */
+/* === end PLATE:testimony === */
 /* === PLATE:watch === */
 /* THE PRUNE (go-3r4l-2d, 2026-10-12, plan R1): the press rules of the PLATE block (.hero.on — only /watch/ presses now), the reading's cross redraw and the WATCH block moved inside this fence, off the home's wire; the same cascade here — each keeps its place before the film's rules. */
 body.reading .sky .cross{animation:drawon 1.8s ease-out both}

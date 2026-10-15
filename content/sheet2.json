@@ -640,10 +640,10 @@
  },
  "story": {
   "placeholder": {
-   "text": "[His words go here — the interview has not been held]",
+   "text": "Brother Daniel's testimony here.",
    "status": "DRAFT",
-   "written": "2026-10-08T08:45Z seat:build-3r4l-p2-1008",
-   "_note": "the PREVIEW only (TR2-founder-page B); no sentence of his is drafted; founder.txt carries his words in his order under at most three heads that are his own phrases"
+   "written": "2026-10-15T02:0xZ seat:go-3r4l-2-do-all-1015 (owner 2026-10-15 in chat; DRAFT until his line)",
+   "_note": "his words: \"placeholder text - just saying brother Daniel testimony here\" — SERVES until founder.txt; was '[His words go here — the interview has not been held]' (never served)"
   },
   "door_print": {
    "text": "Print the card and give it",
@@ -656,6 +656,38 @@
    "status": "DRAFT",
    "written": "2026-10-08T09:05Z seat:build-3r4l-p2-1008",
    "_note": "/story/'s second quiet door → ../contact/"
+  },
+  "h1": {
+   "text": "How this started",
+   "status": "DRAFT",
+   "written": "2026-10-15T02:0xZ seat:go-3r4l-2-do-all-1015 (owner 2026-10-15 in chat; DRAFT until his line)",
+   "_note": "his words: \"Create a how this started page of brother Daniel testimony\" — the page's title and its foot door; the lede of founder.txt replaces it the day his words come"
+  }
+ },
+ "testimony": {
+  "_note": "THE TESTIMONY PAGE (owner 2026-10-15 \"Also skitter animation for the testimony page / Do those two pages … high quality just … text to add\"): what happened to those who prayed the prayer on the card — the consented rows of testimonials.json when they exist, his placeholder line until then; every leaf DRAFT until his line",
+  "h1": {
+   "text": "What happened",
+   "status": "DRAFT",
+   "written": "2026-10-15T02:0xZ seat:go-3r4l-2-do-all-1015 (owner 2026-10-15 in chat; DRAFT until his line)",
+   "_note": "the page's title and its foot door; echoes the invitation's own words ('Tell us what happened')"
+  },
+  "byline": {
+   "text": "People who prayed the prayer on the card, in their own words. First names only.",
+   "status": "DRAFT",
+   "written": "2026-10-15T02:0xZ seat:go-3r4l-2-do-all-1015 (owner 2026-10-15 in chat; DRAFT until his line)"
+  },
+  "placeholder": {
+   "text": "Testimonies here.",
+   "status": "DRAFT",
+   "written": "2026-10-15T02:0xZ seat:go-3r4l-2-do-all-1015 (owner 2026-10-15 in chat; DRAFT until his line)",
+   "_note": "SERVES until the first consented row; the shape of his placeholder for brother Daniel's page"
+  },
+  "door_tell": {
+   "text": "Tell us what happened",
+   "status": "DRAFT",
+   "written": "2026-10-15T02:0xZ seat:go-3r4l-2-do-all-1015 (owner 2026-10-15 in chat; DRAFT until his line)",
+   "_note": "the one gold door → /contact/ (the doors and the form)"
   }
  }
 }
