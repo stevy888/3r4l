@@ -59,6 +59,8 @@ def impose(fitz, src, out_path):
                     for (x, y) in ((cell.x0, cell.y0), (cell.x1, cell.y0), (cell.x0, cell.y1), (cell.x1, cell.y1)):
                         page.draw_line((x - MARK - 2 * MM, y), (x - MARK, y), width=0.3) if x == cell.x0 else page.draw_line((x + MARK, y), (x + MARK + 2 * MM, y), width=0.3)
                         page.draw_line((x, y - MARK - 2 * MM), (x, y - MARK), width=0.3) if y == cell.y0 else page.draw_line((x, y + MARK), (x, y + MARK + 2 * MM), width=0.3)
+            label = {'A4': 'A4', 'Letter': 'Letter / short bond', 'Long': 'Long bond'}[name] + ' \u00b7 ' + ('front' if pno == 0 else 'back') + ' of the card'  # THE SHEET'S LABEL (2026-10-15, the site-wide list D6, owner "Do all"): a hairline label OUTSIDE the cut marks naming the paper and the face, so a shop never guesses which sheet is which; grey, 6 pt, above the top row's marks (baseline 4 mm from the edge); outside every cell, so the per-cell proof is untouched; the words are a seat's DRAFT until his
+            page.insert_text((MARGIN, MARGIN - MARK - 2 * MM - 3), label, fontsize=6, fontname='helv', color=(0.5, 0.5, 0.5))
             report.append((name, 'front' if pno == 0 else 'back', pno, n, cells, len(doc) - 1))  # the sheet's NUMBER: a Page handle dies at the next new_page
     doc.save(out_path); return report, doc
 

@@ -208,12 +208,13 @@
     "written": "2026-10-14T10:1xZ seat:go-3r4l-2-pickup-1014 (the print page plan Rung 2; every fact VERIFIED on the files this hour: pdfinfo docs/card.pdf = 2 pages 252 × 144 pt, sha256 961e9a83… == card-of-record.pdf; docs/kit.pdf p1–2 595.276×841.89 A4 · p3–4 612×792 Letter · p5–6 612×936 long bond, kit/make_kit.py SIZES; pdftoppm of card.pdf p1 samples rgb(37,74,165) — blue on white; the stock's weight and colour are nowhere on disk and are his or brother Daniel's bytes)",
     "_note": "the ink in the file is blue (rgb ≈ 37,74,165) on white; the exact faces above are rendered navy on sand by the owner's word (8976) — the printer should expect blue on their own stock; the stock itself (weight, colour) is his or Daniel's line, never drafted"
    },
-   "why_notes": "owner 2026-10-14 on /card/#doors with the five notes pasted: \"His useful this data? Band useful / only useful stuff\" — the finished-size line (the card file's page IS the card; a shop has the file) and the ink-colour line (changes nothing the reader does) leave; the shop line, the page map and the no-duplex line stay"
-  },
-  "print_h2": {
-   "text": "Print your card",
-   "status": "owner",
-   "written": "2026-10-08 owner in chat: \"print your card with them showing exactly like the cards I gave\""
+   "why_notes": "owner 2026-10-14 on /card/#doors with the five notes pasted: \"His useful this data? Band useful / only useful stuff\" — the finished-size line (the card file's page IS the card; a shop has the file) and the ink-colour line (changes nothing the reader does) leave; the shop line, the page map and the no-duplex line stay",
+   "print_h2": {
+    "text": "Print your card",
+    "status": "owner",
+    "written": "2026-10-08 owner in chat: \"print your card with them showing exactly like the cards I gave\"",
+    "struck": "2026-10-15 seat go-3r4l-2-do-all-1015 on the owner's 'Do all' (the site-wide list C5: nine judge returns of 2026-10-14 read it redundant under the band's h1 'Print the card and give it.'); his words kept here; the revert = one line in build.mjs cardPage"
+   }
   },
   "print_en": {
    "text": "Print the card (English)",
@@ -238,6 +239,17 @@
    "status": "DRAFT",
    "written": "2026-10-14T18:5xZ seat:go-3r4l-2-pickup-1014 (owner 'Do all recommendations … Fix all'; DRAFT until his line)",
    "_note": "the trust lens ×12: who gives the cards, and that they are free; under the h1 on the print page as the home's byline sits under its headline"
+  },
+  "face_front_alt": {
+   "text": "The printed card, front. Its words are set out below.",
+   "status": "DRAFT",
+   "written": "2026-10-15T01:3xZ seat:go-3r4l-2-do-all-1015 (owner 2026-10-15 \"Do all\" on the site-wide list; DRAFT until his line)",
+   "_note": "the front face's alt (C10, a11y): names the picture and points a screen reader to the typeset card under it; never the card's words"
+  },
+  "face_back_alt": {
+   "text": "The printed card, back. Its words are set out below.",
+   "status": "DRAFT",
+   "written": "2026-10-15T01:3xZ seat:go-3r4l-2-do-all-1015 (owner 2026-10-15 \"Do all\" on the site-wide list; DRAFT until his line)"
   }
  },
  "home": {
@@ -352,6 +364,12 @@
    "text": "Brother Daniel reads every message himself. He will reply as he can.",
    "status": "DRAFT",
    "written": "2026-10-14T18:0xZ seat:go-3r4l-2-pickup-1014 (owner 2026-10-14 \"Beautiful contact form here to fill i\" + \"Do all\"; DRAFT until his line)"
+  },
+  "text_first_line": {
+   "text": "Hello. This is about how I am doing.",
+   "status": "DRAFT",
+   "written": "2026-10-15T01:3xZ seat:go-3r4l-2-do-all-1015 (owner 2026-10-15 \"Do all\" on the site-wide list; DRAFT until his line)",
+   "_note": "the line already typed when the Text or WhatsApp door opens (D8): the reader never faces a blank message; the page's own question answered in the first words"
   }
  },
  "privacy": {

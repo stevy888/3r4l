@@ -267,7 +267,6 @@ p.reply{margin:.75rem 0 0;font:400 1.125rem/1.5 var(--sans)} /* his reply figure
 /* THE RULES CARD on the home (owner 2026-10-08 "just the three rules 1. 2. 3. written out beautifully in that box"): the title line and the three rules at reading size on the cream paper, nothing else — the picture is still the card and the door to /card/. */
 /* THE PRINT SECTION at the foot of /card/ (owner 2026-10-08): "Print your card" — the exact cards shown as he gave them, the doors to the actual card files per language, the shop line, the steps, the close line. */
 .print{margin:var(--gap) 0 0}
-.print h2{font:600 1.25rem/1.4 var(--sans);color:var(--head);margin:0 0 1rem}
 .print .real{margin:0 auto}
 .print .next.big{margin:1.25rem 0 0}
 .band+#doors.print{margin-top:1rem}.print .real{max-width:none;gap:.5rem} /* RIVAL P2 — the one cure on r1's shared returns (2026-10-14): the print section 1 rem under the band (the section gap read as a dead gap), the two faces the buttons' own width with a .5 rem gap, so the gold door sits whole inside the 320×568 first screen */
