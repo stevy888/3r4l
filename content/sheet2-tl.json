@@ -1,0 +1,781 @@
+{
+ "_note": "THE TL PHASE 2 STRINGS (2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check). Built by bin/assemble-lang-sheets.py; each row keeps its English under _en.",
+ "challenge": {
+  "h1": {
+   "text": "Apatnapung araw na challenge",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Forty day challenge"
+  },
+  "step3": {
+   "text": "Basahin ang card araw-araw sa loob ng apatnapung araw, at bawat araw ay itanong mo sa Diyos kung ano ang gusto Niyang gawin mo rito. Basahin din ang talata ngayong araw.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Read the card every day for forty days, and each day ask God what He wants you to do with it. Read today's verse too."
+  },
+  "explanation": {
+   "text": "Ang apatnapung araw ay hindi pagsusulit. Walang anuman dito ang kailangang paghirapan para makamit — ginawa ka ng Diyos na anak Niya nang hilingin mo sa Kanya na dalhin ka sa Kanyang tahanan. Ang apatnapung araw ay apatnapung araw lamang ng pagbabasa ng card at pagtatanong sa Diyos kung ano ang gusto Niyang gawin mo rito: “Panginoong Jesus, ano ang gusto Mong gawin ko sa card na ito? Tulungan Mo akong gawin ito.” Bawat araw ay may bagong talata para sa araw na iyon. Basahin ang talata. Gawin ang mga tuntunin. Kung may araw na nalaktawan mo, wala kang kailangang habulin — magsimula ulit mula sa araw na huli mo itong binasa. Sa ikaapatnapung araw, walang natatapos: itanong mo sa Diyos kung gusto Niyang ituloy mo ang pagbabasa nito araw-araw.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Forty days is not a test. Nothing here is earned — God made you His child when you asked Him to take you to His home. The forty days are simply forty days of reading the card and asking God what He wants you to do with it: “Lord Jesus, what do You want me to do with this card? Help me to do it.” Each day there is a new verse for the day. Read the verse. Use the rules. If you miss a day, there is nothing to make up — start again from the day you last read it. On the fortieth day nothing ends: ask God if He wants you to keep reading it every day."
+  },
+  "download_forty": {
+   "text": "I-download ang apatnapung araw na challenge (PDF)",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Download the forty day challenge (PDF)"
+  },
+  "began": {
+   "text": "Nagsimula ako noong",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "I began on"
+  },
+  "again": {
+   "text": "Anumang araw ay magandang araw para magsimulang muli.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Any day is a good day to begin again."
+  },
+  "friend": {
+   "text": "Mag-print ng isa para sa isang kaibigan.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Print one for a friend."
+  },
+  "reading_sheet": {
+   "text": "Nasa sheet ng mga babasahin ang talata ng bawat araw.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Each day's verse is on the reading sheet."
+  },
+  "source": {
+   "text": "Ang card at ang apatnapung araw ay nasa stevy888.github.io/3r4l",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "The card and the forty are at stevy888.github.io/3r4l"
+  },
+  "grace": {
+   "text": "Kasama mo si Jesus sa bawat hakbang",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Jesus with you every step of the way"
+  },
+  "last_card": {
+   "text": "Kung magpi-print ka ng mga card para ipamigay, huwag na huwag mong ibibigay ang huli mong card — magtabi ng isang kopya sakaling sabihin ng Panginoon na gumawa ka pa.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "If you print cards to give away, never give your last one — keep a copy in case the Lord says make more."
+  }
+ },
+ "signup": {
+  "field": {
+   "text": "",
+   "status": "absent",
+   "_en": "Your email"
+  },
+  "button": {
+   "text": "",
+   "status": "absent",
+   "_en": "Join the forty days"
+  },
+  "what": {
+   "text": "",
+   "status": "absent",
+   "_en": "One short mail a morning for forty days: the day's verse and the three rules. Nothing else."
+  },
+  "stop": {
+   "text": "",
+   "status": "absent",
+   "_en": "Stop any day with one tap. We delete your address after day 47."
+  },
+  "age": {
+   "text": "",
+   "status": "absent",
+   "_en": "18 or older, or join with a parent."
+  },
+  "hold": {
+   "text": "",
+   "status": "absent",
+   "_en": "We hold only your email and your language, to send the forty."
+  },
+  "notice_door": {
+   "text": "",
+   "status": "absent",
+   "_en": "Full notice"
+  },
+  "what_happens": {
+   "text": "",
+   "status": "absent",
+   "_en": "Pressing the button opens [the list vendor]'s page, where you confirm from your inbox."
+  }
+ },
+ "card": {
+  "h1": {
+   "text": "I-print ang card at ipamigay ito.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Print the card and give it."
+  },
+  "tab": {
+   "text": "I-print",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Print"
+  },
+  "step1": {
+   "text": "I-tap ang file.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Tap the file."
+  },
+  "step2": {
+   "text": "Ipadala ito sa isang printing shop, o i-print sa bahay — sampung card ang kasya sa isang sheet (labindalawa sa long bond).",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Send it to a print shop, or print it at home — ten cards fit on one sheet (twelve on long bond)."
+  },
+  "step3": {
+   "text": "Gupitin sa mga marka. Ipamigay ang mga ito — pero huwag na huwag ang huli mong card; magtabi ng isa sakaling sabihin ng Panginoon na gumawa ka pa.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Cut on the marks. Give them away — but never your last card; keep one in case the Lord says make more."
+  },
+  "shop": {
+   "text": "Harap at likod · i-flip sa long edge · 100 %, walang scaling · short bond, long bond o A4 · board paper kung mayroon ang shop",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Both sides · flip on the long edge · 100 %, no scaling · short bond, long bond or A4 · board paper if the shop has it"
+  },
+  "papers": {
+   "text": "Ang sheet ay iisang file para sa tatlong klase ng papel — A4: pahina 1 at 2 · Letter o short bond: pahina 3 at 4 · long bond: pahina 5 at 6. I-print lamang ang dalawang pahina para sa papel mo, harap muna, saka likod.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "The sheet is one file on three papers — A4: pages 1 and 2 · Letter or short bond: pages 3 and 4 · long bond: pages 5 and 6. Print your paper's two pages only, front then back."
+  },
+  "no_duplex": {
+   "text": "Walang printer na nakakapag-print ng harap at likod? I-print ang pahina 1, baligtarin ang papel at ibalik sa printer, saka i-print ang pahina 2.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "No two-sided printer? Print page 1, put the sheet back, print page 2."
+  },
+  "send_shop": {
+   "text": "Ipadala ang sheet sa printing shop",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Send the sheet to a print shop"
+  },
+  "share_shop": {
+   "text": "Ipadala ang pahinang ito sa printing shop",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Send this page to a print shop"
+  },
+  "share_shop_text": {
+   "text": "Ang card na ipi-print: ang file, isang sheet ng sampung card na may mga marka sa paggupit, at ang mga tala para sa magpi-print.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "The card to print: the file, a sheet of ten with cut marks, and the printer's notes."
+  },
+  "close": {
+   "text": "Napakagaan ng isang card. Sa kamay ng isang tao, kaya nitong iuwi ang isang buong buhay.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "A card weighs nothing. In a hand it can carry a whole life home."
+  },
+  "honest_number": {
+   "text": "",
+   "status": "absent",
+   "_en": ""
+  },
+  "print_en": {
+   "text": "",
+   "status": "absent",
+   "_en": "Print the card (English)"
+  },
+  "print_tl": {
+   "text": "",
+   "status": "absent",
+   "_en": "Print the card (Tagalog)"
+  },
+  "print_ur": {
+   "text": "",
+   "status": "absent",
+   "_en": "Print the card (Urdu)"
+  },
+  "byline": {
+   "text": "Libreng i-print at ipamigay ang card — mula kay Brother Daniel.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "The card is free to print and give — from brother Daniel."
+  },
+  "face_front_alt": {
+   "text": "Ang naka-print na card, harap.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "The printed card, front. Its words are set out below."
+  },
+  "face_back_alt": {
+   "text": "Ang naka-print na card, likod.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "The printed card, back. Its words are set out below."
+  },
+  "print_sheet_big": {
+   "text": "Mag-print ng sheet ng mga card",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Print a sheet of cards"
+  },
+  "print_shop_file": {
+   "text": "File para sa printing shop (isang card)",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "The print shop's file (one card)"
+  },
+  "save_where": {
+   "text": "Itatanong ng computer mo kung saan ise-save ang file — piliin ang Desktop o Downloads para mahanap mo ito.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Your computer will ask where to save the file — pick Desktop or Downloads so you can find it."
+  },
+  "send_how": {
+   "text": "Para ipadala ito sa iba: i-download ang sheet, pagkatapos ay i-attach ang file sa isang email o mensahe.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "To send it to someone: download the sheet, then attach the file to an email or a message."
+  },
+  "terms_full": {
+   "text": "",
+   "status": "absent",
+   "_en": ""
+  }
+ },
+ "home": {
+  "play": {
+   "text": "Pakinggan ang pagbasa ng card · [m:ss] · [N] MB",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Hear the card read · [m:ss] · [N] MB"
+  },
+  "foot_how": {
+   "text": "Kumusta ka na?",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "How are you doing?"
+  },
+  "pause": {
+   "text": "I-pause",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Pause"
+  },
+  "lang_tl": {
+   "text": "",
+   "status": "absent",
+   "_en": "Tagalog"
+  },
+  "lang_ur": {
+   "text": "",
+   "status": "absent",
+   "_en": "Urdu"
+  },
+  "byline": {
+   "text": "Ito ang home page ng Three Rules for Living (3R4L).",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "This is the home page for Three Rules for Living (3R4L)."
+  }
+ },
+ "contact": {
+  "h1": {
+   "text": "Kumusta ka na?",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "How are you doing?"
+  },
+  "who_reads_named": {
+   "text": "Sumulat kay Brother Daniel, na namimigay ng mga card na ito. Siya mismo ang nagbabasa ng bawat mensahe.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Write to brother Daniel, who gives these cards. He reads every message himself."
+  },
+  "who_reads": {
+   "text": "Sumulat sa amin.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Write to us."
+  },
+  "testimony": {
+   "text": "Ipinanalangin mo ba ang panalangin? Ikuwento mo sa amin ang nangyari. Kung gusto mong mailagay ang mga salita mo sa pahinang ito, sabihin mo — first name o initials lang, hindi kailanman ang apelyido mo o litrato; aalisin namin ang mga ito sa araw na hilingin mo. Wala ka pang 18? Kailangan munang pumayag ang magulang mo.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Did you pray the prayer? Tell us what happened. If you'd like your words on this page, say so — first name or initials only, never your surname or a photo; we take them down the day you ask. Under 18? A parent says yes first."
+  },
+  "low_day": {
+   "text": "Hindi ka okay? Sabihin mo. Hindi mo kailangang isulat ito nang maganda. Mabisa pa rin ang ika-1 tuntunin ngayong araw.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Not doing well? Say so. You don't have to write it well. Rule 1 still works today."
+  },
+  "mail_body": {
+   "text": "Ipinanalangin mo ba ang panalangin? Ikuwento mo sa amin ang nangyari.\n\nMaaari ba naming ilagay ang mga salita mo sa 3r4l.org kasama ang first name mo lang? Isulat ang OO o HINDI dito: ",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Did you pray the prayer? Tell us what happened.\n\nMay we put your words on 3r4l.org with your first name only? Write YES or NO here: "
+  },
+  "form_lead": {
+   "text": "O sumulat dito.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Or write here."
+  },
+  "form_message": {
+   "text": "Ang mensahe mo",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Your message"
+  },
+  "form_reply": {
+   "text": "Paano ka niya masasagot?",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "How can he reply?"
+  },
+  "form_button": {
+   "text": "Ipadala",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Send"
+  },
+  "form_privacy": {
+   "text": "Ipinapadala ito kay Brother Daniel sa pamamagitan ng isang form service, at buburahin kapag nabasa na niya ito at nasagot kung kaya niya.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "It goes to brother Daniel through a form service and is deleted once he has read it and replied where he can."
+  },
+  "sent_h1": {
+   "text": "Naipadala na.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Sent."
+  },
+  "sent_line": {
+   "text": "Si Brother Daniel mismo ang nagbabasa ng bawat mensahe. Kung nag-iwan ka ng paraan para makontak ka, sasagot siya kapag kaya niya. Habang naghihintay ka, mabisa pa rin ang ika-1 tuntunin ngayong araw:",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Brother Daniel reads every message himself. If you left a way to reach you, he will reply as he can. While you wait, Rule 1 still works today:"
+  },
+  "text_first_line": {
+   "text": "Hello. Tungkol ito sa kung kumusta na ako.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Hello. This is about how I am doing."
+  },
+  "form_lead_alone": {
+   "text": "Sumulat kay Brother Daniel, na namimigay ng mga card na ito.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Write to brother Daniel, who gives these cards."
+  },
+  "form_lead_alone_keeper": {
+   "text": "Sumulat sa mga taong namamahala sa card na ito.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Write to the people behind the card."
+  },
+  "form_reply_keeper": {
+   "text": "Paano ka namin masasagot?",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "How can we reply?"
+  },
+  "form_reply_hint": {
+   "text": "Email o numero — o iwanang blangko.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "An email or a number — or leave it blank."
+  },
+  "form_privacy_keeper": {
+   "text": "Dumarating ito sa amin sa pamamagitan ng isang form service, at buburahin kapag nabasa na namin ito at nasagot kung kaya namin.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "It comes to us through a form service and is deleted once we have read it and replied where we can."
+  },
+  "form_failed": {
+   "text": "Hindi ito naipadala. Narito pa ang mga isinulat mo — subukan ulit.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "It didn't go. Your words are still here — try once more."
+  },
+  "sent_line_keeper": {
+   "text": "Salamat sa pagsulat mo. Kung nag-iwan ka ng paraan para makontak ka, sasagot kami kapag kaya namin. Habang naghihintay ka, mabisa pa rin ang ika-1 tuntunin ngayong araw:",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Thank you for writing. If you left a way to reach you, we will reply as we can. While you wait, Rule 1 still works today:"
+  },
+  "form_sending": {
+   "text": "Ipinapadala…",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Sending…"
+  }
+ },
+ "privacy": {
+  "h1": {
+   "text": "Privacy",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Privacy"
+  },
+  "who": {
+   "text": "Sino ang may hawak ng mga detalye mo: [controller] — privacy@3r4l.org.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Who holds your details: [controller] — privacy@3r4l.org."
+  },
+  "what": {
+   "text": "Ano ang hawak namin: para sa apatnapung araw, ang email address mo at ang wika mo; kung susulat ka sa amin, ang mensahe mo at ang pangalang ibibigay mo.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "What we hold: for the forty days, your email address and your language; if you write to us, your message and the name you give."
+  },
+  "why": {
+   "text": "Bakit: para padalhan ka ng isang talata bawat araw sa loob ng apatnapung araw; para sagutin ka.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Why: to send you one verse a day for forty days; to reply to you."
+  },
+  "how_long": {
+   "text": "Gaano katagal: ang apatnapung araw at pito pang araw, o hanggang sa ihinto mo — isang tap sa bawat email; ang mga mensahe, hanggang sa makasagot kami, pagkatapos ay buburahin, maliban kung isinulat mong maaari naming ibahagi ang mga ito.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "How long: the forty days and seven more, or until you stop — one tap in every mail; messages until we have replied, then deleted, unless you wrote that we may share them."
+  },
+  "processors": {
+   "text": "Sino ang nagpoproseso nito para sa amin: [the list vendor] ang nagpapadala ng mga email; Cloudflare ang nagpapadaan ng email namin; Web3Forms ang nagdadala ng mga mensahe ng contact form.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Who processes it for us: [the list vendor] sends the mails; Cloudflare routes our email; Web3Forms carries the contact form's messages."
+  },
+  "rights": {
+   "text": "Ang mga karapatan mo sa ilalim ng Data Privacy Act of 2012: makita, itama o ipabura ang hawak namin, at magreklamo sa National Privacy Commission.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Your rights under the Data Privacy Act of 2012: to see, correct or delete what we hold, and to complain to the National Privacy Commission."
+  },
+  "children": {
+   "text": "Mga bata: para ito sa 18 pataas; kung wala ka pang 18, kailangan ang pahintulot ng magulang.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Children: 18 or older, or with a parent."
+  },
+  "no_tracking": {
+   "text": "Walang cookies, walang tracking, walang advertising sa site na ito.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "No cookies, no tracking, no advertising on this site."
+  }
+ },
+ "mails": {
+  "day0_subject": {
+   "text": "",
+   "status": "absent",
+   "_en": "The forty begin tomorrow"
+  },
+  "day0": {
+   "text": "",
+   "status": "absent",
+   "_en": "You asked for the forty. Day 1 comes tomorrow morning: 1 John 1:9. Until then the card is at 3r4l.org."
+  },
+  "subject": {
+   "text": "",
+   "status": "absent",
+   "_en": "Day {n} of forty · {ref}"
+  },
+  "page_link": {
+   "text": "",
+   "status": "absent",
+   "_en": "Today's verse on the page"
+  },
+  "day40": {
+   "text": "",
+   "status": "absent",
+   "_en": "That is the forty. Nothing ends today — the rules are for every day after this one."
+  }
+ },
+ "film": {
+  "credit": {
+   "text": "Mga salita ng card mula kay Brother Daniel · binasa ng boses na gawa ng computer · 3r4l.org",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "The card's words by brother Daniel · read by a synthesized voice · 3r4l.org"
+  }
+ },
+ "watch": {
+  "h1": {
+   "text": "Ang card, ipinaliwanag",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "The card, explained"
+  },
+  "sub": {
+   "text": "Pindutin ang play. Binabasa nang malakas ang card, at ipinapakita ito ng larawan nang paisa-isang eksena.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Press play. The card is read aloud, and the picture plays it out scene by scene."
+  },
+  "play": {
+   "text": "Panoorin ang card · [m:ss]",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Watch the card · [m:ss]"
+  },
+  "door": {
+   "text": "Panoorin ang paliwanag sa card",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Watch the card explained"
+  },
+  "download_9x16": {
+   "text": "I-download ang video (pang-cellphone)",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Download the video (phone)"
+  },
+  "download_16x9": {
+   "text": "I-download ang video (malapad)",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Download the video (wide)"
+  },
+  "share": {
+   "text": "I-share ang video",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Share the video"
+  },
+  "share_text": {
+   "text": "Panoorin ang paliwanag sa card — ang tatlong tuntunin sa pamumuhay, binasa nang malakas na may kasamang larawan.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Watch the card explained — the three rules for living, read aloud with the picture."
+  },
+  "film_0": {
+   "text": "Tatlong tuntunin",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Three rules"
+  },
+  "film_1": {
+   "text": "Aminin",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Confess"
+  },
+  "film_2": {
+   "text": "Isuko",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Surrender"
+  },
+  "film_3": {
+   "text": "Magpatawad",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Forgive"
+  },
+  "film_4": {
+   "text": "ang susi",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "the key"
+  },
+  "film_5": {
+   "text": "patatawarin ka niya",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "God will forgive"
+  },
+  "film_6": {
+   "text": "huwag titigil",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "never stop"
+  },
+  "film_7": {
+   "text": "araw-araw",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "everyday"
+  },
+  "film_8": {
+   "text": "babaguhin",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "change"
+  },
+  "film_9": {
+   "text": "buong araw",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "all day"
+  },
+  "film_10": {
+   "text": "ibuhos",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "pour out"
+  },
+  "film_10b": {
+   "text": "lahat ng nakikita ko",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "everyone I see"
+  },
+  "film_11": {
+   "text": "sa kabila",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "the other side"
+  },
+  "film_12": {
+   "text": "kabilang buhay",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "eternity"
+  },
+  "film_12b": {
+   "text": "diringgin ka niya",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "He will hear"
+  },
+  "film_13": {
+   "text": "makasalanan",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "a sinner"
+  },
+  "film_13b": {
+   "text": "binuhay muli",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "raised"
+  },
+  "film_14": {
+   "text": "mahabag",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "mercy"
+  },
+  "film_15": {
+   "text": "tahanan",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "home"
+  },
+  "film_16": {
+   "text": "maraming salamat",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "thank You"
+  },
+  "film_17": {
+   "text": "Amen",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Amen"
+  },
+  "door_home": {
+   "text": "Panoorin ang card · [m:ss]",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Watch the card · [m:ss]"
+  }
+ },
+ "story": {
+  "placeholder": {
+   "text": "Dito ang patotoo ni Brother Daniel.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Brother Daniel's testimony here."
+  },
+  "door_print": {
+   "text": "I-print ang card at ipamigay ito",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Print the card and give it"
+  },
+  "door_write": {
+   "text": "Sumulat sa amin",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Write to us"
+  },
+  "h1": {
+   "text": "Paano ito nagsimula",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "How this started"
+  }
+ },
+ "testimony": {
+  "h1": {
+   "text": "Ang nangyari",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "What happened"
+  },
+  "byline": {
+   "text": "Mga taong nanalangin ng panalangin sa card, sa sarili nilang mga salita. First name lang.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "People who prayed the prayer on the card, in their own words. First names only."
+  },
+  "placeholder": {
+   "text": "Dito ang mga patotoo.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Testimonies here."
+  },
+  "door_tell": {
+   "text": "Ikuwento sa amin ang nangyari",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Tell us what happened"
+  },
+  "door_read": {
+   "text": "Basahin ang card at ipamigay ito",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Read the card and give it"
+  }
+ },
+ "help": {
+  "low_door": {
+   "text": "Hindi gaanong mabuti?",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Not so well?"
+  },
+  "well_door": {
+   "text": "Mabuti naman?",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Doing well?"
+  },
+  "low_line": {
+   "text": "Sabihin mo ito sa Diyos. Mabisa pa rin ang ika-1 tuntunin ngayong araw — malapit Siya, at tutulungan ka Niya.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Tell God about it. Rule 1 still works today — He is near, and He will help you."
+  },
+  "well_line": {
+   "text": "Pasalamatan mo Siya dahil dito. Bilangin ang mga pagpapala ngayong araw, at ibigay sa Kanya ang papuri at ang kaluwalhatian.",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check",
+   "_en": "Thank Him for it. Count today's blessings, and give Him the praise and the glory."
+  }
+ }
+}

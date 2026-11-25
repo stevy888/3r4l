@@ -1,0 +1,64 @@
+{
+ "_note": "THE TL SHEET (2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the tl reader's check). Built by bin/assemble-lang-sheets.py from the judged file; the English of each line is sheet.json.",
+ "h1_lines": [
+  "Aminin, aminin, aminin.",
+  "Patatawarin ka niya...",
+  "Babaguhin ng Diyos ang ating buhay."
+ ],
+ "h2": "Kung ginagawa mo ang mga tuntunin araw-araw, saan ka dadalhin ng Diyos?",
+ "lines": [
+  "Sa huli, dadalhin ka Niya sa langit upang makasama Niya; kung nasaan Siya, naroon ka rin.",
+  "\"Kaibigan, ang buhay na ito ay paaralan ng Diyos para sa atin.\" Sa buhay na ito, ihahatid ka Niya sa paaralan araw-araw, at sasamahan ka Niya sa bawat klase.",
+  "Tutulungan ka Niya sa iyong takdang-aralin.",
+  "Tutulungan ka Niya kapag oras na para maglaro.",
+  "Tutulungan ka Niya kapag oras na para magtrabaho.",
+  "Tutulungan ka Niya kapag oras na para magpahinga.",
+  "Tutulungan ka Niya kapag sumasamba ka."
+ ],
+ "whatnext_link": "Naipanalangin mo na ba ang panalangin? Ano ang susunod?",
+ "whatnext_clause": "Patuloy mong gawin ang mga tuntunin bawat araw, lalo na ang pag-amin. Huwag na huwag kang titigil.",
+ "labels": {
+  "lang_link": "",
+  "read_on_kj": "Magbasa pa sa Knowing-Jesus.com",
+  "print_card": "I-print ang card",
+  "print_sheet": "Mag-print ng sheet ng mga card",
+  "share": "I-share",
+  "messenger": "Messenger",
+  "viber": "Viber",
+  "text": "Text",
+  "whatsapp": "WhatsApp",
+  "email": "Email",
+  "home": "Home",
+  "forty": "Ang apatnapung araw",
+  "one_a_day": "Isa bawat araw. Magsimula sa 1.",
+  "today": "ngayong araw",
+  "todays_verse": "Talata ngayong araw",
+  "title_whatnext_suffix": " — Naipanalangin mo na ba ang panalangin? Ano ang susunod?",
+  "hear_card": "Pakinggan ang card",
+  "whole_card": "Basahin ang buong card",
+  "what_next_button": "Ano ang susunod",
+  "light": "Maliwanag",
+  "dark": "Madilim"
+ },
+ "h1": "Aminin, aminin, aminin. Patatawarin ka niya... Babaguhin ng Diyos ang ating buhay.",
+ "placeholder": {
+  "card": ""
+ },
+ "h1_beats": [
+  {
+   "line": 0,
+   "word": "aminin",
+   "nth": 1
+  },
+  {
+   "line": 1,
+   "word": "Patatawarin",
+   "nth": 1
+  },
+  {
+   "line": 2,
+   "word": "Babaguhin",
+   "nth": 1
+  }
+ ]
+}

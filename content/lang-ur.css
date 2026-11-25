@@ -1,0 +1,34 @@
+/* URDU (2026-11-25): the page reads right to left in the Nastaliq hand. Loaded ONLY on /ur/ pages (build.mjs head()), so the English and Tagalog pages are byte-for-byte untouched. The phone's own Noto Nastaliq Urdu first (iPhone and Mac carry it); ours (111 KB, Urdu letters only, OFL) only when missing. */
+@font-face{font-family:"Nastaliq";font-style:normal;font-weight:400;font-display:swap;src:local("Noto Nastaliq Urdu"),local("NotoNastaliqUrdu-Regular"),url(__ROOT__fonts/noto-nastaliq-urdu-400.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F,U+2018-201D}
+:root{--serif:"Nastaliq","Source Serif 4",Georgia,serif;--sans:"Nastaliq",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif}
+/* the Nastaliq hand is tall: every line gets room, nothing is slanted (an italic Nastaliq is a fake slant) */
+html[lang=ur] body :is(h1,h2,p,li,a,button,span,em,label){line-height:2.05!important;font-style:normal!important;letter-spacing:0!important}
+html[lang=ur] .band h1{font-size:1.25rem;line-height:1.68!important} /* the Nastaliq headline: the home h1 whole above y 200 at 320 x 568 (the rig) — 1.75 rem / 2.05 ran to 372 */
+html[lang=ur] .band .byline{line-height:1.8!important}
+html[lang=ur] .verse .text,html[lang=ur] .help-verses .text{font-size:1.25rem}
+/* the mirror: every rule that sits on a side moves to the other one */
+/* the language row stays on the left in Urdu too: the stars hang on the right in both directions */
+[dir=rtl] .band.lifts h1::after{left:auto;right:0;transform-origin:100% 50%}
+[dir=rtl] .band h1 .beat::before{left:auto;right:0}
+[dir=rtl] .face::before{left:auto;right:1.25rem}
+[dir=rtl] .litany li{padding-left:0;padding-right:3.25rem}
+[dir=rtl] .litany .pic{left:auto;right:0}
+[dir=rtl] .verse::before{content:"\201D";content:"\201D" / "";left:auto;right:1.25rem}
+[dir=rtl] .door>svg{margin-right:0;margin-left:.625rem;transform:scaleX(-1)}
+[dir=rtl] .door.big>svg{margin-right:0;margin-left:.75rem}
+[dir=rtl] .next .door>svg{margin-right:0;margin-left:.5rem}
+[dir=rtl] button.door{text-align:right}
+[dir=rtl] a.tab{right:auto;left:.75rem}
+[dir=rtl] .how{padding-left:0;padding-right:1.5rem}
+[dir=rtl] .step{padding:1rem 3.25rem 1rem 1.125rem}
+[dir=rtl] .step::before{left:auto;right:1.125rem}
+/* the card itself is a printed picture on the Urdu pages (its words are never retyped): the faces at the card's own shape */
+.faces-only{display:grid;gap:.75rem;max-width:21rem;margin:var(--gap) auto 0}
+.faces-only img,.real.exact img{display:block;width:100%;height:auto;aspect-ratio:252/144;background:#f7efdc;border:1px solid #1b2440;border-radius:4px;box-shadow:var(--card-shadow)}
+.faces-only a{display:block}
+/* Latin words inside an Urdu line (3R4L, Knowing-Jesus.com, PDF) keep their own order */
+html[lang=ur] .ltr{direction:ltr;unicode-bidi:isolate}
+
+[dir=rtl] .addr{direction:ltr;text-align:right}
+.faces-only a,.real.exact a{display:block}
+@media (max-width:340px){html[lang=ur] .band h1{font-size:1.125rem}} /* the smallest phones: the Urdu headline whole by y 200 even in the system Arabic face (the rig fallback pass) */

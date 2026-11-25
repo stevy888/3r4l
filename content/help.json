@@ -1,0 +1,83 @@
+{
+ "_note": "THE SIX VERSES OF 'How are you doing?' (/contact/, 2026-11-25, brother Daniel's two questions). Texts of record only: KJV and Ang Dating Biblia 1905 through api.getbible.net v2 (public domain); Urdu in ur-verses.json. Made by bin/make-lang-verses.py.",
+ "rows": [
+  {
+   "door": "low",
+   "ref": "Psalm 34:18",
+   "parts": [
+    "The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit."
+   ],
+   "text": "The LORD is nigh unto them that are of a broken heart; and saveth such as be of a contrite spirit.",
+   "translation_name": "King James Version",
+   "source": "api.getbible.net v2 kjv",
+   "ref_tl": "Mga Awit 34:18",
+   "text_tl": "Ang Panginoon ay malapit sa kanila na may bagbag na puso, at inililigtas ang mga may pagsisising diwa.",
+   "translation_tl": "Ang Dating Biblia (1905)"
+  },
+  {
+   "door": "low",
+   "ref": "Isaiah 41:10",
+   "parts": [
+    "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness."
+   ],
+   "text": "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+   "translation_name": "King James Version",
+   "source": "api.getbible.net v2 kjv",
+   "ref_tl": "Isaias 41:10",
+   "text_tl": "Huwag kang matakot, sapagka't ako'y sumasaiyo; huwag kang manglupaypay, sapagka't ako'y iyong Dios; aking palalakasin ka; oo, aking tutulungan ka; oo, aking aalalayan ka ng kanang kamay ng aking katuwiran.",
+   "translation_tl": "Ang Dating Biblia (1905)"
+  },
+  {
+   "door": "low",
+   "ref": "1 Peter 5:7",
+   "parts": [
+    "Casting all your care upon him; for he careth for you."
+   ],
+   "text": "Casting all your care upon him; for he careth for you.",
+   "translation_name": "King James Version",
+   "source": "api.getbible.net v2 kjv",
+   "ref_tl": "1 Pedro 5:7",
+   "text_tl": "Na inyong ilagak sa kaniya ang lahat ng inyong kabalisahan, sapagka't kayo'y ipinagmamalasakit niya.",
+   "translation_tl": "Ang Dating Biblia (1905)"
+  },
+  {
+   "door": "well",
+   "ref": "1 Thessalonians 5:18",
+   "parts": [
+    "In every thing give thanks: for this is the will of God in Christ Jesus concerning you."
+   ],
+   "text": "In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
+   "translation_name": "King James Version",
+   "source": "api.getbible.net v2 kjv",
+   "ref_tl": "1 Mga Taga-Tesalonica 5:18",
+   "text_tl": "Sa lahat ng mga bagay ay magpasalamat kayo; sapagka't ito ang kalooban ng Dios kay Cristo tungkol sa inyo.",
+   "translation_tl": "Ang Dating Biblia (1905)"
+  },
+  {
+   "door": "well",
+   "ref": "Psalm 103:2",
+   "parts": [
+    "Bless the LORD, O my soul, and forget not all his benefits:"
+   ],
+   "text": "Bless the LORD, O my soul, and forget not all his benefits:",
+   "translation_name": "King James Version",
+   "source": "api.getbible.net v2 kjv",
+   "ref_tl": "Mga Awit 103:2",
+   "text_tl": "Purihin mo ang Panginoon, Oh kaluluwa ko, at huwag mong kalimutan ang lahat niyang mabubuting gawa.",
+   "translation_tl": "Ang Dating Biblia (1905)"
+  },
+  {
+   "door": "well",
+   "ref": "Psalm 118:24",
+   "parts": [
+    "This is the day which the LORD hath made; we will rejoice and be glad in it."
+   ],
+   "text": "This is the day which the LORD hath made; we will rejoice and be glad in it.",
+   "translation_name": "King James Version",
+   "source": "api.getbible.net v2 kjv",
+   "ref_tl": "Mga Awit 118:24",
+   "text_tl": "Ito ang araw na ginawa ng Panginoon; tayo'y mangagagalak at ating katutuwaan.",
+   "translation_tl": "Ang Dating Biblia (1905)"
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+== title ==
+Tatlong tuntunin mula sa Lord's Prayer.
+== rules ==
+1. Aminin (sabihin) sa Diyos ang lahat ng nagawa mong kasalanan bawat araw.
+2. Isuko mo sa Diyos ang iyong kalooban (Your will) bawat araw.
+3. Magpatawad ka sa kapwa mo at sarili Mo bawat araw
+== note ==
+Mahal na kaibigan, ang ika-1 tuntunin ang susi sa ating tagumpay. Kung hindi kayang gawin ang ika-2 o ika-3, lagi nating balikan ang una at aminin (sabihin) sa Diyos at patatawarin ka niya. Huwag na huwag tayong titigil sa pag-amin sa Diyos ng kasalanan na laging nagagawa. Habang ginagawa ang mga tuntunin araw-araw, babaguhin ng Diyos ang ating buhay.
+== turn ==
+Tingnan sa kabila para sa karagdagang tulong.
+== invite ==
+Mahal na kaibigan, kung hindi ka sigurado tungkol sa kabilang buhay, at gusto mong makatiyak, ipanalangin mo ang panalanging ito nang buong puso. Diringgin ka niya gaya nang pagdinig niya sa akin.
+== prayer ==
+Mahal na Panginoong Jesus, nauunawaan ko na ako ay makasalanan. Naniniwala ako na ikaw ay namatay dahil sa aking kasalanan, at binuhay kang muli ng iyong Ama sa langit buhat sa kamatayan. Ang nais ko lamang ay mahabag ka sa akin at iligtas ang aking kaluluwa. Pumarito ka sa aking puso at buhay, at dalhin ako sa iyong tahanan balang araw. Ako ay nanalangin sa ngalan mo Panginoong Jesus. Maraming salamat. Amen.
+== turn_back ==
+Tingnan sa kabila para sa karagdagang tulong.

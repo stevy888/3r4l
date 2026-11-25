@@ -1,0 +1,781 @@
+{
+ "_note": "THE UR PHASE 2 STRINGS (2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check). Built by bin/assemble-lang-sheets.py; each row keeps its English under _en.",
+ "challenge": {
+  "h1": {
+   "text": "چالیس دن کا چیلنج",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Forty day challenge"
+  },
+  "step3": {
+   "text": "چالیس دن تک ہر روز کارڈ پڑھیں، اور ہر روز خدا سے پوچھیں کہ وہ چاہتا ہے کہ آپ اس کارڈ کے ساتھ کیا کریں۔ آج کی آیت بھی پڑھیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Read the card every day for forty days, and each day ask God what He wants you to do with it. Read today's verse too."
+  },
+  "explanation": {
+   "text": "چالیس دن کوئی امتحان نہیں۔ یہاں کچھ بھی کما کر حاصل نہیں کیا جاتا — جب آپ نے خدا سے کہا کہ وہ آپ کو اپنے گھر لے جائے، تو اُس نے آپ کو اپنی اولاد بنا لیا۔ چالیس دن بس کارڈ پڑھنے اور خدا سے یہ پوچھنے کے چالیس دن ہیں کہ وہ چاہتا ہے کہ آپ اس کارڈ کے ساتھ کیا کریں: “خداوند یسوع، تُو کیا چاہتا ہے کہ میں اس کارڈ کے ساتھ کروں؟ اسے کرنے میں میری مدد کر۔” ہر دن کے لیے ایک نئی آیت ہے۔ آیت پڑھیں۔ قوانین پر عمل کریں۔ اگر کوئی دن چھوٹ جائے تو کچھ پورا کرنے کی ضرورت نہیں — جس دن آپ نے آخری بار پڑھا تھا، وہیں سے دوبارہ شروع کریں۔ چالیسویں دن کچھ ختم نہیں ہوتا: خدا سے پوچھیں کہ کیا وہ چاہتا ہے کہ آپ اسے ہر روز پڑھتے رہیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Forty days is not a test. Nothing here is earned — God made you His child when you asked Him to take you to His home. The forty days are simply forty days of reading the card and asking God what He wants you to do with it: “Lord Jesus, what do You want me to do with this card? Help me to do it.” Each day there is a new verse for the day. Read the verse. Use the rules. If you miss a day, there is nothing to make up — start again from the day you last read it. On the fortieth day nothing ends: ask God if He wants you to keep reading it every day."
+  },
+  "download_forty": {
+   "text": "چالیس دن کا چیلنج ڈاؤن لوڈ کریں (PDF)",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Download the forty day challenge (PDF)"
+  },
+  "began": {
+   "text": "میں نے اس دن شروع کیا:",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "I began on"
+  },
+  "again": {
+   "text": "دوبارہ شروع کرنے کے لیے ہر دن اچھا دن ہے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Any day is a good day to begin again."
+  },
+  "friend": {
+   "text": "ایک کاپی کسی دوست کے لیے پرنٹ کریں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Print one for a friend."
+  },
+  "reading_sheet": {
+   "text": "ہر دن کی آیت پڑھنے کی شیٹ پر درج ہے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Each day's verse is on the reading sheet."
+  },
+  "source": {
+   "text": "کارڈ اور چالیس دن stevy888.github.io/3r4l پر ہیں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "The card and the forty are at stevy888.github.io/3r4l"
+  },
+  "grace": {
+   "text": "یسوع ہر قدم پر آپ کے ساتھ",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Jesus with you every step of the way"
+  },
+  "last_card": {
+   "text": "اگر آپ بانٹنے کے لیے کارڈ پرنٹ کریں تو اپنا آخری کارڈ کبھی نہ دیں — ایک کاپی اپنے پاس رکھیں، ہو سکتا ہے خداوند کہے کہ اور بنائیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "If you print cards to give away, never give your last one — keep a copy in case the Lord says make more."
+  }
+ },
+ "signup": {
+  "field": {
+   "text": "",
+   "status": "absent",
+   "_en": "Your email"
+  },
+  "button": {
+   "text": "",
+   "status": "absent",
+   "_en": "Join the forty days"
+  },
+  "what": {
+   "text": "",
+   "status": "absent",
+   "_en": "One short mail a morning for forty days: the day's verse and the three rules. Nothing else."
+  },
+  "stop": {
+   "text": "",
+   "status": "absent",
+   "_en": "Stop any day with one tap. We delete your address after day 47."
+  },
+  "age": {
+   "text": "",
+   "status": "absent",
+   "_en": "18 or older, or join with a parent."
+  },
+  "hold": {
+   "text": "",
+   "status": "absent",
+   "_en": "We hold only your email and your language, to send the forty."
+  },
+  "notice_door": {
+   "text": "",
+   "status": "absent",
+   "_en": "Full notice"
+  },
+  "what_happens": {
+   "text": "",
+   "status": "absent",
+   "_en": "Pressing the button opens [the list vendor]'s page, where you confirm from your inbox."
+  }
+ },
+ "card": {
+  "h1": {
+   "text": "کارڈ پرنٹ کریں اور کسی کو دیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Print the card and give it."
+  },
+  "tab": {
+   "text": "پرنٹ",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Print"
+  },
+  "step1": {
+   "text": "فائل پر ٹیپ کریں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Tap the file."
+  },
+  "step2": {
+   "text": "اسے کسی پرنٹ شاپ کو بھیجیں، یا گھر پر پرنٹ کریں — ایک شیٹ پر دس کارڈ آتے ہیں (لانگ بانڈ پر بارہ)۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Send it to a print shop, or print it at home — ten cards fit on one sheet (twelve on long bond)."
+  },
+  "step3": {
+   "text": "نشانوں پر کاٹیں۔ انہیں بانٹ دیں — لیکن اپنا آخری کارڈ کبھی نہیں؛ ایک رکھ لیں، ہو سکتا ہے خداوند کہے کہ اور بنائیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Cut on the marks. Give them away — but never your last card; keep one in case the Lord says make more."
+  },
+  "shop": {
+   "text": "دونوں طرف · لمبے کنارے پر پلٹیں · 100 %، سائز تبدیل کیے بغیر · شارٹ بانڈ، لانگ بانڈ یا A4 · اگر دکان میں ہو تو کارڈ پیپر",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Both sides · flip on the long edge · 100 %, no scaling · short bond, long bond or A4 · board paper if the shop has it"
+  },
+  "papers": {
+   "text": "شیٹ ایک ہی فائل ہے جو کاغذ کے تین سائزوں کے لیے ہے — A4: صفحات 1 اور 2 · لیٹر یا شارٹ بانڈ: صفحات 3 اور 4 · لانگ بانڈ: صفحات 5 اور 6۔ صرف اپنے کاغذ کے دو صفحات پرنٹ کریں، پہلے سامنے کا رخ پھر پچھلا۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "The sheet is one file on three papers — A4: pages 1 and 2 · Letter or short bond: pages 3 and 4 · long bond: pages 5 and 6. Print your paper's two pages only, front then back."
+  },
+  "no_duplex": {
+   "text": "دو طرفہ پرنٹر نہیں ہے؟ صفحہ ۱ پرنٹ کریں، شیٹ واپس ڈالیں، صفحہ ۲ پرنٹ کریں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "No two-sided printer? Print page 1, put the sheet back, print page 2."
+  },
+  "send_shop": {
+   "text": "شیٹ کسی پرنٹ شاپ کو بھیجیں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Send the sheet to a print shop"
+  },
+  "share_shop": {
+   "text": "یہ صفحہ کسی پرنٹ شاپ کو بھیجیں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Send this page to a print shop"
+  },
+  "share_shop_text": {
+   "text": "پرنٹ کے لیے کارڈ: فائل، کاٹنے کے نشانوں والی دس کارڈوں کی شیٹ، اور پرنٹ کرنے والے کے لیے ہدایات۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "The card to print: the file, a sheet of ten with cut marks, and the printer's notes."
+  },
+  "close": {
+   "text": "ایک کارڈ کا وزن نہ ہونے کے برابر ہے۔ کسی کے ہاتھ میں یہ ایک پوری زندگی کو گھر پہنچا سکتا ہے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "A card weighs nothing. In a hand it can carry a whole life home."
+  },
+  "honest_number": {
+   "text": "",
+   "status": "absent",
+   "_en": ""
+  },
+  "print_en": {
+   "text": "",
+   "status": "absent",
+   "_en": "Print the card (English)"
+  },
+  "print_tl": {
+   "text": "",
+   "status": "absent",
+   "_en": "Print the card (Tagalog)"
+  },
+  "print_ur": {
+   "text": "",
+   "status": "absent",
+   "_en": "Print the card (Urdu)"
+  },
+  "byline": {
+   "text": "یہ کارڈ پرنٹ کرنے اور بانٹنے کے لیے مفت ہے — بھائی ڈینیئل کی طرف سے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "The card is free to print and give — from brother Daniel."
+  },
+  "face_front_alt": {
+   "text": "پرنٹ شدہ کارڈ، سامنے کا رخ۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "The printed card, front. Its words are set out below."
+  },
+  "face_back_alt": {
+   "text": "پرنٹ شدہ کارڈ، پچھلا رخ۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "The printed card, back. Its words are set out below."
+  },
+  "print_sheet_big": {
+   "text": "کارڈوں کی شیٹ پرنٹ کریں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Print a sheet of cards"
+  },
+  "print_shop_file": {
+   "text": "پرنٹ شاپ کے لیے فائل (ایک کارڈ)",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "The print shop's file (one card)"
+  },
+  "save_where": {
+   "text": "آپ کا کمپیوٹر پوچھے گا کہ فائل کہاں محفوظ کرنی ہے — ڈیسک ٹاپ یا ڈاؤن لوڈز چنیں تاکہ آپ اسے ڈھونڈ سکیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Your computer will ask where to save the file — pick Desktop or Downloads so you can find it."
+  },
+  "send_how": {
+   "text": "کسی کو بھیجنے کے لیے: شیٹ ڈاؤن لوڈ کریں، پھر فائل کو کسی ای میل یا میسج کے ساتھ لگا دیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "To send it to someone: download the sheet, then attach the file to an email or a message."
+  },
+  "terms_full": {
+   "text": "",
+   "status": "absent",
+   "_en": ""
+  }
+ },
+ "home": {
+  "play": {
+   "text": "کارڈ سنیں · [m:ss] · [N] MB",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Hear the card read · [m:ss] · [N] MB"
+  },
+  "foot_how": {
+   "text": "آپ کا کیا حال ہے؟",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "How are you doing?"
+  },
+  "pause": {
+   "text": "روکیں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Pause"
+  },
+  "lang_tl": {
+   "text": "",
+   "status": "absent",
+   "_en": "Tagalog"
+  },
+  "lang_ur": {
+   "text": "",
+   "status": "absent",
+   "_en": "Urdu"
+  },
+  "byline": {
+   "text": "یہ زندگی کے تین قوانین (3R4L) کا ہوم پیج ہے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "This is the home page for Three Rules for Living (3R4L)."
+  }
+ },
+ "contact": {
+  "h1": {
+   "text": "آپ کا کیا حال ہے؟",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "How are you doing?"
+  },
+  "who_reads_named": {
+   "text": "بھائی ڈینیئل کو لکھیں، جو یہ کارڈ بانٹتے ہیں۔ وہ ہر پیغام خود پڑھتے ہیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Write to brother Daniel, who gives these cards. He reads every message himself."
+  },
+  "who_reads": {
+   "text": "ہمیں لکھیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Write to us."
+  },
+  "testimony": {
+   "text": "کیا آپ نے یہ دُعا کی؟ ہمیں بتائیں کہ کیا ہوا۔ اگر آپ چاہیں کہ آپ کے الفاظ اس صفحے پر ہوں تو بتا دیں — صرف پہلا نام یا نام کے پہلے حروف، خاندانی نام یا تصویر کبھی نہیں؛ جس دن آپ کہیں گے ہم انہیں ہٹا دیں گے۔ عمر ۱۸ سال سے کم ہے؟ پہلے والد یا والدہ ہاں کہیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Did you pray the prayer? Tell us what happened. If you'd like your words on this page, say so — first name or initials only, never your surname or a photo; we take them down the day you ask. Under 18? A parent says yes first."
+  },
+  "low_day": {
+   "text": "حال اچھا نہیں؟ بتا دیں۔ اچھی طرح لکھنا ضروری نہیں۔ پہلا قانون آج بھی کام کرتا ہے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Not doing well? Say so. You don't have to write it well. Rule 1 still works today."
+  },
+  "mail_body": {
+   "text": "کیا آپ نے یہ دُعا کی؟ ہمیں بتائیں کہ کیا ہوا۔\n\nکیا ہم آپ کے الفاظ صرف آپ کے پہلے نام کے ساتھ 3r4l.org پر لگا سکتے ہیں؟ یہاں ہاں یا نہیں لکھیں: ",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Did you pray the prayer? Tell us what happened.\n\nMay we put your words on 3r4l.org with your first name only? Write YES or NO here: "
+  },
+  "form_lead": {
+   "text": "یا یہاں لکھیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Or write here."
+  },
+  "form_message": {
+   "text": "آپ کا پیغام",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Your message"
+  },
+  "form_reply": {
+   "text": "وہ آپ کو جواب کیسے دیں؟",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "How can he reply?"
+  },
+  "form_button": {
+   "text": "بھیجیں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Send"
+  },
+  "form_privacy": {
+   "text": "یہ ایک فارم سروس کے ذریعے بھائی ڈینیئل تک پہنچتا ہے، اور جب وہ اسے پڑھ لیں اور جہاں ممکن ہو جواب دے دیں تو اسے مٹا دیا جاتا ہے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "It goes to brother Daniel through a form service and is deleted once he has read it and replied where he can."
+  },
+  "sent_h1": {
+   "text": "بھیج دیا گیا۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Sent."
+  },
+  "sent_line": {
+   "text": "بھائی ڈینیئل ہر پیغام خود پڑھتے ہیں۔ اگر آپ نے رابطے کا کوئی طریقہ لکھا ہے، تو وہ جیسے ممکن ہو جواب دیں گے۔ انتظار کے دوران، پہلا قانون آج بھی کام کرتا ہے:",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Brother Daniel reads every message himself. If you left a way to reach you, he will reply as he can. While you wait, Rule 1 still works today:"
+  },
+  "text_first_line": {
+   "text": "سلام۔ یہ پیغام میرے حال کے بارے میں ہے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Hello. This is about how I am doing."
+  },
+  "form_lead_alone": {
+   "text": "بھائی ڈینیئل کو لکھیں، جو یہ کارڈ بانٹتے ہیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Write to brother Daniel, who gives these cards."
+  },
+  "form_lead_alone_keeper": {
+   "text": "ان لوگوں کو لکھیں جو اس کارڈ کے پیچھے ہیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Write to the people behind the card."
+  },
+  "form_reply_keeper": {
+   "text": "ہم آپ کو جواب کیسے دیں؟",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "How can we reply?"
+  },
+  "form_reply_hint": {
+   "text": "ای میل یا نمبر — یا خالی چھوڑ دیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "An email or a number — or leave it blank."
+  },
+  "form_privacy_keeper": {
+   "text": "یہ ایک فارم سروس کے ذریعے ہم تک پہنچتا ہے، اور جب ہم اسے پڑھ لیں اور جہاں ممکن ہو جواب دے دیں تو اسے مٹا دیا جاتا ہے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "It comes to us through a form service and is deleted once we have read it and replied where we can."
+  },
+  "form_failed": {
+   "text": "پیغام نہیں گیا۔ آپ کے الفاظ ابھی یہیں ہیں — ایک بار پھر کوشش کریں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "It didn't go. Your words are still here — try once more."
+  },
+  "sent_line_keeper": {
+   "text": "لکھنے کا شکریہ۔ اگر آپ نے رابطے کا کوئی طریقہ لکھا ہے، تو ہم جیسے ممکن ہو جواب دیں گے۔ انتظار کے دوران، پہلا قانون آج بھی کام کرتا ہے:",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Thank you for writing. If you left a way to reach you, we will reply as we can. While you wait, Rule 1 still works today:"
+  },
+  "form_sending": {
+   "text": "بھیجا جا رہا ہے…",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Sending…"
+  }
+ },
+ "privacy": {
+  "h1": {
+   "text": "رازداری",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Privacy"
+  },
+  "who": {
+   "text": "آپ کی معلومات کس کے پاس ہیں: [controller] — privacy@3r4l.org",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Who holds your details: [controller] — privacy@3r4l.org."
+  },
+  "what": {
+   "text": "ہمارے پاس کیا ہے: چالیس دن کے چیلنج کے لیے، آپ کا ای میل ایڈریس اور آپ کی زبان؛ اگر آپ ہمیں لکھیں، تو آپ کا پیغام اور وہ نام جو آپ بتائیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "What we hold: for the forty days, your email address and your language; if you write to us, your message and the name you give."
+  },
+  "why": {
+   "text": "کیوں: چالیس دن تک آپ کو روزانہ ایک آیت بھیجنے کے لیے؛ آپ کو جواب دینے کے لیے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Why: to send you one verse a day for forty days; to reply to you."
+  },
+  "how_long": {
+   "text": "کب تک: چالیس دن اور مزید سات دن، یا جب تک آپ بند نہ کریں — ہر ای میل میں ایک ٹیپ سے؛ پیغامات جب تک ہم جواب نہ دے دیں، پھر مٹا دیے جاتے ہیں، سوائے اس کے کہ آپ نے لکھا ہو کہ ہم انہیں شیئر کر سکتے ہیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "How long: the forty days and seven more, or until you stop — one tap in every mail; messages until we have replied, then deleted, unless you wrote that we may share them."
+  },
+  "processors": {
+   "text": "ہماری طرف سے اسے کون پروسیس کرتا ہے: [the list vendor] ای میلز بھیجتا ہے؛ Cloudflare ہماری ای میل آگے پہنچاتا ہے؛ Web3Forms رابطہ فارم کے پیغامات پہنچاتا ہے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Who processes it for us: [the list vendor] sends the mails; Cloudflare routes our email; Web3Forms carries the contact form's messages."
+  },
+  "rights": {
+   "text": "ڈیٹا پرائیویسی ایکٹ ۲۰۱۲ کے تحت آپ کے حقوق: ہمارے پاس جو کچھ ہے اسے دیکھنا، درست کروانا یا مٹوانا، اور نیشنل پرائیویسی کمیشن سے شکایت کرنا۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Your rights under the Data Privacy Act of 2012: to see, correct or delete what we hold, and to complain to the National Privacy Commission."
+  },
+  "children": {
+   "text": "بچے: عمر ۱۸ سال یا اس سے زیادہ ہو، یا والد یا والدہ ساتھ ہوں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Children: 18 or older, or with a parent."
+  },
+  "no_tracking": {
+   "text": "اس سائٹ پر نہ کوکیز ہیں، نہ ٹریکنگ، نہ اشتہار۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "No cookies, no tracking, no advertising on this site."
+  }
+ },
+ "mails": {
+  "day0_subject": {
+   "text": "",
+   "status": "absent",
+   "_en": "The forty begin tomorrow"
+  },
+  "day0": {
+   "text": "",
+   "status": "absent",
+   "_en": "You asked for the forty. Day 1 comes tomorrow morning: 1 John 1:9. Until then the card is at 3r4l.org."
+  },
+  "subject": {
+   "text": "",
+   "status": "absent",
+   "_en": "Day {n} of forty · {ref}"
+  },
+  "page_link": {
+   "text": "",
+   "status": "absent",
+   "_en": "Today's verse on the page"
+  },
+  "day40": {
+   "text": "",
+   "status": "absent",
+   "_en": "That is the forty. Nothing ends today — the rules are for every day after this one."
+  }
+ },
+ "film": {
+  "credit": {
+   "text": "کارڈ کے الفاظ بھائی ڈینیئل کے · مصنوعی آواز میں پڑھے گئے · 3r4l.org",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "The card's words by brother Daniel · read by a synthesized voice · 3r4l.org"
+  }
+ },
+ "watch": {
+  "h1": {
+   "text": "کارڈ کی وضاحت",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "The card, explained"
+  },
+  "sub": {
+   "text": "پلے دبائیں۔ کارڈ بلند آواز میں پڑھا جاتا ہے، اور تصویر اسے منظر بہ منظر دکھاتی ہے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Press play. The card is read aloud, and the picture plays it out scene by scene."
+  },
+  "play": {
+   "text": "کارڈ دیکھیں · [m:ss]",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Watch the card · [m:ss]"
+  },
+  "door": {
+   "text": "کارڈ کی وضاحت دیکھیں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Watch the card explained"
+  },
+  "download_9x16": {
+   "text": "ویڈیو ڈاؤن لوڈ کریں (فون)",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Download the video (phone)"
+  },
+  "download_16x9": {
+   "text": "ویڈیو ڈاؤن لوڈ کریں (چوڑی)",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Download the video (wide)"
+  },
+  "share": {
+   "text": "ویڈیو شیئر کریں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Share the video"
+  },
+  "share_text": {
+   "text": "کارڈ کی وضاحت دیکھیں — زندگی کے تین قوانین، تصویر کے ساتھ بلند آواز میں پڑھے گئے۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Watch the card explained — the three rules for living, read aloud with the picture."
+  },
+  "film_0": {
+   "text": "تین قوانین",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Three rules"
+  },
+  "film_1": {
+   "text": "گناہوں کا اقرار",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Confess"
+  },
+  "film_2": {
+   "text": "خدا کی مرضی",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Surrender"
+  },
+  "film_3": {
+   "text": "دوسروں کو معاف کریں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Forgive"
+  },
+  "film_4": {
+   "text": "چابی",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "the key"
+  },
+  "film_5": {
+   "text": "خدا معاف کر دے گا",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "God will forgive"
+  },
+  "film_6": {
+   "text": "کبھی نہ رُکیں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "never stop"
+  },
+  "film_7": {
+   "text": "ہر روز",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "everyday"
+  },
+  "film_8": {
+   "text": "بدل دیتا ہے",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "change"
+  },
+  "film_9": {
+   "text": "دن بھر",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "all day"
+  },
+  "film_10": {
+   "text": "اُنڈیل دے",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "pour out"
+  },
+  "film_10b": {
+   "text": "جسے بھی دیکھوں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "everyone I see"
+  },
+  "film_11": {
+   "text": "دوسری جانب",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "the other side"
+  },
+  "film_12": {
+   "text": "ہمیشہ کی زندگی",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "eternity"
+  },
+  "film_12b": {
+   "text": "وہ جواب دے گا",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "He will hear"
+  },
+  "film_13": {
+   "text": "گنہگار",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "a sinner"
+  },
+  "film_13b": {
+   "text": "زندہ ہوا",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "raised"
+  },
+  "film_14": {
+   "text": "رحم",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "mercy"
+  },
+  "film_15": {
+   "text": "گھر",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "home"
+  },
+  "film_16": {
+   "text": "تیرا شکر ہو",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "thank You"
+  },
+  "film_17": {
+   "text": "آمین",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Amen"
+  },
+  "door_home": {
+   "text": "کارڈ دیکھیں · [m:ss]",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Watch the card · [m:ss]"
+  }
+ },
+ "story": {
+  "placeholder": {
+   "text": "بھائی ڈینیئل کی گواہی یہاں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Brother Daniel's testimony here."
+  },
+  "door_print": {
+   "text": "کارڈ پرنٹ کریں اور کسی کو دیں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Print the card and give it"
+  },
+  "door_write": {
+   "text": "ہمیں لکھیں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Write to us"
+  },
+  "h1": {
+   "text": "یہ کیسے شروع ہوا",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "How this started"
+  }
+ },
+ "testimony": {
+  "h1": {
+   "text": "کیا ہوا",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "What happened"
+  },
+  "byline": {
+   "text": "جن لوگوں نے کارڈ پر لکھی دُعا کی، ان کے اپنے الفاظ میں۔ صرف پہلے نام۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "People who prayed the prayer on the card, in their own words. First names only."
+  },
+  "placeholder": {
+   "text": "گواہیاں یہاں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Testimonies here."
+  },
+  "door_tell": {
+   "text": "ہمیں بتائیں کہ کیا ہوا",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Tell us what happened"
+  },
+  "door_read": {
+   "text": "کارڈ پڑھیں اور کسی کو دیں",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Read the card and give it"
+  }
+ },
+ "help": {
+  "low_door": {
+   "text": "حال اچھا نہیں؟",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Not so well?"
+  },
+  "well_door": {
+   "text": "حال اچھا ہے؟",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Doing well?"
+  },
+  "low_line": {
+   "text": "خدا کو اس کے بارے میں بتائیں۔ پہلا قانون آج بھی کام کرتا ہے — وہ قریب ہے، اور وہ آپ کی مدد کرے گا۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Tell God about it. Rule 1 still works today — He is near, and He will help you."
+  },
+  "well_line": {
+   "text": "اس کے لیے اُس کا شکر کریں۔ آج کی برکتیں گنیں، اور اُس کی حمد کریں اور اُسے جلال دیں۔",
+   "status": "DRAFT",
+   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
+   "_en": "Thank Him for it. Count today's blessings, and give Him the praise and the glory."
+  }
+ }
+}

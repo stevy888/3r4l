@@ -20,17 +20,17 @@
 // same PDF prints at 100 % on A4, short bond 8.5 x 11 and long bond 8.5 x 13. Through the kit's Chromium path -> docs/forty.pdf.
 import fs from 'node:fs'; import path from 'node:path';
 
-const ADDRESS = 'https://3r4l.org/', SITE = '3r4l.org'; // THE ADDRESS OF RECORD (the apex alone, as the card and the QR print it — a route can move, the apex outlives every deploy; seat 2026-10-09 on the refuter's catch)
+const ADDRESS = 'https://stevy888.github.io/3r4l/', SITE = 'stevy888.github.io/3r4l'; /* 2026-11-25: 3r4l.org unregistered — the working address until the domain */ // THE ADDRESS OF RECORD (the apex alone, as the card and the QR print it — a route can move, the apex outlives every deploy; seat 2026-10-09 on the refuter's catch)
 
 const R = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..'), C = p => path.join(R, 'content', p), J = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 const arg = k => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : null; }, LANG = arg('--lang') || 'en', OUTPDF = arg('--out'); // --lang tl (rung 2): the sheet's labels from the Tagalog sheets of record (content/sheet-tl.json + sheet2-tl.json — the pastor's check); the verses stay the KJV with their references and the card's words stay brother Daniel's — no Tagalog Bible text is written here and nothing is machine-translated (the DRAFT writing rules stay English until a pastor's line); --out <file.pdf>: the PDF (its HTML beside it) there instead of docs/forty.pdf
 if (LANG !== 'en' && LANG !== 'tl') throw new Error('--lang en|tl'); if (LANG === 'tl' && !(fs.existsSync(C('sheet-tl.json')) && fs.existsSync(C('sheet2-tl.json')))) throw new Error("--lang tl needs content/sheet-tl.json and content/sheet2-tl.json (the pastor's check)");
-const sheet = J(C(LANG === 'tl' ? 'sheet-tl.json' : 'sheet.json')), S2EN = J(C('sheet2.json')), S2 = LANG === 'tl' ? J(C('sheet2-tl.json')) : S2EN, verses = J(C('verses.json')), card = fs.readFileSync(C('card.txt'), 'utf8');
+const sheet = J(C(LANG === 'tl' ? 'sheet-tl.json' : 'sheet.json')), S2EN = J(C('sheet2.json')), S2 = LANG === 'tl' ? J(C('sheet2-tl.json')) : S2EN, verses = J(C('verses.json')), card = fs.readFileSync(C(LANG === 'tl' && fs.existsSync(C('card-tl.txt')) ? 'card-tl.txt' : 'card.txt'), 'utf8'); /* 2026-11-25: the Tagalog sheet carries the Tagalog card's own words (content/card-tl.txt from its printed PDF) */
 const L = k => ((S2.challenge || {})[k] || S2EN.challenge[k]).text; // THE SHEET'S LABELS are rows of sheet2.json's challenge group (status DRAFT until his line): began · again · friend · reading_sheet · source — a Tagalog sheet without the row falls back to the English DRAFT
 const block = k => (new RegExp(`^== ${k} ==\\n([\\s\\S]*?)(?=\\n== \\w+ ==\\n|(?![\\s\\S]))`, 'm').exec(card) || [, ''])[1].replace(/\n$/, '');
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const F = w => `file://${R}/content/fonts/source-serif-4-${w}.woff2`;
-const translation = LANG === 'tl' && verses[0].translation_tl ? verses[0].translation_tl : verses[0].translation_name, /* --lang tl takes the Tagalog Bible on disk (verses.json text_tl / ref_tl / translation_tl, ADB 1905 — owner 'do all six' 2026-10-10: the sheet on the day the pastor's check lands) */ title = S2.challenge.h1.text, day40 = S2.mails.day40.text;
+const translation = LANG === 'tl' && verses[0].translation_tl ? verses[0].translation_tl : verses[0].translation_name, /* --lang tl takes the Tagalog Bible on disk (verses.json text_tl / ref_tl / translation_tl, ADB 1905 — owner 'do all six' 2026-10-10: the sheet on the day the pastor's check lands) */ title = S2.challenge.h1.text, day40 = (S2.mails && S2.mails.day40 && S2.mails.day40.text) || S2EN.mails.day40.text;
 
 // ---- THE DRAWING (mm; the safe box is 182 x 250) ----------------------------------------------------------------------------------------------
 // THE CURE OF RIVAL A (fleet-1010b, both blind judges): the ridge closed into A HILL the road has to climb — its two flanks fall from the summit to the
@@ -151,6 +151,7 @@ p{margin:0}
 .close .addr{font:500 9.5pt/1.4 "Source Serif 4";letter-spacing:.04em;color:${NAVY};margin-top:1.6mm}
 .foot2{position:absolute;left:0;right:0;bottom:0;border-top:.3mm solid ${GOLD};padding-top:1.8mm}
 .foot2 .row{color:#5d5d5d}
+${LANG === 'tl' ? 'html[lang=tl] .rules{font-size:11.5pt;line-height:1.3}html[lang=tl] .verse{font-size:8.6pt;line-height:1.24;margin-bottom:1.5mm}html[lang=tl] .cols{column-gap:6mm}html[lang=tl] .clause{font-size:9.6pt}html[lang=tl] .foot1 .row{font-size:8.6pt}' : ''}
 </style></head><body>
 <section class="side s1">${svg}
 <div class="head">
