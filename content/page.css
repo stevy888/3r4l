@@ -613,3 +613,4 @@ button.door.big.share[hidden]{display:none}
 .print.faces{margin:var(--gap) 0 0}
  /* 2026-11-25: the language row sits on the LEFT of the band in every language, clear of the stars (they hang on the right); a gap, not a margin, so the row is right in both directions */
 html[lang=tl] #card.rules-card .rule::first-letter{margin-bottom:.6em} /* the Tagalog rules run a line longer: the numeral keeps hanging beside the third line */
+.lang a[lang=ur]{font-size:1.15em}
