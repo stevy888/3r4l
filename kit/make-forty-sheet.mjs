@@ -95,7 +95,7 @@ const svg = `<svg class="draw" viewBox="0 0 ${W} ${H}" width="${W}mm" height="${
 <path d="M${CROSS.x} ${CROSS.foot}V${f(CROSS.foot - CROSS.h)}M${f(CROSS.x - CROSS.arm)} ${CROSS.y}H${f(CROSS.x + CROSS.arm)}" fill="none" stroke="${NAVY}" stroke-width="1.4" stroke-linecap="round"/>
 ${rings.map(r => `<circle cx="${f(r.x)}" cy="${f(r.y)}" r="${RING}" fill="#fff" stroke="${NAVY}" stroke-width="${r.fifth ? 1.1 : 0.5}"/>`).join('\n')}
 </svg>`;
-const label = r => `<p class="lab${r.fifth ? ' t' : ''}" style="left:${f(r.lab[0])}mm;top:${f(r.lab[1])}mm">${r.v.day}</p>`;
+const label = r => `<p class="lab${r.fifth ? ' t' : ''}" style="left:${f(r.lab[0])}mm;top:${f(r.lab[1])}mm">${LANG === 'ur' ? String(r.v.day).replace(/[0-9]/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]) : r.v.day}</p>`; // 2026-11-26 the Urdu audit: Urdu digits on the Urdu sheet, the range's numbers in their own order (B4, B9)
 const writeRule = (label, cls = 'wr') => `<div class="${cls}"><span>${tx(label)}</span><span class="line"></span></div>`;
 // GEOMETRY CHECK (before the render): the band and every ring inside the hill with air to the flank, no two rings touching, no numeral on a ring or on the road, day 40 under the cross
 { const nearSummit = p => Math.hypot(p[0] - SUMMIT[0], p[1] - SUMMIT[1]) < 12; // the road ends ON the summit under the cross — there the band is meant to meet the crest
@@ -108,7 +108,7 @@ console.log(`road ${ROADLEN.toFixed(0)} mm, the forty at ${PITCH.toFixed(1)} mm 
 
 // ---- THE READING SHEET -----------------------------------------------------------------------------------------------------------------------
 const MARK = `<svg class="mark" viewBox="0 0 40 16" aria-hidden="true" focusable="false"><path d="M0 14C8 13 16 10 21 7C22.5 6.3 24 6 25 6.6C29 9 34 12 40 13.6" fill="none" stroke="${NAVY}" stroke-width=".7" stroke-linecap="round"/><path d="M24 6.2V1M21.5 2.6H26.5" fill="none" stroke="${NAVY}" stroke-width="1.2" stroke-linecap="round"/></svg>`; // the leaf's drawing small: the ridge, the cross on the summit — the one hand on every page
-const verse = v => { if (LANG === 'ur') { const u = urRow(v.ref); return `<p class="verse"><b class="d">${v.day}</b><b class="ref">${tx(u.ref_ur)}</b> <span class="t">${tx(u.text_ur.replace(/\n/g, ' '))}</span></p>`; }
+const verse = v => { if (LANG === 'ur') { const u = urRow(v.ref); return `<p class="verse"><b class="d">${String(v.day).replace(/[0-9]/g, d => '۰۱۲۳۴۵۶۷۸۹'[d])}</b><b class="ref">${tx(u.ref_ur).replace(/([۰-۹]+:[۰-۹]+(?:-[۰-۹]+)?)$/, '<span style="direction:ltr;unicode-bidi:isolate">$1</span>')}</b> <span class="t">${tx(u.text_ur.replace(/\n/g, ' '))}</span></p>`; }
   const tl = LANG === 'tl' && v.text_tl; return `<p class="verse"><b class="d">${v.day}</b><b class="ref">${esc(tl ? (v.ref_tl || v.ref) : v.ref)}</b> <span class="t">${esc((tl ? v.text_tl : (v.parts ? v.parts.join(' ') : v.text)).replace(/\n/g, ' '))}</span></p>`; };
 const head = right => `<div class="head2"><p class="kicker">${tx(title)}</p>${MARK}<p class="tr">${right}</p></div>`;
 const footRow = (left, right = '') => `<p class="row"><span>${left}</span><span>${right}</span></p>`;

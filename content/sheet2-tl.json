@@ -246,9 +246,10 @@
    "_en": "To send it to someone: download the sheet, then attach the file to an email or a message."
   },
   "terms_full": {
-   "text": "",
-   "status": "absent",
-   "_en": ""
+   "text": "Malayang i-print at ipamigay ang card, nang walang binabago. Ang website ay hindi maaaring kopyahin sa anumang paraan nang walang pahintulot mula sa 3R4L.club. Pinapayagan ang link papunta sa 3R4L.club sa mga web page basta't ang page ay hindi kumukunsinti sa nilalamang imoral ayon sa Bibliya.",
+   "status": "DRAFT",
+   "written": "2026-11-26 Fable 5.2 high pen + its own back-translation (owner 'fix all bugs' · 'make sure all requests done'); DRAFT until the reader's check",
+   "_en": "The card is free to print and give, unchanged. The website may not be copied in any way without permission from 3R4L.club. A link to 3R4L.club is allowed on web pages as long as the page does not condone Biblically immoral content."
   },
   "print_one_page": {
    "text": "Isang card, harap at likod (isang pahina)",
@@ -505,8 +506,9 @@
    "_en": "Today's verse on the page"
   },
   "day40": {
-   "text": "",
-   "status": "absent",
+   "text": "Iyan na ang apatnapu. Walang nagtatapos ngayong araw — ang mga tuntunin ay para sa bawat araw pagkatapos ng araw na ito.",
+   "status": "DRAFT",
+   "written": "2026-11-26 Fable 5.2 high pen + its own back-translation (owner 'fix all bugs' · 'make sure all requests done'); DRAFT until the reader's check",
    "_en": "That is the forty. Nothing ends today — the rules are for every day after this one."
   }
  },
