@@ -42,7 +42,7 @@ html,body{margin:0;width:1200px;height:630px;overflow:hidden}
 .ref{font:400 44px/1.3 S,serif;color:#e0bd6c;margin:0}
 .mark{position:absolute;bottom:40px;margin:0;${rtl ? 'right:76px' : 'left:76px'};font:500 32px/1 S,serif;letter-spacing:.05em;color:rgba(247,242,231,.78);direction:ltr}
 [dir=rtl] .label,[dir=rtl] .q,[dir=rtl] .ref{font-family:N,serif;font-style:normal}
-[dir=rtl] .q{line-height:1.85;font-weight:400}[dir=rtl] .label{line-height:2;font-size:25px}[dir=rtl] .ref{line-height:1.9}
+[dir=rtl] .q{line-height:2.1;font-weight:400}[dir=rtl] .label{line-height:2;font-size:25px}[dir=rtl] .ref{line-height:1.9}
 </style></head><body><div class="og">
 <svg class="sky" viewBox="0 0 1200 630" aria-hidden="true">${stars}${sparkle(rtl ? 1120 : 80, 54, 1.1)}${sparkle(rtl ? 610 : 590, 88, .55)}</svg>
 <div class="horizon"></div><img class="art" src="${art}" alt="">
