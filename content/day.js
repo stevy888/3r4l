@@ -39,6 +39,7 @@
     au.addEventListener('ended',function(){off();fold=setTimeout(function(){set(-1);var on=document.querySelectorAll('.read.on, .read .on');for(var k=0;k<on.length;k++){on[k].classList.remove('on');}if(H){H.classList.remove('on');for(var s=1;s<=SC.length;s++){H.classList.remove('s'+s);}H.classList.add('done');scrollTo({top:0,behavior:'smooth'});}},4000);}); /* THE END HELD (watch-film-1012 round 3, the judges ×6): the last scene stands four seconds after the voice, then the plate folds to rest and the page returns to the top — the ended frame is the rest frame */
     var toggle=function(ev){ev.preventDefault();ev.stopPropagation();if(au.paused){au.play();}else{au.pause();}};
     pl.addEventListener('click',toggle);if(hr&&hr!==pl){hr.addEventListener('click',toggle);}
+    if(location.hash==='#play'){history.replaceState(null,'',location.pathname+location.search);var go=au.play();if(go&&go.catch){go.catch(function(){pl.scrollIntoView({block:'center'});pl.focus();});}} /* owner 2026-11-26 "click watch the card on homepage .. go to the watch card page but should auto start playing": the home's door carries #play; a phone that refuses sound without a tap on THIS page (iPhone) gets the play door centred and focused, one tap */
     window.__at=tick; /* the proof's hand (prove-reading.mjs): lights the cue at a time without a decoder */
   }
   if('serviceWorker' in navigator&&document.referrer.indexOf(location.origin)===0){ /* THE OFFLINE WORKER (rung 3): registered from the second page on — a first load asks for nothing but the fonts */

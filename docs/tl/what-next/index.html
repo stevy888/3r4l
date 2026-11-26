@@ -141,6 +141,7 @@ Kahit ang kataasan, kahit ang kababaan, kahit ang alin mang ibang nilalang, ay h
     au.addEventListener('ended',function(){off();fold=setTimeout(function(){set(-1);var on=document.querySelectorAll('.read.on, .read .on');for(var k=0;k<on.length;k++){on[k].classList.remove('on');}if(H){H.classList.remove('on');for(var s=1;s<=SC.length;s++){H.classList.remove('s'+s);}H.classList.add('done');scrollTo({top:0,behavior:'smooth'});}},4000);});
     var toggle=function(ev){ev.preventDefault();ev.stopPropagation();if(au.paused){au.play();}else{au.pause();}};
     pl.addEventListener('click',toggle);if(hr&&hr!==pl){hr.addEventListener('click',toggle);}
+    if(location.hash==='#play'){history.replaceState(null,'',location.pathname+location.search);var go=au.play();if(go&&go.catch){go.catch(function(){pl.scrollIntoView({block:'center'});pl.focus();});}}
     window.__at=tick;
   }
   if('serviceWorker' in navigator&&document.referrer.indexOf(location.origin)===0){
