@@ -20,7 +20,7 @@
 // same PDF prints at 100 % on A4, short bond 8.5 x 11 and long bond 8.5 x 13. Through the kit's Chromium path -> docs/forty.pdf.
 import fs from 'node:fs'; import path from 'node:path';
 
-const ADDRESS = 'https://stevy888.github.io/3r4l/', SITE = 'stevy888.github.io/3r4l'; /* 2026-11-25: 3r4l.org unregistered — the working address until the domain */ // THE ADDRESS OF RECORD (the apex alone, as the card and the QR print it — a route can move, the apex outlives every deploy; seat 2026-10-09 on the refuter's catch)
+const ADDRESS = 'https://3r4l.club/', SITE = '3r4l.club'; /* 2026-11-25: 3r4l.org unregistered — the working address until the domain */ // THE ADDRESS OF RECORD (the apex alone, as the card and the QR print it — a route can move, the apex outlives every deploy; seat 2026-10-09 on the refuter's catch)
 
 const R = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..'), C = p => path.join(R, 'content', p), J = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 const arg = k => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : null; }, LANG = arg('--lang') || 'en', OUTPDF = arg('--out'); // --lang tl (rung 2): the sheet's labels from the Tagalog sheets of record (content/sheet-tl.json + sheet2-tl.json — the pastor's check); the verses stay the KJV with their references and the card's words stay brother Daniel's — no Tagalog Bible text is written here and nothing is machine-translated (the DRAFT writing rules stay English until a pastor's line); --out <file.pdf>: the PDF (its HTML beside it) there instead of docs/forty.pdf
