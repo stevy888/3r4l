@@ -19,7 +19,7 @@ const card = await b.newPage({ viewport: { width: 1200, height: 630 } });
 for (const [kind, k] of Object.entries(share.kinds)) for (const lang of ['en', 'tl', 'ur']) {
   const t = k[lang]; if (!t) continue;
   const url = BASE + (lang === 'en' ? '' : lang + '/') + ((k.page || kind) === 'home' ? '' : (k.page || kind) + '/'); // k.page: a kind may borrow another page's drawing
-  await shot.goto(url, { waitUntil: 'load' }); await shot.waitForTimeout(1200);
+  await shot.emulateMedia({ colorScheme: k.scheme || 'light' }); await shot.goto(url, { waitUntil: 'load' }); await shot.waitForTimeout(1200);
   await shot.addStyleTag({ content: `html,body,main,header,.band,.plate,.hero,${k.svg}{background:transparent!important;box-shadow:none!important}h1,p,.lang,nav,a,button,.byline{visibility:hidden!important}` }); // the site's own night colours (the drawings' ink turns cream), the page's words hidden over the drawing
   const el = shot.locator(k.svg).first(); if (!(await el.count())) throw new Error(`${url}: no ${k.svg}`);
   const art = 'data:image/png;base64,' + (await el.screenshot({ omitBackground: true })).toString('base64');
@@ -34,19 +34,19 @@ html,body{margin:0;width:1200px;height:630px;overflow:hidden}
 .og{position:relative;width:1200px;height:630px;overflow:hidden;background:radial-gradient(ellipse 620px 420px at ${rtl ? '24%' : '76%'} 74%,rgba(240,214,160,.30),rgba(240,214,160,0) 70%),linear-gradient(180deg,#111830 0%,#1a233f 60%,#1d2645 100%);font-family:S,serif;color:#f7f2e7}
 .sky{position:absolute;inset:0}
 .horizon{position:absolute;left:0;right:0;bottom:0;height:150px;background:linear-gradient(180deg,rgba(184,136,45,0),rgba(184,136,45,.16))}
-.art{position:absolute;bottom:18px;${rtl ? 'left:8px;transform:scaleX(-1)' : 'right:8px'};width:430px;height:330px;object-fit:contain;object-position:bottom;filter:drop-shadow(0 0 18px rgba(243,227,189,.35));-webkit-mask-image:linear-gradient(to right,transparent 0,#000 22%);mask-image:linear-gradient(to right,transparent 0,#000 22%)}
-.words{position:absolute;top:0;bottom:0;${rtl ? 'right:76px' : 'left:76px'};width:680px;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px;box-sizing:border-box}
+.art{position:absolute;bottom:0;${rtl ? 'left:0;transform:scaleX(-1)' : 'right:0'};width:540px;height:380px;object-fit:contain;object-position:bottom right;filter:drop-shadow(0 0 18px rgba(243,227,189,.35));-webkit-mask-image:linear-gradient(to right,transparent 0,#000 22%);mask-image:linear-gradient(to right,transparent 0,#000 22%)}
+.words{position:absolute;top:0;bottom:0;${rtl ? 'right:76px' : 'left:76px'};width:${rtl ? 760 : 700}px;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px;box-sizing:border-box}
 .label{font:italic 400 27px/1.3 S,serif;color:#d9b35e;margin:0 0 22px}
 .q{font:500 ${size}px/1.18 S,serif;margin:0;letter-spacing:-.01em;text-wrap:balance;text-shadow:0 2px 18px rgba(10,14,30,.55)}
 .rule{width:88px;height:4px;background:#c99a3c;border-radius:2px;margin:34px 0 18px}
-.ref{font:400 34px/1.3 S,serif;color:#e0bd6c;margin:0}
-.mark{position:absolute;bottom:40px;margin:0;${rtl ? 'right:76px' : 'left:76px'};font:500 27px/1 S,serif;letter-spacing:.05em;color:rgba(247,242,231,.78);direction:ltr}
+.ref{font:400 44px/1.3 S,serif;color:#e0bd6c;margin:0}
+.mark{position:absolute;bottom:40px;margin:0;${rtl ? 'right:76px' : 'left:76px'};font:500 32px/1 S,serif;letter-spacing:.05em;color:rgba(247,242,231,.78);direction:ltr}
 [dir=rtl] .label,[dir=rtl] .q,[dir=rtl] .ref{font-family:N,serif;font-style:normal}
 [dir=rtl] .q{line-height:1.85;font-weight:400}[dir=rtl] .label{line-height:2;font-size:25px}[dir=rtl] .ref{line-height:1.9}
 </style></head><body><div class="og">
 <svg class="sky" viewBox="0 0 1200 630" aria-hidden="true">${stars}${sparkle(rtl ? 1120 : 80, 54, 1.1)}${sparkle(rtl ? 610 : 590, 88, .55)}</svg>
 <div class="horizon"></div><img class="art" src="${art}" alt="">
-<div class="words"><p class="q">${esc(t.text)}</p>${t.ref ? `<div class="rule"></div><p class="ref">${esc(t.ref)}</p>` : ''}</div>
+<div class="words"><p class="q">${esc(rtl ? t.text : t.text.replace(/'/g, '\u2019').replace(/ (\S+) (\S+)$/, (m, a, b) => (a + b).length <= 14 ? ` ${a}\u00a0${b}` : m)).replace(/\n/g, '<br>')}</p>${t.ref ? `<div class="rule"></div><p class="ref">${esc(t.ref)}</p>` : ''}</div>
 <p class="mark">3r4l.club</p></div></body></html>`;
   await card.setContent(html, { waitUntil: 'load' }); await card.evaluate(() => document.fonts.ready); await card.waitForTimeout(200);
   await card.evaluate(() => { const q = document.querySelector('.q'), w = document.querySelector('.words'); let px = parseFloat(getComputedStyle(q).fontSize); const fits = () => { const c = w.children, top = c[0].getBoundingClientRect().top, bot = c[c.length - 1].getBoundingClientRect().bottom; return top >= 60 && bot <= 505 && q.scrollWidth <= q.clientWidth + 1; }; while (!fits() && px > 40) { px -= 2; q.style.fontSize = px + 'px'; } document.body.dataset.px = px; }); // fill the picture: the largest type that fits

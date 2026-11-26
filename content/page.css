@@ -301,7 +301,7 @@ em.c.now{background:var(--hl);box-shadow:0 0 0 3px var(--hl);text-decoration-col
 #card.rules-card .title{font:500 .9375rem/1.35 var(--serif);letter-spacing:.1em;color:var(--rb-ink);margin:0 0 1.125rem;text-wrap:balance}
 #card.rules-card .rule{font:400 1.3125rem/1.38 var(--serif);color:var(--rb-ink);margin:0;clear:both;text-wrap:pretty}
 #card.rules-card .rule+.rule{margin-top:.875rem}
-#card.rules-card .rule::first-letter{float:left;width:1.2em;text-align:right;color:var(--rb-num);font-weight:400;font-size:2.6em;line-height:.9;margin:.03em .2em 0 0}
+#card.rules-card .rule{padding-left:3.64em}#card.rules-card .rule::first-letter{float:left;width:1.2em;text-align:right;color:var(--rb-num);font-weight:400;font-size:2.6em;line-height:.9;margin:.03em .2em 0 -1.4em} /* the numeral hangs in the rule's own margin: a long rule's third and fourth lines stay under its words, never under the numeral (the Fable audit 2026-11-26, Tagalog rule 1) */
 @media (max-width:359px){.picture.rules-card .face{padding:1.25rem 1rem 1.125rem 1.125rem}#card.rules-card .title{font-size:.875rem;letter-spacing:.08em;margin-bottom:.875rem}#card.rules-card .rule{font-size:1.1875rem;line-height:1.36}#card.rules-card .rule+.rule{margin-top:.625rem}#card.rules-card .rule::first-letter{font-size:2.5em}}
 @media print{.picture.rules-card .frame{box-shadow:none;border:1px solid #000;background:#fff}.picture.rules-card .face{background:#fff}#card.rules-card .title,#card.rules-card .rule,#card.rules-card .rule::first-letter{color:#000}}
 @media (prefers-reduced-motion:reduce){.picture.rules-card{animation:none}}

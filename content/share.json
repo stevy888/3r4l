@@ -1,5 +1,5 @@
 {
- "_note": "THE LINK PREVIEWS (owner 2026-11-26 \"if pasting a link somewhere .. can we have a beautiful image show ? ...for the homepage it can be 'A blessing from the Lord's Prayer' .... and on the other pages have a different quote or picture ... make these inspirational beautiful .. and lovely\"). One 1200x630 picture per page kind per tongue, drawn by kit/make-share-pictures.mjs from the page's OWN drawing; every verse is a text of record (KJV and Ang Dating Biblia 1905 from api.getbible.net v2, the Urdu from Biblica's Open Urdu Contemporary Version USFM, cut by make-lang-verses.py's own cutter, 2026-11-26); the one new caption's Tagalog and Urdu are DRAFT (one Fable 5.2 high pen with its back-translation, 2026-11-26) until the readers check them. Kinds not listed use the home's picture. 2026-11-26 owner \"the homepage should just have 'A Blessing from the Lord's Prayer' ..... each image should be easily readable on a phone if they have words on .. clear to read and beautiful inspiring too\": the home carries the caption alone; every other picture ONE short line of its verse (an exact run of the text of record, '…' where words are left out) in type sized to fill the picture.",
+ "_note": "THE LINK PREVIEWS (owner 2026-11-26 \"if pasting a link somewhere .. can we have a beautiful image show ? ...for the homepage it can be 'A blessing from the Lord's Prayer' .... and on the other pages have a different quote or picture ... make these inspirational beautiful .. and lovely\"). One 1200x630 picture per page kind per tongue, drawn by kit/make-share-pictures.mjs from the page's OWN drawing; every verse is a text of record (KJV and Ang Dating Biblia 1905 from api.getbible.net v2, the Urdu from Biblica's Open Urdu Contemporary Version USFM, cut by make-lang-verses.py's own cutter, 2026-11-26); the one new caption's Tagalog and Urdu are DRAFT (one Fable 5.2 high pen with its back-translation, 2026-11-26) until the readers check them. Kinds not listed use the home's picture. 2026-11-26 owner \"the homepage should just have 'A Blessing from the Lord's Prayer' ..... each image should be easily readable on a phone if they have words on .. clear to read and beautiful inspiring too\": the home carries the caption alone; every other picture ONE short line of its verse (an exact run of the text of record, '…' where words are left out) in type sized to fill the picture. 2026-11-26 the Fable audit: testimony = Psalm 126:3 (a whole line in every tongue); the drawings shot in each page's own band colours (light scheme; the card's walk in dark), larger, to the corner.",
  "kinds": {
   "home": {
    "svg": "svg.sky",
@@ -12,10 +12,11 @@
     "back": "A blessing from the Lord's Prayer"
    },
    "ur": {
-    "text": "دعائے ربانی سے ایک برکت",
+    "text": "دُعائے ربانی سے ایک برکت",
     "status": "DRAFT",
     "back": "From the Lord's Prayer, a blessing"
-   }
+   },
+   "scheme": "light"
   },
   "what-next": {
    "svg": "svg.climb",
@@ -30,12 +31,13 @@
    "ur": {
     "text": "ہر صُبح وہ نئی ہوتی رہتی ہے؛ کیونکہ آپ کی وفاداری عظیم ہے۔",
     "ref": "نوحہ ۳:۲۳"
-   }
+   },
+   "scheme": "light"
   },
   "card": {
    "svg": "svg.walk",
    "en": {
-    "text": "Forgive us our debts, as we forgive our debtors.",
+    "text": "And forgive us our debts, as we forgive our debtors.",
     "ref": "Matthew 6:12"
    },
    "tl": {
@@ -46,7 +48,8 @@
     "text": "وَیسے ہی آپ بھی ہمارے قُصُوروں کو مُعاف کیجئے۔",
     "ref": "متّی ۶:۱۲"
    },
-   "page": "home"
+   "page": "home",
+   "scheme": "dark"
   },
   "contact": {
    "svg": "svg.pl",
@@ -61,14 +64,16 @@
    "ur": {
     "text": "اَپنی ساری فکریں اُس خُدا پر ڈال دو کیونکہ وہ تمہاری فکر کرتا ہے۔",
     "ref": "۱ پطرس ۵:۷"
-   }
+   },
+   "scheme": "light"
   },
   "watch": {
    "svg": "svg.sky",
    "en": {
-    "text": "Come unto me … and I will give you rest.",
+    "text": "Come unto me …\nand I will give you rest.",
     "ref": "Matthew 11:28"
-   }
+   },
+   "scheme": "light"
   },
   "story": {
    "svg": "svg.field",
@@ -83,22 +88,24 @@
    "ur": {
     "text": "یَاہوِہ کے چھُڑائے ہُوئے یہی کہیں۔",
     "ref": "زبُور ۱۰۷:۲"
-   }
+   },
+   "scheme": "light"
   },
   "testimony": {
    "svg": "svg.way",
    "en": {
-    "text": "I will declare what he hath done for my soul.",
-    "ref": "Psalm 66:16"
+    "text": "The LORD hath done great things for us; whereof we are glad.",
+    "ref": "Psalm 126:3"
    },
    "tl": {
-    "text": "Ipahahayag ko kung ano ang kaniyang ginawa sa aking kaluluwa.",
-    "ref": "Mga Awit 66:16"
+    "text": "Ginawan tayo ng Panginoon ng mga dakilang bagay; na siyang ating ikinatutuwa.",
+    "ref": "Mga Awit 126:3"
    },
    "ur": {
-    "text": "تاکہ میں بتاؤں کہ اُنہُوں نے میرے لیٔے کیا کچھ کیا ہے۔",
-    "ref": "زبُور ۶۶:۱۶"
-   }
+    "text": "یَاہوِہ نے ہمارے لیٔے عظیم کام کئے ہیں، اَور ہم خُوشی سے پھُولے نہیں سماتے۔",
+    "ref": "زبُور ۱۲۶:۳"
+   },
+   "scheme": "light"
   }
  }
 }
