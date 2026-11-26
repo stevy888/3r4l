@@ -1,26 +1,20 @@
 {
- "_note": "THE LINK PREVIEWS (owner 2026-11-26 \"if pasting a link somewhere .. can we have a beautiful image show ? ...for the homepage it can be 'A blessing from the Lord's Prayer' .... and on the other pages have a different quote or picture ... make these inspirational beautiful .. and lovely\"). One 1200x630 picture per page kind per tongue, drawn by kit/make-share-pictures.mjs from the page's OWN drawing; every verse is a text of record (KJV and Ang Dating Biblia 1905 from api.getbible.net v2, the Urdu from Biblica's Open Urdu Contemporary Version USFM, cut by make-lang-verses.py's own cutter, 2026-11-26); the one new caption's Tagalog and Urdu are DRAFT (one Fable 5.2 high pen with its back-translation, 2026-11-26) until the readers check them. Kinds not listed use the home's picture.",
+ "_note": "THE LINK PREVIEWS (owner 2026-11-26 \"if pasting a link somewhere .. can we have a beautiful image show ? ...for the homepage it can be 'A blessing from the Lord's Prayer' .... and on the other pages have a different quote or picture ... make these inspirational beautiful .. and lovely\"). One 1200x630 picture per page kind per tongue, drawn by kit/make-share-pictures.mjs from the page's OWN drawing; every verse is a text of record (KJV and Ang Dating Biblia 1905 from api.getbible.net v2, the Urdu from Biblica's Open Urdu Contemporary Version USFM, cut by make-lang-verses.py's own cutter, 2026-11-26); the one new caption's Tagalog and Urdu are DRAFT (one Fable 5.2 high pen with its back-translation, 2026-11-26) until the readers check them. Kinds not listed use the home's picture. 2026-11-26 owner \"the homepage should just have 'A Blessing from the Lord's Prayer' ..... each image should be easily readable on a phone if they have words on .. clear to read and beautiful inspiring too\": the home carries the caption alone; every other picture ONE short line of its verse (an exact run of the text of record, '…' where words are left out) in type sized to fill the picture.",
  "kinds": {
   "home": {
    "svg": "svg.sky",
    "en": {
-    "label": "A blessing from the Lord's Prayer",
-    "text": "Thy kingdom come. Thy will be done in earth, as it is in heaven.",
-    "ref": "Matthew 6:10"
+    "text": "A Blessing from the Lord's Prayer"
    },
    "tl": {
-    "label": "Isang pagpapala mula sa Lord's Prayer",
-    "label_status": "DRAFT",
-    "label_back": "A blessing from the Lord's Prayer",
-    "text": "Dumating nawa ang kaharian mo. Gawin nawa ang iyong kalooban, kung paano sa langit, gayon din naman sa lupa.",
-    "ref": "Mateo 6:10"
+    "text": "Isang pagpapala mula sa Lord's Prayer",
+    "status": "DRAFT",
+    "back": "A blessing from the Lord's Prayer"
    },
    "ur": {
-    "label": "دعائے ربانی سے ایک برکت",
-    "label_status": "DRAFT",
-    "label_back": "From the Lord's Prayer, a blessing",
-    "text": "آپ کی بادشاہی آئے، جَیسے آپ کی مرضی آسمان پر پُوری ہوتی ہے، وَیسے ہی زمین پر بھی ہو۔",
-    "ref": "متّی ۶:۱۰"
+    "text": "دعائے ربانی سے ایک برکت",
+    "status": "DRAFT",
+    "back": "From the Lord's Prayer, a blessing"
    }
   },
   "what-next": {
@@ -41,15 +35,15 @@
   "card": {
    "svg": "svg.walk",
    "en": {
-    "text": "Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.",
-    "ref": "The little prayer on the card"
+    "text": "Forgive us our debts, as we forgive our debtors.",
+    "ref": "Matthew 6:12"
    },
    "tl": {
-    "text": "At ipatawad mo sa amin ang aming mga utang, gaya naman namin na nagpatawad sa mga may utang sa amin.",
+    "text": "At ipatawad mo sa amin ang aming mga utang…",
     "ref": "Mateo 6:12"
    },
    "ur": {
-    "text": "اَور جِس طرح ہم نے اَپنے قُصُورواروں کو مُعاف کیا ہے، وَیسے ہی آپ بھی ہمارے قُصُوروں کو مُعاف کیجئے۔",
+    "text": "وَیسے ہی آپ بھی ہمارے قُصُوروں کو مُعاف کیجئے۔",
     "ref": "متّی ۶:۱۲"
    },
    "page": "home"
@@ -61,7 +55,7 @@
     "ref": "1 Peter 5:7"
    },
    "tl": {
-    "text": "Na inyong ilagak sa kaniya ang lahat ng inyong kabalisahan, sapagka't kayo'y ipinagmamalasakit niya.",
+    "text": "Sapagka't kayo'y ipinagmamalasakit niya.",
     "ref": "1 Pedro 5:7"
    },
    "ur": {
@@ -72,8 +66,38 @@
   "watch": {
    "svg": "svg.sky",
    "en": {
-    "text": "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+    "text": "Come unto me … and I will give you rest.",
     "ref": "Matthew 11:28"
+   }
+  },
+  "story": {
+   "svg": "svg.field",
+   "en": {
+    "text": "Let the redeemed of the LORD say so",
+    "ref": "Psalm 107:2"
+   },
+   "tl": {
+    "text": "Sabihing gayon ng tinubos ng Panginoon",
+    "ref": "Mga Awit 107:2"
+   },
+   "ur": {
+    "text": "یَاہوِہ کے چھُڑائے ہُوئے یہی کہیں۔",
+    "ref": "زبُور ۱۰۷:۲"
+   }
+  },
+  "testimony": {
+   "svg": "svg.way",
+   "en": {
+    "text": "I will declare what he hath done for my soul.",
+    "ref": "Psalm 66:16"
+   },
+   "tl": {
+    "text": "Ipahahayag ko kung ano ang kaniyang ginawa sa aking kaluluwa.",
+    "ref": "Mga Awit 66:16"
+   },
+   "ur": {
+    "text": "تاکہ میں بتاؤں کہ اُنہُوں نے میرے لیٔے کیا کچھ کیا ہے۔",
+    "ref": "زبُور ۶۶:۱۶"
    }
   }
  }
