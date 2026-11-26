@@ -130,10 +130,10 @@
    "_en": "Tap the file."
   },
   "step2": {
-   "text": "اسے کسی پرنٹ شاپ کو بھیجیں، یا گھر پر پرنٹ کریں — ایک شیٹ پر دس کارڈ آتے ہیں (لانگ بانڈ پر بارہ)۔",
+   "text": "اسے کسی پرنٹ شاپ کو بھیجیں، یا گھر پر پرنٹ کریں — ایک A4 شیٹ پر دس کارڈ آتے ہیں۔",
    "status": "DRAFT",
-   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
-   "_en": "Send it to a print shop, or print it at home — ten cards fit on one sheet (twelve on long bond)."
+   "written": "2026-11-25 Fable 5.2 pen + its own back-translation, read by the seat (Pakistan wording: A4 first, no Philippine paper names; the privacy line says why Philippine law is named); DRAFT until the ur reader's check",
+   "_en": "Send it to a print shop, or print it at home — ten cards fit on one A4 sheet."
   },
   "step3": {
    "text": "نشانوں پر کاٹیں۔ انہیں بانٹ دیں — لیکن اپنا آخری کارڈ کبھی نہیں؛ ایک رکھ لیں، ہو سکتا ہے خداوند کہے کہ اور بنائیں۔",
@@ -142,16 +142,16 @@
    "_en": "Cut on the marks. Give them away — but never your last card; keep one in case the Lord says make more."
   },
   "shop": {
-   "text": "دونوں طرف · لمبے کنارے پر پلٹیں · 100 %، سائز تبدیل کیے بغیر · شارٹ بانڈ، لانگ بانڈ یا A4 · اگر دکان میں ہو تو کارڈ پیپر",
+   "text": "دونوں طرف · لمبے کنارے پر پلٹیں · 100 %، سائز تبدیل کیے بغیر · A4 کاغذ · اگر دکان میں ہو تو کارڈ پیپر",
    "status": "DRAFT",
-   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
-   "_en": "Both sides · flip on the long edge · 100 %, no scaling · short bond, long bond or A4 · board paper if the shop has it"
+   "written": "2026-11-25 Fable 5.2 pen + its own back-translation, read by the seat (Pakistan wording: A4 first, no Philippine paper names; the privacy line says why Philippine law is named); DRAFT until the ur reader's check",
+   "_en": "Both sides · flip on the long edge · 100 %, no scaling · A4 paper · card paper if the shop has it"
   },
   "papers": {
-   "text": "شیٹ ایک ہی فائل ہے جو کاغذ کے تین سائزوں کے لیے ہے — A4: صفحات 1 اور 2 · لیٹر یا شارٹ بانڈ: صفحات 3 اور 4 · لانگ بانڈ: صفحات 5 اور 6۔ صرف اپنے کاغذ کے دو صفحات پرنٹ کریں، پہلے سامنے کا رخ پھر پچھلا۔",
+   "text": "شیٹ ایک ہی فائل ہے جو کاغذ کے تین سائزوں کے لیے ہے — A4: صفحات 1 اور 2 · لیٹر: صفحات 3 اور 4 · 8.5 × 13 انچ: صفحات 5 اور 6۔ صرف اپنے کاغذ کے دو صفحات پرنٹ کریں، پہلے سامنے کا رخ پھر پچھلا۔",
    "status": "DRAFT",
-   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
-   "_en": "The sheet is one file on three papers — A4: pages 1 and 2 · Letter or short bond: pages 3 and 4 · long bond: pages 5 and 6. Print your paper's two pages only, front then back."
+   "written": "2026-11-25 Fable 5.2 pen + its own back-translation, read by the seat (Pakistan wording: A4 first, no Philippine paper names; the privacy line says why Philippine law is named); DRAFT until the ur reader's check",
+   "_en": "The sheet is one file on three papers — A4: pages 1 and 2 · Letter: pages 3 and 4 · 8.5 × 13 inch: pages 5 and 6. Print your paper's two pages only, front then back."
   },
   "no_duplex": {
    "text": "دو طرفہ پرنٹر نہیں ہے؟ صفحہ ۱ پرنٹ کریں، شیٹ واپس ڈالیں، صفحہ ۲ پرنٹ کریں۔",
@@ -459,10 +459,10 @@
    "_en": "Who processes it for us: [the list vendor] sends the mails; Cloudflare routes our email; Web3Forms carries the contact form's messages."
   },
   "rights": {
-   "text": "ڈیٹا پرائیویسی ایکٹ ۲۰۱۲ کے تحت آپ کے حقوق: ہمارے پاس جو کچھ ہے اسے دیکھنا، درست کروانا یا مٹوانا، اور نیشنل پرائیویسی کمیشن سے شکایت کرنا۔",
+   "text": "آپ جہاں بھی رہتے ہوں، ہمارے پاس جو کچھ ہے اسے دیکھنے، درست کروانے یا مٹوانے کے لیے کہہ سکتے ہیں۔ ہم فلپائن کے ڈیٹا پرائیویسی ایکٹ ۲۰۱۲ پر عمل کرتے ہیں، اور آپ اس کے نیشنل پرائیویسی کمیشن سے شکایت کر سکتے ہیں۔",
    "status": "DRAFT",
-   "written": "2026-11-25 two pens (Fable 5.2, Opus 5.5) + blind back-translation + Fable 5.2 judge; DRAFT until the ur reader's check",
-   "_en": "Your rights under the Data Privacy Act of 2012: to see, correct or delete what we hold, and to complain to the National Privacy Commission."
+   "written": "2026-11-25 Fable 5.2 pen + its own back-translation, read by the seat (Pakistan wording: A4 first, no Philippine paper names; the privacy line says why Philippine law is named); DRAFT until the ur reader's check",
+   "_en": "Wherever you live, you may ask to see, correct or delete what we hold. We follow the Data Privacy Act of 2012 of the Philippines, and you may complain to its National Privacy Commission."
   },
   "children": {
    "text": "بچے: عمر ۱۸ سال یا اس سے زیادہ ہو، یا والد یا والدہ ساتھ ہوں۔",

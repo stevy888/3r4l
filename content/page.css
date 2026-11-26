@@ -18,8 +18,8 @@ body{margin:0;background:var(--paper);color:var(--ink);font:1.125rem/1.5 var(--s
 main{padding:var(--top) var(--pad) 3rem;max-width:40rem;margin:0 auto;position:relative}
 p,h1,h2,li{overflow-wrap:break-word}
 .prose{max-width:34ch;text-wrap:pretty}
-.lang{position:absolute;top:.25rem;right:var(--pad);margin:0;font:1rem/1.25 var(--sans);height:1.25rem}
-.lang a{color:var(--mute);text-decoration:underline;text-decoration-color:var(--door-rule);text-underline-offset:.15em;padding:0}
+
+.lang{position:absolute;top:4px;display:flex;gap:6px}.lang a,.lang span{padding:4px 10px;border:1px solid var(--panel-rule);border-radius:99px;font:.8125rem/1 var(--sans);color:var(--band-mute);text-decoration:none}.lang span{background:var(--band-ink);color:var(--band)}@media (min-width:360px){.lang{position:static;margin:0 0 1.75rem}.lang a,.lang span{padding:10px 14px;font-size:.9375rem}}
 /* THE HEADLINE — one size larger and one weight stronger than r5 (500, the subset's medium), tracked −.01em at display size; the size steps by the measured column so "Confess, confess, confess." stays one line and the headline three: 30 px from 420, 29 at 384–419, 27 at 360–383, 24 under 360 (280 px holds 272). */
 h1{font:500 1.875rem/1.2 var(--serif);color:var(--head);letter-spacing:-.01em;margin:0;text-wrap:pretty}
 /* THE OWNER'S LINES — the phone's own sans; his question a quiet bold at body size. */
@@ -31,7 +31,7 @@ h2{font:600 1.125rem/1.5 var(--sans);color:var(--head);margin:0 0 .75rem;text-wr
 .band{background:var(--band);color:var(--band-ink);margin:calc(-1*var(--top)) calc(50% - 50vw) 0;padding:var(--top) calc(50vw - 50%) var(--gap)}
 .band h1{color:var(--band-ink)}
 .band .clause{color:var(--band-ink)}
-.band .lang a{color:var(--band-mute);text-decoration-color:var(--door-rule)}
+
 /* E2 — THE BAND'S FOOT (home): the band runs on under the air, the hero and the picture's top third (--lift) and ends on a straight edge — the r7 hill and its horizon line are gone (the direction: no horizon); the paper simply begins under the lifted picture. The stars ride in the band behind the headline (isolation makes the band their stacking context; z −1 puts them under the type). Under the headline a short gold rule, the card's own rule's width, positioned so the h1's box is unchanged. */
 .band.lifts{padding-bottom:calc(var(--air) + var(--hero-h) + var(--lift));isolation:isolate}
 .band>.stars{position:absolute;top:0;left:calc(50% - 50vw);width:100vw;height:8.5rem;z-index:-1;pointer-events:none;animation:breathe 5s ease-in-out infinite}
@@ -611,5 +611,5 @@ button.door.big.share[hidden]{display:none}
 .help+.low{margin-top:var(--gap)}
 .last-card{margin-top:1rem}
 .print.faces{margin:var(--gap) 0 0}
-.lang{display:flex;gap:.875rem;left:var(--pad);right:auto} /* 2026-11-25: the language row sits on the LEFT of the band in every language, clear of the stars (they hang on the right); a gap, not a margin, so the row is right in both directions */
+ /* 2026-11-25: the language row sits on the LEFT of the band in every language, clear of the stars (they hang on the right); a gap, not a margin, so the row is right in both directions */
 html[lang=tl] #card.rules-card .rule::first-letter{margin-bottom:.6em} /* the Tagalog rules run a line longer: the numeral keeps hanging beside the third line */

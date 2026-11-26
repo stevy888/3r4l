@@ -32,3 +32,4 @@ html[lang=ur] .ltr{direction:ltr;unicode-bidi:isolate}
 [dir=rtl] .addr{direction:ltr;text-align:right}
 .faces-only a,.real.exact a{display:block}
 @media (max-width:340px){html[lang=ur] .band h1{font-size:1.125rem}} /* the smallest phones: the Urdu headline whole by y 200 even in the system Arabic face (the rig fallback pass) */
+.lang{direction:ltr;left:var(--pad);width:fit-content;margin-right:auto!important}html[lang=ur] body .lang :is(a,span){font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;line-height:1!important}html[lang=ur] body .lang span{font-family:"Nastaliq",serif;line-height:1.4!important;padding-top:0;padding-bottom:2px}@media (min-width:360px){html[lang=ur] body .lang span{line-height:1.5!important;padding-top:.25rem;padding-bottom:.5rem}} /* 2026-11-25 the language switcher: on the left in every tongue, clear of the star; the Latin names in the Latin face at the pills' own height */
