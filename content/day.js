@@ -55,7 +55,7 @@
     if(f){f.hidden=true;}
     b.hidden=false;
     b.addEventListener('click',function(){
-      navigator.share({title:b.getAttribute('data-title'),text:b.getAttribute('data-text'),url:b.getAttribute('data-url')||'https://3r4l.club/'}).catch(function(){});
+      navigator.share({title:b.getAttribute('data-title'),text:b.getAttribute('data-text'),url:b.getAttribute('data-url')||'https://www.3r4l.club/'}).catch(function(){});
     });
   }
 })();
