@@ -42,6 +42,7 @@ html[lang=ur] :is(.byline,.label,.ref,.tr,.notice){font-size:calc(1em + 2px)}
 html[lang=ur] :is(.duplex,.shop,.privacy p){margin-top:1.1rem}
 html[lang=ur] h2{font-weight:400}
 html[lang=ur] :is(.verse,.help-verses) .ref{margin-top:.4rem}
+html[lang=ur] #card strong.b{font-weight:400;color:var(--gold-text)} /* the printed Urdu card's blue lines: the Nastaliq face has one weight, so the emphasis is the family's gold ink, never a fake bold */
 /* === HOME ONLY === (the rules box, the litany, the school line: rules no other Urdu page carries — the byte bars) */
 [dir=rtl] .litany li{padding-left:0;padding-right:3.25rem}
 [dir=rtl] .litany .pic{left:auto;right:0}

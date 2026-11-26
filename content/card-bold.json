@@ -1,10 +1,17 @@
 {
- "_note": "THE PRINTED CARD'S OWN BOLD PHRASES (2026-10-14, read from docs/card.pdf: the Copperplate-Bold spans, each drawn twice in the file, deduplicated). build.mjs wraps each run inside its card.txt line in <strong class=\"b\"> — the characters never change; the fence unwraps <strong> as it unwraps <em>. The prayers and the title were already the medium face; the note's three phrases are the ones the reader missed.",
+ "_note": "THE PRINTED CARD'S OWN BOLD PHRASES (2026-10-14, read from docs/card.pdf: the Copperplate-Bold spans, each drawn twice in the file, deduplicated). build.mjs wraps each run inside its card.txt line in <strong class=\"b\"> — the characters never change; the fence unwraps <strong> as it unwraps <em>. The prayers and the title were already the medium face; the note's three phrases are the ones the reader missed. 2026-11-26 (the Fable audit: the Tagalog and Urdu cards had no emphasis): the Tagalog printed card's three bold phrases (docs/card-tl-front.webp) and the Urdu printed card's four blue lines (card-ur-front/back.webp), word for word.",
  "runs": [
   "rule 1 is the key to our success",
   "God will forgive",
   "God will change our lives",
   "Lord Jesus, please pour out your mercy, salvation, and deliverance from evil upon everyone I see.",
-  "THREE RULES FOR LIVING FROM THE LORD'S PRAYER:"
+  "THREE RULES FOR LIVING FROM THE LORD'S PRAYER:",
+  "ang ika-1 tuntunin ang susi sa ating tagumpay",
+  "Diyos at patatawarin ka niya",
+  "babaguhin ng Diyos ang ating buhay",
+  "برائے مہربانی اس سادہ دُعا کو اپنی روز مرہ زندگی کا حصہ بنا لیں۔",
+  "خداوند یسوع مَیں تیری مدد کا طلب گار ہوں، تو میری رہنمائی کر کہ میں کیا کرو۔ آمین",
+  "جیسے اُس نے میری دُعا کا جواب دیا ہے وہ آپ کی دُعا کا بھی جواب دے گا۔",
+  "خدا آپ کی مدد کرنا چاہتا ہے۔"
  ]
 }
