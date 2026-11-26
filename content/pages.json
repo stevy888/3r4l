@@ -371,7 +371,7 @@
    "pair": "home",
    "page": "home",
    "needs": {
-    "card": "faces",
+    "card": "lines",
     "forty": true,
     "share": false
    },
@@ -399,7 +399,7 @@
    "pair": "card",
    "page": "card",
    "needs": {
-    "card": "faces",
+    "card": "whole",
     "forty": false,
     "share": true
    },
@@ -427,7 +427,7 @@
    "pair": "privacy",
    "page": "privacy",
    "needs": {
-    "card": "none",
+    "card": "lines",
     "forty": false,
     "share": false
    },
