@@ -249,6 +249,12 @@
    "text": "",
    "status": "absent",
    "_en": ""
+  },
+  "print_one_page": {
+   "text": "ایک کارڈ، سامنے اور پیچھے کا رخ (ایک صفحہ)",
+   "status": "DRAFT",
+   "written": "2026-11-26 Opus 5.5 pen + its own back-translation (brother Daniel's added doors); DRAFT until the ur reader's check",
+   "_en": "One card, front and back (one page)"
   }
  },
  "home": {
@@ -776,6 +782,18 @@
    "status": "DRAFT",
    "written": "2026-11-26 Fable 5.2 pen + its own back-translation, read by the seat (brother Daniel's added lines); DRAFT until the reader's check",
    "_en": "Thank Him for His love. Count today's blessings, and give Him the praise and the glory."
+  },
+  "low_more": {
+   "text": "آپ کی حوصلہ افزائی کے لیے Knowing-Jesus.com پر مزید",
+   "status": "DRAFT",
+   "written": "2026-11-26 Opus 5.5 pen + its own back-translation (brother Daniel's added doors); DRAFT until the ur reader's check",
+   "_en": "More to encourage you on Knowing-Jesus.com"
+  },
+  "well_more": {
+   "text": "شکرگزاری کے بارے میں Knowing-Jesus.com پر مزید",
+   "status": "DRAFT",
+   "written": "2026-11-26 Opus 5.5 pen + its own back-translation (brother Daniel's added doors); DRAFT until the ur reader's check",
+   "_en": "More on giving thanks on Knowing-Jesus.com"
   }
  }
 }

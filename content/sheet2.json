@@ -285,6 +285,12 @@
    "status": "owner",
    "written": "2026-11-25 brother Daniel \"3R4L Notes\"; owner 2026-11-25 \"free to print and give, unchanged .,. use that for now yes ?\" (\"public domain\" replaced; \"Inc\" left off until the company is confirmed)",
    "_note": "Daniel 2026-11-25 asked for: 'The card is public domain and free to the public. However, the website is not public domain and may not be duplicated in any manner without specific permission from 3R4L.club inc. A link to 3R4L.club is allowed on webpages as long as the webpage does not condone Biblically immoral content.' HELD until (1) '3R4L.club inc' is shown to be a registered body and (2) he chooses 'public domain' or 'free to print and give, unchanged'."
+  },
+  "print_one_page": {
+   "text": "One card, front and back (one page)",
+   "status": "DRAFT",
+   "written": "2026-11-26 brother Daniel \"3R4L Notes\" (relayed by the owner): \"…or just have the front and back printed horizontal and on one sheet of paper\"; wording the seat's",
+   "_note": "card-one.pdf, a quiet door beside the print shop's file: the front above the back, level, true size (3.5 x 2 in), on one A4 page with cut marks (kit/make-card-one.py)"
   }
  },
  "home": {
@@ -803,6 +809,18 @@
    "written": "2026-11-26 brother Daniel \"3R4L Notes\" in his own words (the asks the live check of 25 Nov found not done; owner \"go over daniel original document again\")",
    "_note": "the two doors of 'How are you doing?' (Daniel 2026-11-25: 'Not so well?' / 'Doing well?', a few encouraging passages each, links into Knowing-Jesus.com); the line is the seat's, his to keep"
   },
-  "_note": "/contact/ ('How are you doing?'): two doors, each three KJV verses from content/help.json + one line + the Knowing-Jesus.com door per verse (2026-11-25)."
+  "_note": "/contact/ ('How are you doing?'): two doors, each three KJV verses from content/help.json + one line + the Knowing-Jesus.com door per verse (2026-11-25).",
+  "low_more": {
+   "text": "More to encourage you on Knowing-Jesus.com",
+   "status": "DRAFT",
+   "written": "2026-11-26 brother Daniel \"3R4L Notes\" (relayed by the owner): \"may point them to more of your website that will encourage them given their response\"; wording the seat's, close to the verse door \"Read more on Knowing-Jesus.com\"",
+   "_note": "the wider door under the \"Not so well?\" verses: https://www.knowing-jesus.com/topics/comfort (proven 200, h1 \"Bible verses about Comfort\", 2026-11-26)"
+  },
+  "well_more": {
+   "text": "More on giving thanks on Knowing-Jesus.com",
+   "status": "DRAFT",
+   "written": "2026-11-26 brother Daniel \"3R4L Notes\" (relayed by the owner): \"may point them to more of your website that will encourage them given their response\"; wording the seat's, close to the verse door \"Read more on Knowing-Jesus.com\"",
+   "_note": "the wider door under the \"Doing well?\" verses: https://www.knowing-jesus.com/topics/thanksgiving (proven 200, h1 \"Bible verses about Thanksgiving\", 2026-11-26)"
+  }
  }
 }
