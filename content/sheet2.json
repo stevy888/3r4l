@@ -7,14 +7,14 @@
    "written": "2026-10-08T10:0xZ owner in chat: \"Forty day challenge main title could be forty day challenge\" — his words, the title's own capital (the UX delegation of 10-07); the home's door keeps his sheet line"
   },
   "step3": {
-   "text": "Read the card every day for forty days, and each day ask God what He wants you to do with it. Read today's verse too.",
+   "text": "Read the card every day for forty days, and each day ask God what He wants you to do with it. Also, my friend, read today's verse in the box below. That's the Forty day challenge: simple but powerful in God's hands. Try it, you won't be sorry!",
    "status": "owner",
-   "written": "2026-11-25 brother Daniel \"3R4L Notes\" (relayed by the owner, \"go\" 2026-11-25)"
+   "written": "2026-11-26 brother Daniel \"3R4L Notes\" in his own words (the asks the live check of 25 Nov found not done; owner \"go over daniel original document again\")"
   },
   "explanation": {
-   "text": "Forty days is not a test. Nothing here is earned — God made you His child when you asked Him to take you to His home. The forty days are simply forty days of reading the card and asking God what He wants you to do with it: “Lord Jesus, what do You want me to do with this card? Help me to do it.” Each day there is a new verse for the day. Read the verse. Use the rules. If you miss a day, there is nothing to make up — start again from the day you last read it. On the fortieth day nothing ends: ask God if He wants you to keep reading it every day.",
+   "text": "Take the 40 day challenge! It is simple: print the card and put it someplace where you'll see it every day, and read it anytime you can, at least once a day. Forty days is not a test. Nothing here is earned — God made you His child when you asked Him to take you to His home. The forty days are simply forty days of reading the card and asking God what He wants you to do with it: “Lord Jesus, what do You want me to do with this card? Help me to do it.” Each day there is a new verse for the day. Read the verse. Use the rules. If you miss a day, there is nothing to make up — start again from the day you last read it. For example: you read it every day for 4 days and forgot for 2 days — just start reading again from day 5 and keep reading until you finish the 40 days. On the fortieth day nothing ends: ask God if He wants you to keep reading it every day.",
    "status": "owner",
-   "written": "2026-11-25 brother Daniel \"3R4L Notes\" (relayed by the owner, \"go\" 2026-11-25)"
+   "written": "2026-11-26 brother Daniel \"3R4L Notes\" in his own words (the asks the live check of 25 Nov found not done; owner \"go over daniel original document again\")"
   },
   "_struck": {
    "h2": {
@@ -173,15 +173,17 @@
   },
   "share_shop": {
    "text": "Send this page to a print shop",
-   "status": "DRAFT",
+   "status": "absent",
    "written": "2026-10-14T10:4xZ seat:go-3r4l-2-pickup-1014 (the print page plan Rung 3, TPP-shop-send D ruled at the recommendation on the owner's \"Pick up and complete\")",
-   "_note": "the quiet share BUTTON beside the sheet button (hidden until the phone has a share sheet; day.js's existing button.door.share hand) — it sends THIS page's live address, so it works before the domain; the Viber door (send_shop) returns the day docs/CNAME exists"
+   "_note": "the quiet share BUTTON beside the sheet button (hidden until the phone has a share sheet; day.js's existing button.door.share hand) — it sends THIS page's live address, so it works before the domain; the Viber door (send_shop) returns the day docs/CNAME exists",
+   "_held": "2026-11-26 brother Daniel: \"Perhaps we should reserve this option for later versions of the website\" (it opened Apple Mail with no contacts); the row is kept for that later version"
   },
   "share_shop_text": {
    "text": "The card to print: the file, a sheet of ten with cut marks, and the printer's notes.",
-   "status": "DRAFT",
+   "status": "absent",
    "written": "2026-10-14T10:4xZ seat:go-3r4l-2-pickup-1014 (the print page plan Rung 3, TPP-shop-send D ruled at the recommendation on the owner's \"Pick up and complete\")",
-   "_note": "the share sheet's text line (data-text, an attribute — the fence reads text nodes; a leaf all the same); the title is the card's title; the url is location.href"
+   "_note": "the share sheet's text line (data-text, an attribute — the fence reads text nodes; a leaf all the same); the title is the card's title; the url is location.href",
+   "_held": "2026-11-26 brother Daniel: \"Perhaps we should reserve this option for later versions of the website\" (it opened Apple Mail with no contacts); the row is kept for that later version"
   },
   "close": {
    "text": "A card weighs nothing. In a hand it can carry a whole life home.",
@@ -796,9 +798,9 @@
    "_note": "the two doors of 'How are you doing?' (Daniel 2026-11-25: 'Not so well?' / 'Doing well?', a few encouraging passages each, links into Knowing-Jesus.com); the line is the seat's, his to keep"
   },
   "well_line": {
-   "text": "Thank Him for it. Count today's blessings, and give Him the praise and the glory.",
+   "text": "Thank Him for His love. Count today's blessings, and give Him the praise and the glory.",
    "status": "DRAFT",
-   "written": "2026-11-25 brother Daniel \"3R4L Notes\" (relayed by the owner, \"go\" 2026-11-25)",
+   "written": "2026-11-26 brother Daniel \"3R4L Notes\" in his own words (the asks the live check of 25 Nov found not done; owner \"go over daniel original document again\")",
    "_note": "the two doors of 'How are you doing?' (Daniel 2026-11-25: 'Not so well?' / 'Doing well?', a few encouraging passages each, links into Knowing-Jesus.com); the line is the seat's, his to keep"
   },
   "_note": "/contact/ ('How are you doing?'): two doors, each three KJV verses from content/help.json + one line + the Knowing-Jesus.com door per verse (2026-11-25)."

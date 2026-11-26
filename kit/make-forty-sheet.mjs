@@ -24,13 +24,17 @@ const ADDRESS = 'https://stevy888.github.io/3r4l/', SITE = 'stevy888.github.io/3
 
 const R = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..'), C = p => path.join(R, 'content', p), J = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 const arg = k => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : null; }, LANG = arg('--lang') || 'en', OUTPDF = arg('--out'); // --lang tl (rung 2): the sheet's labels from the Tagalog sheets of record (content/sheet-tl.json + sheet2-tl.json — the pastor's check); the verses stay the KJV with their references and the card's words stay brother Daniel's — no Tagalog Bible text is written here and nothing is machine-translated (the DRAFT writing rules stay English until a pastor's line); --out <file.pdf>: the PDF (its HTML beside it) there instead of docs/forty.pdf
-if (LANG !== 'en' && LANG !== 'tl') throw new Error('--lang en|tl'); if (LANG === 'tl' && !(fs.existsSync(C('sheet-tl.json')) && fs.existsSync(C('sheet2-tl.json')))) throw new Error("--lang tl needs content/sheet-tl.json and content/sheet2-tl.json (the pastor's check)");
-const sheet = J(C(LANG === 'tl' ? 'sheet-tl.json' : 'sheet.json')), S2EN = J(C('sheet2.json')), S2 = LANG === 'tl' ? J(C('sheet2-tl.json')) : S2EN, verses = J(C('verses.json')), card = fs.readFileSync(C(LANG === 'tl' && fs.existsSync(C('card-tl.txt')) ? 'card-tl.txt' : 'card.txt'), 'utf8'); /* 2026-11-25: the Tagalog sheet carries the Tagalog card's own words (content/card-tl.txt from its printed PDF) */
-const L = k => ((S2.challenge || {})[k] || S2EN.challenge[k]).text; // THE SHEET'S LABELS are rows of sheet2.json's challenge group (status DRAFT until his line): began · again · friend · reading_sheet · source — a Tagalog sheet without the row falls back to the English DRAFT
+// --lang ur (2026-11-26): right to left in the Nastaliq hand — the labels from content/sheet-ur.json + sheet2-ur.json, the verses from content/ur-verses.json (Biblica's Open Urdu Contemporary Version, CC BY-SA: its notice at the foot of the last reading page), and the card's words NEVER retyped: the Urdu card exists only as its printed picture, so the leaf shows docs/card-ur-front.webp where English prints the title, the rules and the little prayer
+if (LANG !== 'en' && LANG !== 'tl' && LANG !== 'ur') throw new Error('--lang en|tl|ur'); if (LANG === 'tl' && !(fs.existsSync(C('sheet-tl.json')) && fs.existsSync(C('sheet2-tl.json')))) throw new Error("--lang tl needs content/sheet-tl.json and content/sheet2-tl.json (the pastor's check)");
+const UR = LANG === 'ur' ? J(C('ur-verses.json')) : null, CARDUR = path.join(R, 'docs', 'card-ur-front.webp'); if (LANG === 'ur' && !(fs.existsSync(C('sheet-ur.json')) && fs.existsSync(C('sheet2-ur.json')) && fs.existsSync(CARDUR))) throw new Error('--lang ur needs content/sheet-ur.json, content/sheet2-ur.json, content/ur-verses.json and docs/card-ur-front.webp');
+const sheet = J(C(LANG === 'en' ? 'sheet.json' : `sheet-${LANG}.json`)), S2EN = J(C('sheet2.json')), S2 = LANG === 'en' ? S2EN : J(C(`sheet2-${LANG}.json`)), verses = J(C('verses.json')), card = LANG === 'ur' ? '' : fs.readFileSync(C(LANG === 'tl' && fs.existsSync(C('card-tl.txt')) ? 'card-tl.txt' : 'card.txt'), 'utf8'); /* 2026-11-25: the Tagalog sheet carries the Tagalog card's own words (content/card-tl.txt from its printed PDF); Urdu has no card text on purpose (the picture) */
+const L = k => { const r = (S2.challenge || {})[k]; return (r && r.status !== 'absent' ? r : S2EN.challenge[k]).text; }; // THE SHEET'S LABELS are rows of sheet2.json's challenge group (status DRAFT until his line): began · again · friend · reading_sheet · source — a Tagalog or Urdu sheet without the row (or with it 'absent') falls back to the English DRAFT
+const urRow = ref => { const r = UR.verses[ref]; if (!r) throw new Error('ur-verses.json: no ' + ref); return r; }; // keyed by the English reference of verses.json (as build.mjs urRow)
 const block = k => (new RegExp(`^== ${k} ==\\n([\\s\\S]*?)(?=\\n== \\w+ ==\\n|(?![\\s\\S]))`, 'm').exec(card) || [, ''])[1].replace(/\n$/, '');
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const tx = s => LANG !== 'ur' ? esc(s) : String(s).split(/([A-Za-z0-9](?:[A-Za-z0-9.\/:@_-]*[A-Za-z0-9\/])?)/).map((x, i) => i % 2 ? `<span dir="ltr">${esc(x)}</span>` : esc(x)).join(''); // in Urdu every Latin run (3R4L, the address, a Western digit) is held left to right inside the right-to-left line; elsewhere it is esc
 const F = w => `file://${R}/content/fonts/source-serif-4-${w}.woff2`;
-const translation = LANG === 'tl' && verses[0].translation_tl ? verses[0].translation_tl : verses[0].translation_name, /* --lang tl takes the Tagalog Bible on disk (verses.json text_tl / ref_tl / translation_tl, ADB 1905 — owner 'do all six' 2026-10-10: the sheet on the day the pastor's check lands) */ title = S2.challenge.h1.text, day40 = (S2.mails && S2.mails.day40 && S2.mails.day40.text) || S2EN.mails.day40.text;
+const translation = LANG === 'ur' ? UR.translation_ur : LANG === 'tl' && verses[0].translation_tl ? verses[0].translation_tl : verses[0].translation_name, /* --lang tl takes the Tagalog Bible on disk (verses.json text_tl / ref_tl / translation_tl, ADB 1905 — owner 'do all six' 2026-10-10: the sheet on the day the pastor's check lands) */ title = S2.challenge.h1.text, day40 = (S2.mails && S2.mails.day40 && S2.mails.day40.text) || S2EN.mails.day40.text;
 
 // ---- THE DRAWING (mm; the safe box is 182 x 250) ----------------------------------------------------------------------------------------------
 // THE CURE OF RIVAL A (fleet-1010b, both blind judges): the ridge closed into A HILL the road has to climb — its two flanks fall from the summit to the
@@ -92,7 +96,7 @@ const svg = `<svg class="draw" viewBox="0 0 ${W} ${H}" width="${W}mm" height="${
 ${rings.map(r => `<circle cx="${f(r.x)}" cy="${f(r.y)}" r="${RING}" fill="#fff" stroke="${NAVY}" stroke-width="${r.fifth ? 1.1 : 0.5}"/>`).join('\n')}
 </svg>`;
 const label = r => `<p class="lab${r.fifth ? ' t' : ''}" style="left:${f(r.lab[0])}mm;top:${f(r.lab[1])}mm">${r.v.day}</p>`;
-const writeRule = (label, cls = 'wr') => `<div class="${cls}"><span>${esc(label)}</span><span class="line"></span></div>`;
+const writeRule = (label, cls = 'wr') => `<div class="${cls}"><span>${tx(label)}</span><span class="line"></span></div>`;
 // GEOMETRY CHECK (before the render): the band and every ring inside the hill with air to the flank, no two rings touching, no numeral on a ring or on the road, day 40 under the cross
 { const nearSummit = p => Math.hypot(p[0] - SUMMIT[0], p[1] - SUMMIT[1]) < 12; // the road ends ON the summit under the cross — there the band is meant to meet the crest
   for (const s of RS) if (s.p[0] >= 0 && !nearSummit(s.p) && (!insideHill(s.p) || distHill(s.p) < HW + MARGIN)) { geo.push(`the road breaks the flank at ${f(s.p[0])},${f(s.p[1])}`); break; }
@@ -104,14 +108,28 @@ console.log(`road ${ROADLEN.toFixed(0)} mm, the forty at ${PITCH.toFixed(1)} mm 
 
 // ---- THE READING SHEET -----------------------------------------------------------------------------------------------------------------------
 const MARK = `<svg class="mark" viewBox="0 0 40 16" aria-hidden="true" focusable="false"><path d="M0 14C8 13 16 10 21 7C22.5 6.3 24 6 25 6.6C29 9 34 12 40 13.6" fill="none" stroke="${NAVY}" stroke-width=".7" stroke-linecap="round"/><path d="M24 6.2V1M21.5 2.6H26.5" fill="none" stroke="${NAVY}" stroke-width="1.2" stroke-linecap="round"/></svg>`; // the leaf's drawing small: the ridge, the cross on the summit — the one hand on every page
-const verse = v => { const tl = LANG === 'tl' && v.text_tl; return `<p class="verse"><b class="d">${v.day}</b><b class="ref">${esc(tl ? (v.ref_tl || v.ref) : v.ref)}</b> <span class="t">${esc((tl ? v.text_tl : (v.parts ? v.parts.join(' ') : v.text)).replace(/\n/g, ' '))}</span></p>`; };
-const head = right => `<div class="head2"><p class="kicker">${esc(title)}</p>${MARK}<p class="tr">${right}</p></div>`;
+const verse = v => { if (LANG === 'ur') { const u = urRow(v.ref); return `<p class="verse"><b class="d">${v.day}</b><b class="ref">${tx(u.ref_ur)}</b> <span class="t">${tx(u.text_ur.replace(/\n/g, ' '))}</span></p>`; }
+  const tl = LANG === 'tl' && v.text_tl; return `<p class="verse"><b class="d">${v.day}</b><b class="ref">${esc(tl ? (v.ref_tl || v.ref) : v.ref)}</b> <span class="t">${esc((tl ? v.text_tl : (v.parts ? v.parts.join(' ') : v.text)).replace(/\n/g, ' '))}</span></p>`; };
+const head = right => `<div class="head2"><p class="kicker">${tx(title)}</p>${MARK}<p class="tr">${right}</p></div>`;
 const footRow = (left, right = '') => `<p class="row"><span>${left}</span><span>${right}</span></p>`;
-const closeEl = `<div class="close"><p class="day40">${esc(day40)}</p><p class="addr">${SITE}</p></div>`; // after the fortieth row: the day-40 line of record, and the address once more so a reading sheet that travels on its own still says where it comes from
-const readingSide = (vs, last) => `<section class="side read">${head(esc(translation))}<div class="cols">${vs.map(verse).join('\n')}</div>${last ? closeEl : ''}
-<div class="foot2">${footRow(esc(last ? L('friend') : L('again')))}</div></section>`;
+const D40LTR = LANG === 'ur' && !/[\u0600-\u06FF]/.test(day40); // the Urdu day-40 row is absent: the English DRAFT falls back, and reads left to right
+const closeEl = `<div class="close"><p class="day40"${D40LTR ? ' dir="ltr"' : ''}>${D40LTR ? esc(day40) : tx(day40)}</p><p class="addr"${LANG === 'ur' ? ' dir="ltr"' : ''}>${SITE}</p></div>`; // after the fortieth row: the day-40 line of record, and the address once more so a reading sheet that travels on its own still says where it comes from
+const notice = LANG === 'ur' && UR.notice_ur ? `<p class="notice" dir="ltr">${esc(UR.notice_ur)}</p>` : ''; // the Urdu translation's licence (CC BY-SA) once, small, at the foot of the last reading page
+const readingSide = (vs, last) => `<section class="side read">${head(tx(translation))}<div class="cols">${vs.map(verse).join('\n')}</div>${last ? closeEl : ''}
+<div class="foot2">${last ? notice : ''}${footRow(tx(last ? L('friend') : L('again')))}</div></section>`;
+const SPLIT = [0, 20, 40]; // where each reading side begins (the last ends at forty)
 
-const html = `<!doctype html><html lang="${LANG}"><head><meta charset="utf-8"><title>${esc(title)} — ${SITE}</title><style>
+const NAST = `file://${R}/content/fonts/noto-nastaliq-urdu-400.woff2`; // the site's own Nastaliq (content/lang-ur.css "Nastaliq": Urdu letters only, OFL) — by path, so the PDF never takes the machine's copy
+const CARDW = 86, VSZ = 9.5, VLH = 2, VMB = 1; // the Urdu leaf's card picture width (mm); the Urdu verse size (pt), line-height and gap (mm) — Nastaliq wants ~2 or its lines collide
+const UR_CSS = `@font-face{font-family:"Nastaliq";font-weight:400;font-style:normal;src:url(${NAST}) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F,U+2018-201D}
+html[lang=ur] :is(.kicker,.grace,.began,.clause,.row,.head2 .tr,.verse,.close .day40){font-family:"Nastaliq","Source Serif 4";font-style:normal;letter-spacing:0;word-spacing:normal}html[lang=ur] .row{line-height:1.9}
+html[lang=ur] .kicker{font-size:10pt;line-height:1.5}html[lang=ur] .gold{margin:1.2mm auto 1.6mm}html[lang=ur] .grace{font-size:12pt;line-height:1.75;margin-bottom:1.2mm}
+html[lang=ur] .cardimg{display:block;width:${CARDW}mm;height:auto;margin:0 auto}
+html[lang=ur] .began{line-height:1.8;margin-top:1.2mm}html[lang=ur] .clause{font-size:10.5pt;line-height:1.9;margin-bottom:.6mm}html[lang=ur] .foot1 .row{font-size:9pt}
+html[lang=ur] .verse{font-size:${VSZ}pt;line-height:${VLH};padding-left:0;padding-right:7.5mm;margin-bottom:${VMB}mm}html[lang=ur] .verse .d{font-family:"Source Serif 4"}html[lang=ur] .cols{column-gap:6mm}
+html[lang=ur] .head2{margin-bottom:3mm}html[lang=ur] .head2 .tr{font-size:9.5pt;line-height:1.7}html[lang=ur] .close{margin-top:2mm}html[lang=ur] .close .day40{font-size:10.5pt;line-height:1.9}html[lang=ur] .close .day40[dir=ltr]{font:italic 400 10.5pt/1.35 "Source Serif 4"}
+html[lang=ur] .notice{font:400 7pt/1.3 "Source Serif 4";color:#6a6a6a;text-align:center;margin-bottom:1.2mm}html[lang=ur] .foot2 .row{font-size:9pt}`;
+const html = `<!doctype html><html lang="${LANG}"${LANG === 'ur' ? ' dir="rtl"' : ''}><head><meta charset="utf-8"><title>${esc(title)} — ${SITE}</title><style>
 @font-face{font-family:"Source Serif 4";font-weight:400;font-style:normal;src:url(${F('400')}) format("woff2")}
 @font-face{font-family:"Source Serif 4";font-weight:500;font-style:normal;src:url(${F('500')}) format("woff2")}
 @font-face{font-family:"Source Serif 4";font-weight:400;font-style:italic;src:url(${F('400i')}) format("woff2")}
@@ -151,22 +169,21 @@ p{margin:0}
 .close .addr{font:500 9.5pt/1.4 "Source Serif 4";letter-spacing:.04em;color:${NAVY};margin-top:1.6mm}
 .foot2{position:absolute;left:0;right:0;bottom:0;border-top:.3mm solid ${GOLD};padding-top:1.8mm}
 .foot2 .row{color:#5d5d5d}
-${LANG === 'tl' ? 'html[lang=tl] .rules{font-size:11.5pt;line-height:1.3}html[lang=tl] .verse{font-size:8.6pt;line-height:1.24;margin-bottom:1.5mm}html[lang=tl] .cols{column-gap:6mm}html[lang=tl] .clause{font-size:9.6pt}html[lang=tl] .foot1 .row{font-size:8.6pt}' : ''}
+${LANG === 'ur' ? UR_CSS : ''}${LANG === 'tl' ? 'html[lang=tl] .rules{font-size:11.5pt;line-height:1.3}html[lang=tl] .verse{font-size:8.6pt;line-height:1.24;margin-bottom:1.5mm}html[lang=tl] .cols{column-gap:6mm}html[lang=tl] .clause{font-size:9.6pt}html[lang=tl] .foot1 .row{font-size:8.6pt}' : ''}
 </style></head><body>
 <section class="side s1">${svg}
 <div class="head">
-<p class="kicker">${esc(title)}</p>
+<p class="kicker">${tx(title)}</p>
 <div class="gold"></div>
-${L('grace') ? `<p class="grace">${esc(L('grace'))}</p>` : ''}<p class="ttl">${esc(block('title'))}</p>
+${L('grace') ? `<p class="grace">${tx(L('grace'))}</p>` : ''}${LANG === 'ur' ? `<img class="cardimg" src="file://${CARDUR}" alt="">` : `<p class="ttl">${esc(block('title'))}</p>
 <p class="rules">${esc(block('rules')).replace(/^(\d\.)/gm, '<em class="num">$1</em>')}</p>
-<p class="prayer">${esc(block('daily_prayer'))}</p>
+<p class="prayer">${esc(block('daily_prayer'))}</p>`}
 ${writeRule(L('began'), 'began')}
 </div>
 ${rings.map(label).join('\n')}
-<div class="foot1"><p class="clause">${esc(sheet.whatnext_clause)}</p>${footRow(esc(sheet.labels.one_a_day) + ' ' + esc(L('reading_sheet')), esc(L('source')))}</div>
+<div class="foot1"><p class="clause">${tx(sheet.whatnext_clause)}</p>${footRow(tx(sheet.labels.one_a_day) + ' ' + tx(L('reading_sheet')), tx(L('source')))}</div>
 </section>
-${readingSide(verses.slice(0, 20), false)}
-${readingSide(verses.slice(20), true)}
+${SPLIT.slice(0, -1).map((a, i) => readingSide(verses.slice(a, SPLIT[i + 1]), i === SPLIT.length - 2)).join('\n')}
 </body></html>`;
 const out = OUTPDF ? OUTPDF.replace(/\.pdf$/i, '') + '.html' : path.join(R, 'kit', 'forty-sheet.html'); fs.writeFileSync(out, html);
 const { chromium } = await import('@playwright/test'); const b = await chromium.launch(); const p = await b.newPage(); await p.goto('file://' + out, { waitUntil: 'load' }); await p.evaluate(() => document.fonts.ready);
@@ -180,4 +197,4 @@ const check = await p.evaluate((crossTop) => { const px = mm => mm * 96 / 25.4, 
   return out; }, CROSS.foot - CROSS.h);
 console.log(check.join('\n'));
 const pdf = OUTPDF || path.join(R, 'docs', 'forty.pdf'); await p.pdf({ path: pdf, format: 'A4', printBackground: true, preferCSSPageSize: true }); await b.close();
-console.log((OUTPDF ? pdf : 'docs/forty.pdf') + ' written —', verses.length, 'days;', fs.statSync(pdf).size, 'B', LANG === 'tl' ? '· --lang tl: the labels from the Tagalog sheets, the verses the KJV' : '');
+console.log((OUTPDF ? pdf : 'docs/forty.pdf') + ' written —', verses.length, 'days;', fs.statSync(pdf).size, 'B', LANG === 'tl' ? '· --lang tl: the labels from the Tagalog sheets, the verses the KJV' : LANG === 'ur' ? '· --lang ur: right to left, the labels from the Urdu sheets, the verses the Urdu Contemporary Version, the card its printed picture' : '');
