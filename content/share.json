@@ -45,7 +45,7 @@
     "ref": "Mateo 6:12"
    },
    "ur": {
-    "text": "وَیسے ہی آپ بھی ہمارے قُصُوروں کو مُعاف کیجئے۔",
+    "text": "…وَیسے ہی آپ بھی ہمارے قُصُوروں کو مُعاف کیجئے۔",
     "ref": "متّی ۶:۱۲"
    },
    "page": "home",
@@ -58,14 +58,15 @@
     "ref": "1 Peter 5:7"
    },
    "tl": {
-    "text": "Sapagka't kayo'y ipinagmamalasakit niya.",
+    "text": "…sapagka't kayo'y ipinagmamalasakit niya.",
     "ref": "1 Pedro 5:7"
    },
    "ur": {
     "text": "اَپنی ساری فکریں اُس خُدا پر ڈال دو کیونکہ وہ تمہاری فکر کرتا ہے۔",
     "ref": "۱ پطرس ۵:۷"
    },
-   "scheme": "light"
+   "scheme": "light",
+   "words": 560
   },
   "watch": {
    "svg": "svg.sky",
@@ -94,15 +95,15 @@
   "testimony": {
    "svg": "svg.way",
    "en": {
-    "text": "The LORD hath done great things for us; whereof we are glad.",
+    "text": "The LORD hath done great things for us…",
     "ref": "Psalm 126:3"
    },
    "tl": {
-    "text": "Ginawan tayo ng Panginoon ng mga dakilang bagay; na siyang ating ikinatutuwa.",
+    "text": "Ginawan tayo ng Panginoon ng mga dakilang bagay…",
     "ref": "Mga Awit 126:3"
    },
    "ur": {
-    "text": "یَاہوِہ نے ہمارے لیٔے عظیم کام کئے ہیں، اَور ہم خُوشی سے پھُولے نہیں سماتے۔",
+    "text": "یَاہوِہ نے ہمارے لیٔے عظیم کام کئے ہیں…",
     "ref": "زبُور ۱۲۶:۳"
    },
    "scheme": "light"

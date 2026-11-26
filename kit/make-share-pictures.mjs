@@ -24,18 +24,18 @@ for (const [kind, k] of Object.entries(share.kinds)) for (const lang of ['en', '
   const el = shot.locator(k.svg).first(); if (!(await el.count())) throw new Error(`${url}: no ${k.svg}`);
   const art = 'data:image/png;base64,' + (await el.screenshot({ omitBackground: true })).toString('base64');
   const rtl = lang === 'ur', len = t.text.length;
-  const size = rtl ? 84 : 104; // the start size; the page shrinks it until the words fit (a phone shows the picture at about a third: 104 px reads as ~34 px)
+  const size = rtl ? 100 : 104; // the start size; the page shrinks it until the words fit (a phone shows the picture at about a third: 104 px reads as ~34 px)
   const html = `<!doctype html><html lang="${lang}" dir="${rtl ? 'rtl' : 'ltr'}"><head><meta charset="utf-8"><style>
 @font-face{font-family:S;font-weight:400;src:url(${font('source-serif-4-400.woff2')})}
 @font-face{font-family:S;font-weight:400;font-style:italic;src:url(${font('source-serif-4-400i.woff2')})}
 @font-face{font-family:S;font-weight:500;src:url(${font('source-serif-4-500.woff2')})}
 @font-face{font-family:N;src:url(${font('noto-nastaliq-urdu-400.woff2')})}
 html,body{margin:0;width:1200px;height:630px;overflow:hidden}
-.og{position:relative;width:1200px;height:630px;overflow:hidden;background:radial-gradient(ellipse 620px 420px at ${rtl ? '24%' : '76%'} 74%,rgba(240,214,160,.30),rgba(240,214,160,0) 70%),linear-gradient(180deg,#111830 0%,#1a233f 60%,#1d2645 100%);font-family:S,serif;color:#f7f2e7}
+.og{position:relative;width:1200px;height:630px;overflow:hidden;background:radial-gradient(ellipse 620px 420px at ${rtl ? '24%' : '76%'} 74%,rgba(232,180,90,.34),rgba(214,160,70,.10) 45%,rgba(214,160,70,0) 72%),linear-gradient(180deg,#111830 0%,#1a233f 60%,#1d2645 100%);font-family:S,serif;color:#f7f2e7}
 .sky{position:absolute;inset:0}
 .horizon{position:absolute;left:0;right:0;bottom:0;height:150px;background:linear-gradient(180deg,rgba(184,136,45,0),rgba(184,136,45,.16))}
-.art{position:absolute;bottom:0;${rtl ? 'left:0;transform:scaleX(-1)' : 'right:0'};width:540px;height:380px;object-fit:contain;object-position:bottom right;filter:drop-shadow(0 0 18px rgba(243,227,189,.35));-webkit-mask-image:linear-gradient(to right,transparent 0,#000 22%);mask-image:linear-gradient(to right,transparent 0,#000 22%)}
-.words{position:absolute;top:0;bottom:0;${rtl ? 'right:76px' : 'left:76px'};width:${rtl ? 760 : 700}px;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px;box-sizing:border-box}
+.art{position:absolute;bottom:0;${rtl ? 'left:0;transform:scaleX(-1)' : 'right:0'};width:620px;height:430px;object-fit:contain;object-position:bottom right;filter:drop-shadow(0 0 18px rgba(243,227,189,.35));-webkit-mask-image:linear-gradient(to right,transparent 0,#000 22%);mask-image:linear-gradient(to right,transparent 0,#000 22%)}
+.words{position:absolute;top:0;bottom:0;${rtl ? 'right:76px' : 'left:76px'};width:${rtl ? 680 : (k.words || 640)}px;display:flex;flex-direction:column;justify-content:center;padding-bottom:40px;box-sizing:border-box}
 .label{font:italic 400 27px/1.3 S,serif;color:#d9b35e;margin:0 0 22px}
 .q{font:500 ${size}px/1.18 S,serif;margin:0;letter-spacing:-.01em;text-wrap:balance;text-shadow:0 2px 18px rgba(10,14,30,.55)}
 .rule{width:88px;height:4px;background:#c99a3c;border-radius:2px;margin:34px 0 18px}

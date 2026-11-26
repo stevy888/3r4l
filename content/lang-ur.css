@@ -2,10 +2,10 @@
 @font-face{font-family:"Nastaliq";font-style:normal;font-weight:400;font-display:swap;src:local("Noto Nastaliq Urdu"),local("NotoNastaliqUrdu-Regular"),url(__ROOT__fonts/noto-nastaliq-urdu-400.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F,U+2018-201D}
 :root{--serif:"Nastaliq","Source Serif 4",Georgia,serif;--sans:"Nastaliq",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif}
 /* the Nastaliq hand is tall: every line gets room, nothing is slanted (an italic Nastaliq is a fake slant) */
-html[lang=ur] body :is(h1,h2,p,li,a,button,span,em,label){line-height:2.05!important;font-style:normal!important;letter-spacing:0!important}
-html[lang=ur] .band h1{font-size:1.25rem;line-height:1.68!important} /* the Nastaliq headline: the home h1 whole above y 200 at 320 x 568 (the rig) — 1.75 rem / 2.05 ran to 372 */
-html[lang=ur] .band .byline{line-height:1.8!important}
-html[lang=ur] .verse .text,html[lang=ur] .help-verses .text{font-size:1.25rem}
+[lang=ur] body :is(h1,h2,p,li,a,button,span,em,label){line-height:2.05!important;font-style:normal!important;letter-spacing:0!important}
+[lang=ur] .band h1{font-size:1.25rem;line-height:1.68!important} /* the Nastaliq headline: the home h1 whole above y 200 at 320 x 568 (the rig) — 1.75 rem / 2.05 ran to 372 */
+[lang=ur] .band .byline{line-height:1.8!important}
+[lang=ur] .verse .text,[lang=ur] .help-verses .text{font-size:1.4rem}
 /* the mirror: every rule that sits on a side moves to the other one */
 /* the language row stays on the left in Urdu too: the stars hang on the right in both directions */
 [dir=rtl] .band.lifts h1::after{left:auto;right:0;transform-origin:100% 50%}
@@ -25,27 +25,28 @@ html[lang=ur] .verse .text,html[lang=ur] .help-verses .text{font-size:1.25rem}
 .faces-only img,.real.exact img{display:block;width:100%;height:auto;aspect-ratio:252/144;background:#f7efdc;border:1px solid #1b2440;border-radius:4px;box-shadow:var(--card-shadow)}
 .faces-only a{display:block}
 /* Latin words inside an Urdu line (3R4L, Knowing-Jesus.com, PDF) keep their own order */
-html[lang=ur] .ltr{direction:ltr;unicode-bidi:isolate}
+[lang=ur] .ltr{direction:ltr;unicode-bidi:isolate}
 
 [dir=rtl] .addr{direction:ltr;text-align:right}
 .faces-only a,.real.exact a{display:block}
-@media (max-width:340px){html[lang=ur] .band h1{font-size:1.125rem}} /* the smallest phones: the Urdu headline whole by y 200 even in the system Arabic face (the rig fallback pass) */
-.lang{direction:ltr;left:var(--pad);width:fit-content;margin-right:auto!important}html[lang=ur] body .lang :is(a,span){font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;line-height:1!important}html[lang=ur] body .lang span{font-family:"Nastaliq",serif;line-height:1.4!important;padding-top:0;padding-bottom:2px}@media (min-width:360px){html[lang=ur] body .lang span{line-height:1.5!important;padding-top:.25rem;padding-bottom:.5rem}} /* 2026-11-25 the language switcher: on the left in every tongue, clear of the star; the Latin names in the Latin face at the pills' own height */
-html[lang=ur] .step::before{content:counter(step,persian)}html[lang=ur] .how{list-style-type:persian} /* B9: one style of number on an Urdu page — the step and print-list numbers in Urdu digits like the verse references */
+@media (max-width:340px){[lang=ur] .band h1{font-size:1.125rem}} /* the smallest phones: the Urdu headline whole by y 200 even in the system Arabic face (the rig fallback pass) */
+.lang{direction:ltr;left:var(--pad);width:fit-content;margin-right:auto!important}[lang=ur] body .lang :is(a,span){font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;line-height:1!important}[lang=ur] body .lang span{font-family:"Nastaliq",serif;line-height:1.4!important;padding-top:0;padding-bottom:2px}@media (min-width:360px){[lang=ur] body .lang span{line-height:1.5!important;padding-top:.25rem;padding-bottom:.5rem}} /* 2026-11-25 the language switcher: on the left in every tongue, clear of the star; the Latin names in the Latin face at the pills' own height */
+[lang=ur] .step::before{content:counter(step,persian)}[lang=ur] .how{list-style-type:persian} /* B9: one style of number on an Urdu page — the step and print-list numbers in Urdu digits like the verse references */
 [dir=rtl] #card .rules{padding-left:0;padding-right:2em;text-indent:-2em} /* the hanging rule number on the start side: in Urdu that is the right (2026-11-26, the typed Urdu card) */
 /* 2026-11-26 the Urdu audit (Fable 5.2): the Nastaliq hand runs small per pixel — the one-line headlines and the small print one step up; the home's three-line headline keeps its fit */
-html[lang=ur] .band h1{font-size:1.625rem}html[lang=ur] .band.lifts h1{font-size:1.25rem}
-@media (max-width:340px){html[lang=ur] .band h1{font-size:1.375rem}}
-html[lang=ur] :is(.byline,.label,.ref,.tr,.notice){font-size:calc(1em + 2px)}
-@media (max-width:359px){html[lang=ur] .band h1{margin-top:.5rem}}
+[lang=ur] .band h1{font-size:1.625rem}[lang=ur] .band.lifts h1{font-size:1.25rem}
+@media (max-width:340px){[lang=ur] .band h1{font-size:1.375rem}}
+[lang=ur] :is(.byline,.label,.tr){font-size:1.0625rem}[lang=ur] .ref{font-size:1.125rem}[lang=ur] :is(.verse,.help-verses) .door,[lang=ur] #card :is(.note,.invite,.prayer,.daily_prayer){font-size:1.125rem}[lang=ur] #card :is(.turn,.turn_back){font-size:1.0625rem}[lang=ur] .notice{font-size:.8125rem;line-height:1.5!important} /* the second Fable judge: explicit sizes (a calc took the parent's), the label · reference · translation under a larger verse; Biblica's English credit small */
+@media (max-width:359px){[lang=ur] .band h1{margin-top:.5rem}}
 [dir=rtl] .verse::before{font-family:"Source Serif 4",Georgia,serif}
-html[lang=ur] :is(.duplex,.shop,.privacy p){margin-top:1.1rem}
-html[lang=ur] h2{font-weight:400}
-html[lang=ur] :is(.verse,.help-verses) .ref{margin-top:.4rem}
-html[lang=ur] #card strong.b{font-weight:400;color:var(--gold-text)} /* the printed Urdu card's blue lines: the Nastaliq face has one weight, so the emphasis is the family's gold ink, never a fake bold */
+[lang=ur] :is(.duplex,.shop,.privacy p){margin-top:1.1rem}
+[lang=ur] h2{font-weight:400}
+[lang=ur] :is(.verse,.help-verses) .ref{margin-top:.4rem}
+[lang=ur] #card strong.b{font-weight:400;color:var(--gold-text)} /* the printed Urdu card's blue lines: the Nastaliq face has one weight, so the emphasis is the family's gold ink, never a fake bold */
 /* === HOME ONLY === (the rules box, the litany, the school line: rules no other Urdu page carries — the byte bars) */
 [dir=rtl] .litany li{padding-left:0;padding-right:3.25rem}
 [dir=rtl] .litany .pic{left:auto;right:0}
-html[lang=ur] .litany li{text-wrap:balance}
+[lang=ur] .litany li{text-wrap:balance}
 [dir=rtl] .picture.rules-card .face{text-align:right}[dir=rtl] #card.rules-card .rule{padding-left:0;padding-right:3.64em}[dir=rtl] #card.rules-card .rule::first-letter{float:right;text-align:left;margin:.03em -1.4em 0 .2em} /* the rules box read right to left: the numeral on the right */
-html[lang=ur] .band.lifts .byline{padding-top:.4rem}html[lang=ur] .taking .saying{margin-bottom:1.5rem}
+[lang=ur] .band.lifts .byline{padding-top:.4rem}[lang=ur] .taking .saying{margin-bottom:1.5rem}
+[lang=ur] #card.rules-card .title{font-size:1.125rem!important;letter-spacing:0}
